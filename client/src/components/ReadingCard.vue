@@ -142,7 +142,9 @@ const toggleGospel = async () => {
           <div v-if="loadingEpistle" class="mt-2 text-sm text-stone-400 animate-pulse">Loading scripture...</div>
 
           <!-- The Actual Text -->
-          <div v-if="epistleText" class="mt-3 p-4 bg-amber-50 dark:bg-stone-900/50 rounded text-stone-700 dark:text-stone-300 text-sm leading-relaxed border border-amber-100 dark:border-stone-700" v-html="epistleText">
+          <div v-if="epistleText" class="mt-3 p-4 bg-amber-50 dark:bg-stone-900/50 rounded text-stone-700 dark:text-stone-300 text-sm leading-relaxed border border-amber-100 dark:border-stone-700">
+            <div v-html="epistleText"></div>
+            <p class="mt-3 pt-2 border-t border-amber-200/50 dark:border-stone-700 text-[10px] text-stone-400 text-right uppercase tracking-wider">Douay-Rheims 1899 American Edition</p>
           </div>
         </div>
 
@@ -162,7 +164,9 @@ const toggleGospel = async () => {
           <div v-if="loadingGospel" class="mt-2 text-sm text-stone-400 animate-pulse">Loading scripture...</div>
 
           <!-- The Actual Text -->
-          <div v-if="gospelText" class="mt-3 p-4 bg-red-50 dark:bg-stone-900/50 rounded text-stone-700 dark:text-stone-300 text-sm leading-relaxed border border-red-100 dark:border-stone-700" v-html="gospelText">
+          <div v-if="gospelText" class="mt-3 p-4 bg-red-50 dark:bg-stone-900/50 rounded text-stone-700 dark:text-stone-300 text-sm leading-relaxed border border-red-100 dark:border-stone-700">
+            <div v-html="gospelText"></div>
+            <p class="mt-3 pt-2 border-t border-red-200/50 dark:border-stone-700 text-[10px] text-stone-400 text-right uppercase tracking-wider">Douay-Rheims 1899 American Edition</p>
           </div>
         </div>
       </div>

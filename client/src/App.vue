@@ -63,8 +63,9 @@
         </div>
       </main>
       
-      <footer class="mt-16 text-center text-stone-500 dark:text-stone-500 text-sm">
+      <footer class="mt-16 text-center text-stone-500 dark:text-stone-500 text-sm space-y-1">
         <p>Data provided by Google Calendar</p>
+        <p class="text-xs opacity-75">Scripture texts: Douay-Rheims 1899 American Edition</p>
       </footer>
     </div>
   </div>
