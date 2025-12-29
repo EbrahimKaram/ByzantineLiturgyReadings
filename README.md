@@ -1,14 +1,15 @@
 # Byzantine Readings
-We to have a setup that sees the readings from the byzantine Calendar
 
-`https://calendar.google.com/calendar/u/0/embed?src=9pp7p6nos1t3tca6sjo4g6hui0@group.calendar.google.com`
+A web application that displays the Sunday scripture readings from the Byzantine Lectionary.
 
-That would be derived from the following links
+- **Live Website:** [https://www.ebrahimkaram.com/ByzantineLiturgyReadings/](https://www.ebrahimkaram.com/ByzantineLiturgyReadings/)
+- **GitHub Repository:** [https://github.com/EbrahimKaram/ByzantineLiturgyReadings](https://github.com/EbrahimKaram/ByzantineLiturgyReadings)
 
-`https://www.stgeorgeoh.org/calendar`
+## Data Sources
+- **Calendar:** [Google Calendar](https://calendar.google.com/calendar/u/0/embed?src=9pp7p6nos1t3tca6sjo4g6hui0@group.calendar.google.com) (Derived from [St. George Cathedral](https://www.stgeorgeoh.org/calendar))
+- **Scripture Text:** [Bible-api.com](https://bible-api.com) (Douay-Rheims Version)
 
+## Support
+If you find this project useful, please consider supporting it!
 
-We the Passage readings from the Bible-api.com
-
-The website for this is 
-https://www.ebrahimkaram.com/ByzantineLiturgyReadings/
+<a href="https://www.buymeacoffee.com/bobKaram" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
