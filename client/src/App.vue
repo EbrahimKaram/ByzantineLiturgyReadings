@@ -2,6 +2,18 @@
   <div class="min-h-screen bg-stone-100 dark:bg-stone-900 py-12 px-4 sm:px-6 lg:px-8 font-serif">
     <div class="max-w-3xl mx-auto">
       <header class="text-center mb-8">
+        <div class="flex justify-center mb-4">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-red-800 dark:text-red-600">
+            <!-- Vertical post -->
+            <line x1="12" y1="2" x2="12" y2="22"></line>
+            <!-- Top bar (Titulus) -->
+            <line x1="9" y1="6" x2="15" y2="6"></line>
+            <!-- Middle bar (Patibulum) -->
+            <line x1="5" y1="10" x2="19" y2="10"></line>
+            <!-- Bottom slanted bar (Suppedaneum) -->
+            <line x1="8" y1="15" x2="16" y2="18"></line>
+          </svg>
+        </div>
         <h1 class="text-4xl font-bold text-stone-800 dark:text-stone-100 mb-2 tracking-tight">Byzantine Liturgy Readings</h1>
         <p class="text-stone-600 dark:text-stone-400 italic">Scripture readings for the Sunday Liturgies from the <a href="https://www.stgeorgeoh.org/calendar" target="_blank" rel="noopener noreferrer" class="underline">Saint George Cathedral Calendar</a></p>
       </header>
