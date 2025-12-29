@@ -1,12 +1,14 @@
 <template>
   <div class="min-h-screen bg-stone-100 dark:bg-stone-900 py-12 px-4 sm:px-6 lg:px-8 font-serif">
     <div class="max-w-3xl mx-auto">
-      <header class="text-center mb-12">
+      <header class="text-center mb-8">
         <h1 class="text-4xl font-bold text-stone-800 dark:text-stone-100 mb-2 tracking-tight">Byzantine Liturgy Readings</h1>
-        <p class="text-stone-600 dark:text-stone-400 italic mb-8">Scripture readings for the Sunday Liturgies from the Saint George Cathedral Calendar </p>
+        <p class="text-stone-600 dark:text-stone-400 italic">Scripture readings for the Sunday Liturgies from the <a href="https://www.stgeorgeoh.org/calendar" target="_blank" rel="noopener noreferrer" class="underline">Saint George Cathedral Calendar</a></p>
+      </header>
 
-        <!-- Date Navigation Controls -->
-        <div class="flex items-center justify-center space-x-4 bg-white dark:bg-stone-800 p-4 rounded-lg shadow-sm inline-flex">
+      <!-- Date Navigation Controls (Sticky) -->
+      <div class="sticky top-4 z-30 flex justify-center mb-8">
+        <div class="flex items-center justify-center space-x-4 bg-white/90 dark:bg-stone-800/90 backdrop-blur-sm p-4 rounded-lg shadow-lg border border-stone-200 dark:border-stone-700">
           <button 
             @click="previousSunday"
             class="p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
@@ -15,7 +17,7 @@
             ←
           </button>
           
-          <span class="text-lg font-semibold text-stone-800 dark:text-stone-200 min-w-[140px]">
+          <span class="text-lg font-semibold text-stone-800 dark:text-stone-200 min-w-[140px] text-center">
             {{ formatDate(currentDate) }}
           </span>
           
@@ -27,7 +29,7 @@
             →
           </button>
         </div>
-      </header>
+      </div>
 
       <main>
         <div v-if="loading" class="flex flex-col items-center justify-center py-12">
