@@ -9,3 +9,6 @@ That would be derived from the following links
 
 
 We the Passage readings from the Bible-api.com
+
+The website for this is 
+https://www.ebrahimkaram.com/ByzantineLiturgyReadings/
