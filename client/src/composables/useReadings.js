@@ -23,7 +23,16 @@ export function useReadings() {
     error.value = null;
     try {
       const events = await fetchSundayReadings(currentDate.value);
-      readings.value = events;
+      
+      // Sort events: Prioritize events with "Epistle" or "Gospel" in the description
+      readings.value = events.sort((a, b) => {
+        const aHasReadings = a.description && (a.description.includes('Epistle') || a.description.includes('Gospel'));
+        const bHasReadings = b.description && (b.description.includes('Epistle') || b.description.includes('Gospel'));
+
+        if (aHasReadings && !bHasReadings) return -1;
+        if (!aHasReadings && bHasReadings) return 1;
+        return 0;
+      });
     } catch (e) {
       error.value = e.message || 'Failed to load readings';
     } finally {
