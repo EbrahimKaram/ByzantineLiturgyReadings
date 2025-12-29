@@ -88,11 +88,17 @@ const parsed = computed(() => {
   const toneMatch = text.match(/Tone\s+(\d+)/i);
   const matinsMatch = text.match(/Res\.?\s*Gospel\s+(\d+)/i);
   
+  // Remove "Res. Gospel X" from text to prevent the "Gospel" regex from matching it
+  let readingText = text;
+  if (matinsMatch) {
+    readingText = text.replace(matinsMatch[0], '');
+  }
+
   // Epistle: Matches "Epistle" followed by content until "Gospel" or end
-  const epistleMatch = text.match(/Epistle\s+(.*?)(?=;?\s*Gospel|$)/i);
+  const epistleMatch = readingText.match(/Epistle\s+(.*?)(?=;?\s*Gospel|$)/i);
   
   // Gospel: Matches "Gospel" followed by content until "Following" or end
-  const gospelMatch = text.match(/Gospel\s+(.*?)(?=\s*Following|$)/i);
+  const gospelMatch = readingText.match(/Gospel\s+(.*?)(?=\s*Following|$)/i);
 
   // Notes: Matches everything after "Following"
   const notesMatch = text.match(/(Following.*)/i);
