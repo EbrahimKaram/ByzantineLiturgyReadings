@@ -34,13 +34,13 @@
       <main>
         <div v-if="loading" class="flex flex-col items-center justify-center py-12">
           <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-red-800 dark:border-red-600"></div>
-          <p class="mt-4 text-stone-600 dark:text-stone-400">Loading readings...</p>
+          <p class="mt-4 text-stone-600 dark:text-stone-400">Loading Calendar events...</p>
         </div>
 
         <div v-else-if="error" class="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-4 mb-8 rounded-r shadow-sm">
           <div class="flex">
             <div class="ml-3">
-              <h3 class="text-sm font-medium text-red-800 dark:text-red-200">Error loading readings</h3>
+              <h3 class="text-sm font-medium text-red-800 dark:text-red-200">Error loading Calendar events</h3>
               <div class="mt-2 text-sm text-red-700 dark:text-red-300">
                 <p>{{ error }}</p>
               </div>
