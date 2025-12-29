@@ -7,3 +7,5 @@ That would be derived from the following links
 
 `https://www.stgeorgeoh.org/calendar`
 
+
+We the Passage readings from the Bible-api.com
