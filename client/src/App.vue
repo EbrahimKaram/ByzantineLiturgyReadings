@@ -103,6 +103,11 @@ const { readings, loading, error, currentDate, previousSunday, nextSunday } = us
 
 const formatDate = (date) => {
   if (!date) return '';
-  return new Date(date).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  // make sure it's the date closest to sunday
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = d.getDate() + (day === 0 ? 0 : (7 - day));
+  const closestSunday = new Date(d.setDate(diff));
+  return closestSunday.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 };
 </script>

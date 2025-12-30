@@ -1,4 +1,4 @@
-import { ref, watch } from 'vue';
+import { ref, watch, onMounted, onUnmounted } from 'vue';
 import { fetchSundayReadings } from '../services/calendarService';
 
 export function useReadings() {
@@ -8,6 +8,21 @@ export function useReadings() {
   
   // Helper to get the initial Sunday (today or next Sunday)
   const getInitialSunday = () => {
+    // Check hash first
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      const parts = hash.split('-');
+      if (parts.length === 3) {
+        const year = parseInt(parts[0], 10);
+        const month = parseInt(parts[1], 10) - 1;
+        const day = parseInt(parts[2], 10);
+        const dateFromHash = new Date(year, month, day);
+        if (!isNaN(dateFromHash.getTime())) {
+          return dateFromHash;
+        }
+      }
+    }
+
     const d = new Date();
     const day = d.getDay();
     // If today is Sunday (0), we want today.
@@ -52,10 +67,49 @@ export function useReadings() {
     currentDate.value = newDate;
   };
 
-  // Watch for date changes to refetch data
-  watch(currentDate, () => {
+  // Watch for date changes to refetch data and update hash
+  watch(currentDate, (newDate) => {
+    const year = newDate.getFullYear();
+    const month = String(newDate.getMonth() + 1).padStart(2, '0');
+    const day = String(newDate.getDate()).padStart(2, '0');
+    const dateString = `${year}-${month}-${day}`;
+    
+    if (window.location.hash.substring(1) !== dateString) {
+      window.location.hash = dateString;
+    }
     loadReadings();
   }, { immediate: true });
+
+  const handleHashChange = () => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      const parts = hash.split('-');
+      if (parts.length === 3) {
+        const year = parseInt(parts[0], 10);
+        const month = parseInt(parts[1], 10) - 1;
+        const day = parseInt(parts[2], 10);
+        const dateFromHash = new Date(year, month, day);
+        
+        if (!isNaN(dateFromHash.getTime())) {
+          // Compare timestamps to avoid redundant updates
+          // Note: currentDate.value might have time components if not careful, 
+          // but our logic mostly keeps it clean or we just compare YMD.
+          // Let's just set it, the watcher will handle the rest (and check for loops via hash check)
+          if (dateFromHash.getTime() !== currentDate.value.getTime()) {
+             currentDate.value = dateFromHash;
+          }
+        }
+      }
+    }
+  };
+
+  onMounted(() => {
+    window.addEventListener('hashchange', handleHashChange);
+  });
+
+  onUnmounted(() => {
+    window.removeEventListener('hashchange', handleHashChange);
+  });
 
   return {
     readings,
