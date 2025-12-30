@@ -1,4 +1,4 @@
-# Byzantine Readings
+# Byzantine Divine Liturgy Sunday Readings
 
 A web application that displays the Sunday scripture readings from the Byzantine Lectionary.
 
@@ -13,7 +13,7 @@ A web application that displays the Sunday scripture readings from the Byzantine
 # Running
 To debug and test
  `npm run dev `
- 
+
 To build the product which included minimization
  `npm run build `
 
