@@ -22,14 +22,14 @@ jobs:
           cache-dependency-path: client/package-lock.json
 
       - name: Install Dependencies
-        env:
-          # This injects the secret into the build environment
-          VITE_GOOGLE_API_KEY: ${{ secrets.VITE_GOOGLE_API_KEY }}
         run: |
           cd client
           npm install
 
       - name: Build
+        env:
+          # This injects the secret into the build environment
+          VITE_GOOGLE_API_KEY: ${{ secrets.VITE_GOOGLE_API_KEY }}
         run: |
           cd client
           npm run build
