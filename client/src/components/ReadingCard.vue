@@ -34,10 +34,11 @@ const parsed = computed(() => {
   }
 
   // Epistle: Matches "Epistle" followed by content until "Gospel" or end
-  const epistleMatch = readingText.match(/Epistle\s+(.*?)(?=;?\s*Gospel|$)/i);
+  // Updated to handle cases like "11,Epistle" and optional colons
+  const epistleMatch = readingText.match(/(?:^|[\s,;.])Epistle[:\s]+\s*(.*?)(?=;?\s*Gospel|$)/i);
   
   // Gospel: Matches "Gospel" followed by content until "Following" or end
-  const gospelMatch = readingText.match(/Gospel\s+(.*?)(?=\s*Following|$)/i);
+  const gospelMatch = readingText.match(/(?:^|[\s,;.])Gospel[:\s]+\s*(.*?)(?=;?\s*Following|$)/i);
 
   // Notes: Matches everything after "Following"
   const notesMatch = text.match(/(Following.*)/i);
@@ -45,8 +46,8 @@ const parsed = computed(() => {
   return {
     tone: toneMatch ? toneMatch[1] : null,
     matinsGospel: matinsMatch ? matinsMatch[1] : null,
-    epistle: epistleMatch ? epistleMatch[1].trim().replace(/;$/, '') : null,
-    gospel: gospelMatch ? gospelMatch[1].trim() : null,
+    epistle: epistleMatch ? epistleMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '') : null,
+    gospel: gospelMatch ? gospelMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '') : null,
     notes: notesMatch ? notesMatch[1].trim() : null
   };
 });
