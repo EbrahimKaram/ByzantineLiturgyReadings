@@ -55,7 +55,7 @@
             
             <div v-if="showDatePicker" class="fixed inset-0 z-40" @click="showDatePicker = false"></div>
             
-            <div v-if="showDatePicker" class="absolute top-full mt-2 left-1/2 -translate-x-1/2 z-50">
+            <div v-if="showDatePicker" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:absolute sm:top-full sm:left-1/2 sm:-translate-x-1/2 sm:translate-y-0 sm:mt-2 z-50">
               <DatePicker 
                 :modelValue="currentDate" 
                 @update:modelValue="onDateSelect"
