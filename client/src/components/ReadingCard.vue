@@ -99,15 +99,36 @@ const parsed = computed(() => {
     if (gospelMatch) gospel = gospelMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '');
   }
 
-  // Notes: Matches everything after "Following"
-  const notesMatch = text.match(/(Following.*)/i);
+  // Notes extraction
+  // 1. "Following..." section at the end
+  const followingMatch = text.match(/(Following.*)/i);
+  
+  // 2. Introductory notes (anything before the first reading marker)
+  // Markers: Tone, Res. Gospel, Matins Gospel, Divine Liturgy, Epistle, Gospel
+  // We find the index of the first marker
+  const markersRegex = /Tone\s+\d+|Res\.?\s*Gospel|Matins\s+Gospel|Divine\s+Liturgy|Epistle:|Gospel:/i;
+  const firstMarkerMatch = text.match(markersRegex);
+  
+  let introNote = null;
+  if (firstMarkerMatch && firstMarkerMatch.index > 0) {
+    introNote = text.substring(0, firstMarkerMatch.index).trim();
+    // Clean up trailing punctuation if any, mostly keeping it simple
+  } else if (!firstMarkerMatch) {
+    // If no readings found, maybe the whole text is a note? 
+    // But we usually rely on hasParsedData to show anything.
+    // Let's assume if no markers, we don't treat it as intro note here to avoid duplication if the logic fails.
+  }
+
+  const combinedNotes = [introNote, followingMatch ? followingMatch[1].trim() : null]
+    .filter(Boolean)
+    .join('\n\n');
 
   return {
     tone: toneMatch ? toneMatch[1] : null,
     matinsGospel,
     epistle,
     gospel,
-    notes: notesMatch ? notesMatch[1].trim() : null
+    notes: combinedNotes || null
   };
 });
 
