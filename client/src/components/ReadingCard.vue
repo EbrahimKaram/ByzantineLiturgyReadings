@@ -14,7 +14,46 @@ const props = defineProps({
   link: {
     type: String,
     default: ''
+  },
+  start: {
+    type: Object,
+    default: null
+  },
+  end: {
+    type: Object,
+    default: null
   }
+});
+
+const dateDisplay = computed(() => {
+  if (!props.start) return '';
+
+  const getDto = (dt) => dt.dateTime ? new Date(dt.dateTime) : new Date(dt.date + 'T00:00:00');
+  const isAllDay = (dt) => !!dt.date;
+
+  const startDate = getDto(props.start);
+  
+  const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+  const strStart = startDate.toLocaleDateString(undefined, options);
+
+  if (!props.end) return strStart;
+
+  const endDate = getDto(props.end);
+  
+  // Google Calendar all-day events have an exclusive end date (starts next day at 00:00)
+  // We subtract 1 second to pull it back to the actual visual end day for comparison
+  if (isAllDay(props.end)) {
+    endDate.setSeconds(endDate.getSeconds() - 1);
+  }
+
+  // If it's the same day, just return that day
+  if (startDate.toDateString() === endDate.toDateString()) {
+    return strStart;
+  }
+
+  // It's a multi-day event
+  const strEnd = endDate.toLocaleDateString(undefined, options);
+  return `${strStart} – ${strEnd}`;
 });
 
 const parsed = computed(() => {
@@ -25,29 +64,71 @@ const parsed = computed(() => {
 
   // Regex patterns
   const toneMatch = text.match(/Tone\s+(\d+)/i);
-  const matinsMatch = text.match(/Res\.?\s*Gospel\s+(\d+)/i);
+
+  // Matins parsing
+  // 1. "Res. Gospel <number>"
+  const matinsResMatch = text.match(/Res\.?\s*Gospel\s+(\d+)/i);
+  // 2. "Matins Gospel: <text>"
+  // Using simplified capture that respects sentence boundaries but allows abbreviations (e.g. "Mt.")
+  const matinsTextMatch = text.match(/Matins\s+Gospel:?\s*(.*?)(?=\s+Divine Liturgy|\s*Following|\.\s*[A-Z]|\.\s*$|$)/i);
   
-  // Remove "Res. Gospel X" from text to prevent the "Gospel" regex from matching it
+  const matinsGospel = matinsResMatch ? matinsResMatch[1] : (matinsTextMatch ? matinsTextMatch[1].trim() : null);
+
+  // Remove Matins part from text to prevent the generic "Gospel" regex from matching it
   let readingText = text;
-  if (matinsMatch) {
-    readingText = text.replace(matinsMatch[0], '');
+  if (matinsResMatch) readingText = readingText.replace(matinsResMatch[0], '');
+  if (matinsTextMatch) readingText = readingText.replace(matinsTextMatch[0], '');
+
+  // Divine Liturgy Parsing
+  let epistle = null;
+  let gospel = null;
+
+  // Check for combined "Divine Liturgy: <Epistle>; <Gospel>" pattern first
+  // Relaxed regex to allow dots in abbreviations (e.g. "Mt.") but stop at logical sentence ends
+  const divineLiturgyMatch = readingText.match(/Divine Liturgy:?\s*([^;]+);\s*(.*?)(?=\s*Following|\.\s*[A-Z]|\.\s*$|$)/i);
+
+  if (divineLiturgyMatch) {
+    epistle = divineLiturgyMatch[1].trim();
+    gospel = divineLiturgyMatch[2].trim();
+  } else {
+    // Fallback to standard "Epistle:" and "Gospel:" keywords
+    const epistleMatch = readingText.match(/(?:^|[\s,;.])Epistle[:\s]+\s*(.*?)(?=;?\s*Gospel|$)/i);
+    const gospelMatch = readingText.match(/(?:^|[\s,;.])Gospel[:\s]+\s*(.*?)(?=;?\s*Following|$)/i);
+
+    if (epistleMatch) epistle = epistleMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '');
+    if (gospelMatch) gospel = gospelMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '');
   }
 
-  // Epistle: Matches "Epistle" followed by content until "Gospel" or end
-  const epistleMatch = readingText.match(/Epistle\s+(.*?)(?=;?\s*Gospel|$)/i);
+  // Notes extraction
+  // 1. "Following..." section at the end
+  const followingMatch = text.match(/(Following.*)/i);
   
-  // Gospel: Matches "Gospel" followed by content until "Following" or end
-  const gospelMatch = readingText.match(/Gospel\s+(.*?)(?=\s*Following|$)/i);
+  // 2. Introductory notes (anything before the first reading marker)
+  // Markers: Tone, Res. Gospel, Matins Gospel, Divine Liturgy, Epistle, Gospel
+  // We find the index of the first marker
+  const markersRegex = /Tone\s+\d+|Res\.?\s*Gospel|Matins\s+Gospel|Divine\s+Liturgy|Epistle:|Gospel:/i;
+  const firstMarkerMatch = text.match(markersRegex);
+  
+  let introNote = null;
+  if (firstMarkerMatch && firstMarkerMatch.index > 0) {
+    introNote = text.substring(0, firstMarkerMatch.index).trim();
+    // Clean up trailing punctuation if any, mostly keeping it simple
+  } else if (!firstMarkerMatch) {
+    // If no readings found, maybe the whole text is a note? 
+    // But we usually rely on hasParsedData to show anything.
+    // Let's assume if no markers, we don't treat it as intro note here to avoid duplication if the logic fails.
+  }
 
-  // Notes: Matches everything after "Following"
-  const notesMatch = text.match(/(Following.*)/i);
+  const combinedNotes = [introNote, followingMatch ? followingMatch[1].trim() : null]
+    .filter(Boolean)
+    .join('\n\n');
 
   return {
     tone: toneMatch ? toneMatch[1] : null,
-    matinsGospel: matinsMatch ? matinsMatch[1] : null,
-    epistle: epistleMatch ? epistleMatch[1].trim().replace(/;$/, '') : null,
-    gospel: gospelMatch ? gospelMatch[1].trim() : null,
-    notes: notesMatch ? notesMatch[1].trim() : null
+    matinsGospel,
+    epistle,
+    gospel,
+    notes: combinedNotes || null
   };
 });
 
@@ -88,6 +169,9 @@ const toggleGospel = async () => {
 
 <template>
   <div class="bg-white dark:bg-stone-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border-t-4 border-red-800 dark:border-red-600">
+    <div v-if="dateDisplay" class="text-sm font-semibold text-stone-500 dark:text-stone-400 mb-2 uppercase tracking-wide">
+      {{ dateDisplay }}
+    </div>
     <h2 class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6 border-b border-stone-200 dark:border-stone-700 pb-2">
       {{ title }}
     </h2>

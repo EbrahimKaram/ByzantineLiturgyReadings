@@ -71,12 +71,20 @@
         </div>
 
         <div v-else class="space-y-8">
+          <div class="text-center">
+             <a :href="romanCatholicLink" target="_blank" rel="noopener noreferrer" class="text-sm text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-300 transition-colors underline decoration-stone-300 dark:decoration-stone-600">
+              Roman Catholic Readings for this day
+            </a>
+          </div>
+
           <ReadingCard
             v-for="event in readings"
             :key="event.id"
             :title="event.summary"
             :description="event.description"
             :link="event.htmlLink"
+            :start="event.start"
+            :end="event.end"
           />
           
           <div v-if="!loading && readings.length === 0" class="text-center py-12 bg-white dark:bg-stone-800 rounded-lg shadow p-6">
@@ -106,6 +114,7 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
 import { useReadings } from './composables/useReadings';
 import ReadingCard from './components/ReadingCard.vue';
 
@@ -120,4 +129,14 @@ const formatDate = (date) => {
   const closestSunday = new Date(d.setDate(diff));
   return closestSunday.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 };
+
+const romanCatholicLink = computed(() => {
+  if (!currentDate.value) return '#';
+  const d = new Date(currentDate.value);
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  const year = String(d.getFullYear()).slice(-2);
+  
+  return `https://bible.usccb.org/bible/readings/${month}${day}${year}.cfm`;
+});
 </script>
