@@ -83,6 +83,8 @@
             :title="event.summary"
             :description="event.description"
             :link="event.htmlLink"
+            :start="event.start"
+            :end="event.end"
           />
           
           <div v-if="!loading && readings.length === 0" class="text-center py-12 bg-white dark:bg-stone-800 rounded-lg shadow p-6">

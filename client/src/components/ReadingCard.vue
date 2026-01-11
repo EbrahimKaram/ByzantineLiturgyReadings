@@ -14,7 +14,46 @@ const props = defineProps({
   link: {
     type: String,
     default: ''
+  },
+  start: {
+    type: Object,
+    default: null
+  },
+  end: {
+    type: Object,
+    default: null
   }
+});
+
+const dateDisplay = computed(() => {
+  if (!props.start) return '';
+
+  const getDto = (dt) => dt.dateTime ? new Date(dt.dateTime) : new Date(dt.date + 'T00:00:00');
+  const isAllDay = (dt) => !!dt.date;
+
+  const startDate = getDto(props.start);
+  
+  const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+  const strStart = startDate.toLocaleDateString(undefined, options);
+
+  if (!props.end) return strStart;
+
+  const endDate = getDto(props.end);
+  
+  // Google Calendar all-day events have an exclusive end date (starts next day at 00:00)
+  // We subtract 1 second to pull it back to the actual visual end day for comparison
+  if (isAllDay(props.end)) {
+    endDate.setSeconds(endDate.getSeconds() - 1);
+  }
+
+  // If it's the same day, just return that day
+  if (startDate.toDateString() === endDate.toDateString()) {
+    return strStart;
+  }
+
+  // It's a multi-day event
+  const strEnd = endDate.toLocaleDateString(undefined, options);
+  return `${strStart} – ${strEnd}`;
 });
 
 const parsed = computed(() => {
@@ -89,6 +128,9 @@ const toggleGospel = async () => {
 
 <template>
   <div class="bg-white dark:bg-stone-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border-t-4 border-red-800 dark:border-red-600">
+    <div v-if="dateDisplay" class="text-sm font-semibold text-stone-500 dark:text-stone-400 mb-2 uppercase tracking-wide">
+      {{ dateDisplay }}
+    </div>
     <h2 class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6 border-b border-stone-200 dark:border-stone-700 pb-2">
       {{ title }}
     </h2>
