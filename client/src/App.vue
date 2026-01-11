@@ -43,6 +43,27 @@
           
           <div class="h-6 w-px bg-stone-300 dark:bg-stone-600 mx-2"></div>
 
+          <div class="relative">
+            <button 
+              @click="toggleDatePicker"
+              class="p-1.5 rounded-md hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
+              :class="{ 'bg-stone-100 dark:bg-stone-700 text-red-800 dark:text-red-400': showDatePicker }"
+              title="Select Date"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </button>
+            
+            <div v-if="showDatePicker" class="fixed inset-0 z-40" @click="showDatePicker = false"></div>
+            
+            <div v-if="showDatePicker" class="absolute top-full mt-2 left-1/2 -translate-x-1/2 z-50">
+              <DatePicker 
+                :modelValue="currentDate" 
+                @update:modelValue="onDateSelect"
+                @close="showDatePicker = false"
+              />
+            </div>
+          </div>
+
           <button 
             @click="goToToday"
             class="px-3 py-1.5 text-sm font-medium rounded-md hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
@@ -118,11 +139,30 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useReadings } from './composables/useReadings';
 import ReadingCard from './components/ReadingCard.vue';
+import DatePicker from './components/DatePicker.vue';
 
 const { readings, loading, error, currentDate, previousSunday, nextSunday, goToToday } = useReadings();
+const showDatePicker = ref(false);
+
+const toggleDatePicker = () => {
+  showDatePicker.value = !showDatePicker.value;
+};
+
+const onDateSelect = (selectedDate) => {
+  // Snap to next Sunday logic to match existing behavior
+  const day = selectedDate.getDay();
+  // If Sunday (0) -> 0
+  // If Mon (1) -> 6
+  // ...
+  const diff = day === 0 ? 0 : (7 - day);
+  const nextSundayDate = new Date(selectedDate);
+  nextSundayDate.setDate(selectedDate.getDate() + diff);
+  
+  currentDate.value = nextSundayDate;
+};
 
 const formatDate = (date) => {
   if (!date) return '';
