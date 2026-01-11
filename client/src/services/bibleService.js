@@ -10,7 +10,7 @@ export async function fetchScriptureText(reference) {
     .replace(/\s*:\s*/g, ':') // Remove spaces around colons
     .replace(/\s*-\s*/g, '-') // Remove spaces around hyphens
     .trim()
-    .replace(/[.;]+$/, ''); // Remove trailing periods or semicolons
+    .replace(/[.;,]+$/, ''); // Remove trailing periods, semicolons, or commas
 
   try {
     // 2. Split by semicolon to handle multiple ranges
