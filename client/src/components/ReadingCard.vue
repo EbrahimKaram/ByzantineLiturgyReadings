@@ -64,29 +64,49 @@ const parsed = computed(() => {
 
   // Regex patterns
   const toneMatch = text.match(/Tone\s+(\d+)/i);
-  const matinsMatch = text.match(/Res\.?\s*Gospel\s+(\d+)/i);
-  
-  // Remove "Res. Gospel X" from text to prevent the "Gospel" regex from matching it
-  let readingText = text;
-  if (matinsMatch) {
-    readingText = text.replace(matinsMatch[0], '');
-  }
 
-  // Epistle: Matches "Epistle" followed by content until "Gospel" or end
-  // Updated to handle cases like "11,Epistle" and optional colons
-  const epistleMatch = readingText.match(/(?:^|[\s,;.])Epistle[:\s]+\s*(.*?)(?=;?\s*Gospel|$)/i);
+  // Matins parsing
+  // 1. "Res. Gospel <number>"
+  const matinsResMatch = text.match(/Res\.?\s*Gospel\s+(\d+)/i);
+  // 2. "Matins Gospel: <text>"
+  // Using simplified capture that respects sentence boundaries but allows abbreviations (e.g. "Mt.")
+  const matinsTextMatch = text.match(/Matins\s+Gospel:?\s*(.*?)(?=\s+Divine Liturgy|\s*Following|\.\s*[A-Z]|\.\s*$|$)/i);
   
-  // Gospel: Matches "Gospel" followed by content until "Following" or end
-  const gospelMatch = readingText.match(/(?:^|[\s,;.])Gospel[:\s]+\s*(.*?)(?=;?\s*Following|$)/i);
+  const matinsGospel = matinsResMatch ? matinsResMatch[1] : (matinsTextMatch ? matinsTextMatch[1].trim() : null);
+
+  // Remove Matins part from text to prevent the generic "Gospel" regex from matching it
+  let readingText = text;
+  if (matinsResMatch) readingText = readingText.replace(matinsResMatch[0], '');
+  if (matinsTextMatch) readingText = readingText.replace(matinsTextMatch[0], '');
+
+  // Divine Liturgy Parsing
+  let epistle = null;
+  let gospel = null;
+
+  // Check for combined "Divine Liturgy: <Epistle>; <Gospel>" pattern first
+  // Relaxed regex to allow dots in abbreviations (e.g. "Mt.") but stop at logical sentence ends
+  const divineLiturgyMatch = readingText.match(/Divine Liturgy:?\s*([^;]+);\s*(.*?)(?=\s*Following|\.\s*[A-Z]|\.\s*$|$)/i);
+
+  if (divineLiturgyMatch) {
+    epistle = divineLiturgyMatch[1].trim();
+    gospel = divineLiturgyMatch[2].trim();
+  } else {
+    // Fallback to standard "Epistle:" and "Gospel:" keywords
+    const epistleMatch = readingText.match(/(?:^|[\s,;.])Epistle[:\s]+\s*(.*?)(?=;?\s*Gospel|$)/i);
+    const gospelMatch = readingText.match(/(?:^|[\s,;.])Gospel[:\s]+\s*(.*?)(?=;?\s*Following|$)/i);
+
+    if (epistleMatch) epistle = epistleMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '');
+    if (gospelMatch) gospel = gospelMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '');
+  }
 
   // Notes: Matches everything after "Following"
   const notesMatch = text.match(/(Following.*)/i);
 
   return {
     tone: toneMatch ? toneMatch[1] : null,
-    matinsGospel: matinsMatch ? matinsMatch[1] : null,
-    epistle: epistleMatch ? epistleMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '') : null,
-    gospel: gospelMatch ? gospelMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '') : null,
+    matinsGospel,
+    epistle,
+    gospel,
     notes: notesMatch ? notesMatch[1].trim() : null
   };
 });
