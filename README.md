@@ -5,6 +5,9 @@ A web application that displays the Sunday scripture readings from the Byzantine
 - **Live Website:** [https://www.ebrahimkaram.com/ByzantineLiturgyReadings/](https://www.ebrahimkaram.com/ByzantineLiturgyReadings/)
 - **GitHub Repository:** [https://github.com/EbrahimKaram/ByzantineLiturgyReadings](https://github.com/EbrahimKaram/ByzantineLiturgyReadings)
 
+Hopefully if you want a better reference
+https://romaniancatholic.org/liturgical-calendar
+
 ## Data Sources
 - **Calendar:** [Google Calendar](https://calendar.google.com/calendar/u/0/embed?src=9pp7p6nos1t3tca6sjo4g6hui0@group.calendar.google.com) (Derived from [St. George Cathedral](https://www.stgeorgeoh.org/calendar))
 - **Scripture Text:** [Bible-api.com](https://bible-api.com) (Douay-Rheims Version)
