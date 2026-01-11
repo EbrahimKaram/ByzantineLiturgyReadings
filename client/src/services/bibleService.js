@@ -65,15 +65,36 @@ export async function fetchScriptureText(reference) {
 }
 
 async function fetchSinglePassage(ref) {
+  const cacheKey = `bible_text_${ref}`;
+  
+  // 1. Check Cache
+  try {
+    const cached = localStorage.getItem(cacheKey);
+    if (cached) {
+      return JSON.parse(cached);
+    }
+  } catch (e) {
+    // Ignore potential input errors
+  }
+
   try {
     const response = await fetch(`${BASE_URL}/${encodeURIComponent(ref)}?translation=dra`);
     if (!response.ok) return null;
     const data = await response.json();
     
     // Transform verses into HTML with superscript numbers
-    return data.verses.map(v => 
+    const htmlContent = data.verses.map(v => 
       `<span class="text-xs align-top text-red-800 dark:text-red-400 font-bold mr-0.5 select-none">${v.verse}</span>${v.text}`
     ).join(' ');
+
+    // 2. Save to Cache
+    try {
+      localStorage.setItem(cacheKey, JSON.stringify(htmlContent));
+    } catch (e) {
+      // Quota exceeded or disabled
+    }
+
+    return htmlContent;
     
   } catch (e) {
     console.error(`Failed to fetch part: ${ref}`, e);
