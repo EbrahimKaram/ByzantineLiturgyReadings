@@ -14,11 +14,13 @@ https://romaniancatholic.org/liturgical-calendar
 
 
 # Running
-To debug and test
+To debug and test. You need to make sure you cd into `client`
  `npm run dev `
 
 To build the product which included minimization
  `npm run build `
+
+ Github has an automated deploy that would create the build for me.
 
 ## Support
 If you find this project useful, please consider supporting it!
