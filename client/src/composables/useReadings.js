@@ -67,6 +67,14 @@ export function useReadings() {
     currentDate.value = newDate;
   };
 
+  const goToToday = () => {
+    // Reset to "today" (meaning the upcoming/current Sunday)
+    const d = new Date();
+    const day = d.getDay();
+    const diff = d.getDate() + (day === 0 ? 0 : (7 - day));
+    currentDate.value = new Date(d.setDate(diff));
+  };
+
   // Watch for date changes to refetch data and update hash
   watch(currentDate, (newDate) => {
     const year = newDate.getFullYear();
@@ -117,6 +125,7 @@ export function useReadings() {
     error,
     currentDate,
     previousSunday,
-    nextSunday
+    nextSunday,
+    goToToday
   };
 }
