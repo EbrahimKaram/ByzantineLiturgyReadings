@@ -40,6 +40,16 @@
           >
             →
           </button>
+          
+          <div class="h-6 w-px bg-stone-300 dark:bg-stone-600 mx-2"></div>
+
+          <button 
+            @click="goToToday"
+            class="px-3 py-1.5 text-sm font-medium rounded-md hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
+            title="Go to current Sunday"
+          >
+            Today
+          </button>
         </div>
       </div>
 
@@ -99,7 +109,7 @@
 import { useReadings } from './composables/useReadings';
 import ReadingCard from './components/ReadingCard.vue';
 
-const { readings, loading, error, currentDate, previousSunday, nextSunday } = useReadings();
+const { readings, loading, error, currentDate, previousSunday, nextSunday, goToToday } = useReadings();
 
 const formatDate = (date) => {
   if (!date) return '';
