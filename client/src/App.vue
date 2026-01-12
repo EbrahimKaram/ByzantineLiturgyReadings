@@ -20,7 +20,9 @@
 
       <!-- Date Navigation Controls (Sticky) -->
       <div class="sticky top-4 z-30 flex justify-center mb-8">
-        <div class="flex items-center justify-center space-x-4 bg-white/90 dark:bg-stone-800/90 backdrop-blur-sm p-4 rounded-lg shadow-lg border border-stone-200 dark:border-stone-700">
+        <div class="relative">
+          <div class="absolute inset-0 bg-white/90 dark:bg-stone-800/90 backdrop-blur-sm rounded-lg shadow-lg border border-stone-200 dark:border-stone-700"></div>
+          <div class="relative flex items-center justify-center space-x-4 p-4">
           <button 
             @click="previousSunday"
             class="p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
@@ -55,7 +57,7 @@
             
             <div v-if="showDatePicker" class="fixed inset-0 z-40" @click="showDatePicker = false"></div>
             
-            <div v-if="showDatePicker" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:absolute sm:top-full sm:left-1/2 sm:-translate-x-1/2 sm:translate-y-0 sm:mt-2 z-50">
+            <div v-if="showDatePicker" class="absolute top-full right-0 sm:left-1/2 sm:-translate-x-1/2 sm:right-auto mt-2 z-50">
               <DatePicker 
                 :modelValue="currentDate" 
                 @update:modelValue="onDateSelect"
@@ -71,6 +73,7 @@
           >
             Today
           </button>
+          </div>
         </div>
       </div>
 
