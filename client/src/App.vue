@@ -22,28 +22,28 @@
       <div class="sticky top-4 z-30 flex justify-center mb-8">
         <div class="relative">
           <div class="absolute inset-0 bg-white/90 dark:bg-stone-800/90 backdrop-blur-sm rounded-lg shadow-lg border border-stone-200 dark:border-stone-700"></div>
-          <div class="relative flex items-center justify-center space-x-4 p-4">
+          <div class="relative flex items-center justify-center space-x-2 sm:space-x-4 p-2 sm:p-4">
           <button 
             @click="previousSunday"
-            class="p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
+            class="p-1 sm:p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
             aria-label="Previous Sunday"
           >
             ←
           </button>
           
-          <span class="text-lg font-semibold text-stone-800 dark:text-stone-200 min-w-[140px] text-center">
+          <span class="text-sm sm:text-lg font-semibold text-stone-800 dark:text-stone-200 min-w-[110px] sm:min-w-[140px] text-center">
             {{ formatDate(currentDate) }}
           </span>
           
           <button 
             @click="nextSunday"
-            class="p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
+            class="p-1 sm:p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
             aria-label="Next Sunday"
           >
             →
           </button>
           
-          <div class="h-6 w-px bg-stone-300 dark:bg-stone-600 mx-2"></div>
+          <div class="h-6 w-px bg-stone-300 dark:bg-stone-600 mx-1 sm:mx-2"></div>
 
           <div class="relative">
             <button 
@@ -68,7 +68,7 @@
 
           <button 
             @click="goToToday"
-            class="px-3 py-1.5 text-sm font-medium rounded-md hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
+            class="px-2 sm:px-3 py-1.5 text-xs sm:text-sm font-medium rounded-md hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
             title="Go to current Sunday"
           >
             Today
