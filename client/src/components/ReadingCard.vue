@@ -128,10 +128,13 @@ const parsed = computed(() => {
   // Clean up remaining punctuation and "Following" label
   let notes = workText
     // .replace(/Following[:\s]*/i, '') // Remove "Following" keyword if it remains
-    .replace(/^[\s,;.]+|[\s,;.]+$/g, '') // Trim punctuation from start/end
-    .replace(/,,+/g, '')
+    .replace(/^[\s,;.]+|[\s,;.]+$/g, '')  // Trim punctuation from start/end
+    .replace(/\s+([,;.])/g, '$1')         // Remove space before punctuation (e.g. " ,")
+    .replace(/[,;]+\s*\./g, '.')          // Fix combined separators (e.g. ",." -> ".")
+    .replace(/\.\s*[,;]+/g, '.')          // Fix dot followed by comma/semicolon
+    .replace(/,,+/g, ',')                 // Fix multiple commas (was previously removing them)
+    .replace(/\.\.+/g, '.')               // Fix multiple dots
     .trim();
-
   return {
     tone,
     matinsGospel,
