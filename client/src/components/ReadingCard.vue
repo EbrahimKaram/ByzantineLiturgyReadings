@@ -59,77 +59,85 @@ const dateDisplay = computed(() => {
 const parsed = computed(() => {
   if (!props.description) return {};
 
-  // Simple HTML strip for parsing text content
-  const text = props.description.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
-
-  // Regex patterns
-  const toneMatch = text.match(/Tone\s+(\d+)/i);
-
-  // Matins parsing
-  // 1. "Res. Gospel <number>"
-  const matinsResMatch = text.match(/Res\.?\s*Gospel\s+(\d+)/i);
-  // 2. "Matins Gospel: <text>"
-  // Using simplified capture that respects sentence boundaries but allows abbreviations (e.g. "Mt.")
-  const matinsTextMatch = text.match(/Matins\s+Gospel:?\s*(.*?)(?=\s+Divine Liturgy|\s*Following|\.\s*[A-Z]|\.\s*$|$)/i);
+  // Start with a clean working copy
+  let workText = props.description.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
   
-  const matinsGospel = matinsResMatch ? matinsResMatch[1] : (matinsTextMatch ? matinsTextMatch[1].trim() : null);
+  // Helper to clean extracted values (remove trailing punctuation)
+  const clean = (s) => s?.trim().replace(/^[;:,.\-\s]+|[;:,.\-\s]+$/g, '') || null;
 
-  // Remove Matins part from text to prevent the generic "Gospel" regex from matching it
-  let readingText = text;
-  if (matinsResMatch) readingText = readingText.replace(matinsResMatch[0], '');
-  if (matinsTextMatch) readingText = readingText.replace(matinsTextMatch[0], '');
+  // 1. Extract Tone
+  let tone = null;
+  const toneMatch = workText.match(/Tone\s+(\d+)/i);
+  if (toneMatch) {
+    tone = toneMatch[1];
+    workText = workText.replace(toneMatch[0], '');
+  }
 
-  // Divine Liturgy Parsing
+  // 2. Extract Matins
+  let matinsGospel = null;
+  const matinsResMatch = workText.match(/Res\.?\s*Gospel\s+(\d+)/i);
+  
+  if (matinsResMatch) {
+    matinsGospel = matinsResMatch[1];
+    workText = workText.replace(matinsResMatch[0], '');
+  } else {
+    // Look for explicit Matins Gospel phrase, stopping before other major keywords
+    const matinsTextMatch = workText.match(/Matins\s+Gospel:?\s*(.+?)(?=\s*(?:Divine Liturgy|Epistle|Gospel|Following)|$)/i);
+    if (matinsTextMatch) {
+      matinsGospel = clean(matinsTextMatch[1]);
+      workText = workText.replace(matinsTextMatch[0], '');
+    }
+  }
+
+  // 3. Prepare for Liturgy Parsing
   let epistle = null;
   let gospel = null;
 
-  // Check for combined "Divine Liturgy: <Epistle>; <Gospel>" pattern first
-  // Relaxed regex to allow dots in abbreviations (e.g. "Mt.") but stop at logical sentence ends
-  const divineLiturgyMatch = readingText.match(/Divine Liturgy:?\s*([^;]+);\s*(.*?)(?=\s*Following|\.\s*[A-Z]|\.\s*$|$)/i);
-
-  if (divineLiturgyMatch) {
-    epistle = divineLiturgyMatch[1].trim();
-    gospel = divineLiturgyMatch[2].trim();
+  // Check for implicit "Divine Liturgy: <Epistle>; <Gospel>" pattern first (where labels are missing)
+  // This must look at props.description or workText before stripping "Divine Liturgy" blindly
+  // We match "Divine Liturgy" followed by texts separated by semicolon, ending at period or "Following"
+  const implicitMatch = workText.match(/Divine Liturgy:?\s*([^;]+);\s*([^;]+?)(?=\s*(?:Following|\.\s*[A-Z]|$))/i);
+  
+  if (implicitMatch) {
+    // If we found the implicit pair, capture them and remove the whole segment
+    epistle = clean(implicitMatch[1]);
+    gospel = clean(implicitMatch[2]);
+    workText = workText.replace(implicitMatch[0], '');
   } else {
-    // Fallback to standard "Epistle:" and "Gospel:" keywords
-    const epistleMatch = readingText.match(/(?:^|[\s,;.])Epistle[:\s]+\s*(.*?)(?=;?\s*Gospel|$)/i);
-    // Updated regex to stop at sentence boundaries (e.g. ". The readings...") to avoid capturing trailing notes
-    const gospelMatch = readingText.match(/(?:^|[\s,;.])Gospel[:\s]+\s*(.*?)(?=;?\s*Following|\.\s+[A-Z]|$)/i);
+    // Fallback: Remove "Divine Liturgy" header if present to clean up the text for keyword search
+    workText = workText.replace(/Divine Liturgy:?/i, '');
 
-    if (epistleMatch) epistle = epistleMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '');
-    if (gospelMatch) gospel = gospelMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '');
+    // 4. Extract Epistle
+    // Look for "Epistle:" followed by text until "Gospel" or end
+    const epistleMatch = workText.match(/(?:^|[\s,;.])Epistle:?\s*(.+?)(?=\s*(?:Gospel|Following)|$)/i);
+    if (epistleMatch) {
+      epistle = clean(epistleMatch[1]);
+      workText = workText.replace(epistleMatch[0], '');
+    }
+
+    // 5. Extract Gospel
+    // Look for "Gospel:" followed by text until "Following", a new sentence with Capital Letter, or end
+    const gospelMatch = workText.match(/(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|\.\s+[A-Z])|$)/i);
+    if (gospelMatch) {
+      gospel = clean(gospelMatch[1]);
+      workText = workText.replace(gospelMatch[0], '');
+    }
   }
 
-  // Notes extraction
-  // 1. "Following..." section at the end
-  const followingMatch = text.match(/(Following.*)/i);
-  
-  // 2. Introductory notes (anything before the first reading marker)
-  // Markers: Tone, Res. Gospel, Matins Gospel, Divine Liturgy, Epistle, Gospel
-  // We find the index of the first marker
-  const markersRegex = /Tone\s+\d+|Res\.?\s*Gospel|Matins\s+Gospel|Divine\s+Liturgy|Epistle:|Gospel:/i;
-  const firstMarkerMatch = text.match(markersRegex);
-  
-  let introNote = null;
-  if (firstMarkerMatch && firstMarkerMatch.index > 0) {
-    introNote = text.substring(0, firstMarkerMatch.index).trim();
-    // Clean up trailing punctuation if any, mostly keeping it simple
-  } else if (!firstMarkerMatch) {
-    // If no readings found, maybe the whole text is a note? 
-    // But we usually rely on hasParsedData to show anything.
-    // Let's assume if no markers, we don't treat it as intro note here to avoid duplication if the logic fails.
-  }
-
-  const combinedNotes = [introNote, followingMatch ? followingMatch[1].trim() : null]
-    .filter(Boolean)
-    .join('\n\n');
+  // 6. Extract Notes (Whatever is left)
+  // Clean up remaining punctuation and "Following" label
+  let notes = workText
+    // .replace(/Following[:\s]*/i, '') // Remove "Following" keyword if it remains
+    .replace(/^[\s,;.]+|[\s,;.]+$/g, '') // Trim punctuation from start/end
+    .replace(/,,+/g, '')
+    .trim();
 
   return {
-    tone: toneMatch ? toneMatch[1] : null,
+    tone,
     matinsGospel,
     epistle,
     gospel,
-    notes: combinedNotes || null
+    notes: notes || null
   };
 });
 
