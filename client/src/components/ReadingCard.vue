@@ -93,7 +93,8 @@ const parsed = computed(() => {
   } else {
     // Fallback to standard "Epistle:" and "Gospel:" keywords
     const epistleMatch = readingText.match(/(?:^|[\s,;.])Epistle[:\s]+\s*(.*?)(?=;?\s*Gospel|$)/i);
-    const gospelMatch = readingText.match(/(?:^|[\s,;.])Gospel[:\s]+\s*(.*?)(?=;?\s*Following|$)/i);
+    // Updated regex to stop at sentence boundaries (e.g. ". The readings...") to avoid capturing trailing notes
+    const gospelMatch = readingText.match(/(?:^|[\s,;.])Gospel[:\s]+\s*(.*?)(?=;?\s*Following|\.\s+[A-Z]|$)/i);
 
     if (epistleMatch) epistle = epistleMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '');
     if (gospelMatch) gospel = gospelMatch[1].trim().replace(/^[;:,.\s]+|[;:,.\s]+$/g, '');
