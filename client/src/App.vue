@@ -14,8 +14,11 @@
             <line x1="8" y1="15" x2="16" y2="18"></line>
           </svg>
         </div>
-        <h1 class="text-4xl font-bold text-stone-800 dark:text-stone-100 mb-2 tracking-tight">Byzantine Liturgy Readings</h1>
-        <p class="text-stone-600 dark:text-stone-400 italic">Scripture readings for the Sunday Liturgies from the <a href="https://www.stgeorgeoh.org/calendar" target="_blank" rel="noopener noreferrer" class="underline">Saint George Cathedral Calendar</a></p>
+        <h1 class="text-4xl font-bold text-stone-800 dark:text-stone-100 mb-2 tracking-tight">Romanian Byzantine Liturgy Readings</h1>
+        <p class="text-stone-600 dark:text-stone-400 italic">Scripture readings for the Sunday Romanian Byzantine Liturgies from the <a href="https://www.stgeorgeoh.org/calendar" target="_blank" rel="noopener noreferrer" class="underline">Saint George Cathedral Calendar.</a>
+        
+          We are specifically following the readings as outlined by the Romanian <a href="https://romaniancatholic.org/" target="_blank" rel="noopener noreferrer" class="underline">Catholic Diocese Eparchy of St. George in Canton</a>.</p>
+
       </header>
 
       <!-- Date Navigation Controls (Sticky) -->
