@@ -9,6 +9,8 @@ export async function fetchScriptureText(reference) {
     .replace(/–/g, '-')
     .replace(/\s*:\s*/g, ':') // Remove spaces around colons
     .replace(/\s*-\s*/g, '-') // Remove spaces around hyphens
+    // Fix for "Verse-Verse-Chapter:Verse" patterns (e.g. "8:8-13-9:1-2") which should be semicolon separated
+    .replace(/(\d+-\d+)-(\d+:)/g, '$1;$2')
     .trim()
     .replace(/[.;,]+$/, ''); // Remove trailing periods, semicolons, or commas
 
