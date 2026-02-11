@@ -31,12 +31,12 @@
     "Month": "January",
     "Day": 3,
     "Raw Text": "3\nDispensation (H\u00e2r\u021bi)\nMalachi, prophet. Gordius,\nmartyr",
-    "Title": "Dispensation (H\u00e2r\u021bi) Malachi, prophet. Gordius, martyr",
+    "Title": "Malachi, prophet. Gordius, martyr",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "010424",
@@ -82,12 +82,12 @@
     "Year": "2024",
     "Month": "January",
     "Day": 7,
-    "Raw Text": "7\nSunday after the Theophany.\nTone 7, Res. Gospel 10. Epistle Eph. 4: 7-",
+    "Raw Text": "7\nSunday after the Theophany.\nTone 7, Res. Gospel 10. Epistle Eph. 4: 7-\n13; Gospel Matt 4:12-17",
     "Title": "Sunday after the Theophany",
     "Tone": "7",
     "Matins Gospel": "10",
-    "Epistle": "Eph. 4: 7",
-    "Gospel": null,
+    "Epistle": "Eph. 4: 7- 13",
+    "Gospel": "Matt 4:12-17",
     "Fasting": null
   },
   {
@@ -166,19 +166,6 @@
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "011324",
-    "Year": "2024",
-    "Month": "January",
-    "Day": 13,
-    "Raw Text": "13; Gospel Matt 4:12-17",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Matt 4:12-17",
     "Fasting": null
   },
   {
@@ -317,12 +304,12 @@
     "Month": "January",
     "Day": 24,
     "Raw Text": "24\nDispensation (H\u00e2r\u021bi)\nVen. Mother Xenia of Rome\n[St. Francis de Sales]",
-    "Title": "Dispensation (H\u00e2r\u021bi) Ven. Mother Xenia of Rome [St. Francis de Sales]",
+    "Title": "Ven. Mother Xenia of Rome [St. Francis de Sales]",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "012524",
@@ -343,12 +330,12 @@
     "Month": "January",
     "Day": 26,
     "Raw Text": "26\nDispensation (H\u00e2r\u021bi)\nVen. Father Xenophon and\nothers",
-    "Title": "Dispensation (H\u00e2r\u021bi) Ven. Father Xenophon and others",
+    "Title": "Ven. Father Xenophon and others",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "012724",
@@ -447,12 +434,12 @@
     "Month": "February",
     "Day": 2,
     "Raw Text": "2\nDispensation (H\u00e2r\u021bi)\n(\u2020) ENCOUNTER OF OUR\nLORD IN THE TEMPLE\nHoly day of Obligation\nEpistle: Heb 7:7-17; Gospel\nLuke 2:22-40\nAliturgical Day\nNicephorus, martyr",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) ENCOUNTER OF OUR LORD IN THE TEMPLE Holy day of Obligation",
+    "Title": "(\u2020) ENCOUNTER OF OUR LORD IN THE TEMPLE Holy day of Obligation",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Heb 7:7-17",
     "Gospel": "Luke 2:22-40 Aliturgical Day Nicephorus, martyr",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "020324",
@@ -1214,12 +1201,12 @@
     "Month": "March",
     "Day": 25,
     "Raw Text": "25\nDispensation (Harti)\nGreat and Holy Monday\n(\u2020) ANNUNCIATION\nHoly Day of Obligation\nEpistle 2:11-18\nGospel Lk. 1:24-38",
-    "Title": "Dispensation (Harti) Great and Holy Monday (\u2020) ANNUNCIATION Holy Day of Obligation",
+    "Title": "Great and Holy Monday (\u2020) ANNUNCIATION Holy Day of Obligation",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "2:11-18",
     "Gospel": "Lk. 1:24-38",
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "032624",
@@ -1318,12 +1305,12 @@
     "Month": "April",
     "Day": 3,
     "Raw Text": "3\nDispensation (Harti)\nBRIGHT WEDNESDAY\nVen. Nicetas, Confessor",
-    "Title": "Dispensation (Harti) BRIGHT WEDNESDAY Ven. Nicetas, Confessor",
+    "Title": "BRIGHT WEDNESDAY Ven. Nicetas, Confessor",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "040424",
@@ -1344,12 +1331,12 @@
     "Month": "April",
     "Day": 5,
     "Raw Text": "5\nDispensation (Harti)\nBRIGHT FRIDAY\nMother of God of the Life-\nGiving Spring\nClaudius, Diodore, Victor,\nVictorin, Papias, Nicephorus\nand Serapion, Martyrs",
-    "Title": "Dispensation (Harti) BRIGHT FRIDAY Mother of God of the Life- Giving Spring Claudius, Diodore, Victor, Victorin, Papias, Nicephorus and Serapion, Martyrs",
+    "Title": "BRIGHT FRIDAY Mother of God of the Life- Giving Spring Claudius, Diodore, Victor, Victorin, Papias, Nicephorus and Serapion, Martyrs",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "040624",
@@ -1369,12 +1356,12 @@
     "Year": "2024",
     "Month": "April",
     "Day": 7,
-    "Raw Text": "7\nTHOMAS SUNDAY (2nd Sunday of\nEaster) Tone 1, Res. Gospel 1 Epistle: Acts",
-    "Title": "THOMAS SUNDAY (2nd Sunday of Easter)",
+    "Raw Text": "7\nTHOMAS SUNDAY (2nd Sunday of\nEaster) Tone 1, Res. Gospel 1 Epistle: Acts\n5:12-20, Gospel Jn. 20:19-31 Following\nweek readings \u2014 2nd week of Easter.",
+    "Title": "THOMAS SUNDAY (2nd Sunday of Easter),  Following week readings \u2014 2nd week of Easter",
     "Tone": "1",
     "Matins Gospel": "1",
-    "Epistle": "Acts",
-    "Gospel": null,
+    "Epistle": "Acts 5:12-20",
+    "Gospel": "Jn. 20:19-31",
     "Fasting": null
   },
   {
@@ -1453,19 +1440,6 @@
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "040524",
-    "Year": "2024",
-    "Month": "April",
-    "Day": 5,
-    "Raw Text": "5:12-20, Gospel Jn. 20:19-31 Following\nweek readings \u2014 2nd week of Easter.",
-    "Title": ":12-20, Following week readings \u2014 2nd week of Easter",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Jn. 20:19-31",
     "Fasting": null
   },
   {
@@ -2111,12 +2085,12 @@
     "Month": "May",
     "Day": 22,
     "Raw Text": "22\nDispensation (H\u00e2r\u021bi)\nBasillicus, martyr\n[St. Rita of Cascia]",
-    "Title": "Dispensation (H\u00e2r\u021bi) Basillicus, martyr [St. Rita of Cascia]",
+    "Title": "Basillicus, martyr [St. Rita of Cascia]",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "052324",
@@ -2137,12 +2111,12 @@
     "Month": "May",
     "Day": 24,
     "Raw Text": "24\nDispensation (H\u00e2r\u021bi)\nVen. Father Symeon of the\nWondrous Mountain",
-    "Title": "Dispensation (H\u00e2r\u021bi) Ven. Father Symeon of the Wondrous Mountain",
+    "Title": "Ven. Father Symeon of the Wondrous Mountain",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "052524",
@@ -2176,12 +2150,12 @@
     "Month": "May",
     "Day": 27,
     "Raw Text": "27\nDispensation (H\u00e2r\u021bi)\nAlladius, Martyr; Julius\nBeginning of the\nApostles\u2019 Fast\nUSA: Memorial Day",
-    "Title": "Dispensation (H\u00e2r\u021bi) Alladius, Martyr; Julius Beginning of the Apostles\u2019 Fast USA: Memorial Day",
+    "Title": "Alladius, Martyr; Julius Beginning of the Apostles\u2019 Fast USA: Memorial Day",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "052824",
@@ -2254,12 +2228,12 @@
     "Month": "June",
     "Day": 2,
     "Raw Text": "2\nDispensation (H\u00e2r\u021bi)",
-    "Title": "Dispensation (H\u00e2r\u021bi)",
+    "Title": "",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "060324",
@@ -2344,24 +2318,11 @@
     "Year": "2024",
     "Month": "June",
     "Day": 2,
-    "Raw Text": "2nd SUNDAY AFTER PENTECOST.\nTone 1, Res. Gospel 2, Epistle Rom. 2:10-",
-    "Title": "nd SUNDAY AFTER PENTECOST",
+    "Raw Text": "2nd SUNDAY AFTER PENTECOST.\nTone 1, Res. Gospel 2, Epistle Rom. 2:10-\n16, Gospel Matt. 4:18-23. Following\nweek readings \u2013 3rd week after\nPentecost.\n(\u2020) BLESSED MARTYR BISHOPS\nEpistle Heb 7,26-28,8: 1-2 Gospel\nJohn:15:17-27; 16:1-2",
+    "Title": "nd SUNDAY AFTER PENTECOST. Following week readings \u2013 3rd week after Pentecost. (\u2020) BLESSED MARTYR BISHOPS Epistle Heb 7,26-28,8: 1-2 Gospel John:15:17-27; 16:1-2",
     "Tone": "1",
     "Matins Gospel": "2",
-    "Epistle": "Rom. 2:10",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "061624",
-    "Year": "2024",
-    "Month": "June",
-    "Day": 16,
-    "Raw Text": "16, Gospel Matt. 4:18-23. Following\nweek readings \u2013 3rd week after\nPentecost.\n(\u2020) BLESSED MARTYR BISHOPS\nEpistle Heb 7,26-28,8: 1-2 Gospel\nJohn:15:17-27; 16:1-2",
-    "Title": "Following week readings \u2013 3rd week after Pentecost. (\u2020) BLESSED MARTYR BISHOPS Gospel John:15:17-27; 16:1-2",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": "Heb 7,26-28,8: 1-2",
+    "Epistle": "Rom. 2:10- 16",
     "Gospel": "Matt. 4:18-23",
     "Fasting": null
   },
@@ -2579,12 +2540,12 @@
     "Month": "June",
     "Day": 24,
     "Raw Text": "24\nDispensation (Harti)\n(\u2020) Nativity of St. John the\nBaptist (S\u00e2nzienele)\nEpistle: Rom. 13:11-14; 14:1-4\nGospel: Lk. 1:1-25;57-68; 76-\n80",
-    "Title": "Dispensation (Harti) (\u2020) Nativity of St. John the Baptist (S\u00e2nzienele)",
+    "Title": "(\u2020) Nativity of St. John the Baptist (S\u00e2nzienele)",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Rom. 13:11-14; 14:1-4",
     "Gospel": "Lk. 1:1-25;57-68; 76- 80",
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "062524",
@@ -2838,12 +2799,12 @@
     "Year": "2024",
     "Month": "July",
     "Day": 7,
-    "Raw Text": "7th SUNDAY AFTER PENTECOST\nTone 6, Res. Gospel 7, Epistle Rom. 15: 1 \u2013",
-    "Title": "th SUNDAY AFTER PENTECOST",
+    "Raw Text": "7th SUNDAY AFTER PENTECOST\nTone 6, Res. Gospel 7, Epistle Rom. 15: 1 \u2013\n7, Gospel Matt. 9: 27 - 35. Following week\nreadings \u2013 8th week after Pentecost.",
+    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 8th week after Pentecost",
     "Tone": "6",
     "Matins Gospel": "7",
-    "Epistle": "Rom. 15: 1 \u2013",
-    "Gospel": null,
+    "Epistle": "Rom. 15: 1 \u2013 7",
+    "Gospel": "Matt. 9: 27 - 35",
     "Fasting": null
   },
   {
@@ -2857,19 +2818,6 @@
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "070724",
-    "Year": "2024",
-    "Month": "July",
-    "Day": 7,
-    "Raw Text": "7, Gospel Matt. 9: 27 - 35. Following week\nreadings \u2013 8th week after Pentecost.",
-    "Title": "Following week readings \u2013 8th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Matt. 9: 27 - 35",
     "Fasting": null
   },
   {
@@ -3072,24 +3020,11 @@
     "Year": "2024",
     "Month": "July",
     "Day": 9,
-    "Raw Text": "9th SUNDAY AFTER PENTECOST\nTone 8, Res. Gospel 9, Epistle 1 Cor. 3: 9 \u2013",
-    "Title": "th SUNDAY AFTER PENTECOST",
+    "Raw Text": "9th SUNDAY AFTER PENTECOST\nTone 8, Res. Gospel 9, Epistle 1 Cor. 3: 9 \u2013\n16, Gospel Matt. 14: 22 \u2013 34. Following\nweek readings \u2013 10th week after\nPentecost.",
+    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 10th week after Pentecost",
     "Tone": "8",
     "Matins Gospel": "9",
-    "Epistle": "1 Cor. 3: 9 \u2013",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "071624",
-    "Year": "2024",
-    "Month": "July",
-    "Day": 16,
-    "Raw Text": "16, Gospel Matt. 14: 22 \u2013 34. Following\nweek readings \u2013 10th week after\nPentecost.",
-    "Title": "Following week readings \u2013 10th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Epistle": "1 Cor. 3: 9 \u2013 16",
     "Gospel": "Matt. 14: 22 \u2013 34",
     "Fasting": null
   },
@@ -3229,12 +3164,12 @@
     "Month": "August",
     "Day": 6,
     "Raw Text": "6\nDispensation (H\u00e2r\u021bi)\n(\u2020) TRANSFIGURATION OF\nOUR LORD JESUS CHRIST\nHoly Day of Obligation\nEpistle 2 Peter 1:10-19;\nGospel Matt. 17:1-9. Blessing",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) TRANSFIGURATION OF OUR LORD JESUS CHRIST Holy Day of Obligation. Blessing",
+    "Title": "(\u2020) TRANSFIGURATION OF OUR LORD JESUS CHRIST Holy Day of Obligation. Blessing",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "2 Peter 1:10-19",
     "Gospel": "Matt. 17:1-9",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "080724",
@@ -3293,25 +3228,12 @@
     "Year": "2024",
     "Month": "August",
     "Day": 11,
-    "Raw Text": "11th SUNDAY AFTER\nPENTECOST\nTone 2, Res. Gospel 11, Epistle 1\nCor. 9: 2 \u2013 12, Gospel Matt. 18: 23\n\u2013 35. Following week readings \u2013",
-    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013",
+    "Raw Text": "11th SUNDAY AFTER\nPENTECOST\nTone 2, Res. Gospel 11, Epistle 1\nCor. 9: 2 \u2013 12, Gospel Matt. 18: 23\n\u2013 35. Following week readings \u2013\n12th week after Pentecost",
+    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 12th week after Pentecost",
     "Tone": "2",
     "Matins Gospel": "11",
     "Epistle": "1 Cor. 9: 2 \u2013 12",
     "Gospel": "Matt. 18: 23 \u2013 35",
-    "Fasting": null
-  },
-  {
-    "Date": "081224",
-    "Year": "2024",
-    "Month": "August",
-    "Day": 12,
-    "Raw Text": "12th week after Pentecost",
-    "Title": "th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
     "Fasting": null
   },
   {
@@ -3501,25 +3423,12 @@
     "Year": "2024",
     "Month": "August",
     "Day": 13,
-    "Raw Text": "13th SUNDAY AFTER\nPENTECOST\nTone 4, Res. Gospel 2, Epistle 1\nCor. 16: 13 \u2013 24, Gospel Matt. 21:\n33-42. Following week readings \u2013",
-    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013",
+    "Raw Text": "13th SUNDAY AFTER\nPENTECOST\nTone 4, Res. Gospel 2, Epistle 1\nCor. 16: 13 \u2013 24, Gospel Matt. 21:\n33-42. Following week readings \u2013\n14th week after Pentecost.",
+    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 14th week after Pentecost",
     "Tone": "4",
     "Matins Gospel": "2",
     "Epistle": "1 Cor. 16: 13 \u2013 24",
     "Gospel": "Matt. 21: 33-42",
-    "Fasting": null
-  },
-  {
-    "Date": "081424",
-    "Year": "2024",
-    "Month": "August",
-    "Day": 14,
-    "Raw Text": "14th week after Pentecost.",
-    "Title": "th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
     "Fasting": null
   },
   {
@@ -3709,12 +3618,12 @@
     "Year": "2024",
     "Month": "September",
     "Day": 8,
-    "Raw Text": "8\nSUNDAY BEFORE THE EXALTATION OF\nTHE CROSS Tone 7, Res. Gospel 5,\nEpistle Gal. 6:11\u201318, Gospel Jn. 3:13 \u2013",
-    "Title": "SUNDAY BEFORE THE EXALTATION OF THE CROSS",
+    "Raw Text": "8\nSUNDAY BEFORE THE EXALTATION OF\nTHE CROSS Tone 7, Res. Gospel 5,\nEpistle Gal. 6:11\u201318, Gospel Jn. 3:13 \u2013\n17; also\n\u2020 NATIVITY OF THE MOTHER OF GOD\nMay also read: Epistle: Phil 2:5-11;\nGospel: Lk 10:38-42, 11:27-28. Next\nweek \u2013 17th week after Pentecost.",
+    "Title": "SUNDAY BEFORE THE EXALTATION OF THE CROSS. Next week \u2013 17th week after Pentecost",
     "Tone": "7",
     "Matins Gospel": "5",
     "Epistle": "Gal. 6:11\u201318",
-    "Gospel": "Jn. 3:13 \u2013",
+    "Gospel": "Jn. 3:13 \u2013 17; also \u2020 NATIVITY OF THE MOTHER OF GOD May also read: Epistle: Phil 2:5-11; Gospel: Lk 10:38-42, 11:27-28",
     "Fasting": null
   },
   {
@@ -3787,39 +3696,13 @@
     "Year": "2024",
     "Month": "September",
     "Day": 14,
-    "Raw Text": "14\nStrict Fast and Abstinence\n(\u2020) EXALTATION OF THE\nCROSS\nHoly Day of Obligation\nEpistle: 1 Cor. 1:18-24\nGospel: Jn. 19:6-11, 13-20, 25-",
+    "Raw Text": "14\nStrict Fast and Abstinence\n(\u2020) EXALTATION OF THE\nCROSS\nHoly Day of Obligation\nEpistle: 1 Cor. 1:18-24\nGospel: Jn. 19:6-11, 13-20, 25-\n28, 30-35",
     "Title": "(\u2020) EXALTATION OF THE CROSS Holy Day of Obligation",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "1 Cor. 1:18-24",
-    "Gospel": "Jn. 19:6-11, 13-20, 25",
+    "Gospel": "Jn. 19:6-11, 13-20, 25- 28, 30-35",
     "Fasting": "Strict Fast and Abstinence"
-  },
-  {
-    "Date": "091724",
-    "Year": "2024",
-    "Month": "September",
-    "Day": 17,
-    "Raw Text": "17; also\n\u2020 NATIVITY OF THE MOTHER OF GOD\nMay also read: Epistle: Phil 2:5-11;\nGospel: Lk 10:38-42, 11:27-28. Next\nweek \u2013 17th week after Pentecost.",
-    "Title": "; also \u2020 NATIVITY OF THE MOTHER OF GOD May also read:. Next week \u2013 17th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": "Phil 2:5-11",
-    "Gospel": "Lk 10:38-42, 11:27-28",
-    "Fasting": null
-  },
-  {
-    "Date": "092824",
-    "Year": "2024",
-    "Month": "September",
-    "Day": 28,
-    "Raw Text": "28, 30-35",
-    "Title": "30-35",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
   },
   {
     "Date": "091524",
@@ -4594,12 +4477,12 @@
     "Month": "November",
     "Day": 8,
     "Raw Text": "8\nDispensation/H\u00e2r\u021bi\n(\u2020) Holy Archangels\nMichael and Gabriel and\nAll the Heavenly Powers\nEpistle Heb. 2:2-10,",
-    "Title": "Dispensation/H\u00e2r\u021bi (\u2020) Holy Archangels Michael and Gabriel and All the Heavenly Powers",
+    "Title": "/H\u00e2r\u021bi (\u2020) Holy Archangels Michael and Gabriel and All the Heavenly Powers",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Heb. 2:2-10",
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation"
   },
   {
     "Date": "110924",
@@ -4619,12 +4502,12 @@
     "Year": "2024",
     "Month": "November",
     "Day": 5,
-    "Raw Text": "5th SUNDAY AFTER HOLY\nCROSS (24th Sunday after\nPentecost) Tone 7, Res. Gospel 2,\nEpistle Eph. 2:14-22 Gospel Lk. 16:19\u2013",
-    "Title": "th SUNDAY AFTER HOLY CROSS (24th Sunday after Pentecost)",
+    "Raw Text": "5th SUNDAY AFTER HOLY\nCROSS (24th Sunday after\nPentecost) Tone 7, Res. Gospel 2,\nEpistle Eph. 2:14-22 Gospel Lk. 16:19\u2013\n31. Following week readings \u2013 25th\nweek after Pentecost.",
+    "Title": "th SUNDAY AFTER HOLY CROSS (24th Sunday after Pentecost). Following week readings \u2013 25th week after Pentecost",
     "Tone": "7",
     "Matins Gospel": "2",
     "Epistle": "Eph. 2:14-22",
-    "Gospel": "Lk. 16:19\u2013",
+    "Gospel": "Lk. 16:19\u2013 31",
     "Fasting": null
   },
   {
@@ -4647,19 +4530,6 @@
     "Day": 33,
     "Raw Text": "33 Martyrs of Melitene\nVen. Lazarus the\nWonderworker of Mt. Galesius",
     "Title": "Martyrs of Melitene Ven. Lazarus the Wonderworker of Mt. Galesius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "113124",
-    "Year": "2024",
-    "Month": "November",
-    "Day": 31,
-    "Raw Text": "31. Following week readings \u2013 25th\nweek after Pentecost.",
-    "Title": "Following week readings \u2013 25th week after Pentecost",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
@@ -4814,13 +4684,13 @@
     "Year": "2024",
     "Month": "November",
     "Day": 21,
-    "Raw Text": "21\nDispensation (H\u00e2r\u021bi)\n(\u2020) ENTRANCE INTO THE\nTEMPLE OF THE MOTHER\nOF GOD\nHoly Day of Obligation\nApostle Heb. 9:1-7; Gospel Lk",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) ENTRANCE INTO THE TEMPLE OF THE MOTHER OF GOD Holy Day of Obligation Apostle Heb. 9:1-7",
+    "Raw Text": "21\nDispensation (H\u00e2r\u021bi)\n(\u2020) ENTRANCE INTO THE\nTEMPLE OF THE MOTHER\nOF GOD\nHoly Day of Obligation\nApostle Heb. 9:1-7; Gospel Lk\n10:38-42, 11:27-28",
+    "Title": "(\u2020) ENTRANCE INTO THE TEMPLE OF THE MOTHER OF GOD Holy Day of Obligation Apostle Heb. 9:1-7",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
-    "Gospel": "Lk",
-    "Fasting": null
+    "Gospel": "Lk 10:38-42, 11:27-28",
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "112224",
@@ -4853,38 +4723,12 @@
     "Year": "2024",
     "Month": "November",
     "Day": 9,
-    "Raw Text": "9th SUNDAY AFTER HOLY CROSS\n(26th Sunday after Pentecost)\nTone 1, Res. Gospel 4, Epistle Eph. 5: 8-",
-    "Title": "th SUNDAY AFTER HOLY CROSS (26th Sunday after Pentecost)",
+    "Raw Text": "9th SUNDAY AFTER HOLY CROSS\n(26th Sunday after Pentecost)\nTone 1, Res. Gospel 4, Epistle Eph. 5: 8-\n19; Gospel Lk. 12: 16\u2013 21. Following\nweek readings \u2013 27th week after\nPentecost.",
+    "Title": "th SUNDAY AFTER HOLY CROSS (26th Sunday after Pentecost). Following week readings \u2013 27th week after Pentecost",
     "Tone": "1",
     "Matins Gospel": "4",
-    "Epistle": "Eph. 5: 8",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "111924",
-    "Year": "2024",
-    "Month": "November",
-    "Day": 19,
-    "Raw Text": "19; Gospel Lk. 12: 16\u2013 21. Following\nweek readings \u2013 27th week after\nPentecost.",
-    "Title": "Following week readings \u2013 27th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Epistle": "Eph. 5: 8- 19",
     "Gospel": "Lk. 12: 16\u2013 21",
-    "Fasting": null
-  },
-  {
-    "Date": "111024",
-    "Year": "2024",
-    "Month": "November",
-    "Day": 10,
-    "Raw Text": "10:38-42, 11:27-28",
-    "Title": ":38-42, 11:27-28",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
     "Fasting": null
   },
   {
@@ -4945,12 +4789,12 @@
     "Month": "November",
     "Day": 28,
     "Raw Text": "28\nDispensation (H\u00e2rti)\nVen. Stephen the Younger.\nIrenarchus, martyr\n[St. Catherine Labour\u00e9]\nUSA: Thanksgiving",
-    "Title": "Dispensation (H\u00e2rti) Ven. Stephen the Younger. Irenarchus, martyr [St. Catherine Labour\u00e9] USA: Thanksgiving",
+    "Title": "Ven. Stephen the Younger. Irenarchus, martyr [St. Catherine Labour\u00e9] USA: Thanksgiving",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2rti)"
   },
   {
     "Date": "112924",
@@ -4958,12 +4802,12 @@
     "Month": "November",
     "Day": 29,
     "Raw Text": "29\nDispensation (H\u00e2rti)\nParamon and Philumenes,\nmartyrs",
-    "Title": "Dispensation (H\u00e2rti) Paramon and Philumenes, martyrs",
+    "Title": "Paramon and Philumenes, martyrs",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2rti)"
   },
   {
     "Date": "113024",
@@ -4971,12 +4815,12 @@
     "Month": "November",
     "Day": 30,
     "Raw Text": "30\nDispensation (H\u00e2rti)\nApostle Andrew the First-\ncalled",
-    "Title": "Dispensation (H\u00e2rti) Apostle Andrew the First- called",
+    "Title": "Apostle Andrew the First- called",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2rti)"
   },
   {
     "Date": "120124",
@@ -4984,12 +4828,12 @@
     "Month": "December",
     "Day": 1,
     "Raw Text": "1\nDispensation (H\u00e2r\u021bi)\n14th SUNDAY AFTER HOLY CROSS\n(28th Sunday after Pentecost).\nTone 3, Res. Gospel 6, Epistle Col 1: 12-\n18; Gospel Lk. 18: 35\u201342. Following\nweek readings \u2013 29th week after\nPentecost.",
-    "Title": "Dispensation (H\u00e2r\u021bi) 14th SUNDAY AFTER HOLY CROSS (28th Sunday after Pentecost). Following week readings \u2013 29th week after Pentecost",
+    "Title": "14th SUNDAY AFTER HOLY CROSS (28th Sunday after Pentecost). Following week readings \u2013 29th week after Pentecost",
     "Tone": "3",
     "Matins Gospel": "6",
     "Epistle": "Col 1: 12- 18",
     "Gospel": "Lk. 18: 35\u201342",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "120224",
@@ -5049,12 +4893,12 @@
     "Month": "December",
     "Day": 6,
     "Raw Text": "6\nDispensation (H\u00e2r\u021bi)\n(\u2020) St. Nicholas the\nWonderworker of Myra\nin Lycia\nEpistle Heb. 13:17-21,\nGospel, Luke 6:17-23a\n\u2020 Eustratius, Auxentius,\nEugene, Mardarius,\nOrestes and Lucy, martyrs",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) St. Nicholas the Wonderworker of Myra in Lycia",
+    "Title": "(\u2020) St. Nicholas the Wonderworker of Myra in Lycia",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Heb. 13:17-21",
     "Gospel": "Luke 6:17-23a \u2020 Eustratius, Auxentius, Eugene, Mardarius, Orestes and Lucy, martyrs",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "120724",
@@ -5165,24 +5009,11 @@
     "Year": "2024",
     "Month": "December",
     "Day": 10,
-    "Raw Text": "10th SUNDAY AFTER HOLY CROSS\n(29th Sunday after Pentecost).\nTone 4, Res. Gospel 7, Epistle Col 3: 12-",
-    "Title": "th SUNDAY AFTER HOLY CROSS (29th Sunday after Pentecost)",
+    "Raw Text": "10th SUNDAY AFTER HOLY CROSS\n(29th Sunday after Pentecost).\nTone 4, Res. Gospel 7, Epistle Col 3: 12-\n16; Gospel Lk. 13: 10\u201317. Following\nweek readings \u2013 30th week after\nPentecost.",
+    "Title": "th SUNDAY AFTER HOLY CROSS (29th Sunday after Pentecost). Following week readings \u2013 30th week after Pentecost",
     "Tone": "4",
     "Matins Gospel": "7",
-    "Epistle": "Col 3: 12",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "121624",
-    "Year": "2024",
-    "Month": "December",
-    "Day": 16,
-    "Raw Text": "16; Gospel Lk. 13: 10\u201317. Following\nweek readings \u2013 30th week after\nPentecost.",
-    "Title": "Following week readings \u2013 30th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Epistle": "Col 3: 12- 16",
     "Gospel": "Lk. 13: 10\u201317",
     "Fasting": null
   },
@@ -5322,12 +5153,12 @@
     "Month": "December",
     "Day": 25,
     "Raw Text": "25\nDispensation (H\u00e2r\u021bi)\n(\u2020) NATIVITY OF OUR\nLORD JESUS CHRIST\n(Christmas Day)\nHoly Day of Obligation\nEpistle Gal. 4:4-7\nGospel Matt. 2:1-12",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) NATIVITY OF OUR LORD JESUS CHRIST (Christmas Day) Holy Day of Obligation",
+    "Title": "(\u2020) NATIVITY OF OUR LORD JESUS CHRIST (Christmas Day) Holy Day of Obligation",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Gal. 4:4-7",
     "Gospel": "Matt. 2:1-12",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "122624",
@@ -5348,12 +5179,12 @@
     "Month": "December",
     "Day": 27,
     "Raw Text": "27\nDispensation (H\u00e2r\u021bi)\n(\u2020) St. Stephen,\nProtomartyr and\nArchdeacon\nEpistle Acts. 6:8 to 7:5a and\n47-60; Gospel, Matt 21:33-42",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) St. Stephen, Protomartyr and Archdeacon",
+    "Title": "(\u2020) St. Stephen, Protomartyr and Archdeacon",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Acts. 6:8 to 7:5a and 47-60",
     "Gospel": "Matt 21:33-42",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "122824",
@@ -5439,12 +5270,12 @@
     "Month": "January",
     "Day": 1,
     "Raw Text": "1\nDispensation (H\u00e2r\u021bi)\n(\u2020)CIRCUMCISION/\nST. BASIL\nHoly Day of Obligation Ep.\n2 Timothy 4:5-8 Gospel:\nMark 1:1-8 Liturgy of St.\nBasil\nVen. Mother Dominica.\nVen. Father George.",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020)CIRCUMCISION/ ST. BASIL Holy Day of Obligation Ep. 2 Timothy 4:5-8. Basil Ven. Mother Dominica. Ven. Father George",
+    "Title": "(\u2020)CIRCUMCISION/ ST. BASIL Holy Day of Obligation Ep. 2 Timothy 4:5-8. Basil Ven. Mother Dominica. Ven. Father George",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": "Mark 1:1-8 Liturgy of St",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "010225",
@@ -5776,25 +5607,12 @@
     "Year": "2025",
     "Month": "January",
     "Day": 12,
-    "Raw Text": "12th Sunday after The Holy Cross\n(29th Sunday after Pentecost)\nTone 2, Res, Gospel 2, Epistle Col. 3:4-",
-    "Title": "th Sunday after The Holy Cross (29th Sunday after Pentecost), Res",
+    "Raw Text": "12th Sunday after The Holy Cross\n(29th Sunday after Pentecost)\nTone 2, Res, Gospel 2, Epistle Col. 3:4-\n11, Gospel Lk 17:12-19. Following week\nreadings are of the 30th week after\nPentecost.",
+    "Title": "th Sunday after The Holy Cross (29th Sunday after Pentecost), Res. Following week readings are of the 30th week after Pentecost",
     "Tone": "2",
     "Matins Gospel": null,
-    "Epistle": "Col. 3:4",
-    "Gospel": "2",
-    "Fasting": null
-  },
-  {
-    "Date": "011125",
-    "Year": "2025",
-    "Month": "January",
-    "Day": 11,
-    "Raw Text": "11, Gospel Lk 17:12-19. Following week\nreadings are of the 30th week after\nPentecost.",
-    "Title": "Following week readings are of the 30th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Lk 17:12-19",
+    "Epistle": "Col. 3:4- 11",
+    "Gospel": "2, Gospel Lk 17:12-19",
     "Fasting": null
   },
   {
@@ -6050,12 +5868,12 @@
     "Month": "February",
     "Day": 12,
     "Raw Text": "12\nDispensation(H\u00e2r\u021bi)\nHoly Father Meletius,\nArchbishop of Antioch the\nGreat",
-    "Title": "Dispensation(H\u00e2r\u021bi) Holy Father Meletius, Archbishop of Antioch the Great",
+    "Title": "Holy Father Meletius, Archbishop of Antioch the Great",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation(H\u00e2r\u021bi)"
   },
   {
     "Date": "021325",
@@ -6076,12 +5894,12 @@
     "Month": "February",
     "Day": 14,
     "Raw Text": "14\nDispensation(H\u00e2r\u021bi)\nVen. Father Auxentius,\nascetic. [Cyril and\nMethodius]",
-    "Title": "Dispensation(H\u00e2r\u021bi) Ven. Father Auxentius, ascetic. [Cyril and Methodius]",
+    "Title": "Ven. Father Auxentius, ascetic. [Cyril and Methodius]",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation(H\u00e2r\u021bi)"
   },
   {
     "Date": "021525",
@@ -6622,12 +6440,12 @@
     "Month": "March",
     "Day": 25,
     "Raw Text": "25\nDispensation (Harti)\n(\u2020) ANNUNCIATION\nHoly Day of Obligation\nEpistle 2:11-18;\nGospel Lk. 1:24-38.",
-    "Title": "Dispensation (Harti) (\u2020) ANNUNCIATION Holy Day of Obligation",
+    "Title": "(\u2020) ANNUNCIATION Holy Day of Obligation",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "2:11-18",
     "Gospel": "Lk. 1:24-38",
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "032625",
@@ -6986,12 +6804,12 @@
     "Month": "April",
     "Day": 23,
     "Raw Text": "23\nDispensation (Harti)\nBRIGHT WEDNESDAY\n(\u2020) Great Martyr and\nTrophy-Bearer, George,\nPatron of the Romanian\nCatholic Diocese\nEpistle: Acts 12:1-11\nGospel: John: 15:17-27, 16:1",
-    "Title": "Dispensation (Harti) BRIGHT WEDNESDAY (\u2020) Great Martyr and Trophy-Bearer, George, Patron of the Romanian Catholic Diocese",
+    "Title": "BRIGHT WEDNESDAY (\u2020) Great Martyr and Trophy-Bearer, George, Patron of the Romanian Catholic Diocese",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Acts 12:1-11",
     "Gospel": "John: 15:17-27, 16:1",
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "042425",
@@ -7012,12 +6830,12 @@
     "Month": "April",
     "Day": 25,
     "Raw Text": "25\nDispensation (Harti)\nBRIGHT FRIDAY\nHoly Apostle and Evangelist,\nMark.",
-    "Title": "Dispensation (Harti) BRIGHT FRIDAY Holy Apostle and Evangelist, Mark",
+    "Title": "BRIGHT FRIDAY Holy Apostle and Evangelist, Mark",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "042625",
@@ -7207,12 +7025,12 @@
     "Month": "April",
     "Day": 25,
     "Raw Text": "25\nDispensation (Harti)\nBRIGHT FRIDAY\nHoly Apostle and Evangelist,\nMark.",
-    "Title": "Dispensation (Harti) BRIGHT FRIDAY Holy Apostle and Evangelist, Mark",
+    "Title": "BRIGHT FRIDAY Holy Apostle and Evangelist, Mark",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "042625",
@@ -7453,12 +7271,12 @@
     "Year": "2025",
     "Month": "May",
     "Day": 18,
-    "Raw Text": "18\nSUNDAY OF THE SAMARITAN\nWOMAN (5th Sunday of Easter)\nTone 4, Res. Gospel 7. Epistle Acts 11: 19-",
-    "Title": "SUNDAY OF THE SAMARITAN WOMAN (5th Sunday of Easter)",
+    "Raw Text": "18\nSUNDAY OF THE SAMARITAN\nWOMAN (5th Sunday of Easter)\nTone 4, Res. Gospel 7. Epistle Acts 11: 19-\n30, Gospel Jn. 4: 5-42. Following week\nreadings \u2013 5th Sunday after Easter.",
+    "Title": "SUNDAY OF THE SAMARITAN WOMAN (5th Sunday of Easter). Following week readings \u2013 5th Sunday after Easter",
     "Tone": "4",
     "Matins Gospel": "7",
-    "Epistle": "Acts 11: 19",
-    "Gospel": null,
+    "Epistle": "Acts 11: 19- 30",
+    "Gospel": "Jn. 4: 5-42",
     "Fasting": null
   },
   {
@@ -7537,19 +7355,6 @@
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "053025",
-    "Year": "2025",
-    "Month": "May",
-    "Day": 30,
-    "Raw Text": "30, Gospel Jn. 4: 5-42. Following week\nreadings \u2013 5th Sunday after Easter.",
-    "Title": "Following week readings \u2013 5th Sunday after Easter",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Jn. 4: 5-42",
     "Fasting": null
   },
   {
@@ -7779,12 +7584,12 @@
     "Month": "June",
     "Day": 11,
     "Raw Text": "11\nDispensation (H\u00e2r\u021bi)\nApostles Bartholomew &\nBarnabus",
-    "Title": "Dispensation (H\u00e2r\u021bi) Apostles Bartholomew & Barnabus",
+    "Title": "Apostles Bartholomew & Barnabus",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "061225",
@@ -7805,12 +7610,12 @@
     "Month": "June",
     "Day": 13,
     "Raw Text": "13\nDispensation (H\u00e2r\u021bi)\nAquilina, martyr. H. Father\nTriphylius",
-    "Title": "Dispensation (H\u00e2r\u021bi) Aquilina, martyr. H. Father Triphylius",
+    "Title": "Aquilina, martyr. H. Father Triphylius",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "061425",
@@ -7960,13 +7765,13 @@
     "Year": "2025",
     "Month": "June",
     "Day": 24,
-    "Raw Text": "24\nDispensation (H\u00e2r\u021bi)\n(\u2020) Nativity of St. John the\nBaptist. (S\u00e2nzienele)\nEp. Rom 13:11-14; 14:1-4\nGospel: Lk 1:1-25;57-68; 76-",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) Nativity of St. John the Baptist. (S\u00e2nzienele) Ep. Rom 13:11-14; 14:1-4",
+    "Raw Text": "24\nDispensation (H\u00e2r\u021bi)\n(\u2020) Nativity of St. John the\nBaptist. (S\u00e2nzienele)\nEp. Rom 13:11-14; 14:1-4\nGospel: Lk 1:1-25;57-68; 76-\n80",
+    "Title": "(\u2020) Nativity of St. John the Baptist. (S\u00e2nzienele) Ep. Rom 13:11-14; 14:1-4",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
-    "Gospel": "Lk 1:1-25;57-68; 76",
-    "Fasting": null
+    "Gospel": "Lk 1:1-25;57-68; 76- 80",
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "062525",
@@ -8031,19 +7836,6 @@
     "Matins Gospel": "2",
     "Epistle": "Rom. 2: 10 \u2013 16",
     "Gospel": "Matt. 4: 18-23",
-    "Fasting": null
-  },
-  {
-    "Date": "068025",
-    "Year": "2025",
-    "Month": "June",
-    "Day": 80,
-    "Raw Text": "80",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
     "Fasting": null
   },
   {
@@ -8246,12 +8038,12 @@
     "Year": "2025",
     "Month": "July",
     "Day": 4,
-    "Raw Text": "4th SUNDAY AFTER PENTECOST\nTone 3, Res. Gospel 4, Epistle Rom. 6: 18 \u2013",
-    "Title": "th SUNDAY AFTER PENTECOST",
+    "Raw Text": "4th SUNDAY AFTER PENTECOST\nTone 3, Res. Gospel 4, Epistle Rom. 6: 18 \u2013\n23, Gospel Matt. 8: 5-13. Following week\nreadings \u2013 5th week after Pentecost.",
+    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 5th week after Pentecost",
     "Tone": "3",
     "Matins Gospel": "4",
-    "Epistle": "Rom. 6: 18 \u2013",
-    "Gospel": null,
+    "Epistle": "Rom. 6: 18 \u2013 23",
+    "Gospel": "Matt. 8: 5-13",
     "Fasting": null
   },
   {
@@ -8265,19 +8057,6 @@
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "072325",
-    "Year": "2025",
-    "Month": "July",
-    "Day": 23,
-    "Raw Text": "23, Gospel Matt. 8: 5-13. Following week\nreadings \u2013 5th week after Pentecost.",
-    "Title": "Following week readings \u2013 5th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Matt. 8: 5-13",
     "Fasting": null
   },
   {
@@ -8480,24 +8259,11 @@
     "Year": "2025",
     "Month": "July",
     "Day": 6,
-    "Raw Text": "6TH SUNDAY AFTER PENTECOST\nTone 5, Res. Gospel 6, Epistle Rom. 12: 6-",
-    "Title": "TH SUNDAY AFTER PENTECOST",
+    "Raw Text": "6TH SUNDAY AFTER PENTECOST\nTone 5, Res. Gospel 6, Epistle Rom. 12: 6-\n14, Gospel Mt. 9: 1 - 8. Following week\nreadings \u2013 7th week after Pentecost.\n(\u2020) Holy Prophet Elijah the Tishbite",
+    "Title": "TH SUNDAY AFTER PENTECOST. Following week readings \u2013 7th week after Pentecost. (\u2020) Holy Prophet Elijah the Tishbite",
     "Tone": "5",
     "Matins Gospel": "6",
-    "Epistle": "Rom. 12: 6",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "071425",
-    "Year": "2025",
-    "Month": "July",
-    "Day": 14,
-    "Raw Text": "14, Gospel Mt. 9: 1 - 8. Following week\nreadings \u2013 7th week after Pentecost.\n(\u2020) Holy Prophet Elijah the Tishbite",
-    "Title": "Following week readings \u2013 7th week after Pentecost. (\u2020) Holy Prophet Elijah the Tishbite",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Epistle": "Rom. 12: 6- 14",
     "Gospel": "Mt. 9: 1 - 8",
     "Fasting": null
   },
@@ -8650,12 +8416,12 @@
     "Month": "August",
     "Day": 6,
     "Raw Text": "6\nDispensation (H\u00e2r\u021bi)\n(\u2020) TRANSFIGURATION OF\nOUR LORD JESUS CHRIST.\nEpistle 2 Peter 1:10-19;\nGospel Matt 17:1-9. Blessing\nof the first fruits of the vine.",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) TRANSFIGURATION OF OUR LORD JESUS CHRIST. Blessing of the first fruits of the vine",
+    "Title": "(\u2020) TRANSFIGURATION OF OUR LORD JESUS CHRIST. Blessing of the first fruits of the vine",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "2 Peter 1:10-19",
     "Gospel": "Matt 17:1-9",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "080725",
@@ -8793,12 +8559,12 @@
     "Month": "August",
     "Day": 15,
     "Raw Text": "15\nDispensation (H\u00e2r\u021bi)\n(\u2020) DORMITION OF THE\nMOTHER OF GOD.\nHoly day of Obligation\nApostle Phil 2:5-11;\nGospel Lk 10:38-42, 11:27-28\nAgathonicus, martyr.",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) DORMITION OF THE MOTHER OF GOD. Holy day of Obligation Apostle Phil 2:5-11",
+    "Title": "(\u2020) DORMITION OF THE MOTHER OF GOD. Holy day of Obligation Apostle Phil 2:5-11",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": "Lk 10:38-42, 11:27-28 Agathonicus, martyr",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "081625",
@@ -9572,24 +9338,11 @@
     "Year": "2025",
     "Month": "October",
     "Day": 8,
-    "Raw Text": "8, Res. Gospel 6, Epistle 2 Cor 11:31-33; 12:1-",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": "6",
-    "Epistle": "2 Cor 11:31-33; 12:1",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "101025",
-    "Year": "2025",
-    "Month": "October",
-    "Day": 10,
-    "Raw Text": "10, Gospel Lk. 6: 31\u2013 36. Following week\nreadings \u2013 20th, week after Pentecost.",
+    "Raw Text": "8, Res. Gospel 6, Epistle 2 Cor 11:31-33; 12:1-\n10, Gospel Lk. 6: 31\u2013 36. Following week\nreadings \u2013 20th, week after Pentecost.",
     "Title": "Following week readings \u2013 20th, week after Pentecost",
     "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Matins Gospel": "6",
+    "Epistle": "2 Cor 11:31-33; 12:1- 10",
     "Gospel": "Lk. 6: 31\u2013 36",
     "Fasting": null
   },
@@ -9988,51 +9741,38 @@
     "Year": "2025",
     "Month": "November",
     "Day": 5,
-    "Raw Text": "5th SUNDAY AFTER HOLY CROSS\n(22ND Sunday after Pentecost).\nTone 4, Res. Gospel 10, Epistle Gal 6:11-",
-    "Title": "th SUNDAY AFTER HOLY CROSS (22ND Sunday after Pentecost)",
+    "Raw Text": "5th SUNDAY AFTER HOLY CROSS\n(22ND Sunday after Pentecost).\nTone 4, Res. Gospel 10, Epistle Gal 6:11-\n18 Gospel Lk. 16: 19\u2013 31. Following\nweek readings \u2013 24th week after\nPentecost.",
+    "Title": "th SUNDAY AFTER HOLY CROSS (22ND Sunday after Pentecost). Following week readings \u2013 24th week after Pentecost",
     "Tone": "4",
     "Matins Gospel": "10",
-    "Epistle": "Gal 6:11",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "113325",
-    "Year": "2025",
-    "Month": "November",
-    "Day": 33,
-    "Raw Text": "33 Martyrs of Melitene. Ven.\nLazarus of Mt. Galesion.",
-    "Title": "Martyrs of Melitene. Ven. Lazarus of Mt. Galesion",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "113325",
-    "Year": "2025",
-    "Month": "November",
-    "Day": 33,
-    "Raw Text": "33 Martyrs of Melitene. Ven.\nLazarus of Mt. Galesion.",
-    "Title": "Martyrs of Melitene. Ven. Lazarus of Mt. Galesion",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "111825",
-    "Year": "2025",
-    "Month": "November",
-    "Day": 18,
-    "Raw Text": "18 Gospel Lk. 16: 19\u2013 31. Following\nweek readings \u2013 24th week after\nPentecost.",
-    "Title": "Following week readings \u2013 24th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Epistle": "Gal 6:11- 18",
     "Gospel": "Lk. 16: 19\u2013 31",
+    "Fasting": null
+  },
+  {
+    "Date": "113325",
+    "Year": "2025",
+    "Month": "November",
+    "Day": 33,
+    "Raw Text": "33 Martyrs of Melitene. Ven.\nLazarus of Mt. Galesion.",
+    "Title": "Martyrs of Melitene. Ven. Lazarus of Mt. Galesion",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
+    "Fasting": null
+  },
+  {
+    "Date": "113325",
+    "Year": "2025",
+    "Month": "November",
+    "Day": 33,
+    "Raw Text": "33 Martyrs of Melitene. Ven.\nLazarus of Mt. Galesion.",
+    "Title": "Martyrs of Melitene. Ven. Lazarus of Mt. Galesion",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
     "Fasting": null
   },
   {
@@ -10196,13 +9936,13 @@
     "Year": "2025",
     "Month": "November",
     "Day": 21,
-    "Raw Text": "21\nDispensation/H\u00e2r\u021bi\n(\u2020)ENTRANCE INTO THE\nTEMPLE OF THE MOTHER\nOF GOD.\nHoly Day of Obligation.\nApostle Heb. 9:1-7; Gospel Lk",
-    "Title": "Dispensation/H\u00e2r\u021bi (\u2020)ENTRANCE INTO THE TEMPLE OF THE MOTHER OF GOD. Holy Day of Obligation. Apostle Heb. 9:1-7",
+    "Raw Text": "21\nDispensation/H\u00e2r\u021bi\n(\u2020)ENTRANCE INTO THE\nTEMPLE OF THE MOTHER\nOF GOD.\nHoly Day of Obligation.\nApostle Heb. 9:1-7; Gospel Lk\n10:38-42, 11:27-28.",
+    "Title": "/H\u00e2r\u021bi (\u2020)ENTRANCE INTO THE TEMPLE OF THE MOTHER OF GOD. Holy Day of Obligation. Apostle Heb. 9:1-7",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
-    "Gospel": "Lk",
-    "Fasting": null
+    "Gospel": "Lk 10:38-42, 11:27-28",
+    "Fasting": "Dispensation"
   },
   {
     "Date": "112225",
@@ -10228,19 +9968,6 @@
     "Matins Gospel": "1",
     "Epistle": "Eph 4: 1-7",
     "Gospel": "Lk. 10: 25\u2013 37",
-    "Fasting": null
-  },
-  {
-    "Date": "111025",
-    "Year": "2025",
-    "Month": "November",
-    "Day": 10,
-    "Raw Text": "10:38-42, 11:27-28.",
-    "Title": ":38-42, 11:27-28",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
     "Fasting": null
   },
   {
@@ -10301,12 +10028,12 @@
     "Month": "November",
     "Day": 27,
     "Raw Text": "27\nDispensation (H\u00e2rti)\nJames the Persian, martyr.\nUSA: Thanksgiving Day\n(In the Eparchy of\nCanton, a dispensation\nfor all foods is granted\non Thanksgiving Day\nand the following\nweekend)",
-    "Title": "Dispensation (H\u00e2rti) James the Persian, martyr. USA: Thanksgiving Day (In the Eparchy of Canton, a dispensation for all foods is granted on Thanksgiving Day and the following weekend)",
+    "Title": "James the Persian, martyr. USA: Thanksgiving Day (In the Eparchy of Canton, a dispensation for all foods is granted on Thanksgiving Day and the following weekend)",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2rti)"
   },
   {
     "Date": "112825",
@@ -10314,12 +10041,12 @@
     "Month": "November",
     "Day": 28,
     "Raw Text": "28\nDispensation (H\u00e2rti)\nVen. Stephen the Younger.\nIrenarchus, martyr.",
-    "Title": "Dispensation (H\u00e2rti) Ven. Stephen the Younger. Irenarchus, martyr",
+    "Title": "Ven. Stephen the Younger. Irenarchus, martyr",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2rti)"
   },
   {
     "Date": "112925",
@@ -10327,12 +10054,12 @@
     "Month": "November",
     "Day": 29,
     "Raw Text": "29\nDispensation (H\u00e2rti)\nParamon and Philumenes,\nmartyrs.",
-    "Title": "Dispensation (H\u00e2rti) Paramon and Philumenes, martyrs",
+    "Title": "Paramon and Philumenes, martyrs",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2rti)"
   },
   {
     "Date": "120125",
@@ -10405,12 +10132,12 @@
     "Month": "December",
     "Day": 6,
     "Raw Text": "6\nDispensation (H\u00e2r\u021bi)\n(\u2020)St. Nicholas the\nWonderworker of Myra in\nLycia\nEpistle Heb. 13:17-21,\nGospel, Luke 6:17-23a\nEustratius, Auxentius,\nEugene, Mardarius, Orestes\nand Lucia, martyrs.",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020)St. Nicholas the Wonderworker of Myra in Lycia",
+    "Title": "(\u2020)St. Nicholas the Wonderworker of Myra in Lycia",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Heb. 13:17-21",
     "Gospel": "Luke 6:17-23a Eustratius, Auxentius, Eugene, Mardarius, Orestes and Lucia, martyrs",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "120725",
@@ -10521,25 +10248,12 @@
     "Year": "2025",
     "Month": "December",
     "Day": 4,
-    "Raw Text": "4, Epistle Eph 6: 10-17; Gospel Lk.",
-    "Title": "",
+    "Raw Text": "4, Epistle Eph 6: 10-17; Gospel Lk.\n13: 10\u201317. Following week readings\n\u2013 29th week after Pentecost.",
+    "Title": "Following week readings \u2013 29th week after Pentecost",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Eph 6: 10-17",
-    "Gospel": "Lk",
-    "Fasting": null
-  },
-  {
-    "Date": "121325",
-    "Year": "2025",
-    "Month": "December",
-    "Day": 13,
-    "Raw Text": "13: 10\u201317. Following week readings\n\u2013 29th week after Pentecost.",
-    "Title": ": 10\u201317. Following week readings \u2013 29th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
+    "Gospel": "Lk. 13: 10\u201317",
     "Fasting": null
   },
   {
@@ -10638,12 +10352,12 @@
     "Year": "2025",
     "Month": "December",
     "Day": 21,
-    "Raw Text": "21\nCommon Abstinence\nSUNDAY BEFORE NATIVITY\nOF OUR LORD JESUS CHRIST.\nTone 3, Res. Gospel 6, Epistle Heb.",
-    "Title": "SUNDAY BEFORE NATIVITY OF OUR LORD JESUS CHRIST",
+    "Raw Text": "21\nCommon Abstinence\nSUNDAY BEFORE NATIVITY\nOF OUR LORD JESUS CHRIST.\nTone 3, Res. Gospel 6, Epistle Heb.\n11: 9-10; 17-23; 32\u201340; Gospel Mt.1:\n1 \u2013 25. Following week daily\nreadings of the Menaion",
+    "Title": "SUNDAY BEFORE NATIVITY OF OUR LORD JESUS CHRIST. Following week daily readings of the Menaion",
     "Tone": "3",
     "Matins Gospel": "6",
-    "Epistle": "Heb",
-    "Gospel": null,
+    "Epistle": "Heb. 11: 9-10; 17-23; 32\u201340",
+    "Gospel": "Mt.1: 1 \u2013 25",
     "Fasting": "Common Abstinence"
   },
   {
@@ -10704,12 +10418,12 @@
     "Month": "December",
     "Day": 26,
     "Raw Text": "26\nDispensation (H\u00e2r\u021bi)\n(\u2020) SYNAXIS OF THE\nMOTHER OF GOD.\nHoly day of Obligation.\nReadings of the Sunday\nafter Nativity.\nEpistle Gal. 1:11-19; Gospel,\nMatt 2: 13-23.\nCanada: Boxing Day",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) SYNAXIS OF THE MOTHER OF GOD. Holy day of Obligation. Readings of the Sunday after Nativity. Canada: Boxing Day",
+    "Title": "(\u2020) SYNAXIS OF THE MOTHER OF GOD. Holy day of Obligation. Readings of the Sunday after Nativity. Canada: Boxing Day",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Gal. 1:11-19",
     "Gospel": "Matt 2: 13-23",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "122725",
@@ -10735,19 +10449,6 @@
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "121125",
-    "Year": "2025",
-    "Month": "December",
-    "Day": 11,
-    "Raw Text": "11: 9-10; 17-23; 32\u201340; Gospel Mt.1:\n1 \u2013 25. Following week daily\nreadings of the Menaion",
-    "Title": ": 9-10; 17-23; 32\u201340. Following week daily readings of the Menaion",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Mt.1: 1 \u2013 25",
     "Fasting": null
   },
   {
@@ -10795,12 +10496,12 @@
     "Month": "December",
     "Day": 31,
     "Raw Text": "31\nDispensation (H\u00e2r\u021bi)\nLeavetaking of the Nativity\n(New Years Eve)\nVen. Melania of Rome",
-    "Title": "Dispensation (H\u00e2r\u021bi) Leavetaking of the Nativity (New Years Eve) Ven. Melania of Rome",
+    "Title": "Leavetaking of the Nativity (New Years Eve) Ven. Melania of Rome",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "010126",
@@ -10821,12 +10522,12 @@
     "Month": "January",
     "Day": 2,
     "Raw Text": "2\nDispensation (H\u00e2r\u021bi)\nForefeast of Theophany, St.\nSylvester, Pope\nPolyeuctus, martyr.",
-    "Title": "Dispensation (H\u00e2r\u021bi) Forefeast of Theophany, St. Sylvester, Pope Polyeuctus, martyr",
+    "Title": "Forefeast of Theophany, St. Sylvester, Pope Polyeuctus, martyr",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "010326",
@@ -11132,24 +10833,11 @@
     "Year": "2026",
     "Month": "January",
     "Day": 15,
-    "Raw Text": "15th SUNDAY AFTER HOLY CROSS\n(32nd Sunday after Pentecost)\nTone 7, Res. Gospel 10, Epistle 1 Tim 4:9-",
-    "Title": "th SUNDAY AFTER HOLY CROSS (32nd Sunday after Pentecost)",
+    "Raw Text": "15th SUNDAY AFTER HOLY CROSS\n(32nd Sunday after Pentecost)\nTone 7, Res. Gospel 10, Epistle 1 Tim 4:9-\n15, Gospel Lk. 19:1-10. Following week\nreadings \u201333rd week after Pentecost.",
+    "Title": "th SUNDAY AFTER HOLY CROSS (32nd Sunday after Pentecost). Following week readings \u201333rd week after Pentecost",
     "Tone": "7",
     "Matins Gospel": "10",
-    "Epistle": "1 Tim 4:9",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "011526",
-    "Year": "2026",
-    "Month": "January",
-    "Day": 15,
-    "Raw Text": "15, Gospel Lk. 19:1-10. Following week\nreadings \u201333rd week after Pentecost.",
-    "Title": "Following week readings \u201333rd week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Epistle": "1 Tim 4:9- 15",
     "Gospel": "Lk. 19:1-10",
     "Fasting": null
   },
@@ -11198,12 +10886,12 @@
     "Month": "January",
     "Day": 28,
     "Raw Text": "28\nDispensation (Harti)\nEutychius of Melitene,\nhieromartyr",
-    "Title": "Dispensation (Harti) Eutychius of Melitene, hieromartyr",
+    "Title": "Eutychius of Melitene, hieromartyr",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "012926",
@@ -11224,12 +10912,12 @@
     "Month": "January",
     "Day": 30,
     "Raw Text": "30\nDispensation (Harti)\n(\u2020) Three Holy Hierarchs:\nBasil the Great, Gregory\nthe Theologian and John\nChrysostom.\nEpistle, Heb. 13:7-16,\nGospel, Matt: 5:14-19\nHippolytus, martyr.",
-    "Title": "Dispensation (Harti) (\u2020) Three Holy Hierarchs: Basil the Great, Gregory the Theologian and John Chrysostom",
+    "Title": "(\u2020) Three Holy Hierarchs: Basil the Great, Gregory the Theologian and John Chrysostom",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Heb. 13:7-16",
     "Gospel": "Matt: 5:14-19 Hippolytus, martyr",
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "013126",
@@ -11626,25 +11314,12 @@
     "Year": "2026",
     "Month": "February",
     "Day": 1,
-    "Raw Text": "1st Sunday of Lent \u2013\nOrthodoxy Sunday. Liturgy of\nSt. Basil. Tone 4. Res. Gospel 4.\nEpistle: Heb. 11: 24-26; Gospel: Jn.",
+    "Raw Text": "1st Sunday of Lent \u2013\nOrthodoxy Sunday. Liturgy of\nSt. Basil. Tone 4. Res. Gospel 4.\nEpistle: Heb. 11: 24-26; Gospel: Jn.\n1:43-51.",
     "Title": "st Sunday of Lent \u2013 Orthodoxy Sunday. Liturgy of St. Basil",
     "Tone": "4",
     "Matins Gospel": "4",
     "Epistle": "Heb. 11: 24-26",
-    "Gospel": "Jn",
-    "Fasting": null
-  },
-  {
-    "Date": "020126",
-    "Year": "2026",
-    "Month": "February",
-    "Day": 1,
-    "Raw Text": "1:43-51.",
-    "Title": ":43-51",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
+    "Gospel": "Jn. 1:43-51",
     "Fasting": null
   },
   {
@@ -12004,12 +11679,12 @@
     "Month": "March",
     "Day": 25,
     "Raw Text": "25\nDispensation (Harti)\n(\u2020) ANNUNCIATION\nHoly Day of Obligation\nEpistle 2:11-18;\nGospel Lk. 1:24-38.",
-    "Title": "Dispensation (Harti) (\u2020) ANNUNCIATION Holy Day of Obligation",
+    "Title": "(\u2020) ANNUNCIATION Holy Day of Obligation",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "2:11-18",
     "Gospel": "Lk. 1:24-38",
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "032626",
@@ -12147,12 +11822,12 @@
     "Month": "March",
     "Day": 25,
     "Raw Text": "25\nDispensation (Harti)\n(\u2020) ANNUNCIATION\nHoly Day of Obligation\nEpistle 2:11-18;\nGospel Lk. 1:24-38.",
-    "Title": "Dispensation (Harti) (\u2020) ANNUNCIATION Holy Day of Obligation",
+    "Title": "(\u2020) ANNUNCIATION Holy Day of Obligation",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "2:11-18",
     "Gospel": "Lk. 1:24-38",
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "032726",
@@ -12264,12 +11939,12 @@
     "Month": "April",
     "Day": 8,
     "Raw Text": "8\nDispensation (Harti)\nBRIGHT WEDNESDAY\nHerodion et al, Apostles\namong the 70",
-    "Title": "Dispensation (Harti) BRIGHT WEDNESDAY Herodion et al, Apostles among the 70",
+    "Title": "BRIGHT WEDNESDAY Herodion et al, Apostles among the 70",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "040926",
@@ -12290,12 +11965,12 @@
     "Month": "April",
     "Day": 10,
     "Raw Text": "10\nDispensation (Harti)\nBRIGHT FRIDAY\nTerence, Pompey, Maximus,\nand companions, Martyrs",
-    "Title": "Dispensation (Harti) BRIGHT FRIDAY Terence, Pompey, Maximus, and companions, Martyrs",
+    "Title": "BRIGHT FRIDAY Terence, Pompey, Maximus, and companions, Martyrs",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "041126",
@@ -12589,12 +12264,12 @@
     "Month": "April",
     "Day": 8,
     "Raw Text": "8\nDispensation (Harti)\nBRIGHT WEDNESDAY\nHerodion et al, Apostles\namong the 70",
-    "Title": "Dispensation (Harti) BRIGHT WEDNESDAY Herodion et al, Apostles among the 70",
+    "Title": "BRIGHT WEDNESDAY Herodion et al, Apostles among the 70",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "040926",
@@ -12615,12 +12290,12 @@
     "Month": "April",
     "Day": 10,
     "Raw Text": "10\nDispensation (Harti)\nBRIGHT FRIDAY\nTerence, Pompey, Maximus,\nand companions, Martyrs",
-    "Title": "Dispensation (Harti) BRIGHT FRIDAY Terence, Pompey, Maximus, and companions, Martyrs",
+    "Title": "BRIGHT FRIDAY Terence, Pompey, Maximus, and companions, Martyrs",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "041126",
@@ -12744,12 +12419,12 @@
     "Year": "2026",
     "Month": "May",
     "Day": 3,
-    "Raw Text": "3\nSUNDAY OF THE SAMARITAN\nWOMAN (5th Sunday of Easter)\nTone 4, Res. Gospel 7. Epistle Acts 11: 19-",
-    "Title": "SUNDAY OF THE SAMARITAN WOMAN (5th Sunday of Easter)",
+    "Raw Text": "3\nSUNDAY OF THE SAMARITAN\nWOMAN (5th Sunday of Easter)\nTone 4, Res. Gospel 7. Epistle Acts 11: 19-\n30, Gospel Jn. 4: 5-42. Following week\nreadings \u2013 5th Sunday after Easter.",
+    "Title": "SUNDAY OF THE SAMARITAN WOMAN (5th Sunday of Easter). Following week readings \u2013 5th Sunday after Easter",
     "Tone": "4",
     "Matins Gospel": "7",
-    "Epistle": "Acts 11: 19",
-    "Gospel": null,
+    "Epistle": "Acts 11: 19- 30",
+    "Gospel": "Jn. 4: 5-42",
     "Fasting": null
   },
   {
@@ -12828,19 +12503,6 @@
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "053026",
-    "Year": "2026",
-    "Month": "May",
-    "Day": 30,
-    "Raw Text": "30, Gospel Jn. 4: 5-42. Following week\nreadings \u2013 5th Sunday after Easter.",
-    "Title": "Following week readings \u2013 5th Sunday after Easter",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Jn. 4: 5-42",
     "Fasting": null
   },
   {
@@ -13083,12 +12745,12 @@
     "Month": "May",
     "Day": 27,
     "Raw Text": "27\nDispensation (H\u00e2r\u021bi)\nAlladius, Martyr; Julius",
-    "Title": "Dispensation (H\u00e2r\u021bi) Alladius, Martyr; Julius",
+    "Title": "Alladius, Martyr; Julius",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "052826",
@@ -13109,12 +12771,12 @@
     "Month": "May",
     "Day": 29,
     "Raw Text": "29\nDispensation (H\u00e2r\u021bi)",
-    "Title": "Dispensation (H\u00e2r\u021bi)",
+    "Title": "",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "053026",
@@ -13148,12 +12810,12 @@
     "Month": "June",
     "Day": 2,
     "Raw Text": "2\nDispensation (Harti)\n(\u2020) BLESSED MARTYR\nBISHOPS\nEpistle Heb 7,26-28,8: 1-2\nGospel John:15:17-27; 16:1-2\nH. Father Cyril, Archbishop\nof Alexandria.",
-    "Title": "Dispensation (Harti) (\u2020) BLESSED MARTYR BISHOPS. Father Cyril, Archbishop of Alexandria",
+    "Title": "(\u2020) BLESSED MARTYR BISHOPS. Father Cyril, Archbishop of Alexandria",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Heb 7,26-28,8: 1-2",
     "Gospel": "John:15:17-27; 16:1-2 H",
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "060326",
@@ -13303,25 +12965,12 @@
     "Year": "2026",
     "Month": "June",
     "Day": 2,
-    "Raw Text": "2nd SUNDAY AFTER\nPENTECOST.\nTone 1, Res. Gospel 2, Epistle\nRom. 2: 10 \u2013 16, Gospel Matt. 4:\n18-23. Following week readings \u2013",
-    "Title": "nd SUNDAY AFTER PENTECOST. Following week readings \u2013",
+    "Raw Text": "2nd SUNDAY AFTER\nPENTECOST.\nTone 1, Res. Gospel 2, Epistle\nRom. 2: 10 \u2013 16, Gospel Matt. 4:\n18-23. Following week readings \u2013\n3rd week after Pentecost.",
+    "Title": "nd SUNDAY AFTER PENTECOST. Following week readings \u2013 3rd week after Pentecost",
     "Tone": "1",
     "Matins Gospel": "2",
     "Epistle": "Rom. 2: 10 \u2013 16",
     "Gospel": "Matt. 4: 18-23",
-    "Fasting": null
-  },
-  {
-    "Date": "060326",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 3,
-    "Raw Text": "3rd week after Pentecost.",
-    "Title": "rd week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
     "Fasting": null
   },
   {
@@ -13459,13 +13108,13 @@
     "Year": "2026",
     "Month": "June",
     "Day": 24,
-    "Raw Text": "24\nDispensation (H\u00e2r\u021bi)\n(\u2020) Nativity of St. John the\nBaptist. (S\u00e2nzienele)\nEp. Rom 13:11-14; 14:1-4\nGospel: Lk 1:1-25;57-68; 76-",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) Nativity of St. John the Baptist. (S\u00e2nzienele) Ep. Rom 13:11-14; 14:1-4",
+    "Raw Text": "24\nDispensation (H\u00e2r\u021bi)\n(\u2020) Nativity of St. John the\nBaptist. (S\u00e2nzienele)\nEp. Rom 13:11-14; 14:1-4\nGospel: Lk 1:1-25;57-68; 76-\n80",
+    "Title": "(\u2020) Nativity of St. John the Baptist. (S\u00e2nzienele) Ep. Rom 13:11-14; 14:1-4",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
-    "Gospel": "Lk 1:1-25;57-68; 76",
-    "Fasting": null
+    "Gospel": "Lk 1:1-25;57-68; 76- 80",
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "062526",
@@ -13511,38 +13160,12 @@
     "Year": "2026",
     "Month": "June",
     "Day": 4,
-    "Raw Text": "4th SUNDAY AFTER\nPENTECOST\nTone 3, Res. Gospel 4, Epistle\nRom. 6: 18 \u2013 23, Gospel Matt. 8:\n5-13. Following week readings \u2013",
-    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013",
+    "Raw Text": "4th SUNDAY AFTER\nPENTECOST\nTone 3, Res. Gospel 4, Epistle\nRom. 6: 18 \u2013 23, Gospel Matt. 8:\n5-13. Following week readings \u2013\n5th week after Pentecost.\nUSA: Father\u2019s Day",
+    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 5th week after Pentecost. USA: Father\u2019s Day",
     "Tone": "3",
     "Matins Gospel": "4",
     "Epistle": "Rom. 6: 18 \u2013 23",
     "Gospel": "Matt. 8: 5-13",
-    "Fasting": null
-  },
-  {
-    "Date": "068026",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 80,
-    "Raw Text": "80",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "060526",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 5,
-    "Raw Text": "5th week after Pentecost.\nUSA: Father\u2019s Day",
-    "Title": "th week after Pentecost. USA: Father\u2019s Day",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
     "Fasting": null
   },
   {
@@ -13732,12 +13355,12 @@
     "Year": "2026",
     "Month": "July",
     "Day": 6,
-    "Raw Text": "6TH SUNDAY AFTER PENTECOST\nTone 5, Res. Gospel 6, Epistle Rom. 12: 6-",
-    "Title": "TH SUNDAY AFTER PENTECOST",
+    "Raw Text": "6TH SUNDAY AFTER PENTECOST\nTone 5, Res. Gospel 6, Epistle Rom. 12: 6-\n14, Gospel Mt. 9: 1 - 8. Following week\nreadings \u2013 7th week after Pentecost.",
+    "Title": "TH SUNDAY AFTER PENTECOST. Following week readings \u2013 7th week after Pentecost",
     "Tone": "5",
     "Matins Gospel": "6",
-    "Epistle": "Rom. 12: 6",
-    "Gospel": null,
+    "Epistle": "Rom. 12: 6- 14",
+    "Gospel": "Mt. 9: 1 - 8",
     "Fasting": null
   },
   {
@@ -13751,19 +13374,6 @@
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "071426",
-    "Year": "2026",
-    "Month": "July",
-    "Day": 14,
-    "Raw Text": "14, Gospel Mt. 9: 1 - 8. Following week\nreadings \u2013 7th week after Pentecost.",
-    "Title": "Following week readings \u2013 7th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Mt. 9: 1 - 8",
     "Fasting": null
   },
   {
@@ -14031,38 +13641,12 @@
     "Year": "2026",
     "Month": "July",
     "Day": 45,
-    "Raw Text": "45 Martyrs in Nicopolis in\nArmenia.\nEuphemia, woman\nmartyr.\n+Holy Prophet Elijah the\nTishbite. Epistle James 5:10-",
-    "Title": "Martyrs in Nicopolis in Armenia. Euphemia, woman martyr. +Holy Prophet Elijah the Tishbite",
+    "Raw Text": "45 Martyrs in Nicopolis in\nArmenia.\nEuphemia, woman\nmartyr.\n+Holy Prophet Elijah the\nTishbite. Epistle James 5:10-\n20, Gospel, Luke 4:22-26, 28-\n30\nVen. Symeon, Fool-for-\nChrist, and his fellow\nascetic, John.\nMary Magdalene, Equal to\nthe Apostles\nTranslation of the Relics of\nSt. Phocas, martyr.\nProphet Ezekiel.\nDormition of St. Anne,\nmother of the\nTheotokos. Holy Women\nOlympiada the\nDeaconess & Eupraxia\nthe Virgin.",
+    "Title": "Martyrs in Nicopolis in Armenia. Euphemia, woman martyr. +Holy Prophet Elijah the Tishbite. Symeon, Fool-for- Christ, and his fellow ascetic, John. Mary Magdalene, Equal to the Apostles Translation of the Relics of St. Phocas, martyr. Prophet Ezekiel. Dormition of St. Anne, mother of the Theotokos. Holy Women Olympiada the Deaconess & Eupraxia the Virgin",
     "Tone": null,
     "Matins Gospel": null,
-    "Epistle": "James 5:10",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "072026",
-    "Year": "2026",
-    "Month": "July",
-    "Day": 20,
-    "Raw Text": "20, Gospel, Luke 4:22-26, 28-",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Luke 4:22-26, 28",
-    "Fasting": null
-  },
-  {
-    "Date": "073026",
-    "Year": "2026",
-    "Month": "July",
-    "Day": 30,
-    "Raw Text": "30\nVen. Symeon, Fool-for-\nChrist, and his fellow\nascetic, John.\nMary Magdalene, Equal to\nthe Apostles\nTranslation of the Relics of\nSt. Phocas, martyr.\nProphet Ezekiel.\nDormition of St. Anne,\nmother of the\nTheotokos. Holy Women\nOlympiada the\nDeaconess & Eupraxia\nthe Virgin.",
-    "Title": "Ven. Symeon, Fool-for- Christ, and his fellow ascetic, John. Mary Magdalene, Equal to the Apostles Translation of the Relics of St. Phocas, martyr. Prophet Ezekiel. Dormition of St. Anne, mother of the Theotokos. Holy Women Olympiada the Deaconess & Eupraxia the Virgin",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
+    "Epistle": "James 5:10- 20",
+    "Gospel": "Luke 4:22-26, 28- 30 Ven",
     "Fasting": null
   },
   {
@@ -14136,12 +13720,12 @@
     "Month": "August",
     "Day": 6,
     "Raw Text": "6\nDispensation (H\u00e2r\u021bi)\n(\u2020) TRANSFIGURATION OF OUR\nLORD JESUS CHRIST. Epistle 2\nPeter 1:10-19; Gospel Matt\n17:1-9. Blessing of the first fruits\nof the vine",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) TRANSFIGURATION OF OUR LORD JESUS CHRIST. Blessing of the first fruits of the vine",
+    "Title": "(\u2020) TRANSFIGURATION OF OUR LORD JESUS CHRIST. Blessing of the first fruits of the vine",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "2 Peter 1:10-19",
     "Gospel": "Matt 17:1-9",
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "080726",
@@ -14356,24 +13940,11 @@
     "Year": "2026",
     "Month": "August",
     "Day": 12,
-    "Raw Text": "12th SUNDAY AFTER PENTECOST\nTone 3, Res. Gospel 1, Epistle 1 Cor.",
-    "Title": "th SUNDAY AFTER PENTECOST",
+    "Raw Text": "12th SUNDAY AFTER PENTECOST\nTone 3, Res. Gospel 1, Epistle 1 Cor.\n15:1-11, Gospel Matt. 19:16-26.\nFollowing week readings \u2013 13th week after\nPentecost.",
+    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 13th week after Pentecost",
     "Tone": "3",
     "Matins Gospel": "1",
-    "Epistle": "1 Cor",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "081526",
-    "Year": "2026",
-    "Month": "August",
-    "Day": 15,
-    "Raw Text": "15:1-11, Gospel Matt. 19:16-26.\nFollowing week readings \u2013 13th week after\nPentecost.",
-    "Title": ":1-11. Following week readings \u2013 13th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Epistle": "1 Cor. 15:1-11",
     "Gospel": "Matt. 19:16-26",
     "Fasting": null
   },
@@ -15019,24 +14590,11 @@
     "Year": "2026",
     "Month": "October",
     "Day": 2,
-    "Raw Text": "2, Res. Gospel 8, Epistle 2 Cor 11:31-33; 12:1-",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": "8",
-    "Epistle": "2 Cor 11:31-33; 12:1",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "101026",
-    "Year": "2026",
-    "Month": "October",
-    "Day": 10,
-    "Raw Text": "10, Gospel Lk. 6: 31\u2013 36. Following week\nreadings \u2013 20th, week after Pentecost.",
+    "Raw Text": "2, Res. Gospel 8, Epistle 2 Cor 11:31-33; 12:1-\n10, Gospel Lk. 6: 31\u2013 36. Following week\nreadings \u2013 20th, week after Pentecost.",
     "Title": "Following week readings \u2013 20th, week after Pentecost",
     "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Matins Gospel": "8",
+    "Epistle": "2 Cor 11:31-33; 12:1- 10",
     "Gospel": "Lk. 6: 31\u2013 36",
     "Fasting": null
   },
@@ -15526,24 +15084,11 @@
     "Year": "2026",
     "Month": "November",
     "Day": 7,
-    "Raw Text": "7TH SUNDAY AFTER HOLY CROSS\n(24th Sunday after Pentecost).\nTone 7, Res. Gospel 2, Epistle Eph 2: 14-",
-    "Title": "TH SUNDAY AFTER HOLY CROSS (24th Sunday after Pentecost)",
+    "Raw Text": "7TH SUNDAY AFTER HOLY CROSS\n(24th Sunday after Pentecost).\nTone 7, Res. Gospel 2, Epistle Eph 2: 14-\n22; Gospel Lk. 8: 41\u2013 56. Following week\nreadings \u2013 25TH week after Pentecost",
+    "Title": "TH SUNDAY AFTER HOLY CROSS (24th Sunday after Pentecost). Following week readings \u2013 25TH week after Pentecost",
     "Tone": "7",
     "Matins Gospel": "2",
-    "Epistle": "Eph 2: 14",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "112226",
-    "Year": "2026",
-    "Month": "November",
-    "Day": 22,
-    "Raw Text": "22; Gospel Lk. 8: 41\u2013 56. Following week\nreadings \u2013 25TH week after Pentecost",
-    "Title": "Following week readings \u2013 25TH week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Epistle": "Eph 2: 14- 22",
     "Gospel": "Lk. 8: 41\u2013 56",
     "Fasting": null
   },
@@ -15631,12 +15176,12 @@
     "Month": "November",
     "Day": 21,
     "Raw Text": "21\nDispensation (Harti)\n(\u2020)ENTRANCE INTO THE\nTEMPLE OF THE MOTHER\nOF GOD.\nHoly Day of Obligation.\nApostle Heb. 9:1-7; Gospel\nLk 10:38-42, 11:27-28.\nVen. Stephen the Younger.\nIrenarchus, martyr.",
-    "Title": "Dispensation (Harti) (\u2020)ENTRANCE INTO THE TEMPLE OF THE MOTHER OF GOD. Holy Day of Obligation. Apostle Heb. 9:1-7. Ven. Stephen the Younger. Irenarchus, martyr",
+    "Title": "(\u2020)ENTRANCE INTO THE TEMPLE OF THE MOTHER OF GOD. Holy Day of Obligation. Apostle Heb. 9:1-7. Ven. Stephen the Younger. Irenarchus, martyr",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": "Lk 10:38-42, 11:27-28",
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "112226",
@@ -15696,12 +15241,12 @@
     "Month": "November",
     "Day": 26,
     "Raw Text": "26\nDispensation (Harti)\nVen. Alypius the Stylite.\nNicon the Wonderworker.\nUSA: Thanksgiving Day\n(In the Eparchy of Canton, a\ndispensation for all foods is\ngranted on Thanksgiving Day\nand the following weekend)",
-    "Title": "Dispensation (Harti) Ven. Alypius the Stylite. Nicon the Wonderworker. USA: Thanksgiving Day (In the Eparchy of Canton, a dispensation for all foods is granted on Thanksgiving Day and the following weekend)",
+    "Title": "Ven. Alypius the Stylite. Nicon the Wonderworker. USA: Thanksgiving Day (In the Eparchy of Canton, a dispensation for all foods is granted on Thanksgiving Day and the following weekend)",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "112726",
@@ -15709,12 +15254,12 @@
     "Month": "November",
     "Day": 27,
     "Raw Text": "27\nDispensation (H\u00e2rti)\nJames the Persian, martyr.",
-    "Title": "Dispensation (H\u00e2rti) James the Persian, martyr",
+    "Title": "James the Persian, martyr",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2rti)"
   },
   {
     "Date": "112826",
@@ -15722,36 +15267,23 @@
     "Month": "November",
     "Day": 28,
     "Raw Text": "28\nDispensation (Harti)\nVen. Stephen the Younger.\nIrenarchus, martyr.",
-    "Title": "Dispensation (Harti) Ven. Stephen the Younger. Irenarchus, martyr",
+    "Title": "Ven. Stephen the Younger. Irenarchus, martyr",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "110926",
     "Year": "2026",
     "Month": "November",
     "Day": 9,
-    "Raw Text": "9th SUNDAY AFTER HOLY CROSS\n(26th Sunday after Pentecost).\nTone 1, Res. Gospel 4, Epistle Eph 5:8-",
-    "Title": "th SUNDAY AFTER HOLY CROSS (26th Sunday after Pentecost)",
+    "Raw Text": "9th SUNDAY AFTER HOLY CROSS\n(26th Sunday after Pentecost).\nTone 1, Res. Gospel 4, Epistle Eph 5:8-\n19; Gospel Lk. 12: 16\u2013 21. Following\nweek readings \u2013 27th week after\nPentecost.",
+    "Title": "th SUNDAY AFTER HOLY CROSS (26th Sunday after Pentecost). Following week readings \u2013 27th week after Pentecost",
     "Tone": "1",
     "Matins Gospel": "4",
-    "Epistle": "Eph 5:8",
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "111926",
-    "Year": "2026",
-    "Month": "November",
-    "Day": 19,
-    "Raw Text": "19; Gospel Lk. 12: 16\u2013 21. Following\nweek readings \u2013 27th week after\nPentecost.",
-    "Title": "Following week readings \u2013 27th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
+    "Epistle": "Eph 5:8- 19",
     "Gospel": "Lk. 12: 16\u2013 21",
     "Fasting": null
   },
@@ -15761,12 +15293,12 @@
     "Month": "November",
     "Day": 29,
     "Raw Text": "29\nDispensation (Harti)\n13th SUNDAY AFTER HOLY CROSS\n(30th Sunday after Pentecost).\nTone 2, Res. Gospel 5, Epistle Eph 6: 10-\n17; Gospel Lk. 18: 18\u201328. Following\nweek readings \u2013 28th week after\nPentecost.",
-    "Title": "Dispensation (Harti) 13th SUNDAY AFTER HOLY CROSS (30th Sunday after Pentecost). Following week readings \u2013 28th week after Pentecost",
+    "Title": "13th SUNDAY AFTER HOLY CROSS (30th Sunday after Pentecost). Following week readings \u2013 28th week after Pentecost",
     "Tone": "2",
     "Matins Gospel": "5",
     "Epistle": "Eph 6: 10- 17",
     "Gospel": "Lk. 18: 18\u201328",
-    "Fasting": null
+    "Fasting": "Dispensation (Harti)"
   },
   {
     "Date": "113026",
@@ -15955,38 +15487,12 @@
     "Year": "2026",
     "Month": "December",
     "Day": 6,
-    "Raw Text": "6, Epistle Col 1: 12-18; Gospel Lk. 13:\n10\u201317. Following week readings \u2013",
-    "Title": "Following week readings \u2013",
+    "Raw Text": "6, Epistle Col 1: 12-18; Gospel Lk. 13:\n10\u201317. Following week readings \u2013\n29th week after Pentecost.\n(\u2020)St. Nicholas the Wonderworker\nof Myra in Lycia\nEpistle Heb. 13:17-21, Gospel, Luke\n6:17-23a",
+    "Title": "Following week readings \u2013 29th week after Pentecost. (\u2020)St. Nicholas the Wonderworker of Myra in Lycia Epistle Heb. 13:17-21, Gospel, Luke 6:17-23a",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Col 1: 12-18",
     "Gospel": "Lk. 13: 10\u201317",
-    "Fasting": null
-  },
-  {
-    "Date": "122926",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 29,
-    "Raw Text": "29th week after Pentecost.\n(\u2020)St. Nicholas the Wonderworker\nof Myra in Lycia\nEpistle Heb. 13:17-21, Gospel, Luke",
-    "Title": "th week after Pentecost. (\u2020)St. Nicholas the Wonderworker of Myra in Lycia",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": "Heb. 13:17-21",
-    "Gospel": "Luke",
-    "Fasting": null
-  },
-  {
-    "Date": "120626",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 6,
-    "Raw Text": "6:17-23a",
-    "Title": ":17-23a",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
     "Fasting": null
   },
   {
@@ -16085,12 +15591,12 @@
     "Year": "2026",
     "Month": "December",
     "Day": 20,
-    "Raw Text": "20\nCommon Abstinence\nSUNDAY BEFORE NATIVITY\nOF OUR LORD JESUS CHRIST.\nTone 5, Res. Gospel 8, Epistle Heb.",
-    "Title": "SUNDAY BEFORE NATIVITY OF OUR LORD JESUS CHRIST",
+    "Raw Text": "20\nCommon Abstinence\nSUNDAY BEFORE NATIVITY\nOF OUR LORD JESUS CHRIST.\nTone 5, Res. Gospel 8, Epistle Heb.\n11: 9-10; 17-23; 32\u201340; Gospel Mt.1:\n1 \u2013 25. Following week daily\nreadings of the Menaion",
+    "Title": "SUNDAY BEFORE NATIVITY OF OUR LORD JESUS CHRIST. Following week daily readings of the Menaion",
     "Tone": "5",
     "Matins Gospel": "8",
-    "Epistle": "Heb",
-    "Gospel": null,
+    "Epistle": "Heb. 11: 9-10; 17-23; 32\u201340",
+    "Gospel": "Mt.1: 1 \u2013 25",
     "Fasting": "Common Abstinence"
   },
   {
@@ -16163,26 +15669,13 @@
     "Year": "2026",
     "Month": "December",
     "Day": 26,
-    "Raw Text": "26\nDispensation (H\u00e2r\u021bi)\n(\u2020) SYNAXIS OF THE\nMOTHER OF GOD.\nHoly day of Obligation.\nReadings of the Sunday\nafter Nativity.\nEpistle Gal. 1:11-19; Gospel, Matt",
-    "Title": "Dispensation (H\u00e2r\u021bi) (\u2020) SYNAXIS OF THE MOTHER OF GOD. Holy day of Obligation. Readings of the Sunday after Nativity",
+    "Raw Text": "26\nDispensation (H\u00e2r\u021bi)\n(\u2020) SYNAXIS OF THE\nMOTHER OF GOD.\nHoly day of Obligation.\nReadings of the Sunday\nafter Nativity.\nEpistle Gal. 1:11-19; Gospel, Matt\n2: 13-23.\nCanada: Boxing Day",
+    "Title": "(\u2020) SYNAXIS OF THE MOTHER OF GOD. Holy day of Obligation. Readings of the Sunday after Nativity. Canada: Boxing Day",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": "Gal. 1:11-19",
-    "Gospel": "Matt",
-    "Fasting": null
-  },
-  {
-    "Date": "121126",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 11,
-    "Raw Text": "11: 9-10; 17-23; 32\u201340; Gospel Mt.1:\n1 \u2013 25. Following week daily\nreadings of the Menaion",
-    "Title": ": 9-10; 17-23; 32\u201340. Following week daily readings of the Menaion",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Mt.1: 1 \u2013 25",
-    "Fasting": null
+    "Gospel": "Matt 2: 13-23",
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "121026",
@@ -16191,19 +15684,6 @@
     "Day": 10,
     "Raw Text": "10 Martyrs of Crete",
     "Title": "Martyrs of Crete",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "120226",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 2,
-    "Raw Text": "2: 13-23.\nCanada: Boxing Day",
-    "Title": ": 13-23. Canada: Boxing Day",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
@@ -16255,12 +15735,12 @@
     "Month": "December",
     "Day": 30,
     "Raw Text": "30\nDispensation (H\u00e2r\u021bi)\nAnysia, Martyr; Zoticus the\nProtector of Orphans,\nPriest",
-    "Title": "Dispensation (H\u00e2r\u021bi) Anysia, Martyr; Zoticus the Protector of Orphans, Priest",
+    "Title": "Anysia, Martyr; Zoticus the Protector of Orphans, Priest",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
     "Gospel": null,
-    "Fasting": null
+    "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
     "Date": "123126",

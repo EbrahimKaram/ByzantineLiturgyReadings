@@ -16,7 +16,7 @@ EPISTLE_RE = re.compile(r'(?:^|[\s,;.])Epistle:?\s*(.+?)(?=\s*(?:Gospel|Followin
 GOSPEL_RE = re.compile(r'(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|\.\s+[A-Z])|$)', re.IGNORECASE)
 FOLLOWING_RE = re.compile(r'Following[:\s]*', re.IGNORECASE)
 DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
-FASTING_RE = re.compile(r'(Strict Fast and abstinence|Common Abstinence|Strict Fast|Abstinence)', re.IGNORECASE)
+FASTING_RE = re.compile(r'(Strict Fast and abstinence|Common Abstinence|Strict Fast|Abstinence|Dispensation\s*\([^)]+\)|Dispensation)', re.IGNORECASE)
 
 MONTH_MAP = {
     "january": "01", "february": "02", "march": "03", "april": "04", "may": "05", "june": "06",
@@ -181,10 +181,22 @@ def process_pdfs(root_dir):
                                         day_num = int(day_match.group(1)) if day_match else None
                                         
                                         # Filter out unlikely day numbers (e.g. "16" in "16 - 20")
-                                        # Heuristic: If it looks like a verse range "16 - 20" or "16-20", it is not a day.
                                         if day_num:
+                                            # Case 1: Range "16 - 20"
                                             if re.match(r'^\d{1,2}\s*[\-–]\s*\d+', cleaned_cell):
                                                 day_num = None
+                                            # Case 2: Verse continuation "13;" or "13." followed by text (dangerous if day is "13.")
+                                            # But usually Day is "13" or "13\nTitle".
+                                            # If it is "13;" (semicolon), it is almost certainly a verse ending.
+                                            elif re.match(r'^\d{1,2}\s*[;:]', cleaned_cell):
+                                                day_num = None
+                                            
+                                            # Case 3: Check context with previous entry in this column
+                                            # If previous content ended with hypen "-", this is likely a continuation number
+                                            elif col_idx in active_entries:
+                                                prev_text = active_entries[col_idx]["Raw Text"]
+                                                if prev_text.strip().endswith(('-', '–')):
+                                                    day_num = None
 
                                         if day_num:
                                             # New Day Found: Create Entry
