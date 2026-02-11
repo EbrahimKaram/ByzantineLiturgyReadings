@@ -26,9 +26,13 @@ mkdir -p "$OUTPUT_DIR"
 MONTHS=("January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December")
 
 # Loop through months
+count=1
 for month in "${MONTHS[@]}"; do
+    # Zero-pad month number
+    month_num=$(printf "%02d" $count)
+
     downloaded=false
-    final_filename="Calendar $YEAR $month.pdf"
+    final_filename="$month_num Calendar $YEAR $month.pdf"
     output_path="$OUTPUT_DIR/$final_filename"
     
     # Possible naming patterns
@@ -50,6 +54,7 @@ for month in "${MONTHS[@]}"; do
     if [ "$downloaded" = false ]; then
         echo -e "\e[33mWarning: Could not find file for $month at $BASE_URL\e[0m"
     fi
+    ((count++))
 done
 
 # Handle Special Announcements

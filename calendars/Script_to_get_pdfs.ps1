@@ -24,11 +24,13 @@ if (-not (Test-Path -Path $outputDir)) {
 $months = [System.Globalization.DateTimeFormatInfo]::CurrentInfo.MonthNames[0..11]
 
 # 2. Loop through months and try Patterns
+$monthCounter = 1
 foreach ($month in $months) {
+    $monthNum = $monthCounter.ToString("00")
     $downloaded = $false
     
-    # We want to save everything as "Calendar YYYY Month.pdf" for consistency
-    $finalFileName = "Calendar $Year $month.pdf"
+    # We want to save everything as "MM Calendar YYYY Month.pdf" for consistency
+    $finalFileName = "$monthNum Calendar $Year $month.pdf"
     $outputPath = Join-Path $outputDir $finalFileName
 
     # Possible naming patterns on the server
@@ -58,6 +60,7 @@ foreach ($month in $months) {
     if (-not $downloaded) {
         Write-Warning "Could not find file for $month at $baseUrl"
     }
+    $monthCounter++
 }
 
 # 3. Handle Special Announcements (and check for known typos)
