@@ -16,6 +16,7 @@ EPISTLE_RE = re.compile(r'(?:^|[\s,;.])Epistle:?\s*(.+?)(?=\s*(?:Gospel|Followin
 GOSPEL_RE = re.compile(r'(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|\.\s+[A-Z])|$)', re.IGNORECASE)
 FOLLOWING_RE = re.compile(r'Following[:\s]*', re.IGNORECASE)
 DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
+FASTING_RE = re.compile(r'(Strict Fast and abstinence|Common Abstinence|Strict Fast|Abstinence)', re.IGNORECASE)
 
 MONTH_MAP = {
     "january": "01", "february": "02", "march": "03", "april": "04", "may": "05", "june": "06",
@@ -35,6 +36,13 @@ def parse_reading_text(text):
     # Start with a clean working copy
     work_text = TAGS_RE.sub(' ', text)
     work_text = WHITESPACE_RE.sub(' ', work_text).strip()
+
+    # 0. Extract Fasting/Abstinence (Look for it early to remove it from Title/notes)
+    fasting = None
+    fasting_match = FASTING_RE.search(work_text)
+    if fasting_match:
+        fasting = fasting_match.group(1)
+        work_text = work_text.replace(fasting_match.group(0), '')
 
     # 1. Extract Tone
     tone = None
@@ -103,6 +111,7 @@ def parse_reading_text(text):
         "matinsGospel": matins_gospel,
         "epistle": epistle,
         "gospel": gospel,
+        "fasting": fasting,
         "notes": notes if notes else None
     }
 
@@ -231,7 +240,8 @@ def process_pdfs(root_dir):
             "Tone": parsed['tone'],
             "Matins Gospel": parsed['matinsGospel'],
             "Epistle": parsed['epistle'],
-            "Gospel": parsed['gospel']
+            "Gospel": parsed['gospel'],
+            "Fasting": parsed['fasting']
         })
         final_results.append(entry)
 
@@ -248,7 +258,7 @@ if __name__ == "__main__":
 
     # Save as CSV
     csv_output = calendars_dir / "readings.csv"
-    csv_columns = ["Date", "Title", "Tone", "Matins Gospel", "Epistle", "Gospel", "Raw Text"]
+    csv_columns = ["Date", "Title", "Tone", "Matins Gospel", "Epistle", "Gospel", "Fasting", "Raw Text"]
     
     with open(csv_output, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=csv_columns, extrasaction='ignore')
