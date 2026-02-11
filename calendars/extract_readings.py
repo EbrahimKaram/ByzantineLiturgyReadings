@@ -198,6 +198,11 @@ def process_pdfs(root_dir):
                                                 if prev_text.strip().endswith(('-', '–')):
                                                     day_num = None
 
+                                            # Case 4: Bible book citation starting with number (e.g. "2 Tim", "1 Cor")
+                                            # Using a regex that catches common abbreviated books
+                                            if day_num and re.match(r'^\d\s+(?:Tim|Cor|Pet|John|Kgs|Sam|Chr|Thess|Macc|Ki|Sa|Co|Ti|Pe|Jo)', cleaned_cell, re.IGNORECASE):
+                                                day_num = None
+
                                         if day_num:
                                             # New Day Found: Create Entry
                                             yy = year[-2:]

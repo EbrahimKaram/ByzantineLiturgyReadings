@@ -264,12 +264,12 @@
     "Year": "2024",
     "Month": "January",
     "Day": 21,
-    "Raw Text": "21\nBeginning of the Triodion\nSunday of the Pharisee and the\nPublican. Tone 1, Res. Gospel 1, Epistle:",
-    "Title": "Beginning of the Triodion Sunday of the Pharisee and the Publican",
+    "Raw Text": "21\nBeginning of the Triodion\nSunday of the Pharisee and the\nPublican. Tone 1, Res. Gospel 1, Epistle:\n2 Tim. 3: 10-15; Gospel: Luke 18:10-14.\nFollowing week readings are of the 34th\nweek after Pentecost",
+    "Title": "Beginning of the Triodion Sunday of the Pharisee and the Publican. Following week readings are of the 34th week after Pentecost",
     "Tone": "1",
     "Matins Gospel": "1",
-    "Epistle": "",
-    "Gospel": null,
+    "Epistle": "2 Tim. 3: 10-15",
+    "Gospel": "Luke 18:10-14",
     "Fasting": null
   },
   {
@@ -351,19 +351,6 @@
     "Fasting": null
   },
   {
-    "Date": "010224",
-    "Year": "2024",
-    "Month": "January",
-    "Day": 2,
-    "Raw Text": "2 Tim. 3: 10-15; Gospel: Luke 18:10-14.\nFollowing week readings are of the 34th\nweek after Pentecost",
-    "Title": "Tim. 3: 10-15. Following week readings are of the 34th week after Pentecost",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": "Luke 18:10-14",
-    "Fasting": null
-  },
-  {
     "Date": "012824",
     "Year": "2024",
     "Month": "January",
@@ -442,19 +429,6 @@
     "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
-    "Date": "020324",
-    "Year": "2024",
-    "Month": "February",
-    "Day": 3,
-    "Raw Text": "3\nSaturday of the Dead\nVen. Symeon the God-\nReceiver and Prophetess\nAnna",
-    "Title": "Saturday of the Dead Ven. Symeon the God- Receiver and Prophetess Anna",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
     "Date": "020424",
     "Year": "2024",
     "Month": "February",
@@ -466,71 +440,6 @@
     "Epistle": "1 Cor. 8: 8- 9:2",
     "Gospel": "Matt. 25:31-46",
     "Fasting": "Abstinence"
-  },
-  {
-    "Date": "020524",
-    "Year": "2024",
-    "Month": "February",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nAgatha, martyr",
-    "Title": "Agatha, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "020624",
-    "Year": "2024",
-    "Month": "February",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nVen. Bucolus, Bishop of\nSmyrna",
-    "Title": "Ven. Bucolus, Bishop of Smyrna",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "020724",
-    "Year": "2024",
-    "Month": "February",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nAliturgical Day\nVen. Parthenius, Bishop of\nLampsaca. Ven. Luke of\nSyria",
-    "Title": "Aliturgical Day Ven. Parthenius, Bishop of Lampsaca. Ven. Luke of Syria",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "020824",
-    "Year": "2024",
-    "Month": "February",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nGreat-Martyr Theodore\nStratelates. Prophet\nZachariah",
-    "Title": "Great-Martyr Theodore Stratelates. Prophet Zachariah",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "020924",
-    "Year": "2024",
-    "Month": "February",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nAliturgical Day\nNicephorus, martyr",
-    "Title": "Aliturgical Day Nicephorus, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "021024",
@@ -825,123 +734,6 @@
     "Day": 29,
     "Raw Text": "29\nCommon Abstinence\nVen. Cassian the Roman",
     "Title": "Ven. Cassian the Roman",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030124",
-    "Year": "2024",
-    "Month": "March",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinence\nPresanctified Liturgy\nVen. Eudochia, woman\nmartyr",
-    "Title": "Presanctified Liturgy Ven. Eudochia, woman martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030224",
-    "Year": "2024",
-    "Month": "March",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nSaturday of the Dead\nHieromartyr Theodotus,\nBishop of Cyprus\nSaturday of the Dead\n40 Martyrs of Sebastea",
-    "Title": "Saturday of the Dead Hieromartyr Theodotus, Bishop of Cyprus Saturday of the Dead 40 Martyrs of Sebastea",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030324",
-    "Year": "2024",
-    "Month": "March",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030424",
-    "Year": "2024",
-    "Month": "March",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nVen. Gerasimus of the\nJordan",
-    "Title": "Ven. Gerasimus of the Jordan",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030524",
-    "Year": "2024",
-    "Month": "March",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nConon of Isauria, martyr",
-    "Title": "Conon of Isauria, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030624",
-    "Year": "2024",
-    "Month": "March",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nPresanctified Liturgy",
-    "Title": "Presanctified Liturgy",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030724",
-    "Year": "2024",
-    "Month": "March",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nHieromartyrs of Cherson,\nBasil, Ephrem, Eugenius,\nCapiton, Aetherius,\nElpidius and Agathodorus",
-    "Title": "Hieromartyrs of Cherson, Basil, Ephrem, Eugenius, Capiton, Aetherius, Elpidius and Agathodorus",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030824",
-    "Year": "2024",
-    "Month": "March",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nPresanctified Liturgy\nHoly Father Theophylact\nthe Confessor, Bishop of\nNicomedia",
-    "Title": "Presanctified Liturgy Holy Father Theophylact the Confessor, Bishop of Nicomedia",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030924",
-    "Year": "2024",
-    "Month": "March",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nSaturday of the Dead",
-    "Title": "Saturday of the Dead",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
@@ -1807,51 +1599,12 @@
     "Fasting": null
   },
   {
-    "Date": "050124",
-    "Year": "2024",
-    "Month": "May",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinence\nProphet Jeremiah\n[St. Joseph the Worker]",
-    "Title": "Prophet Jeremiah [St. Joseph the Worker]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "050224",
     "Year": "2024",
     "Month": "May",
     "Day": 2,
     "Raw Text": "2\nFounding of\nConstantinople. H. Father\nAthanasius the Great",
     "Title": "Founding of Constantinople. H. Father Athanasius the Great",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "050324",
-    "Year": "2024",
-    "Month": "May",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nTimothy and Maura, martyrs\nApostle Simon the Zealot",
-    "Title": "Timothy and Maura, martyrs Apostle Simon the Zealot",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "050424",
-    "Year": "2024",
-    "Month": "May",
-    "Day": 4,
-    "Raw Text": "4\nPelagia, woman martyr\nMocius, Martyr",
-    "Title": "Pelagia, woman martyr Mocius, Martyr",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
@@ -1896,19 +1649,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "050824",
-    "Year": "2024",
-    "Month": "May",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\n(\u2020) Apostle and Evangelist,\nJohn the Theologian\nVen. Arsenius the Great\n[Bl. Jeremiah the\nWallachian]",
-    "Title": "(\u2020) Apostle and Evangelist, John the Theologian Ven. Arsenius the Great [Bl. Jeremiah the Wallachian]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "050924",
@@ -2210,19 +1950,6 @@
     "Fasting": "Common Abstinence"
   },
   {
-    "Date": "060124",
-    "Year": "2024",
-    "Month": "June",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinence\nJustin the Philosopher,\nmartyr\nTranslation of the Relics of\nthe Great-Martyr Theodore\nStratelates",
-    "Title": "Justin the Philosopher, martyr Translation of the Relics of the Great-Martyr Theodore Stratelates",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "060224",
     "Year": "2024",
     "Month": "June",
@@ -2236,84 +1963,6 @@
     "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
-    "Date": "060324",
-    "Year": "2024",
-    "Month": "June",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nLucillian and Paula, martyrs\nand their companions.\nHypatius, Paul and Dionysius",
-    "Title": "Lucillian and Paula, martyrs and their companions. Hypatius, Paul and Dionysius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060424",
-    "Year": "2024",
-    "Month": "June",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nMetrophanes, Bishop of\nCanstantinople",
-    "Title": "Metrophanes, Bishop of Canstantinople",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060524",
-    "Year": "2024",
-    "Month": "June",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nHieromartyr Dorotheus,\nBishop of Tyre",
-    "Title": "Hieromartyr Dorotheus, Bishop of Tyre",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060624",
-    "Year": "2024",
-    "Month": "June",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nVen. Father Bessarion the\nWonderworker. Ven.\nFather Hilarion the\nYounger of the Monastery\nof Dalmatus",
-    "Title": "Ven. Father Bessarion the Wonderworker. Ven. Father Hilarion the Younger of the Monastery of Dalmatus",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060724",
-    "Year": "2024",
-    "Month": "June",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nHieromartyr Theodotus of\nAncyra.",
-    "Title": "Hieromartyr Theodotus of Ancyra",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060824",
-    "Year": "2024",
-    "Month": "June",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nTranslation of the Relics of\nthe Great-Martyr Theodore\nStratelates",
-    "Title": "Translation of the Relics of the Great-Martyr Theodore Stratelates",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "060224",
     "Year": "2024",
     "Month": "June",
@@ -2325,19 +1974,6 @@
     "Epistle": "Rom. 2:10- 16",
     "Gospel": "Matt. 4:18-23",
     "Fasting": null
-  },
-  {
-    "Date": "060924",
-    "Year": "2024",
-    "Month": "June",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\n3rd SUNDAY AFTER PENTECOST\nTone 2, Res. Gospel 3, Epistle Rom. 5: 1\n\u2013 10, Gospel Matt. 6: 22-23. Following\nweek readings \u2013 4th week after\nPentecost.",
-    "Title": "3rd SUNDAY AFTER PENTECOST. Following week readings \u2013 4th week after Pentecost",
-    "Tone": "2",
-    "Matins Gospel": "3",
-    "Epistle": "Rom. 5: 1 \u2013 10",
-    "Gospel": "Matt. 6: 22-23",
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "061024",
@@ -2613,19 +2249,6 @@
     "Fasting": null
   },
   {
-    "Date": "070124",
-    "Year": "2024",
-    "Month": "July",
-    "Day": 1,
-    "Raw Text": "1\nCosmas and Damian, Holy\nWonderworkers\nCANADA: Canada Day",
-    "Title": "Cosmas and Damian, Holy Wonderworkers CANADA: Canada Day",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
     "Date": "070224",
     "Year": "2024",
     "Month": "July",
@@ -2639,19 +2262,6 @@
     "Fasting": null
   },
   {
-    "Date": "070324",
-    "Year": "2024",
-    "Month": "July",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nHyacinth, martyr. Holy Father\nAnatolius.",
-    "Title": "Hyacinth, martyr. Holy Father Anatolius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "070424",
     "Year": "2024",
     "Month": "July",
@@ -2663,19 +2273,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "070524",
-    "Year": "2024",
-    "Month": "July",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nVen. Martha. Ven. Father\nAthanasius of Athos",
-    "Title": "Ven. Martha. Ven. Father Athanasius of Athos",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "070624",
@@ -3094,71 +2691,6 @@
     "Fasting": null
   },
   {
-    "Date": "080124",
-    "Year": "2024",
-    "Month": "August",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinence\nSeven Holy Maccabees,\ntheir Mother, Solomonia and\ntheir Teacher, Eleazar\nBeginning of the Dormition\nFast [St. Alphonsus Liguori]\nEmilian the Confessor,\nBishop of Cyzicus\n[St. Dominic]",
-    "Title": "Seven Holy Maccabees, their Mother, Solomonia and their Teacher, Eleazar Beginning of the Dormition Fast [St. Alphonsus Liguori] Emilian the Confessor, Bishop of Cyzicus [St. Dominic]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080224",
-    "Year": "2024",
-    "Month": "August",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nTranslation of the Relics of\nthe Protomartyr Stephen\nApostle Matthias\n[St. Teresa Benedicta of the\nCross (Edith Stein), patroness\nof Europe]",
-    "Title": "Translation of the Relics of the Protomartyr Stephen Apostle Matthias [St. Teresa Benedicta of the Cross (Edith Stein), patroness of Europe]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080324",
-    "Year": "2024",
-    "Month": "August",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nVen. Fathers Isaac,\nDalmatus and Faustus\nLawrence, archdeacon\nand martyr",
-    "Title": "Ven. Fathers Isaac, Dalmatus and Faustus Lawrence, archdeacon and martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080424",
-    "Year": "2024",
-    "Month": "August",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080524",
-    "Year": "2024",
-    "Month": "August",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nForefeast of the\nTransfiguration\nEusignius, Martyr; Fabian,\nPope",
-    "Title": "Forefeast of the Transfiguration Eusignius, Martyr; Fabian, Pope",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "080624",
     "Year": "2024",
     "Month": "August",
@@ -3170,45 +2702,6 @@
     "Epistle": "2 Peter 1:10-19",
     "Gospel": "Matt. 17:1-9",
     "Fasting": "Dispensation (H\u00e2r\u021bi)"
-  },
-  {
-    "Date": "080724",
-    "Year": "2024",
-    "Month": "August",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nVen. Dometius, martyr",
-    "Title": "Ven. Dometius, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080824",
-    "Year": "2024",
-    "Month": "August",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nEmilian the Confessor,\nBishop of Cyzicus\n[St. Dominic]",
-    "Title": "Emilian the Confessor, Bishop of Cyzicus [St. Dominic]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080924",
-    "Year": "2024",
-    "Month": "August",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nApostle Matthias\n[St. Teresa Benedicta of the\nCross (Edith Stein), patroness\nof Europe]",
-    "Title": "Apostle Matthias [St. Teresa Benedicta of the Cross (Edith Stein), patroness of Europe]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "081024",
@@ -3562,19 +3055,6 @@
     "Fasting": null
   },
   {
-    "Date": "090424",
-    "Year": "2024",
-    "Month": "September",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nHieromartyr Babylas,\nBishop of Antioch\nProphet Moses the God-\nSeer\nVen. Mother Theodora of\nAlexandria",
-    "Title": "Hieromartyr Babylas, Bishop of Antioch Prophet Moses the God- Seer Ven. Mother Theodora of Alexandria",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "090524",
     "Year": "2024",
     "Month": "September",
@@ -3586,19 +3066,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "090624",
-    "Year": "2024",
-    "Month": "September",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nMiracle of the Archangel\nMichael at Chonae\nPreparation of the Feast of the\nExaltation of the Holy Cross\nDedication of the Basilica of\nthe Resurrection\nHieromartyr Cornelius the\nCenturion",
-    "Title": "Miracle of the Archangel Michael at Chonae Preparation of the Feast of the Exaltation of the Holy Cross Dedication of the Basilica of the Resurrection Hieromartyr Cornelius the Centurion",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "090724",
@@ -3939,19 +3406,6 @@
     "Fasting": null
   },
   {
-    "Date": "100224",
-    "Year": "2024",
-    "Month": "October",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nCyprian and Justina,\nmartyrs\nApostle James, son of\nAlphaeus. Ven.\nAndronicus and his wife,\nAthanasia",
-    "Title": "Cyprian and Justina, martyrs Apostle James, son of Alphaeus. Ven. Andronicus and his wife, Athanasia",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "100324",
     "Year": "2024",
     "Month": "October",
@@ -3963,19 +3417,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "100424",
-    "Year": "2024",
-    "Month": "October",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nH. Father Hierotheus, Bishop\nof Athens\nApostle Philip, one of the First\nSeven Deacons\nVen. Father Theophanes the\nConfessor, Bishop of Nicea\n[Pope St. John XXIII]",
-    "Title": "H. Father Hierotheus, Bishop of Athens Apostle Philip, one of the First Seven Deacons Ven. Father Theophanes the Confessor, Bishop of Nicea [Pope St. John XXIII]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "100524",
@@ -4028,19 +3469,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "100924",
-    "Year": "2024",
-    "Month": "October",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nApostle James, son of\nAlphaeus. Ven.\nAndronicus and his wife,\nAthanasia",
-    "Title": "Apostle James, son of Alphaeus. Ven. Andronicus and his wife, Athanasia",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "101024",
@@ -4381,19 +3809,6 @@
     "Fasting": null
   },
   {
-    "Date": "110124",
-    "Year": "2024",
-    "Month": "November",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinence\nCosmas and Damian,\nunmercenary healers\n(\u2020) Holy Archangels\nMichael and Gabriel and\nAll the Heavenly Powers\nEpistle Heb. 2:2-10,\nGospel Lk. 10: 16-21",
-    "Title": "Cosmas and Damian, unmercenary healers (\u2020) Holy Archangels Michael and Gabriel and All the Heavenly Powers",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": "Heb. 2:2-10",
-    "Gospel": "Lk. 10: 16-21",
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "110224",
     "Year": "2024",
     "Month": "November",
@@ -4444,19 +3859,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "110624",
-    "Year": "2024",
-    "Month": "November",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nH. Father Paul the\nConfessor",
-    "Title": "H. Father Paul the Confessor",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "110724",
@@ -4836,58 +4238,6 @@
     "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
-    "Date": "120224",
-    "Year": "2024",
-    "Month": "December",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nProphet Habakkuk\nConception by Anne of the\nMother of God\n[Immaculate Conception,\npatronal feast of the USA]",
-    "Title": "Prophet Habakkuk Conception by Anne of the Mother of God [Immaculate Conception, patronal feast of the USA]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120324",
-    "Year": "2024",
-    "Month": "December",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nProphet Zephaniah\n[St Francis Xavier]\nMenas, Hermogenes and\nEugraphius, martyrs",
-    "Title": "Prophet Zephaniah [St Francis Xavier] Menas, Hermogenes and Eugraphius, martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120424",
-    "Year": "2024",
-    "Month": "December",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nBarbara, martyr\nH. Father John of\nDamascus\nVen. Father Daniel the\nStylite",
-    "Title": "Barbara, martyr H. Father John of Damascus Ven. Father Daniel the Stylite",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120524",
-    "Year": "2024",
-    "Month": "December",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\n(\u2020) Ven. Father Sabbas the\nSanctified.\n(\u2020) St. Spyridon the\nWonderworker",
-    "Title": "(\u2020) Ven. Father Sabbas the Sanctified. (\u2020) St. Spyridon the Wonderworker",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "120624",
     "Year": "2024",
     "Month": "December",
@@ -4899,45 +4249,6 @@
     "Epistle": "Heb. 13:17-21",
     "Gospel": "Luke 6:17-23a \u2020 Eustratius, Auxentius, Eugene, Mardarius, Orestes and Lucy, martyrs",
     "Fasting": "Dispensation (H\u00e2r\u021bi)"
-  },
-  {
-    "Date": "120724",
-    "Year": "2024",
-    "Month": "December",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nH. Father Ambrose of Milan\nThryces, Leucius, Callinicus\nand others, martyrs\n[St. John of the Cross]",
-    "Title": "H. Father Ambrose of Milan Thryces, Leucius, Callinicus and others, martyrs [St. John of the Cross]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120824",
-    "Year": "2024",
-    "Month": "December",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120924",
-    "Year": "2024",
-    "Month": "December",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nConception by Anne of the\nMother of God\n[Immaculate Conception,\npatronal feast of the USA]",
-    "Title": "Conception by Anne of the Mother of God [Immaculate Conception, patronal feast of the USA]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "121024",
@@ -5356,19 +4667,6 @@
     "Fasting": null
   },
   {
-    "Date": "010825",
-    "Year": "2025",
-    "Month": "January",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nVen. Mother Dominica.\nVen. Father George.",
-    "Title": "Ven. Mother Dominica. Ven. Father George",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "010925",
     "Year": "2025",
     "Month": "January",
@@ -5746,19 +5044,6 @@
     "Fasting": null
   },
   {
-    "Date": "020525",
-    "Year": "2025",
-    "Month": "February",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nAgatha, martyr",
-    "Title": "Agatha, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "020625",
     "Year": "2025",
     "Month": "February",
@@ -5770,32 +5055,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "020725",
-    "Year": "2025",
-    "Month": "February",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nVen. Parthenius, Bishop of\nLampsaca. Ven. Luke of\nSyria",
-    "Title": "Ven. Parthenius, Bishop of Lampsaca. Ven. Luke of Syria",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "020825",
-    "Year": "2025",
-    "Month": "February",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nGreat-Martyr Theodore\nStratelates. Prophet\nZachariah",
-    "Title": "Great-Martyr Theodore Stratelates. Prophet Zachariah",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "021725",
@@ -6214,19 +5473,6 @@
     "Fasting": null
   },
   {
-    "Date": "030925",
-    "Year": "2025",
-    "Month": "March",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\n1st Sunday of Lent \u2013\nOrthodoxy Sunday. Liturgy\nof St. Basil. Tone 1. Res. Gospel 9.\nEpistle: Heb. 11: 24-26; Gospel: Jn.\n1:43-51.",
-    "Title": "1st Sunday of Lent \u2013 Orthodoxy Sunday. Liturgy of St. Basil",
-    "Tone": "1",
-    "Matins Gospel": "9",
-    "Epistle": "Heb. 11: 24-26",
-    "Gospel": "Jn. 1:43-51",
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "031025",
     "Year": "2025",
     "Month": "March",
@@ -6500,123 +5746,6 @@
     "Fasting": "Common Abstinence"
   },
   {
-    "Date": "040125",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinenc e\nSt. Mary of Egypt",
-    "Title": "Common Abstinenc e St. Mary of Egypt",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "040225",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nPresanctified Liturgy\nGreat Canon of St. Andrew\nof Crete with Lite of St. Mary\nof Egypt\nVen. Father Titus",
-    "Title": "Presanctified Liturgy Great Canon of St. Andrew of Crete with Lite of St. Mary of Egypt Ven. Father Titus",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "040325",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nThursday of the Great\nCanon\nVen. Nicetas, Confessor",
-    "Title": "Thursday of the Great Canon Ven. Nicetas, Confessor",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "040425",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nPresanctified Liturgy\nAkathist Hymn\nTheodulus & companion,\nmartyrs. Ven. Joseph the\nHymnographer. Ven. George\nof Maleum.",
-    "Title": "Presanctified Liturgy Akathist Hymn Theodulus & companion, martyrs. Ven. Joseph the Hymnographer. Ven. George of Maleum",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "040525",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nSaturday of the Akathist Hymn\nClaudius, Diodore, Victor,\nVictorin, Papias, Nicephorus\nand Serapion, Martyrs.",
-    "Title": "Saturday of the Akathist Hymn Claudius, Diodore, Victor, Victorin, Papias, Nicephorus and Serapion, Martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "040625",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "040725",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nHoly Father Kalliopos\nand Holy Father\nGeorge, Bishop of\nMelitene",
-    "Title": "Holy Father Kalliopos and Holy Father George, Bishop of Melitene",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "040825",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nHerodion et al, Apostles\namong the 70",
-    "Title": "Herodion et al, Apostles among the 70",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "040925",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nPresanctified Liturgy\nEupsychius, martyr.",
-    "Title": "Presanctified Liturgy Eupsychius, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "041025",
     "Year": "2025",
     "Month": "April",
@@ -6855,13 +5984,13 @@
     "Year": "2025",
     "Month": "April",
     "Day": 27,
-    "Raw Text": "27\nTHOMAS SUNDAY (2nd Sunday\nof Easter) Tone 1, Res. Gospel 1, Of\nthe Sunday - Epistle Acts 5:12-20,\nGospel Jn. 20:19-31 Following week\nreadings-2nd week after Easter.",
-    "Title": "THOMAS SUNDAY (2nd Sunday of Easter), Of the Sunday - Following week readings-2nd week after Easter",
+    "Raw Text": "27\nTHOMAS SUNDAY (2nd Sunday\nof Easter) Tone 1, Res. Gospel 1, Of\nthe Sunday - Epistle Acts 5:12-20,\nGospel Jn. 20:19-31 Following week\nreadings-2nd week after Easter.\n7\nCommon Abstinence\nHoly Father Kalliopos\nand Holy Father\nGeorge, Bishop of\nMelitene\n8\nCommon Abstinence\nHerodion et al, Apostles\namong the 70\n9\nCommon Abstinence\nPresanctified Liturgy\nEupsychius, martyr.",
+    "Title": "THOMAS SUNDAY (2nd Sunday of Easter), Of the Sunday - Following week readings-2nd week after Easter. 7  Holy Father Kalliopos and Holy Father George, Bishop of Melitene 8  Herodion et al, Apostles among the 70 9  Presanctified Liturgy Eupsychius, martyr",
     "Tone": "1",
     "Matins Gospel": "1",
     "Epistle": "Acts 5:12-20",
     "Gospel": "Jn. 20:19-31",
-    "Fasting": null
+    "Fasting": "Common Abstinence"
   },
   {
     "Date": "042825",
@@ -6896,45 +6025,6 @@
     "Day": 30,
     "Raw Text": "30\nCommon Abstinence\nApostle James, brother of St.\nJohn the Theologian",
     "Title": "Apostle James, brother of St. John the Theologian",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "040725",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nHoly Father Kalliopos\nand Holy Father\nGeorge, Bishop of\nMelitene",
-    "Title": "Holy Father Kalliopos and Holy Father George, Bishop of Melitene",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "040825",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nHerodion et al, Apostles\namong the 70",
-    "Title": "Herodion et al, Apostles among the 70",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "040925",
-    "Year": "2025",
-    "Month": "April",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nPresanctified Liturgy\nEupsychius, martyr.",
-    "Title": "Presanctified Liturgy Eupsychius, martyr",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
@@ -7059,32 +6149,6 @@
     "Fasting": null
   },
   {
-    "Date": "050225",
-    "Year": "2025",
-    "Month": "May",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nFounding of Constantinople.\nH. Father Athanasius the\nGreat.",
-    "Title": "Founding of Constantinople. H. Father Athanasius the Great",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "050325",
-    "Year": "2025",
-    "Month": "May",
-    "Day": 3,
-    "Raw Text": "3\nTimothy & Maura,\nmartyrs.",
-    "Title": "Timothy & Maura, martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
     "Date": "050425",
     "Year": "2025",
     "Month": "May",
@@ -7124,19 +6188,6 @@
     "Fasting": null
   },
   {
-    "Date": "050725",
-    "Year": "2025",
-    "Month": "May",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nAppearance of the Holy Cross\nover Jerusalem. Acacius,\nmartyr.",
-    "Title": "Appearance of the Holy Cross over Jerusalem. Acacius, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "050825",
     "Year": "2025",
     "Month": "May",
@@ -7148,19 +6199,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "050925",
-    "Year": "2025",
-    "Month": "May",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nProphet Isaiah, Christopher,\nMartyr",
-    "Title": "Prophet Isaiah, Christopher, Martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "051025",
@@ -7488,51 +6526,12 @@
     "Fasting": null
   },
   {
-    "Date": "060425",
-    "Year": "2025",
-    "Month": "June",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nMetrophanes, Bishop of\nCanstantinople\nApostles Bartholomew &\nBarnabus",
-    "Title": "Metrophanes, Bishop of Canstantinople Apostles Bartholomew & Barnabus",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "060525",
     "Year": "2025",
     "Month": "June",
     "Day": 5,
     "Raw Text": "5\nHieromartyr Dorotheus,\nBishop of Tyre\nVen. Fathers Onuphrius &\nPeter of Mt. Athos",
     "Title": "Hieromartyr Dorotheus, Bishop of Tyre Ven. Fathers Onuphrius & Peter of Mt. Athos",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "060625",
-    "Year": "2025",
-    "Month": "June",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nVen. Father Bessarion the\nWonderworker. Ven. Father\nHilarion the Younger of the\nMonastery of Dalmatus.\nAquilina, martyr. H. Father\nTriphylius",
-    "Title": "Ven. Father Bessarion the Wonderworker. Ven. Father Hilarion the Younger of the Monastery of Dalmatus. Aquilina, martyr. H. Father Triphylius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060725",
-    "Year": "2025",
-    "Month": "June",
-    "Day": 7,
-    "Raw Text": "7\nSaturday of the Dead\nHieromartyr Theodotus of\nAncyra.\nProphet Elisha. H. Father\nMethodius of\nConstantinople.",
-    "Title": "Saturday of the Dead Hieromartyr Theodotus of Ancyra. Prophet Elisha. H. Father Methodius of Constantinople",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
@@ -7865,32 +6864,6 @@
     "Fasting": null
   },
   {
-    "Date": "070125",
-    "Year": "2025",
-    "Month": "July",
-    "Day": 1,
-    "Raw Text": "1\nCosmas and Damian, Holy\nWonderworkers\nCANADA: Canada Day",
-    "Title": "Cosmas and Damian, Holy Wonderworkers CANADA: Canada Day",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "070225",
-    "Year": "2025",
-    "Month": "July",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nDeposition of the Mantle of\nthe Mother of God",
-    "Title": "Deposition of the Mantle of the Mother of God",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "070325",
     "Year": "2025",
     "Month": "July",
@@ -7902,19 +6875,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "070425",
-    "Year": "2025",
-    "Month": "July",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nSt. Andrew of Crete\nUSA: Independence Day",
-    "Title": "St. Andrew of Crete USA: Independence Day",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "070525",
@@ -7967,19 +6927,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "070925",
-    "Year": "2025",
-    "Month": "July",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nHieromartyr Pancratius of\nTaormina.",
-    "Title": "Hieromartyr Pancratius of Taormina",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "071025",
@@ -8346,71 +7293,6 @@
     "Fasting": null
   },
   {
-    "Date": "080125",
-    "Year": "2025",
-    "Month": "August",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinence\nSeven Holy Maccabees and\ntheir Mother, Solomonia and\ntheir Teacher, Eleazar.\nBeginning of the Dormition\nFast\nEmilian the Confessor,\nBishop of Cyzicus.",
-    "Title": "Seven Holy Maccabees and their Mother, Solomonia and their Teacher, Eleazar. Beginning of the Dormition Fast Emilian the Confessor, Bishop of Cyzicus",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080225",
-    "Year": "2025",
-    "Month": "August",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nTranslation of the Relics\nof the Protomartyr\nStephen.\nApostle Matthias.",
-    "Title": "Translation of the Relics of the Protomartyr Stephen. Apostle Matthias",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080325",
-    "Year": "2025",
-    "Month": "August",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080425",
-    "Year": "2025",
-    "Month": "August",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nSeven Holy Youths of\nEphesus. Ven. Eudochia,\nmartyr.\nCANADA: Civic Holiday",
-    "Title": "Seven Holy Youths of Ephesus. Ven. Eudochia, martyr. CANADA: Civic Holiday",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080525",
-    "Year": "2025",
-    "Month": "August",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nForefeast of the\nTransfiguration, Eusignius,\nMartyr; Fabian, Pope",
-    "Title": "Forefeast of the Transfiguration, Eusignius, Martyr; Fabian, Pope",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "080625",
     "Year": "2025",
     "Month": "August",
@@ -8422,45 +7304,6 @@
     "Epistle": "2 Peter 1:10-19",
     "Gospel": "Matt 17:1-9",
     "Fasting": "Dispensation (H\u00e2r\u021bi)"
-  },
-  {
-    "Date": "080725",
-    "Year": "2025",
-    "Month": "August",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nVen. Dometius, martyr.",
-    "Title": "Ven. Dometius, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080825",
-    "Year": "2025",
-    "Month": "August",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nEmilian the Confessor,\nBishop of Cyzicus.",
-    "Title": "Emilian the Confessor, Bishop of Cyzicus",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080925",
-    "Year": "2025",
-    "Month": "August",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nApostle Matthias.",
-    "Title": "Apostle Matthias",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "080825",
@@ -8801,19 +7644,6 @@
     "Fasting": null
   },
   {
-    "Date": "090325",
-    "Year": "2025",
-    "Month": "September",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nHieromartyr Anthimus,\nBishop of Nicomedia. H.\nFather Theoktistos.\nMinodora, Metrodora &\nNymphodora, martyrs.",
-    "Title": "Hieromartyr Anthimus, Bishop of Nicomedia. H. Father Theoktistos. Minodora, Metrodora & Nymphodora, martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "090425",
     "Year": "2025",
     "Month": "September",
@@ -8825,19 +7655,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "090525",
-    "Year": "2025",
-    "Month": "September",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nZechariah, father of St. John\nthe Baptist.\nLeavetaking of the Nativity of\nthe Mother of God.\nAutonomus, martyr.",
-    "Title": "Zechariah, father of St. John the Baptist. Leavetaking of the Nativity of the Mother of God. Autonomus, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "090625",
@@ -9178,19 +7995,6 @@
     "Fasting": null
   },
   {
-    "Date": "100125",
-    "Year": "2025",
-    "Month": "October",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinence\nApostle Ananias. Ven.\nRomanus the\nHymnographer\nVen. Mother Pelagia",
-    "Title": "Apostle Ananias. Ven. Romanus the Hymnographer Ven. Mother Pelagia",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "100225",
     "Year": "2025",
     "Month": "October",
@@ -9202,19 +8006,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "100325",
-    "Year": "2025",
-    "Month": "October",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nH. Father Dionysius the\nAreopagite, martyr\nEulampius and Eulampia,\nmartyrs",
-    "Title": "H. Father Dionysius the Areopagite, martyr Eulampius and Eulampia, martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "100425",
@@ -9267,19 +8058,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "100825",
-    "Year": "2025",
-    "Month": "October",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nVen. Mother Pelagia",
-    "Title": "Ven. Mother Pelagia",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "100925",
@@ -9633,19 +8411,6 @@
     "Fasting": "Common Abstinence"
   },
   {
-    "Date": "110125",
-    "Year": "2025",
-    "Month": "November",
-    "Day": 1,
-    "Raw Text": "1\nCosmas and Damian, holy\nwonderworkers.",
-    "Title": "Cosmas and Damian, holy wonderworkers",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
     "Date": "110225",
     "Year": "2025",
     "Month": "November",
@@ -9685,19 +8450,6 @@
     "Fasting": null
   },
   {
-    "Date": "110525",
-    "Year": "2025",
-    "Month": "November",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nGalaction and Episteme,\nmartyrs.",
-    "Title": "Galaction and Episteme, martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "110625",
     "Year": "2025",
     "Month": "November",
@@ -9709,19 +8461,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "110725",
-    "Year": "2025",
-    "Month": "November",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "110825",
@@ -10062,71 +8801,6 @@
     "Fasting": "Dispensation (H\u00e2rti)"
   },
   {
-    "Date": "120125",
-    "Year": "2025",
-    "Month": "December",
-    "Day": 1,
-    "Raw Text": "1\nCommon A bstinence\nH. Prophet Nahum\nVen. Father Patapius.",
-    "Title": "Common A bstinence H. Prophet Nahum Ven. Father Patapius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "120225",
-    "Year": "2025",
-    "Month": "December",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinen ce\nProphet Habakkuk\nConception by Anne of\nthe Mother of God\n(Immaculate Conception)",
-    "Title": "Common Abstinen ce Prophet Habakkuk Conception by Anne of the Mother of God (Immaculate Conception)",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "120325",
-    "Year": "2025",
-    "Month": "December",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nProphet Zephaniah; [St\nFrancis Xavier]\nMenas, Hermogenes and\nEugraphius, martyrs.",
-    "Title": "Prophet Zephaniah; [St Francis Xavier] Menas, Hermogenes and Eugraphius, martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120425",
-    "Year": "2025",
-    "Month": "December",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nBarbara, martyr. H. Father\nJohn of Damascus.\nVen. Father Daniel the\nStylite",
-    "Title": "Barbara, martyr. H. Father John of Damascus. Ven. Father Daniel the Stylite",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120525",
-    "Year": "2025",
-    "Month": "December",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nVen. Father Sabbas the\nSanctified.\nSt. Spyridon the\nWonderworker.",
-    "Title": "Ven. Father Sabbas the Sanctified. St. Spyridon the Wonderworker",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "120625",
     "Year": "2025",
     "Month": "December",
@@ -10138,45 +8812,6 @@
     "Epistle": "Heb. 13:17-21",
     "Gospel": "Luke 6:17-23a Eustratius, Auxentius, Eugene, Mardarius, Orestes and Lucia, martyrs",
     "Fasting": "Dispensation (H\u00e2r\u021bi)"
-  },
-  {
-    "Date": "120725",
-    "Year": "2025",
-    "Month": "December",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120825",
-    "Year": "2025",
-    "Month": "December",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nVen. Father Patapius.",
-    "Title": "Ven. Father Patapius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120925",
-    "Year": "2025",
-    "Month": "December",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nConception by Anne of\nthe Mother of God\n(Immaculate Conception)",
-    "Title": "Conception by Anne of the Mother of God (Immaculate Conception)",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "121025",
@@ -10521,8 +9156,8 @@
     "Year": "2026",
     "Month": "January",
     "Day": 2,
-    "Raw Text": "2\nDispensation (H\u00e2r\u021bi)\nForefeast of Theophany, St.\nSylvester, Pope\nPolyeuctus, martyr.",
-    "Title": "Forefeast of Theophany, St. Sylvester, Pope Polyeuctus, martyr",
+    "Raw Text": "2\nDispensation (H\u00e2r\u021bi)\nForefeast of Theophany, St.\nSylvester, Pope\nPolyeuctus, martyr.\n6\nCommon Abstinence\nVeneration of the Chains\nof the Holy & All-Praised\nApostle, Peter.\nClement of Ancyra &\nAgathangel, martyrs",
+    "Title": "Forefeast of Theophany, St. Sylvester, Pope Polyeuctus, martyr. 6 Common Abstinence Veneration of the Chains of the Holy & All-Praised Apostle, Peter. Clement of Ancyra & Agathangel, martyrs",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
@@ -10582,19 +9217,6 @@
     "Fasting": null
   },
   {
-    "Date": "010726",
-    "Year": "2026",
-    "Month": "January",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\n+Synaxis of St. John the\nBaptist",
-    "Title": "+Synaxis of St. John the Baptist",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "010826",
     "Year": "2026",
     "Month": "January",
@@ -10606,19 +9228,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "010926",
-    "Year": "2026",
-    "Month": "January",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nPolyeuctus, martyr.",
-    "Title": "Polyeuctus, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "011026",
@@ -10697,19 +9306,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "010626",
-    "Year": "2026",
-    "Month": "January",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nVeneration of the Chains\nof the Holy & All-Praised\nApostle, Peter.\nClement of Ancyra &\nAgathangel, martyrs",
-    "Title": "Veneration of the Chains of the Holy & All-Praised Apostle, Peter. Clement of Ancyra & Agathangel, martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "011726",
@@ -10972,51 +9568,12 @@
     "Fasting": null
   },
   {
-    "Date": "020426",
-    "Year": "2026",
-    "Month": "February",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nVen. Father Isidore of\nPelusium\nAliturgical Day\nBlaise, martyr",
-    "Title": "Ven. Father Isidore of Pelusium Aliturgical Day Blaise, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "020526",
     "Year": "2026",
     "Month": "February",
     "Day": 5,
     "Raw Text": "5\nAgatha, martyr\nHoly Father Meletius,\nArchbishop of Antioch the\nGreat",
     "Title": "Agatha, martyr Holy Father Meletius, Archbishop of Antioch the Great",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "020626",
-    "Year": "2026",
-    "Month": "February",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nVen. Bucolus, Bishop of\nSmyrna\nAliturgical Day\nVen. Father Martinian,\nhermit",
-    "Title": "Ven. Bucolus, Bishop of Smyrna Aliturgical Day Ven. Father Martinian, hermit",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "020726",
-    "Year": "2026",
-    "Month": "February",
-    "Day": 7,
-    "Raw Text": "7\nSaturday of the Dead\nVen. Parthenius, Bishop of\nLampsaca. Ven. Luke of Syria\nVen. Father Auxentius,\nascetic. [Cyril and Methodius]",
-    "Title": "Saturday of the Dead Ven. Parthenius, Bishop of Lampsaca. Ven. Luke of Syria Ven. Father Auxentius, ascetic. [Cyril and Methodius]",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
@@ -11321,123 +9878,6 @@
     "Epistle": "Heb. 11: 24-26",
     "Gospel": "Jn. 1:43-51",
     "Fasting": null
-  },
-  {
-    "Date": "030126",
-    "Year": "2026",
-    "Month": "March",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinence\n2nd Sunday of Lent -\nGregory Palamas. Liturgy of\nSt. Basil. Tone 5. Res. Gospel 5.\nEpistle: Heb. 1: 10-14 2:1-4;\nGospel: Mark 2:1-12.",
-    "Title": "2nd Sunday of Lent - Gregory Palamas. Liturgy of St. Basil",
-    "Tone": "5",
-    "Matins Gospel": "5",
-    "Epistle": "Heb. 1: 10-14 2:1-4",
-    "Gospel": "Mark 2:1-12",
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030226",
-    "Year": "2026",
-    "Month": "March",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nHieromartyr Theodotus,\nBishop of Cyprus",
-    "Title": "Hieromartyr Theodotus, Bishop of Cyprus",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030326",
-    "Year": "2026",
-    "Month": "March",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nEutropius, Cleonicus and\nBasiliscus, Martyrs\nCodratus and his\ncompanions, martyrs",
-    "Title": "Eutropius, Cleonicus and Basiliscus, Martyrs Codratus and his companions, martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030426",
-    "Year": "2026",
-    "Month": "March",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nPresanctified Liturgy\nVen. Gerasimus of the\nJordan\nPresanctified Liturgy\nVen. Father Sophronius,\nArchbishop of Jerusalem",
-    "Title": "Presanctified Liturgy Ven. Gerasimus of the Jordan Presanctified Liturgy Ven. Father Sophronius, Archbishop of Jerusalem",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030526",
-    "Year": "2026",
-    "Month": "March",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nConon of Isauria, martyr\nVen. Theophan the\nConfessor. Holy Father\nGregory the Dialogist.",
-    "Title": "Conon of Isauria, martyr Ven. Theophan the Confessor. Holy Father Gregory the Dialogist",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030626",
-    "Year": "2026",
-    "Month": "March",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nPresanctified Liturgy\n42 Martyrs of Amorium\nPresanctified Liturgy\nTranslation of the Relics of\nour Holy Father Nicephorus,\nArchbishop of\nConstantinople",
-    "Title": "Presanctified Liturgy 42 Martyrs of Amorium Presanctified Liturgy Translation of the Relics of our Holy Father Nicephorus, Archbishop of Constantinople",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030726",
-    "Year": "2026",
-    "Month": "March",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nSaturday of the Dead\nHieromartyrs of Cherson,\nBasil, Ephrem, Eugenius,\nCapiton, Aetherius, Elpidius\n& Agathodorus\nSaturday of the Dead\nVen. Father of Nursia.\nAlexander of Pidna, martyr.",
-    "Title": "Saturday of the Dead Hieromartyrs of Cherson, Basil, Ephrem, Eugenius, Capiton, Aetherius, Elpidius & Agathodorus Saturday of the Dead Ven. Father of Nursia. Alexander of Pidna, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030826",
-    "Year": "2026",
-    "Month": "March",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "030926",
-    "Year": "2026",
-    "Month": "March",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "031026",
@@ -12328,21 +10768,8 @@
     "Year": "2026",
     "Month": "April",
     "Day": 21,
-    "Raw Text": "21\nHieromartyr Januarius\nand his companions.\nTheodore of Perga in\nPamphilia, martyr.",
-    "Title": "Hieromartyr Januarius and his companions. Theodore of Perga in Pamphilia, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "040226",
-    "Year": "2026",
-    "Month": "April",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nVen. Father Theodore of\nSykeon",
-    "Title": "Ven. Father Theodore of Sykeon",
+    "Raw Text": "21\nHieromartyr Januarius\nand his companions.\nTheodore of Perga in\nPamphilia, martyr.\n2\nCommon Abstinence\nVen. Father Theodore of\nSykeon",
+    "Title": "Hieromartyr Januarius and his companions. Theodore of Perga in Pamphilia, martyr. 2  Ven. Father Theodore of Sykeon",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
@@ -12382,19 +10809,6 @@
     "Day": 25,
     "Raw Text": "25\nHoly Apostle and Evangelist,\nMark.",
     "Title": "Holy Apostle and Evangelist, Mark",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "050126",
-    "Year": "2026",
-    "Month": "May",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstin ence\nProphet Jeremiah",
-    "Title": "Common Abstin ence Prophet Jeremiah",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
@@ -12454,19 +10868,6 @@
     "Fasting": null
   },
   {
-    "Date": "050626",
-    "Year": "2026",
-    "Month": "May",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nJob, the Holy and\nLongsuffering One",
-    "Title": "Job, the Holy and Longsuffering One",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "050726",
     "Year": "2026",
     "Month": "May",
@@ -12478,19 +10879,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "050826",
-    "Year": "2026",
-    "Month": "May",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nApostle and Evangelist,\nJohn the Theologian. Ven.\nArsenius the Great.",
-    "Title": "Apostle and Evangelist, John the Theologian. Ven. Arsenius the Great",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "050926",
@@ -12792,19 +11180,6 @@
     "Fasting": null
   },
   {
-    "Date": "060126",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinence\nJustin the Philosopher,\nmartyr.\nBeginning of Apostle Fast\nTranslation of the Relics of\nthe Great-Martyr Theodore\nStratelates",
-    "Title": "Justin the Philosopher, martyr. Beginning of Apostle Fast Translation of the Relics of the Great-Martyr Theodore Stratelates",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "060226",
     "Year": "2026",
     "Month": "June",
@@ -12816,97 +11191,6 @@
     "Epistle": "Heb 7,26-28,8: 1-2",
     "Gospel": "John:15:17-27; 16:1-2 H",
     "Fasting": "Dispensation (Harti)"
-  },
-  {
-    "Date": "060326",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nLucillian and Paula, martyrs\nand their companions.\nHypatius, Paul and Dionysius",
-    "Title": "Lucillian and Paula, martyrs and their companions. Hypatius, Paul and Dionysius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060426",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nMetrophanes, Bishop of\nCanstantinople\nApostles Bartholomew &\nBarnabus",
-    "Title": "Metrophanes, Bishop of Canstantinople Apostles Bartholomew & Barnabus",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060526",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nHieromartyr Dorotheus,\nBishop of Tyre\nVen. Fathers Onuphrius &\nPeter of Mt. Athos",
-    "Title": "Hieromartyr Dorotheus, Bishop of Tyre Ven. Fathers Onuphrius & Peter of Mt. Athos",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060626",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nVen. Father Bessarion the\nWonderworker. Ven. Father\nHilarion the Younger of the\nMonastery of Dalmatus.\nAquilina, martyr. H. Father\nTriphylius",
-    "Title": "Ven. Father Bessarion the Wonderworker. Ven. Father Hilarion the Younger of the Monastery of Dalmatus. Aquilina, martyr. H. Father Triphylius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060726",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060826",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nTranslation of the Relics of\nthe Great-Martyr Theodore\nStratelates",
-    "Title": "Translation of the Relics of the Great-Martyr Theodore Stratelates",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "060926",
-    "Year": "2026",
-    "Month": "June",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nH. Father Cyril, Archbishop\nof Alexandria.",
-    "Title": "H. Father Cyril, Archbishop of Alexandria",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "061026",
@@ -13208,19 +11492,6 @@
     "Fasting": null
   },
   {
-    "Date": "070126",
-    "Year": "2026",
-    "Month": "July",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinence\nCosmas and Damian, Holy\nWonderworkers\nCANADA: Canada Day",
-    "Title": "Cosmas and Damian, Holy Wonderworkers CANADA: Canada Day",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "070226",
     "Year": "2026",
     "Month": "July",
@@ -13232,19 +11503,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "070326",
-    "Year": "2026",
-    "Month": "July",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nHyacinth, martyr. Holy\nFather Anatolius.",
-    "Title": "Hyacinth, martyr. Holy Father Anatolius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "070426",
@@ -13297,19 +11555,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "070826",
-    "Year": "2026",
-    "Month": "July",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nGreat Martyr Procopius",
-    "Title": "Great Martyr Procopius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "070926",
@@ -13663,58 +11908,6 @@
     "Fasting": null
   },
   {
-    "Date": "080226",
-    "Year": "2026",
-    "Month": "August",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080326",
-    "Year": "2026",
-    "Month": "August",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nVen. Father Isaac, Dalmatus\n& Faustus.\nCANADA: Civic Holiday",
-    "Title": "Ven. Father Isaac, Dalmatus & Faustus. CANADA: Civic Holiday",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080426",
-    "Year": "2026",
-    "Month": "August",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nSeven Holy Youths of\nEphesus. Ven. Eudochia,\nmartyr.",
-    "Title": "Seven Holy Youths of Ephesus. Ven. Eudochia, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080526",
-    "Year": "2026",
-    "Month": "August",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nEusignius, Martyr; Fabian,\nPope",
-    "Title": "Eusignius, Martyr; Fabian, Pope",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "080626",
     "Year": "2026",
     "Month": "August",
@@ -13728,32 +11921,6 @@
     "Fasting": "Dispensation (H\u00e2r\u021bi)"
   },
   {
-    "Date": "080726",
-    "Year": "2026",
-    "Month": "August",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "080826",
-    "Year": "2026",
-    "Month": "August",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nEmilian the Confessor,\nBishop of Cyzicus.",
-    "Title": "Emilian the Confessor, Bishop of Cyzicus",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "081026",
     "Year": "2026",
     "Month": "August",
@@ -13765,19 +11932,6 @@
     "Epistle": "1 Cor. 4: 9 \u2013 16",
     "Gospel": "Matt. 17: 14 \u2013 23",
     "Fasting": null
-  },
-  {
-    "Date": "080926",
-    "Year": "2026",
-    "Month": "August",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\n11th SUNDAY AFTER PENTECOST\nTone 2, Res. Gospel 11, Epistle 1 Cor. 9:\n2 \u2013 12, Gospel Matt. 18: 23 \u2013 35.\nFollowing week readings \u2013 12th week after\nPentecost",
-    "Title": "11th SUNDAY AFTER PENTECOST. Following week readings \u2013 12th week after Pentecost",
-    "Tone": "2",
-    "Matins Gospel": "11",
-    "Epistle": "1 Cor. 9: 2 \u2013 12",
-    "Gospel": "Matt. 18: 23 \u2013 35",
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "081026",
@@ -14053,19 +12207,6 @@
     "Fasting": null
   },
   {
-    "Date": "090226",
-    "Year": "2026",
-    "Month": "September",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nMamas, Mrt.; John the Faster,\nPatriarch of Constantinopole\nJoachim and Anne, Parents\nof the Mother of God;\nSeverian, martyr",
-    "Title": "Mamas, Mrt. John the Faster, Patriarch of Constantinopole Joachim and Anne, Parents of the Mother of God; Severian, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "090326",
     "Year": "2026",
     "Month": "September",
@@ -14077,19 +12218,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "090426",
-    "Year": "2026",
-    "Month": "September",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nHieromartyr Babylas, Bishop\nof Antioch. Prophet Moses\nthe God-Seer.\nVen. Mother Theodora of\nAlexandria.",
-    "Title": "Hieromartyr Babylas, Bishop of Antioch. Prophet Moses the God-Seer. Ven. Mother Theodora of Alexandria",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "090526",
@@ -14142,19 +12270,6 @@
     "Epistle": "Phil 2:5-11",
     "Gospel": "Lk 10:38-42, 11:27-28",
     "Fasting": null
-  },
-  {
-    "Date": "090926",
-    "Year": "2026",
-    "Month": "September",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nJoachim and Anne, Parents\nof the Mother of God;\nSeverian, martyr",
-    "Title": "Joachim and Anne, Parents of the Mother of God; Severian, martyr",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "091026",
@@ -14456,19 +12571,6 @@
     "Fasting": null
   },
   {
-    "Date": "100226",
-    "Year": "2026",
-    "Month": "October",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinence\nCyprian and Justina, martyrs\nApostle James, son of\nAlphaeus. Ven. Andronicus\nand his wife, Athanasia",
-    "Title": "Cyprian and Justina, martyrs Apostle James, son of Alphaeus. Ven. Andronicus and his wife, Athanasia",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "100326",
     "Year": "2026",
     "Month": "October",
@@ -14521,19 +12623,6 @@
     "Fasting": null
   },
   {
-    "Date": "100726",
-    "Year": "2026",
-    "Month": "October",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nSergius and Bacchus, Martyrs;\n[Our Lady of the Rosary]",
-    "Title": "Sergius and Bacchus, Martyrs; [Our Lady of the Rosary]",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "100826",
     "Year": "2026",
     "Month": "October",
@@ -14545,19 +12634,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "100926",
-    "Year": "2026",
-    "Month": "October",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nApostle James, son of\nAlphaeus. Ven. Andronicus\nand his wife, Athanasia",
-    "Title": "Apostle James, son of Alphaeus. Ven. Andronicus and his wife, Athanasia",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "101026",
@@ -14937,19 +13013,6 @@
     "Fasting": null
   },
   {
-    "Date": "110426",
-    "Year": "2026",
-    "Month": "November",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nJoannicius the Great;\nNicander & Hermeus,\nMartyrs",
-    "Title": "Joannicius the Great; Nicander & Hermeus, Martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
     "Date": "110526",
     "Year": "2026",
     "Month": "November",
@@ -14961,19 +13024,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null
-  },
-  {
-    "Date": "110626",
-    "Year": "2026",
-    "Month": "November",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nH. Father Paul the Confessor.\nH. Father John Chrysostom.",
-    "Title": "H. Father Paul the Confessor. H. Father John Chrysostom",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
   },
   {
     "Date": "110726",
@@ -15307,123 +13357,6 @@
     "Day": 30,
     "Raw Text": "30\nCommon Abstinence\nApostle Andrew the First-\ncalled.",
     "Title": "Apostle Andrew the First- called",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120126",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 1,
-    "Raw Text": "1\nCommon Abstinen ce\nH. Prophet Nahum\nVen. Father Patapius.",
-    "Title": "Common Abstinen ce H. Prophet Nahum Ven. Father Patapius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "120226",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 2,
-    "Raw Text": "2\nCommon Abstinen ce\nProphet Habakkuk\nConception by Anne of\nthe Mother of God\n(Immaculate Conception)",
-    "Title": "Common Abstinen ce Prophet Habakkuk Conception by Anne of the Mother of God (Immaculate Conception)",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": null
-  },
-  {
-    "Date": "120326",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 3,
-    "Raw Text": "3\nCommon Abstinence\nProphet Zephaniah; [St\nFrancis Xavier]\nMenas, Hermogenes and\nEugraphius, martyrs.",
-    "Title": "Prophet Zephaniah; [St Francis Xavier] Menas, Hermogenes and Eugraphius, martyrs",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120426",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 4,
-    "Raw Text": "4\nCommon Abstinence\nBarbara, martyr. H. Father\nJohn of Damascus.\nVen. Father Daniel the\nStylite",
-    "Title": "Barbara, martyr. H. Father John of Damascus. Ven. Father Daniel the Stylite",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120526",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 5,
-    "Raw Text": "5\nCommon Abstinence\nVen. Father Sabbas the\nSanctified.\nSt. Spyridon the\nWonderworker.",
-    "Title": "Ven. Father Sabbas the Sanctified. St. Spyridon the Wonderworker",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120626",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence",
-    "Title": "",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120726",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 7,
-    "Raw Text": "7\nCommon Abstinence\nH. Father Ambrose of Milan.",
-    "Title": "H. Father Ambrose of Milan",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120826",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 8,
-    "Raw Text": "8\nCommon Abstinence\nVen. Father Patapius.",
-    "Title": "Ven. Father Patapius",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence"
-  },
-  {
-    "Date": "120926",
-    "Year": "2026",
-    "Month": "December",
-    "Day": 9,
-    "Raw Text": "9\nCommon Abstinence\nConception by Anne of\nthe Mother of God\n(Immaculate Conception)",
-    "Title": "Conception by Anne of the Mother of God (Immaculate Conception)",
     "Tone": null,
     "Matins Gospel": null,
     "Epistle": null,
