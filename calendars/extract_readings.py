@@ -4,6 +4,7 @@ import json
 import csv
 import os
 from pathlib import Path
+from datetime import date
 
 # Regex patterns matching the logic in ReadingCard.vue
 TAGS_RE = re.compile(r'<[^>]*>')
@@ -12,7 +13,7 @@ TONE_RE = re.compile(r'Tone\s+(\d+)', re.IGNORECASE)
 MATINS_RES_RE = re.compile(r'Res\.?\s*Gospel\s+(\d+)', re.IGNORECASE)
 MATINS_TEXT_RE = re.compile(r'Matins\s+Gospel:?\s*(.+?)(?=\s*(?:Divine Liturgy|Epistle|Gospel|Following)|$)', re.IGNORECASE)
 IMPLICIT_LITURGY_RE = re.compile(r'Divine Liturgy:?\s*([^;]+);\s*([^;]+?)(?=\s*(?:Following|\.\s*[A-Z]|$))', re.IGNORECASE)
-EPISTLE_RE = re.compile(r'(?:^|[\s,;.])Epistle:?\s*(.+?)(?=\s*(?:Gospel|Following)|$)', re.IGNORECASE)
+EPISTLE_RE = re.compile(r'(?:^|[\s,;.])(?:Epistle|Ep\.?):?\s*(.+?)(?=\s*(?:Gospel|Following)|$)', re.IGNORECASE)
 GOSPEL_RE = re.compile(r'(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|\.\s+[A-Z])|$)', re.IGNORECASE)
 FOLLOWING_RE = re.compile(r'Following[:\s]*', re.IGNORECASE)
 DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
@@ -252,13 +253,33 @@ def process_pdfs(root_dir):
         parsed = parse_reading_text(entry["Raw Text"])
         title = clean_title(parsed['notes'], entry['Day'])
         
+        # Determine Holy Day of Obligation
+        is_holy_day = False
+        
+        # Check if Sunday
+        try:
+            # Entry has Year (str), Date (MMDDYY), Day (int)
+            mm = int(entry["Date"][:2])
+            dd = int(entry["Day"])
+            yyyy = int(entry["Year"])
+            dt = date(yyyy, mm, dd)
+            if dt.weekday() == 6: # Sunday
+                is_holy_day = True
+        except Exception:
+            pass
+
+        # Check Raw Text
+        if re.search(r'Holy Day of Obligation', entry["Raw Text"], re.IGNORECASE):
+            is_holy_day = True
+
         entry.update({
             "Title": title,
             "Tone": parsed['tone'],
             "Matins Gospel": parsed['matinsGospel'],
             "Epistle": parsed['epistle'],
             "Gospel": parsed['gospel'],
-            "Fasting": parsed['fasting']
+            "Fasting": parsed['fasting'],
+            "Holy Day of Obligation": is_holy_day
         })
         final_results.append(entry)
 
@@ -275,7 +296,7 @@ if __name__ == "__main__":
 
     # Save as CSV
     csv_output = calendars_dir / "readings.csv"
-    csv_columns = ["Date", "Title", "Tone", "Matins Gospel", "Epistle", "Gospel", "Fasting", "Raw Text"]
+    csv_columns = ["Date", "Title", "Tone", "Matins Gospel", "Epistle", "Gospel", "Fasting", "Holy Day of Obligation", "Raw Text"]
     
     with open(csv_output, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=csv_columns, extrasaction='ignore')
