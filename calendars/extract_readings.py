@@ -14,7 +14,7 @@ MATINS_RES_RE = re.compile(r'Res\.?\s*Gospel\s+(\d+)', re.IGNORECASE)
 MATINS_TEXT_RE = re.compile(r'Matins\s+Gospel:?\s*(.+?)(?=\s*(?:Divine Liturgy|Epistle|Gospel|Following)|$)', re.IGNORECASE)
 IMPLICIT_LITURGY_RE = re.compile(r'Divine Liturgy:?\s*([^;]+);\s*([^;]+?)(?=\s*(?:Following|\.\s*[A-Z]|$))', re.IGNORECASE)
 EPISTLE_RE = re.compile(r'(?:^|[\s,;.])(?:Epistle|Ep\.?):?\s*(.+?)(?=\s*(?:Gospel|Following)|$)', re.IGNORECASE)
-GOSPEL_RE = re.compile(r'(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|\.\s+[A-Z])|$)', re.IGNORECASE)
+GOSPEL_RE = re.compile(r'(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|(?:Divine\s+)?Liturgy|\.\s+[A-Z])|$)', re.IGNORECASE)
 FOLLOWING_RE = re.compile(r'Following[:\s]*', re.IGNORECASE)
 DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
 FASTING_RE = re.compile(r'(Strict Fast and abstinence|Common Abstinence|Strict Fast|Abstinence|Dispensation\s*\([^)]+\)|Dispensation)', re.IGNORECASE)
@@ -323,12 +323,19 @@ def extract_day_from_cell_style(page, bbox):
 def clean_title(notes, day):
     if not notes:
         return ""
+    cleaned = notes.strip()
     # Remove the day number if it appears at the start of the notes
     if day:
         # Regex to match the day number at the start, possibly followed by punctuation
         pattern = fr'^{day}[\s,.-]*'
-        return re.sub(pattern, '', notes).strip()
-    return notes.strip()
+        cleaned = re.sub(pattern, '', cleaned)
+
+    cleaned = re.sub(r'\bHoly\s+Day\s+of\s+Obligation\b\.?', '', cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r'\s{2,}', ' ', cleaned)
+    cleaned = re.sub(r'\s+([,.;:])', r'\1', cleaned)
+    cleaned = re.sub(r'([,.;:]){2,}', r'\1', cleaned)
+    cleaned = re.sub(r'^[\s,.;:]+|[\s,.;:]+$', '', cleaned)
+    return cleaned.strip()
 
 def split_following_notes(notes):
     if not notes:
