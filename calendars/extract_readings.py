@@ -13,8 +13,10 @@ TONE_RE = re.compile(r'Tone\s+(\d+)', re.IGNORECASE)
 MATINS_RES_RE = re.compile(r'Res\.?\s*Gospel\s+(\d+)', re.IGNORECASE)
 MATINS_TEXT_RE = re.compile(r'Matins\s+Gospel:?\s*(.+?)(?=\s*(?:Divine Liturgy|Epistle|Gospel|Following)|$)', re.IGNORECASE)
 IMPLICIT_LITURGY_RE = re.compile(r'Divine Liturgy:?\s*([^;]+);\s*([^;]+?)(?=\s*(?:Following|\.\s*[A-Z]|$))', re.IGNORECASE)
-EPISTLE_RE = re.compile(r'(?:^|[\s,;.])(?:Epistle|Ep\.?):?\s*(.+?)(?=\s*(?:Gospel|Following)|$)', re.IGNORECASE)
-GOSPEL_RE = re.compile(r'(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|(?:Divine\s+)?Liturgy|Great\s+blessing\s+of\s+water|Holy\s+Day\s+of\s+Obligation|\.\s+[A-Z])|$)', re.IGNORECASE)
+EPISTLE_RE = re.compile(r'(?:^|[\s,;.])(?:Epistle\b|Ep\b\.?)\s*:?\s*(.+?)(?=\s*(?:Gospel|G\s*:|Following)|$)', re.IGNORECASE)
+APOSTLE_EPISTLE_RE = re.compile(r'(?:^|[\s,;.])(?:Apostle\b|Apost\.)\s+((?:[1-3]\s*)?(?:Acts|Rom|Cor|Gal|Eph|Phil|Col|Thess|Tim|Tit|Phlm|Philem|Heb|Jas|James|Pet|Jude|Rev)\.?\s*[^;]*?\d\s*:\s*\d[^;]*?)(?=\s*(?:;\s*)?(?:Gospel|G\s*:|Following)|$)', re.IGNORECASE)
+EPISTLE_BEFORE_GOSPEL_RE = re.compile(r'(?:^|[\s,;.])((?:[1-3]\s*)?(?:Acts|Rom|Cor|Gal|Eph|Phil|Col|Thess|Tim|Tit|Phlm|Philem|Heb|Jas|James|Pet|Jude|Rev)\.?\s*[^;]*?\d\s*:\s*\d[^;]*?)(?=\s*;\s*(?:Gospel|G\s*:))', re.IGNORECASE)
+GOSPEL_RE = re.compile(r'(?:^|[\s,;.])(?:Gospel|G\s*:)\s*(.+?)(?=\s*(?:Following|(?:Divine\s+)?Liturgy|Great\s+blessing\s+of\s+water|Holy\s+Day\s+of\s+Obligation|\.\s+[A-Z])|$)', re.IGNORECASE)
 FOLLOWING_RE = re.compile(r'Following[:\s]*', re.IGNORECASE)
 DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
 FASTING_RE = re.compile(r'(Strict Fast and abstinence|Strict Abstinence|Common Abstinence|Strict Fast|Abstinence|Dispensation\s*\([^)]+\)|Dispensation)', re.IGNORECASE)
@@ -125,6 +127,16 @@ def parse_reading_text(text):
         if epistle_match:
             epistle = normalize_scripture_reference(epistle_match.group(1))
             work_text = work_text.replace(epistle_match.group(0), '')
+        else:
+            apostle_match = APOSTLE_EPISTLE_RE.search(work_text)
+            if apostle_match:
+                epistle = normalize_scripture_reference(apostle_match.group(1))
+                work_text = work_text.replace(apostle_match.group(0), '')
+            else:
+                epistle_fallback_match = EPISTLE_BEFORE_GOSPEL_RE.search(work_text)
+                if epistle_fallback_match:
+                    epistle = normalize_scripture_reference(epistle_fallback_match.group(1))
+                    work_text = work_text.replace(epistle_fallback_match.group(0), '')
 
         # 5. Extract Gospel
         gospel_match = GOSPEL_RE.search(work_text)
