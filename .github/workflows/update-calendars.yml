@@ -1,0 +1,48 @@
+name: Update Calendars and Readings
+
+on:
+  schedule:
+    - cron: "0 6 15 1 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readings:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Determine target year
+        id: year
+        run: echo "year=$(date -u +%Y)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install parser dependencies
+        run: python -m pip install -r calendars/requirements.txt
+
+      - name: Download calendars and extract readings
+        run: |
+          cd calendars
+          bash ./get_calendars.sh "${{ steps.year.outputs.year }}"
+          python ./extract_readings.py
+
+      - name: Commit updated calendar data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          commit_message: "chore(calendars): update data for ${{ steps.year.outputs.year }}"
+          file_pattern: |
+            calendars/readings.csv
+            calendars/extracted_readings.json
+            calendars/${{ steps.year.outputs.year }}/**
