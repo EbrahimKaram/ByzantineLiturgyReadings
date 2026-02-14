@@ -14,10 +14,10 @@ MATINS_RES_RE = re.compile(r'Res\.?\s*Gospel\s+(\d+)', re.IGNORECASE)
 MATINS_TEXT_RE = re.compile(r'Matins\s+Gospel:?\s*(.+?)(?=\s*(?:Divine Liturgy|Epistle|Gospel|Following)|$)', re.IGNORECASE)
 IMPLICIT_LITURGY_RE = re.compile(r'Divine Liturgy:?\s*([^;]+);\s*([^;]+?)(?=\s*(?:Following|\.\s*[A-Z]|$))', re.IGNORECASE)
 EPISTLE_RE = re.compile(r'(?:^|[\s,;.])(?:Epistle|Ep\.?):?\s*(.+?)(?=\s*(?:Gospel|Following)|$)', re.IGNORECASE)
-GOSPEL_RE = re.compile(r'(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|(?:Divine\s+)?Liturgy|\.\s+[A-Z])|$)', re.IGNORECASE)
+GOSPEL_RE = re.compile(r'(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|(?:Divine\s+)?Liturgy|Great\s+blessing\s+of\s+water|Holy\s+Day\s+of\s+Obligation|\.\s+[A-Z])|$)', re.IGNORECASE)
 FOLLOWING_RE = re.compile(r'Following[:\s]*', re.IGNORECASE)
 DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
-FASTING_RE = re.compile(r'(Strict Fast and abstinence|Common Abstinence|Strict Fast|Abstinence|Dispensation\s*\([^)]+\)|Dispensation)', re.IGNORECASE)
+FASTING_RE = re.compile(r'(Strict Fast and abstinence|Strict Abstinence|Common Abstinence|Strict Fast|Abstinence|Dispensation\s*\([^)]+\)|Dispensation)', re.IGNORECASE)
 CANADA_HOLIDAY_RE = re.compile(r'\bCANADA\s*:\s*(.+?)(?=(?:\s+USA\s*:)|$)', re.IGNORECASE)
 USA_HOLIDAY_RE = re.compile(r'\bUSA\s*:\s*(.+?)(?=(?:\s+CANADA\s*:)|$)', re.IGNORECASE)
 
@@ -37,6 +37,16 @@ def clean_string(s):
         return None
     # Remove leading/trailing punctuation and whitespace
     return re.sub(r'^[;:,.\-\s]+|[;:,.\-\s]+$', '', s.strip())
+
+def normalize_scripture_reference(value):
+    text = clean_string(value)
+    if not text:
+        return None
+
+    text = re.sub(r'\b(?:Great\s+blessing\s+of\s+water|Holy\s+Day\s+of\s+Obligation)\b.*$', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'(?<=\d)\s*([\-–])\s*(?=\d)', r'\1', text)
+    text = WHITESPACE_RE.sub(' ', text).strip()
+    return clean_string(text)
 
 def extract_country_holidays(text):
     canada_holiday = None
@@ -103,8 +113,8 @@ def parse_reading_text(text):
     implicit_match = IMPLICIT_LITURGY_RE.search(work_text)
     
     if implicit_match:
-        epistle = clean_string(implicit_match.group(1))
-        gospel = clean_string(implicit_match.group(2))
+        epistle = normalize_scripture_reference(implicit_match.group(1))
+        gospel = normalize_scripture_reference(implicit_match.group(2))
         work_text = work_text.replace(implicit_match.group(0), '')
     else:
         # Clear Liturgy Header if present
@@ -113,13 +123,13 @@ def parse_reading_text(text):
         # 4. Extract Epistle
         epistle_match = EPISTLE_RE.search(work_text)
         if epistle_match:
-            epistle = clean_string(epistle_match.group(1))
+            epistle = normalize_scripture_reference(epistle_match.group(1))
             work_text = work_text.replace(epistle_match.group(0), '')
 
         # 5. Extract Gospel
         gospel_match = GOSPEL_RE.search(work_text)
         if gospel_match:
-            gospel = clean_string(gospel_match.group(1))
+            gospel = normalize_scripture_reference(gospel_match.group(1))
             work_text = work_text.replace(gospel_match.group(0), '')
 
     # 6. Extract Notes (Whatever is left is roughly the title/notes)
