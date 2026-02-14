@@ -185,6 +185,73 @@ def get_table_cell_bbox(table, row_idx, col_idx):
         return None
     return None
 
+def get_logical_cell_bbox(table, row_idx, logical_col_idx, group_width):
+    if group_width <= 1:
+        return get_table_cell_bbox(table, row_idx, logical_col_idx)
+
+    x0 = None
+    top = None
+    x1 = None
+    bottom = None
+
+    start = logical_col_idx * group_width
+    end = start + group_width
+    for physical_col in range(start, end):
+        bbox = get_table_cell_bbox(table, row_idx, physical_col)
+        if not bbox:
+            continue
+        bx0, btop, bx1, bbottom = bbox
+        x0 = bx0 if x0 is None else min(x0, bx0)
+        top = btop if top is None else min(top, btop)
+        x1 = bx1 if x1 is None else max(x1, bx1)
+        bottom = bbottom if bottom is None else max(bottom, bbottom)
+
+    if None in (x0, top, x1, bottom):
+        return None
+    return (x0, top, x1, bottom)
+
+def merge_unique_parts(parts):
+    merged = []
+    for part in parts:
+        text = (part or '').strip()
+        if not text:
+            continue
+
+        skip = False
+        for existing in merged:
+            if text == existing or text in existing:
+                skip = True
+                break
+        if skip:
+            continue
+
+        merged = [existing for existing in merged if existing not in text]
+        merged.append(text)
+
+    return "\n".join(merged) if merged else None
+
+def collapse_row_to_7_columns(row):
+    row = row or []
+    col_count = len(row)
+
+    if col_count == 7:
+        return row[:7], 1
+
+    if col_count > 7 and col_count % 7 == 0:
+        group_width = col_count // 7
+        collapsed = []
+        for logical_col in range(7):
+            start = logical_col * group_width
+            end = start + group_width
+            parts = row[start:end]
+            collapsed.append(merge_unique_parts(parts))
+        return collapsed, group_width
+
+    if col_count < 7:
+        return row + [None] * (7 - col_count), 1
+
+    return row[:7], 1
+
 def extract_day_from_cell_style(page, bbox):
     if not bbox:
         return None
@@ -293,37 +360,51 @@ def process_pdfs(root_dir):
                                 continue
 
                             normalized_rows = []
+                            group_width = 1
                             for row_idx, row in enumerate(extracted_rows):
-                                row = row or []
-                                if len(row) < 7:
-                                    row = row + [None] * (7 - len(row))
-                                elif len(row) > 7:
-                                    row = row[:7]
-                                normalized_rows.append((row_idx, row))
+                                collapsed_row, row_group_width = collapse_row_to_7_columns(row)
+                                if row_group_width > group_width:
+                                    group_width = row_group_width
+                                normalized_rows.append((row_idx, collapsed_row))
 
-                            week_rows = []
+                            week_blocks = []
+                            current_block = None
+
                             for row_idx, row in normalized_rows:
                                 if is_weekday_header_row(row):
                                     continue
+
                                 if is_week_row(row):
-                                    week_rows.append((row_idx, row))
+                                    if current_block:
+                                        week_blocks.append(current_block)
+                                    current_block = {
+                                        "start_row_idx": row_idx,
+                                        "rows": [row]
+                                    }
+                                elif current_block:
+                                    current_block["rows"].append(row)
 
-                            if len(week_rows) > 5:
-                                week_rows = week_rows[:5]
+                            if current_block:
+                                week_blocks.append(current_block)
 
-                            for row_idx, row in week_rows:
+                            if len(week_blocks) > 5:
+                                week_blocks = week_blocks[:5]
+
+                            for block in week_blocks:
+                                block_rows = block["rows"]
+                                start_row_idx = block["start_row_idx"]
+
                                 for col_idx in range(7):
-                                    cell = row[col_idx]
-                                    if not cell:
+                                    parts = [row[col_idx] for row in block_rows if row[col_idx]]
+                                    combined_cell = merge_unique_parts(parts)
+                                    if not combined_cell:
                                         continue
 
-                                    cleaned_cell = cell.strip()
-                                    if not cleaned_cell:
-                                        continue
-
+                                    cleaned_cell = combined_cell.strip()
                                     day_num = extract_day_number_at_start(cleaned_cell)
+
                                     if not day_num:
-                                        bbox = get_table_cell_bbox(table, row_idx, col_idx)
+                                        bbox = get_logical_cell_bbox(table, start_row_idx, col_idx, group_width)
                                         day_num = extract_day_from_cell_style(page, bbox)
 
                                     if not day_num:
