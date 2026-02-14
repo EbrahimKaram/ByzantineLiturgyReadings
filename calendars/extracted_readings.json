@@ -11,6 +11,7 @@
     "Epistle": "2 Timothy 4:5-8",
     "Gospel": "Mark 1:1-8; Liturgy of St",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -25,6 +26,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -39,6 +41,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -53,6 +56,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -61,12 +65,13 @@
     "Month": "January",
     "Day": 14,
     "Raw Text": "14\n15th Sunday after Holy Cross:\nZacchaeus Sunday (32nd Sunday\nAfter Pentecost) Tone 8, Res. Gospel 11,\nEpistle: 1 Tim 4:9-16; Gospel: Luke 19:1-\n10. Following week readings are of the\n33rd week after Pentecost",
-    "Title": "15th Sunday after Holy Cross: Zacchaeus Sunday (32nd Sunday After Pentecost). Following week readings are of the 33rd week after Pentecost",
+    "Title": "15th Sunday after Holy Cross: Zacchaeus Sunday (32nd Sunday After Pentecost).",
     "Tone": "8",
     "Matins Gospel": "11",
     "Epistle": "1 Tim 4:9-16",
     "Gospel": "Luke 19:1- 10",
     "Fasting": null,
+    "Notes": "Following week readings are of the 33rd week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -81,6 +86,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -95,6 +101,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -109,6 +116,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -123,6 +131,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -131,12 +140,13 @@
     "Month": "January",
     "Day": 28,
     "Raw Text": "28\nSunday of the Prodigal Son.\nTone 2, Res. Gospel 2, Epistle: 1 Cor. 6:\n12-20; Gospel: Lk. 15:11-32. The readings\nfor the following week are of the\nMeatfare week.\n.",
-    "Title": "Sunday of the Prodigal Son. The readings for the following week are of the Meatfare week",
+    "Title": "Sunday of the Prodigal Son.",
     "Tone": "2",
     "Matins Gospel": "2",
     "Epistle": "1 Cor. 6: 12-20",
     "Gospel": "Lk. 15:11-32",
     "Fasting": null,
+    "Notes": "The readings for the following week are of the Meatfare week",
     "Holy Day of Obligation": true
   },
   {
@@ -151,6 +161,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -165,6 +176,7 @@
     "Epistle": "Heb. 13:7-16",
     "Gospel": "Matt: 5:14-19 Hippolytus, martyr",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -179,6 +191,7 @@
     "Epistle": "Rom. 13: 11-14:4",
     "Gospel": "Matt. 6:14-21",
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -193,6 +206,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -207,6 +221,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -221,6 +236,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -235,6 +251,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -249,6 +266,7 @@
     "Epistle": "Heb. 11: 24-26, 32-12:1",
     "Gospel": "Jn. 1:43-51",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -263,6 +281,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -277,6 +296,7 @@
     "Epistle": "Heb. 1: 10-2:3",
     "Gospel": "Mark 2:1-12",
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -291,6 +311,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -305,6 +326,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -319,6 +341,7 @@
     "Epistle": null,
     "Gospel": "Mark 9:17-32",
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -333,6 +356,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -347,6 +371,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -361,6 +386,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -375,6 +401,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -383,12 +410,13 @@
     "Month": "March",
     "Day": 24,
     "Raw Text": "24\nCommon Abstinence\nPalm Sunday (Floriile)\nLiturgy of St. John. Begin Holy Week\nEpistle: Phil. 4: 4-9, Gospel: Jn. 12:1-18. Tone\n2. Res. Gospel 10.\n/ 31\nRESURRECTION OF OUR LORD\n\u00cenvierea Domnului Isus Hristos\nResurrection service, Matins and Liturgy. All of\nthe Feast. Epistle Acts 1:1-8, Gospel Jn. 1: 1-17.\nBlessing of Easter Baskets! Christ is Risen!\nFollowing week readings \u2013 from Bright Week",
-    "Title": "Palm Sunday (Floriile) Liturgy of St. John. Begin Holy Week. All of the Feast. Epistle Acts 1:1-8, Gospel Jn. 1: 1-17. Blessing of Easter Baskets! Christ is Risen! Following week readings \u2013 from Bright Week",
+    "Title": "Palm Sunday (Floriile) Liturgy of St. John. Begin Holy Week. All of the Feast. Epistle Acts 1:1-8, Gospel Jn. 1: 1-17. Blessing of Easter Baskets! Christ is Risen!",
     "Tone": "2",
     "Matins Gospel": "10",
     "Epistle": "Phil. 4: 4-9",
     "Gospel": "Jn. 12:1-18. . . / 31 RESURRECTION OF OUR LORD \u00cenvierea Domnului Isus Hristos Resurrection service, Matins and Liturgy",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 from Bright Week",
     "Holy Day of Obligation": true
   },
   {
@@ -403,6 +431,7 @@
     "Epistle": "2:11-18",
     "Gospel": "Lk. 1:24-38",
     "Fasting": "Dispensation (Harti)",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -417,6 +446,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -431,6 +461,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -445,6 +476,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -459,6 +491,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -473,6 +506,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -487,6 +521,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -495,12 +530,13 @@
     "Month": "April",
     "Day": 14,
     "Raw Text": "14\nSUNDAY OF THE MYRRH-BEARING\nWOMEN (3rd Sunday of Easter)\nTone 2, Res. Gospel 4, Epistle Acts 6:1-7,\nGospel Mk. 15:43\u201316:8. Following week\nreadings \u2014 3rd week of Easter.",
-    "Title": "SUNDAY OF THE MYRRH-BEARING WOMEN (3rd Sunday of Easter). Following week readings \u2014 3rd week of Easter",
+    "Title": "SUNDAY OF THE MYRRH-BEARING WOMEN (3rd Sunday of Easter).",
     "Tone": "2",
     "Matins Gospel": "4",
     "Epistle": "Acts 6:1-7",
     "Gospel": "Mk. 15:43\u201316:8",
     "Fasting": null,
+    "Notes": "Following week readings \u2014 3rd week of Easter",
     "Holy Day of Obligation": true
   },
   {
@@ -515,6 +551,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -529,6 +566,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -543,6 +581,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -557,6 +596,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -565,12 +605,13 @@
     "Month": "April",
     "Day": 28,
     "Raw Text": "28\nSUNDAY OF THE SAMARITAN\nWOMAN (5th Sunday of Easter)\nTone 4, Res. Gospel 7. Epistle Acts 11:19-\n30, Gospel Jn. 4:5-42. Following week\nreadings \u2014 5th week of Easter.",
-    "Title": "SUNDAY OF THE SAMARITAN WOMAN (5th Sunday of Easter). Following week readings \u2014 5th week of Easter",
+    "Title": "SUNDAY OF THE SAMARITAN WOMAN (5th Sunday of Easter).",
     "Tone": "4",
     "Matins Gospel": "7",
     "Epistle": "Acts 11:19- 30",
     "Gospel": "Jn. 4:5-42",
     "Fasting": null,
+    "Notes": "Following week readings \u2014 5th week of Easter",
     "Holy Day of Obligation": true
   },
   {
@@ -585,6 +626,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -599,6 +641,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -613,6 +656,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -627,6 +671,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -635,12 +680,13 @@
     "Month": "May",
     "Day": 12,
     "Raw Text": "12\nFATHERS OF THE 1st ECUMENICAL\nCOUNCIL OF NICAEA (7th Sunday\nof Easter)\nTone 6, Res. Gospel 10. Epistle Acts 20: 16-\n18, 28-36 Gospel Jn. 17: 1-13. Following\nweek readings \u2014 7th week of Easter.\nUSA: Mother\u2019s Day",
-    "Title": "FATHERS OF THE 1st ECUMENICAL COUNCIL OF NICAEA (7th Sunday of Easter). Following week readings \u2014 7th week of Easter. USA: Mother\u2019s Day",
+    "Title": "FATHERS OF THE 1st ECUMENICAL COUNCIL OF NICAEA (7th Sunday of Easter). USA: Mother\u2019s Day",
     "Tone": "6",
     "Matins Gospel": "10",
     "Epistle": "Acts 20: 16- 18, 28-36",
     "Gospel": "Jn. 17: 1-13",
     "Fasting": null,
+    "Notes": "Following week readings \u2014 7th week of Easter.",
     "Holy Day of Obligation": true
   },
   {
@@ -655,6 +701,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -669,6 +716,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -683,6 +731,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -697,6 +746,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -705,12 +755,13 @@
     "Month": "May",
     "Day": 26,
     "Raw Text": "26\n1st SUNDAY AFTER PENTECOST:\nSunday of All Saints\nTone 8, Res. Gospel 1, Epistle Heb. 11: 33 \u2013\n12: 2, Gospel Matt. 10: 32-35; 37-38; 19: 27-\n30. Following week readings \u2013 2nd week\nafter Pentecost.",
-    "Title": "1st SUNDAY AFTER PENTECOST: Sunday of All Saints. Following week readings \u2013 2nd week after Pentecost",
+    "Title": "1st SUNDAY AFTER PENTECOST: Sunday of All Saints.",
     "Tone": "8",
     "Matins Gospel": "1",
     "Epistle": "Heb. 11: 33 \u2013 12: 2",
     "Gospel": "Matt. 10: 32-35; 37-38; 19: 27- 30",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 2nd week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -725,6 +776,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Dispensation (H\u00e2r\u021bi)",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -739,6 +791,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -747,12 +800,13 @@
     "Month": "June",
     "Day": 9,
     "Raw Text": "9\nCommon Abstinence\n3rd SUNDAY AFTER PENTECOST\nTone 2, Res. Gospel 3, Epistle Rom. 5: 1\n\u2013 10, Gospel Matt. 6: 22-23. Following\nweek readings \u2013 4th week after\nPentecost.",
-    "Title": "3rd SUNDAY AFTER PENTECOST. Following week readings \u2013 4th week after Pentecost",
+    "Title": "3rd SUNDAY AFTER PENTECOST.",
     "Tone": "2",
     "Matins Gospel": "3",
     "Epistle": "Rom. 5: 1 \u2013 10",
     "Gospel": "Matt. 6: 22-23",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 4th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -767,6 +821,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -781,6 +836,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -795,6 +851,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -809,6 +866,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -817,12 +875,13 @@
     "Month": "June",
     "Day": 23,
     "Raw Text": "23/30\nCommon Abstinence\n5th SUNDAY AFTER PENTECOST\nTone 4, Res. Gospel 5, Epistle Rom. 10:\n1\u201310, Gospel Matt. 8: 28 -9:1. Following\nweek readings \u2013 6th week after\nPentecost.\n/\n6TH SUNDAY AFTER PENTECOST\nTone 5, Res. Gospel 6, Epistle Rom. 12:\n6-14, Gospel Mt. 9: 1-8. Following week\nreadings \u2013 7th week after Pentecost.",
-    "Title": "/30  5th SUNDAY AFTER PENTECOST. Following week readings \u2013 6th week after Pentecost. / 6TH SUNDAY AFTER PENTECOST Tone 5, Res. Gospel 6, Epistle Rom. 12: 6-14, Gospel Mt. 9: 1-8. Following week readings \u2013 7th week after Pentecost",
+    "Title": "/30  5th SUNDAY AFTER PENTECOST. / 6TH SUNDAY AFTER PENTECOST Tone 5, Res. Gospel 6, Epistle Rom. 12: 6-14, Gospel Mt. 9: 1-8.",
     "Tone": "4",
     "Matins Gospel": "5",
     "Epistle": "Rom. 10: 1\u201310",
     "Gospel": "Matt. 8: 28 -9:1",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 6th week after Pentecost. Following week readings \u2013 7th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -837,6 +896,7 @@
     "Epistle": "Rom. 13:11-14; 14:1-4",
     "Gospel": "Lk. 1:1-25;57-68; 76- 80",
     "Fasting": "Dispensation (Harti)",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -851,6 +911,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -865,6 +926,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -879,6 +941,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -893,6 +956,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -901,12 +965,13 @@
     "Month": "July",
     "Day": 7,
     "Raw Text": "7th SUNDAY AFTER PENTECOST\nTone 6, Res. Gospel 7, Epistle Rom. 15: 1 \u2013\n7, Gospel Matt. 9: 27 - 35. Following week\nreadings \u2013 8th week after Pentecost.",
-    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 8th week after Pentecost",
+    "Title": "th SUNDAY AFTER PENTECOST.",
     "Tone": "6",
     "Matins Gospel": "7",
     "Epistle": "Rom. 15: 1 \u2013 7",
     "Gospel": "Matt. 9: 27 - 35",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 8th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -921,6 +986,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -929,12 +995,13 @@
     "Month": "July",
     "Day": 14,
     "Raw Text": "14\nSunday of the Holy Fathers of the\nFirst Six Ecumenical Councils\nTone 7, Res. Gospel 8, Epistle Titus 3: 8 \u2013 15,\nGospel Matt. 5: 14-19. Following week\nreadings \u2013 9th week after Pentecost.",
-    "Title": "Sunday of the Holy Fathers of the First Six Ecumenical Councils. Following week readings \u2013 9th week after Pentecost",
+    "Title": "Sunday of the Holy Fathers of the First Six Ecumenical Councils.",
     "Tone": "7",
     "Matins Gospel": "8",
     "Epistle": "Titus 3: 8 \u2013 15",
     "Gospel": "Matt. 5: 14-19",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 9th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -949,6 +1016,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -963,6 +1031,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -977,6 +1046,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -991,6 +1061,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1005,6 +1076,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1013,12 +1085,13 @@
     "Month": "July",
     "Day": 9,
     "Raw Text": "9th SUNDAY AFTER PENTECOST\nTone 8, Res. Gospel 9, Epistle 1 Cor. 3: 9 \u2013\n16, Gospel Matt. 14: 22 \u2013 34. Following\nweek readings \u2013 10th week after\nPentecost.",
-    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 10th week after Pentecost",
+    "Title": "th SUNDAY AFTER PENTECOST.",
     "Tone": "8",
     "Matins Gospel": "9",
     "Epistle": "1 Cor. 3: 9 \u2013 16",
     "Gospel": "Matt. 14: 22 \u2013 34",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 10th week after Pentecost",
     "Holy Day of Obligation": false
   },
   {
@@ -1033,6 +1106,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1041,12 +1115,13 @@
     "Month": "August",
     "Day": 11,
     "Raw Text": "11\nCommon Abstinence\n12th SUNDAY AFTER\nPENTECOST\nTone 3, Res. Gospel 1, Epistle 1\nCor. 15:1-11, Gospel Matt. 19:16-\n26. Following week readings \u2013 13th\nweek after Pentecost.",
-    "Title": "12th SUNDAY AFTER PENTECOST. Following week readings \u2013 13th week after Pentecost",
+    "Title": "12th SUNDAY AFTER PENTECOST.",
     "Tone": "3",
     "Matins Gospel": "1",
     "Epistle": "1 Cor. 15:1-11",
     "Gospel": "Matt. 19:16- 26",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 13th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1061,6 +1136,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1075,6 +1151,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1089,6 +1166,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1103,6 +1181,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1111,12 +1190,13 @@
     "Month": "August",
     "Day": 25,
     "Raw Text": "25\n14th SUNDAY AFTER\nPENTECOST\nTone 5, Res. Gospel 3, Epistle 2\nCor. 1: 21 \u2013 23, 2:1-4 Gospel Matt.\n22: 2-14. Following week readings\n\u2013 15th week after Pentecost.",
-    "Title": "14th SUNDAY AFTER PENTECOST. Following week readings \u2013 15th week after Pentecost",
+    "Title": "14th SUNDAY AFTER PENTECOST.",
     "Tone": "5",
     "Matins Gospel": "3",
     "Epistle": "2 Cor. 1: 21 \u2013 23, 2:1-4",
     "Gospel": "Matt. 22: 2-14",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 15th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1131,6 +1211,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1145,6 +1226,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1153,12 +1235,13 @@
     "Month": "September",
     "Day": 1,
     "Raw Text": "1\nIndiction; beginning of the Church year\n15th SUNDAY AFTER PENTECOST\nTone 6, Res. Gospel 4, Epistle 2 Cor. 4:\n6-15 Gospel Matt. 22:35-46. Following\nweek readings \u2013 16TH week after\nPentecost.",
-    "Title": "Indiction; beginning of the Church year 15th SUNDAY AFTER PENTECOST. Following week readings \u2013 16TH week after Pentecost",
+    "Title": "Indiction; beginning of the Church year 15th SUNDAY AFTER PENTECOST.",
     "Tone": "6",
     "Matins Gospel": "4",
     "Epistle": "2 Cor. 4: 6-15",
     "Gospel": "Matt. 22:35-46",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 16TH week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1173,6 +1256,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1187,6 +1271,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1201,6 +1286,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1215,6 +1301,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1223,12 +1310,13 @@
     "Month": "September",
     "Day": 15,
     "Raw Text": "15\nSUNDAY AFTER THE\nEXALTATION OF THE CROSS\nTone 8, Res. Gospel 6, Epistle Gal. 2:\n16 \u2013 20; Gospel Mk. 8:34 \u2013 9:1.\nFollowing week readings \u2013 18th week\nafter Pentecost.",
-    "Title": "SUNDAY AFTER THE EXALTATION OF THE CROSS. Following week readings \u2013 18th week after Pentecost",
+    "Title": "SUNDAY AFTER THE EXALTATION OF THE CROSS.",
     "Tone": "8",
     "Matins Gospel": "6",
     "Epistle": "Gal. 2: 16 \u2013 20",
     "Gospel": "Mk. 8:34 \u2013 9:1",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 18th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1243,6 +1331,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1257,6 +1346,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1271,6 +1361,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1285,6 +1376,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1293,12 +1385,13 @@
     "Month": "September",
     "Day": 29,
     "Raw Text": "29\n2nd SUNDAY AFTER HOLY\nCROSS\n(19th Sunday after Pentecost)\nTone 2, Res. Gospel 8, Epistle 2 Cor.\n11:31-33. 12:1-10; Gospel Lk. 6:31\u2013 36.\nFollowing week readings \u2013 20th week\nafter Pentecost.",
-    "Title": "2nd SUNDAY AFTER HOLY CROSS (19th Sunday after Pentecost). Following week readings \u2013 20th week after Pentecost",
+    "Title": "2nd SUNDAY AFTER HOLY CROSS (19th Sunday after Pentecost).",
     "Tone": "2",
     "Matins Gospel": "8",
     "Epistle": "2 Cor. 11:31-33. 12:1-10",
     "Gospel": "Lk. 6:31\u2013 36",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 20th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1313,6 +1406,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1327,6 +1421,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1341,6 +1436,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1349,12 +1445,13 @@
     "Month": "October",
     "Day": 13,
     "Raw Text": "13\n4th SUNDAY AFTER HOLY CROSS.\n(Sunday of the Holy Fathers of the\n7th Ecumenical Council) Tone 4, Res.\nGospel 10, Epistle Titus 3: 8 \u2013 15; Gospel Lk.\n8:5 \u2013 15. Following week readings \u2013 22nd\nweek after Pentecost.",
-    "Title": "4th SUNDAY AFTER HOLY CROSS. (Sunday of the Holy Fathers of the 7th Ecumenical Council). Following week readings \u2013 22nd week after Pentecost",
+    "Title": "4th SUNDAY AFTER HOLY CROSS. (Sunday of the Holy Fathers of the 7th Ecumenical Council).",
     "Tone": "4",
     "Matins Gospel": "10",
     "Epistle": "Titus 3: 8 \u2013 15",
     "Gospel": "Lk. 8:5 \u2013 15",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 22nd week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1369,6 +1466,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1383,6 +1481,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1397,6 +1496,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1411,6 +1511,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1419,12 +1520,13 @@
     "Month": "October",
     "Day": 27,
     "Raw Text": "27\n7th SUNDAY AFTER HOLY CROSS\n(23rd Sunday after Pentecost) Tone\n6, Res. Gospel 1, Epistle Eph. 2:4-10; Gospel\nLk. 8: 41\u2013 56. Following week readings \u2013 24th\nweek after Pentecost.",
-    "Title": "7th SUNDAY AFTER HOLY CROSS (23rd Sunday after Pentecost). Following week readings \u2013 24th week after Pentecost",
+    "Title": "7th SUNDAY AFTER HOLY CROSS (23rd Sunday after Pentecost).",
     "Tone": "6",
     "Matins Gospel": "1",
     "Epistle": "Eph. 2:4-10",
     "Gospel": "Lk. 8: 41\u2013 56",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 24th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1439,6 +1541,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1453,6 +1556,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1467,6 +1571,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1481,6 +1586,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1489,12 +1595,13 @@
     "Month": "November",
     "Day": 10,
     "Raw Text": "10\n8th SUNDAY AFTER HOLY CROSS\n(25th Sunday after Pentecost)\nTone 8, Res. Gospel 3, Epistle Eph. 4: 1-\n7; Gospel Lk. 10: 25\u2013 37. Following\nweek readings \u2013 26th week after\nPentecost.",
-    "Title": "8th SUNDAY AFTER HOLY CROSS (25th Sunday after Pentecost). Following week readings \u2013 26th week after Pentecost",
+    "Title": "8th SUNDAY AFTER HOLY CROSS (25th Sunday after Pentecost).",
     "Tone": "8",
     "Matins Gospel": "3",
     "Epistle": "Eph. 4: 1- 7",
     "Gospel": "Lk. 10: 25\u2013 37",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 26th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1509,6 +1616,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1523,6 +1631,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1537,6 +1646,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1551,6 +1661,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1559,12 +1670,13 @@
     "Month": "November",
     "Day": 24,
     "Raw Text": "24\nCommon Abstinence\n13th SUNDAY AFTER HOLY CROSS\n(27th Sunday after Pentecost)\nTone 2, Res. Gospel 5, Epistle Eph. 6:10-\n17; Gospel Lk. 18: 18\u2013 28. Following\nweek readings \u2013 28th week after\nPentecost.",
-    "Title": "13th SUNDAY AFTER HOLY CROSS (27th Sunday after Pentecost). Following week readings \u2013 28th week after Pentecost",
+    "Title": "13th SUNDAY AFTER HOLY CROSS (27th Sunday after Pentecost).",
     "Tone": "2",
     "Matins Gospel": "5",
     "Epistle": "Eph. 6:10- 17",
     "Gospel": "Lk. 18: 18\u2013 28",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 28th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1579,6 +1691,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1593,6 +1706,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1601,12 +1715,13 @@
     "Month": "December",
     "Day": 15,
     "Raw Text": "15\nCommon Abstinence\n11th SUNDAY AFTER HOLY CROSS\n(Sunday of the Holy Ancestors).\nTone 5, Res. Gospel 8, Epistle Col 3: 4-\n12; Gospel Lk. 14: 16\u201325. Following\nweek readings \u201331st week after\nPentecost.",
-    "Title": "11th SUNDAY AFTER HOLY CROSS (Sunday of the Holy Ancestors). Following week readings \u201331st week after Pentecost",
+    "Title": "11th SUNDAY AFTER HOLY CROSS (Sunday of the Holy Ancestors).",
     "Tone": "5",
     "Matins Gospel": "8",
     "Epistle": "Col 3: 4- 12",
     "Gospel": "Lk. 14: 16\u201325",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u201331st week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1621,6 +1736,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1635,6 +1751,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1649,6 +1766,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1663,6 +1781,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1671,12 +1790,13 @@
     "Month": "December",
     "Day": 29,
     "Raw Text": "29\nSUNDAY AFTER NATIVITY OF\nOUR LORD JESUS CHRIST. Tone 7,\nRes. Gospel 10, Epistle Gal. 1: 11-19;\nGospel Mt. 2: 13 \u2013 23.\nFollowing week readings 32nd\nweek after Pentecost.",
-    "Title": "SUNDAY AFTER NATIVITY OF OUR LORD JESUS CHRIST. Following week readings 32nd week after Pentecost",
+    "Title": "SUNDAY AFTER NATIVITY OF OUR LORD JESUS CHRIST.",
     "Tone": "7",
     "Matins Gospel": "10",
     "Epistle": "Gal. 1: 11-19",
     "Gospel": "Mt. 2: 13 \u2013 23",
     "Fasting": null,
+    "Notes": "Following week readings 32nd week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1691,6 +1811,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1705,6 +1826,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1719,6 +1841,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1733,6 +1856,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1747,6 +1871,7 @@
     "Epistle": "Eph. 4: 7 13",
     "Gospel": "Matt 4:12-17",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1761,6 +1886,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1775,6 +1901,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1789,6 +1916,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1803,6 +1931,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1811,12 +1940,13 @@
     "Month": "January",
     "Day": 12,
     "Raw Text": "12th Sunday after The Holy Cross\n(29th Sunday after Pentecost)\nTone 2, Res, Gospel 2, Epistle Col. 3:4-\n11, Gospel Lk 17:12-19. Following week\nreadings are of the 30th week after\nPentecost.",
-    "Title": "th Sunday after The Holy Cross (29th Sunday after Pentecost), Res. Following week readings are of the 30th week after Pentecost",
+    "Title": "th Sunday after The Holy Cross (29th Sunday after Pentecost), Res.",
     "Tone": "2",
     "Matins Gospel": null,
     "Epistle": "Col. 3:4- 11",
     "Gospel": "2, Gospel Lk 17:12-19",
     "Fasting": null,
+    "Notes": "Following week readings are of the 30th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1831,6 +1961,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1839,12 +1970,13 @@
     "Month": "January",
     "Day": 26,
     "Raw Text": "26\n15th Sunday after Holy Cross:\nZacchaeus Sunday (32nd Sunday\nAfter Pentecost) Tone 3, Res. Gospel 3,\nEpistle:1 Tim 4:9-16; Gospel: Luke 19:1-\n10. Following week readings are of the\n33rd week after Pentecost.",
-    "Title": "15th Sunday after Holy Cross: Zacchaeus Sunday (32nd Sunday After Pentecost). Following week readings are of the 33rd week after Pentecost",
+    "Title": "15th Sunday after Holy Cross: Zacchaeus Sunday (32nd Sunday After Pentecost).",
     "Tone": "3",
     "Matins Gospel": "3",
     "Epistle": "1 Tim 4:9-16",
     "Gospel": "Luke 19:1- 10",
     "Fasting": null,
+    "Notes": "Following week readings are of the 33rd week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1859,6 +1991,7 @@
     "Epistle": "Heb. 7:26 to 8:2",
     "Gospel": "John 10:9-16",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1873,6 +2006,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1887,6 +2021,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1901,6 +2036,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1909,12 +2045,13 @@
     "Month": "February",
     "Day": 9,
     "Raw Text": "9\nBeginning of the Triodion\nLeavetaking of Presentation of Our Lord in the Temple\nSunday of the Pharisee and the\nPublican. Tone 5, Res. Gospel 5,\nEpistle: 3 Tim. 3: 10-15; Gospel: Luke\n18:10-14.\nFollowing week readings are of the\n34th week after Pentecost.",
-    "Title": "Beginning of the Triodion Leavetaking of Presentation of Our Lord in the Temple Sunday of the Pharisee and the Publican. Following week readings are of the 34th week after Pentecost",
+    "Title": "Beginning of the Triodion Leavetaking of Presentation of Our Lord in the Temple Sunday of the Pharisee and the Publican.",
     "Tone": "5",
     "Matins Gospel": "5",
     "Epistle": "3 Tim. 3: 10-15",
     "Gospel": "Luke 18:10-14",
     "Fasting": null,
+    "Notes": "Following week readings are of the 34th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -1929,6 +2066,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1943,6 +2081,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1957,6 +2096,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -1971,6 +2111,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1985,6 +2126,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -1993,12 +2135,13 @@
     "Month": "February",
     "Day": 23,
     "Raw Text": "23\nMeat-Fare Sunday \u2013 Sunday of\nthe Last Judgement. Tone 7, Res.\nGospel 7. Epistle: 1 Cor. 8: 8-13 \u2013 9:1-2;\nGospel: Matt. 25:31-46. The readings\nfor the following week are of the\nCheesefare week. Abstinence from\nmeat products this week.",
-    "Title": "Meat-Fare Sunday \u2013 Sunday of the Last Judgement. The readings for the following week are of the Cheesefare week.  from meat products this week",
+    "Title": "Meat-Fare Sunday \u2013 Sunday of the Last Judgement. from meat products this week",
     "Tone": "7",
     "Matins Gospel": "7",
     "Epistle": "1 Cor. 8: 8-13 \u2013 9:1-2",
     "Gospel": "Matt. 25:31-46",
     "Fasting": "Abstinence",
+    "Notes": "The readings for the following week are of the Cheesefare week.",
     "Holy Day of Obligation": true
   },
   {
@@ -2013,6 +2156,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2027,6 +2171,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2041,6 +2186,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2055,6 +2201,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2069,6 +2216,7 @@
     "Epistle": "Heb. 11: 24-26",
     "Gospel": "Jn. 1:43-51",
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2083,6 +2231,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2097,6 +2246,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2111,6 +2261,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2125,6 +2276,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2139,6 +2291,7 @@
     "Epistle": null,
     "Gospel": "Mark 8:34 - 9:1",
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2153,6 +2306,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2167,6 +2321,7 @@
     "Epistle": "2:11-18",
     "Gospel": "Lk. 1:24-38",
     "Fasting": "Dispensation (Harti)",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2181,6 +2336,7 @@
     "Epistle": "Phil. 4: 4-9",
     "Gospel": "Jn. 12:1-18",
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2195,6 +2351,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2209,6 +2366,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2223,6 +2381,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2237,6 +2396,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2251,6 +2411,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2259,12 +2420,13 @@
     "Month": "April",
     "Day": 27,
     "Raw Text": "27\nTHOMAS SUNDAY (2nd Sunday\nof Easter) Tone 1, Res. Gospel 1, Of\nthe Sunday - Epistle Acts 5:12-20,\nGospel Jn. 20:19-31 Following week\nreadings-2nd week after Easter.",
-    "Title": "THOMAS SUNDAY (2nd Sunday of Easter), Of the Sunday - Following week readings-2nd week after Easter",
+    "Title": "",
     "Tone": "1",
     "Matins Gospel": "1",
     "Epistle": "Acts 5:12-20",
     "Gospel": "Jn. 20:19-31",
     "Fasting": null,
+    "Notes": "27 THOMAS SUNDAY (2nd Sunday of Easter), Of the Sunday - Following week readings-2nd week after Easter",
     "Holy Day of Obligation": true
   },
   {
@@ -2279,6 +2441,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2293,6 +2456,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2307,6 +2471,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2321,6 +2486,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2329,12 +2495,13 @@
     "Month": "May",
     "Day": 11,
     "Raw Text": "11\nSUNDAY OF THE PARALYTIC (4th\nSunday of Easter)\nTone 3, Res. Gospel 5. Epistle Acts 9: 32-\n42, Gospel Jn. 5:1-15. Following week\nreadings \u2013 4th week after Easter.\nUSA: Mother\u2019s Day",
-    "Title": "SUNDAY OF THE PARALYTIC (4th Sunday of Easter). Following week readings \u2013 4th week after Easter. USA: Mother\u2019s Day",
+    "Title": "SUNDAY OF THE PARALYTIC (4th Sunday of Easter). USA: Mother\u2019s Day",
     "Tone": "3",
     "Matins Gospel": "5",
     "Epistle": "Acts 9: 32- 42",
     "Gospel": "Jn. 5:1-15",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 4th week after Easter.",
     "Holy Day of Obligation": true
   },
   {
@@ -2349,6 +2516,7 @@
     "Epistle": "iphanius, Bishop of Cyprus and Germanus the Hymnographer, Patriarch of Constantinople",
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2363,6 +2531,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2377,6 +2546,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2391,6 +2561,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2399,12 +2570,13 @@
     "Month": "May",
     "Day": 25,
     "Raw Text": "25\nSUNDAY OF THE MAN BORN\nBLIND (6th Sunday of Easter)\nTone 5, Res. Gospel 8. Epistle Acts 16: 16-\n34, Gospel Jn. 9: 1-38. Following week\nreadings \u2013 6th week after Easter.",
-    "Title": "SUNDAY OF THE MAN BORN BLIND (6th Sunday of Easter). Following week readings \u2013 6th week after Easter",
+    "Title": "SUNDAY OF THE MAN BORN BLIND (6th Sunday of Easter).",
     "Tone": "5",
     "Matins Gospel": "8",
     "Epistle": "Acts 16: 16- 34",
     "Gospel": "Jn. 9: 1-38",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 6th week after Easter",
     "Holy Day of Obligation": true
   },
   {
@@ -2419,6 +2591,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2433,6 +2606,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2441,12 +2615,13 @@
     "Month": "June",
     "Day": 1,
     "Raw Text": "1\nFATHERS OF THE 1ST ECUMENI-\nCAL COUNCIL OF NICAEA (7TH\nSunday of Easter) Tone 6, Res.\nGospel 10. Epistle Acts 20: 16-18, 28-36\nGospel Jn. 17: 1-13. Following week\nreadings \u2013 7th week after Easter.",
-    "Title": "FATHERS OF THE 1ST ECUMENI- CAL COUNCIL OF NICAEA (7TH Sunday of Easter). Following week readings \u2013 7th week after Easter",
+    "Title": "FATHERS OF THE 1ST ECUMENI- CAL COUNCIL OF NICAEA (7TH Sunday of Easter).",
     "Tone": "6",
     "Matins Gospel": "10",
     "Epistle": "Acts 20: 16-18, 28-36",
     "Gospel": "Jn. 17: 1-13",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 7th week after Easter",
     "Holy Day of Obligation": true
   },
   {
@@ -2461,6 +2636,7 @@
     "Epistle": "Heb 7,26-28,8: 1-2",
     "Gospel": "John:15:17-27; 16:1-2",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2475,6 +2651,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2489,6 +2666,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2503,6 +2681,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2511,12 +2690,13 @@
     "Month": "June",
     "Day": 15,
     "Raw Text": "15\nCommon Abstinence\n1st SUNDAY AFTER PENTECOST\nSunday of All Saints. Tone 8, Res.\nGospel 1, Epistle Heb. 11: 33 \u2013 12: 2,\nGospel Matt. 10: 32-35; 37-38; 19: 27-30.\nFollowing week readings \u2013 2nd week after\nPentecost. USA: Father\u2019s Day",
-    "Title": "1st SUNDAY AFTER PENTECOST Sunday of All Saints. Following week readings \u2013 2nd week after Pentecost. USA: Father\u2019s Day",
+    "Title": "1st SUNDAY AFTER PENTECOST Sunday of All Saints. USA: Father\u2019s Day",
     "Tone": "8",
     "Matins Gospel": "1",
     "Epistle": "Heb. 11: 33 \u2013 12: 2",
     "Gospel": "Matt. 10: 32-35; 37-38; 19: 27-30",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 2nd week after Pentecost.",
     "Holy Day of Obligation": true
   },
   {
@@ -2531,6 +2711,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2545,6 +2726,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2559,6 +2741,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2573,6 +2756,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2581,12 +2765,13 @@
     "Month": "June",
     "Day": 29,
     "Raw Text": "29\n3rd SUNDAY AFTER PENTECOST\nTone 2, Res. Gospel 3, Epistle Rom. 5: 1\n\u2013 10, Gospel Matt. 6: 22-23. Following\nweek readings \u2013 4th week after\nPentecost.\n(\u2020)HOLY APOSTLES PETER AND PAUL\nEpistle: 2 Cor. 11:21-12:9 Gospel Mt\n16:13-19",
-    "Title": "3rd SUNDAY AFTER PENTECOST. Following week readings \u2013 4th week after Pentecost. (\u2020)HOLY APOSTLES PETER AND PAUL Epistle: 2 Cor. 11:21-12:9 Gospel Mt 16:13-19",
+    "Title": "3rd SUNDAY AFTER PENTECOST. (\u2020)HOLY APOSTLES PETER AND PAUL Epistle: 2 Cor. 11:21-12:9 Gospel Mt 16:13-19",
     "Tone": "2",
     "Matins Gospel": "3",
     "Epistle": "Rom. 5: 1 \u2013 10",
     "Gospel": "Matt. 6: 22-23",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 4th week after Pentecost.",
     "Holy Day of Obligation": true
   },
   {
@@ -2601,6 +2786,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2615,6 +2801,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2629,6 +2816,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2643,6 +2831,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2651,12 +2840,13 @@
     "Month": "July",
     "Day": 4,
     "Raw Text": "4th SUNDAY AFTER PENTECOST\nTone 3, Res. Gospel 4, Epistle Rom. 6: 18 \u2013\n23, Gospel Matt. 8: 5-13. Following week\nreadings \u2013 5th week after Pentecost.",
-    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 5th week after Pentecost",
+    "Title": "th SUNDAY AFTER PENTECOST.",
     "Tone": "3",
     "Matins Gospel": "4",
     "Epistle": "Rom. 6: 18 \u2013 23",
     "Gospel": "Matt. 8: 5-13",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 5th week after Pentecost",
     "Holy Day of Obligation": false
   },
   {
@@ -2671,6 +2861,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2679,12 +2870,13 @@
     "Month": "July",
     "Day": 13,
     "Raw Text": "13\nSunday of the Holy Fathers of the\nFirst Sixth Ecumenical Councils\nTone 4, Res. Gospel 5, Epistle Tit. 3: 8 \u2013 15,\nGospel Matt. 5: 14 -19. Following week\nreadings \u2013 6th week after Pentecost.",
-    "Title": "Sunday of the Holy Fathers of the First Sixth Ecumenical Councils. Following week readings \u2013 6th week after Pentecost",
+    "Title": "Sunday of the Holy Fathers of the First Sixth Ecumenical Councils.",
     "Tone": "4",
     "Matins Gospel": "5",
     "Epistle": "Tit. 3: 8 \u2013 15",
     "Gospel": "Matt. 5: 14 -19",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 6th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -2699,6 +2891,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2713,6 +2906,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2727,6 +2921,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2741,6 +2936,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2755,6 +2951,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2763,12 +2960,13 @@
     "Month": "July",
     "Day": 6,
     "Raw Text": "6TH SUNDAY AFTER PENTECOST\nTone 5, Res. Gospel 6, Epistle Rom. 12: 6-\n14, Gospel Mt. 9: 1 - 8. Following week\nreadings \u2013 7th week after Pentecost.\n(\u2020) Holy Prophet Elijah the Tishbite",
-    "Title": "TH SUNDAY AFTER PENTECOST. Following week readings \u2013 7th week after Pentecost. (\u2020) Holy Prophet Elijah the Tishbite",
+    "Title": "TH SUNDAY AFTER PENTECOST. (\u2020) Holy Prophet Elijah the Tishbite",
     "Tone": "5",
     "Matins Gospel": "6",
     "Epistle": "Rom. 12: 6- 14",
     "Gospel": "Mt. 9: 1 - 8",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 7th week after Pentecost.",
     "Holy Day of Obligation": true
   },
   {
@@ -2783,6 +2981,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2791,12 +2990,13 @@
     "Month": "August",
     "Day": 8,
     "Raw Text": "8th SUNDAY AFTER PENTECOST\nTone 7, Res. Gospel 8, Epistle 1 Cor 1:\n10-17, Gospel Matt. 14: 14-21. Following\nweek readings \u2013 9th week after Pentecost.",
-    "Title": "th SUNDAY AFTER PENTECOST. Following week readings \u2013 9th week after Pentecost",
+    "Title": "th SUNDAY AFTER PENTECOST.",
     "Tone": "7",
     "Matins Gospel": "8",
     "Epistle": "1 Cor 1: 10-17",
     "Gospel": "Matt. 14: 14-21",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 9th week after Pentecost",
     "Holy Day of Obligation": false
   },
   {
@@ -2811,6 +3011,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2819,12 +3020,13 @@
     "Month": "August",
     "Day": 10,
     "Raw Text": "10\nCommon Abstinence\n9th SUNDAY AFTER PENTECOST\nTone 8, Res. Gospel 9, Epistle 1 Cor. 3: 9\n\u2013 16, Gospel Matt. 14: 22 \u2013 34. Following\nweek readings \u2013 10th week after\nPentecost.",
-    "Title": "9th SUNDAY AFTER PENTECOST. Following week readings \u2013 10th week after Pentecost",
+    "Title": "9th SUNDAY AFTER PENTECOST.",
     "Tone": "8",
     "Matins Gospel": "9",
     "Epistle": "1 Cor. 3: 9 \u2013 16",
     "Gospel": "Matt. 14: 22 \u2013 34",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 10th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -2839,6 +3041,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2853,6 +3056,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2867,6 +3071,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2881,6 +3086,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2889,12 +3095,13 @@
     "Month": "August",
     "Day": 24,
     "Raw Text": "24/31\n11th SUNDAY AFTER PENTECOST\nTone 2, Res. Gospel 11, Epistle 1 Cor. 9:\n2 \u2013 12, Gospel Matt. 18: 23 \u2013 35.\nFollowing week readings \u2013 12th week after\nPentecost\n12th SUNDAY AFTER PENTECOST\nTone 3, Res. Gospel 1, Epistle 1 Cor.\n15:1-11, Gospel Matt. 19:16-26.\nFollowing week readings \u2013 13th week after\nPentecost.",
-    "Title": "/31 11th SUNDAY AFTER PENTECOST. Following week readings \u2013 12th week after Pentecost 12th SUNDAY AFTER PENTECOST Tone 3, Res. Gospel 1, Epistle 1 Cor. 15:1-11, Gospel Matt. 19:16-26. Following week readings \u2013 13th week after Pentecost",
+    "Title": "/31 11th SUNDAY AFTER PENTECOST. Gospel 1, Epistle 1 Cor. 15:1-11, Gospel Matt. 19:16-26.",
     "Tone": "2",
     "Matins Gospel": "11",
     "Epistle": "1 Cor. 9: 2 \u2013 12",
     "Gospel": "Matt. 18: 23 \u2013 35",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 12th week after Pentecost 12th SUNDAY AFTER PENTECOST Tone 3, Res. Following week readings \u2013 13th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -2909,6 +3116,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2923,6 +3131,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2937,6 +3146,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2951,6 +3161,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2965,6 +3176,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -2979,6 +3191,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -2993,6 +3206,7 @@
     "Epistle": null,
     "Gospel": "Jn. 19:6-11, 13-20, 25- 28, 30-35",
     "Fasting": "Strict Fast and abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3007,6 +3221,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3021,6 +3236,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3035,6 +3251,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3049,6 +3266,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3057,12 +3275,13 @@
     "Month": "September",
     "Day": 28,
     "Raw Text": "28\n1st SUNDAY AFTER HOLY\nCROSS\n(18th Sunday after Pentecost).\nTone 7, Res. Gospel 5, Epistle 2 Cor.\n9:6-11; Gospel Lk. 5: 1\u2013 18. Following\nweek readings \u2013 19th week after\nPentecost.",
-    "Title": "1st SUNDAY AFTER HOLY CROSS (18th Sunday after Pentecost). Following week readings \u2013 19th week after Pentecost",
+    "Title": "1st SUNDAY AFTER HOLY CROSS (18th Sunday after Pentecost).",
     "Tone": "7",
     "Matins Gospel": "5",
     "Epistle": "2 Cor. 9:6-11",
     "Gospel": "Lk. 5: 1\u2013 18",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 19th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -3077,6 +3296,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3091,6 +3311,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3105,6 +3326,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3119,6 +3341,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3127,12 +3350,13 @@
     "Month": "October",
     "Day": 12,
     "Raw Text": "12\n4th SUNDAY AFTER HOLY CROSS.\n(Sunday of the Holy Fathers of the\nSeventh Ecumenical Councils\nTone 1, Res. Gospel 7, Epistle Titus. 3: 8 \u2013 15;\nGospel Lk. 8:5 \u2013 15. Following week readings\n\u2013 21st week after Pentecost.",
-    "Title": "4th SUNDAY AFTER HOLY CROSS. (Sunday of the Holy Fathers of the Seventh Ecumenical Councils. Following week readings \u2013 21st week after Pentecost",
+    "Title": "4th SUNDAY AFTER HOLY CROSS. (Sunday of the Holy Fathers of the Seventh Ecumenical Councils.",
     "Tone": "1",
     "Matins Gospel": "7",
     "Epistle": "Titus. 3: 8 \u2013 15",
     "Gospel": "Lk. 8:5 \u2013 15",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 21st week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -3147,6 +3371,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3161,6 +3386,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3175,6 +3401,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3189,6 +3416,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3197,12 +3425,13 @@
     "Month": "October",
     "Day": 26,
     "Raw Text": "26\n6th SUNDAY AFTER HOLY CROSS\n(23rd Sunday after Pentecost).\nTone 3, Res. Gospel 9, Epistle Efes 2:4-10;\nGospel Lk. 8: 27\u2013 39. Following week\nreadings \u2013 23rd week after Pentecost.\n(\u2020) Holy Great-Martyr Demetrius, Fount\nof Myrrh",
-    "Title": "6th SUNDAY AFTER HOLY CROSS (23rd Sunday after Pentecost). Following week readings \u2013 23rd week after Pentecost. (\u2020) Holy Great-Martyr Demetrius, Fount of Myrrh",
+    "Title": "6th SUNDAY AFTER HOLY CROSS (23rd Sunday after Pentecost). (\u2020) Holy Great-Martyr Demetrius, Fount of Myrrh",
     "Tone": "3",
     "Matins Gospel": "9",
     "Epistle": "Efes 2:4-10",
     "Gospel": "Lk. 8: 27\u2013 39",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 23rd week after Pentecost.",
     "Holy Day of Obligation": true
   },
   {
@@ -3217,6 +3446,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3231,6 +3461,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3245,6 +3476,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3259,6 +3491,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3267,12 +3500,13 @@
     "Month": "November",
     "Day": 9,
     "Raw Text": "9\n7TH SUNDAY AFTER HOLY CROSS\n(24th Sunday after Pentecost).\nTone 5, Res. Gospel 11, Epistle Eph 2:\n14-22; Gospel Lk. 8: 41\u2013 56. Following\nweek readings \u2013 25TH week after Pent",
-    "Title": "7TH SUNDAY AFTER HOLY CROSS (24th Sunday after Pentecost). Following week readings \u2013 25TH week after Pent",
+    "Title": "7TH SUNDAY AFTER HOLY CROSS (24th Sunday after Pentecost).",
     "Tone": "5",
     "Matins Gospel": "11",
     "Epistle": "Eph 2: 14-22",
     "Gospel": "Lk. 8: 41\u2013 56",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 25TH week after Pent",
     "Holy Day of Obligation": true
   },
   {
@@ -3287,6 +3521,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3301,6 +3536,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3315,6 +3551,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3329,6 +3566,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3337,12 +3575,13 @@
     "Month": "November",
     "Day": 23,
     "Raw Text": "23/30\nCommon Abstinence\n9th SUNDAY AFTER HOLY CROSS\n(26th Sunday after Pentecost).\nTone 7, Res. Gospel 2, Epistle Eph 5:8-\n19; Gospel Lk. 12: 16\u2013 21. Following\nweek readings \u2013 27th week after\nPentecost.\n13th SUNDAY AFTER HOLY CROSS\n(30th Sunday after Pentecost).\nTone 8, Res. Gospel 3, Epistle Col 3: 12-\n16; Gospel Lk. 18: 18\u201327. Following\nweek readings \u2013 28th week after\nPentecost. Dispensation (H\u00e2rti)",
-    "Title": "/30  9th SUNDAY AFTER HOLY CROSS (26th Sunday after Pentecost). Following week readings \u2013 27th week after Pentecost. 13th SUNDAY AFTER HOLY CROSS (30th Sunday after Pentecost). Tone 8, Res. Gospel 3, Epistle Col 3: 12- 16; Gospel Lk. 18: 18\u201327. Following week readings \u2013 28th week after Pentecost. Dispensation (H\u00e2rti)",
+    "Title": "/30  9th SUNDAY AFTER HOLY CROSS (26th Sunday after Pentecost). 13th SUNDAY AFTER HOLY CROSS (30th Sunday after Pentecost). Tone 8, Res. Gospel 3, Epistle Col 3: 12- 16; Gospel Lk. 18: 18\u201327. Dispensation (H\u00e2rti)",
     "Tone": "7",
     "Matins Gospel": "2",
     "Epistle": "Eph 5:8- 19",
     "Gospel": "Lk. 12: 16\u2013 21",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 27th week after Pentecost. Following week readings \u2013 28th week after Pentecost.",
     "Holy Day of Obligation": true
   },
   {
@@ -3357,6 +3596,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3371,6 +3611,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3379,12 +3620,13 @@
     "Month": "December",
     "Day": 14,
     "Raw Text": "14\nCommon Abstinence\n11th SUNDAY AFTER HOLY\nCROSS (Sunday of the Holy\nAncestors). Tone 2, Res. Gospel 5,\nEpistle Col 3: 4-12; Gospel Lk. 14:\n16\u201325. Following week readings \u2013\n30th week after Pentecost.",
-    "Title": "11th SUNDAY AFTER HOLY CROSS (Sunday of the Holy Ancestors). Following week readings \u2013 30th week after Pentecost",
+    "Title": "11th SUNDAY AFTER HOLY CROSS (Sunday of the Holy Ancestors).",
     "Tone": "2",
     "Matins Gospel": "5",
     "Epistle": "Col 3: 4-12",
     "Gospel": "Lk. 14: 16\u201325",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 30th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -3399,6 +3641,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3413,6 +3656,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3427,6 +3671,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3441,6 +3686,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3449,12 +3695,13 @@
     "Month": "December",
     "Day": 28,
     "Raw Text": "28\nSUNDAY AFTER NATIVITY OF\nOUR LORD JESUS CHRIST.\nTone 4, Res. Gospel 7, Epistle Gal. 1:\n11-19; Gospel Mt. 2: 13 \u2013 23.\nFollowing week readings 32nd week\nafter Pentecost or of the Menaion",
-    "Title": "SUNDAY AFTER NATIVITY OF OUR LORD JESUS CHRIST. Following week readings 32nd week after Pentecost or of the Menaion",
+    "Title": "SUNDAY AFTER NATIVITY OF OUR LORD JESUS CHRIST.",
     "Tone": "4",
     "Matins Gospel": "7",
     "Epistle": "Gal. 1: 11-19",
     "Gospel": "Mt. 2: 13 \u2013 23",
     "Fasting": null,
+    "Notes": "Following week readings 32nd week after Pentecost or of the Menaion",
     "Holy Day of Obligation": true
   },
   {
@@ -3469,6 +3716,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3483,6 +3731,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3497,6 +3746,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3511,6 +3761,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3525,6 +3776,7 @@
     "Epistle": "Eph. 4: 7 13",
     "Gospel": "Matt 4:12-17",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3539,6 +3791,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3553,6 +3806,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3567,6 +3821,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3581,6 +3836,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3589,12 +3845,13 @@
     "Month": "January",
     "Day": 15,
     "Raw Text": "15th SUNDAY AFTER HOLY CROSS\n(32nd Sunday after Pentecost)\nTone 7, Res. Gospel 10, Epistle 1 Tim 4:9-\n15, Gospel Lk. 19:1-10. Following week\nreadings \u201333rd week after Pentecost.",
-    "Title": "th SUNDAY AFTER HOLY CROSS (32nd Sunday after Pentecost). Following week readings \u201333rd week after Pentecost",
+    "Title": "th SUNDAY AFTER HOLY CROSS (32nd Sunday after Pentecost).",
     "Tone": "7",
     "Matins Gospel": "10",
     "Epistle": "1 Tim 4:9- 15",
     "Gospel": "Lk. 19:1-10",
     "Fasting": null,
+    "Notes": "Following week readings \u201333rd week after Pentecost",
     "Holy Day of Obligation": false
   },
   {
@@ -3609,6 +3866,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3617,12 +3875,13 @@
     "Month": "January",
     "Day": 25,
     "Raw Text": "25\nBeginning of the Triodion\nSunday of the Pharisee and the\nPublican. Tone 8, Res. Gospel 11,\nEpistle: 2 Tim. 3: 10-15; Gospel: Luke\n18:10-14.\nFollowing week readings are of the 34th\nweek after Pentecost.",
-    "Title": "Beginning of the Triodion Sunday of the Pharisee and the Publican. Following week readings are of the 34th week after Pentecost",
+    "Title": "Beginning of the Triodion Sunday of the Pharisee and the Publican.",
     "Tone": "8",
     "Matins Gospel": "11",
     "Epistle": "2 Tim. 3: 10-15",
     "Gospel": "Luke 18:10-14",
     "Fasting": null,
+    "Notes": "Following week readings are of the 34th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -3637,6 +3896,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3651,6 +3911,7 @@
     "Epistle": "Heb. 7:26 to 8:2",
     "Gospel": "John 10:9-16",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3659,12 +3920,13 @@
     "Month": "February",
     "Day": 1,
     "Raw Text": "1\nSunday of the Prodigal Son.\nTone 1, Res. Gospel 1, Epistle: 1 Cor.\n6: 12-20; Gospel: Lk. 15:11-32. The\nreadings for the following week are\nof the Meatfare week",
-    "Title": "Sunday of the Prodigal Son. The readings for the following week are of the Meatfare week",
+    "Title": "Sunday of the Prodigal Son.",
     "Tone": "1",
     "Matins Gospel": "1",
     "Epistle": "1 Cor. 6: 12-20",
     "Gospel": "Lk. 15:11-32",
     "Fasting": null,
+    "Notes": "The readings for the following week are of the Meatfare week",
     "Holy Day of Obligation": true
   },
   {
@@ -3679,6 +3941,7 @@
     "Epistle": "Heb 7:7-17",
     "Gospel": "Luke 2:22-40",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3693,6 +3956,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3707,6 +3971,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3721,6 +3986,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3735,6 +4001,7 @@
     "Epistle": "Rom. 13: 11-14 - 14: 1-4",
     "Gospel": "Matt. 6:14-21",
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3749,6 +4016,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3763,6 +4031,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3777,6 +4046,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3791,6 +4061,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3805,6 +4076,7 @@
     "Epistle": "Heb. 11: 24-26",
     "Gospel": "Jn. 1:43-51",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3819,6 +4091,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3833,6 +4106,7 @@
     "Epistle": null,
     "Gospel": "Mark 9:17-32",
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3847,6 +4121,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3861,6 +4136,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3875,6 +4151,7 @@
     "Epistle": null,
     "Gospel": "Mark 10:32-45",
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3889,6 +4166,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3903,6 +4181,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3917,6 +4196,7 @@
     "Epistle": "Phil. 4: 4-9",
     "Gospel": "Jn. 12:1-18",
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3931,6 +4211,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3945,6 +4226,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3959,6 +4241,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -3973,6 +4256,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3987,6 +4271,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -3995,12 +4280,13 @@
     "Month": "April",
     "Day": 12,
     "Raw Text": "12\nTHOMAS SUNDAY (2nd Sunday\nof Easter) Tone 1, Res. Gospel 1, Of\nthe Sunday - Epistle Acts 5:12-20,\nGospel Jn. 20:19-31 Following week\nreadings-2nd week after Easter.",
-    "Title": "THOMAS SUNDAY (2nd Sunday of Easter), Of the Sunday - Following week readings-2nd week after Easter",
+    "Title": "",
     "Tone": "1",
     "Matins Gospel": "1",
     "Epistle": "Acts 5:12-20",
     "Gospel": "Jn. 20:19-31",
     "Fasting": null,
+    "Notes": "12 THOMAS SUNDAY (2nd Sunday of Easter), Of the Sunday - Following week readings-2nd week after Easter",
     "Holy Day of Obligation": true
   },
   {
@@ -4015,6 +4301,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4029,6 +4316,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4043,6 +4331,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4057,6 +4346,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4071,6 +4361,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4079,12 +4370,13 @@
     "Month": "April",
     "Day": 26,
     "Raw Text": "26\nSUNDAY OF THE PARALYTIC\n(4th Sunday of Easter)\nTone 3, Res. Gospel 5. Epistle Acts 9:\n32-42, Gospel Jn. 5:1-15. Following\nweek readings \u2013 4th week after Easter.",
-    "Title": "SUNDAY OF THE PARALYTIC (4th Sunday of Easter). Following week readings \u2013 4th week after Easter",
+    "Title": "SUNDAY OF THE PARALYTIC (4th Sunday of Easter).",
     "Tone": "3",
     "Matins Gospel": "5",
     "Epistle": "Acts 9: 32-42",
     "Gospel": "Jn. 5:1-15",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 4th week after Easter",
     "Holy Day of Obligation": true
   },
   {
@@ -4099,6 +4391,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4113,6 +4406,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4127,6 +4421,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4141,6 +4436,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4149,12 +4445,13 @@
     "Month": "May",
     "Day": 10,
     "Raw Text": "10\nSUNDAY OF THE MAN BORN\nBLIND (6th Sunday of Easter)\nTone 5, Res. Gospel 8. Epistle Acts 16: 16-\n34, Gospel Jn. 9: 1-38. Following week\nreadings \u2013 6th week after Easter.",
-    "Title": "SUNDAY OF THE MAN BORN BLIND (6th Sunday of Easter). Following week readings \u2013 6th week after Easter",
+    "Title": "SUNDAY OF THE MAN BORN BLIND (6th Sunday of Easter).",
     "Tone": "5",
     "Matins Gospel": "8",
     "Epistle": "Acts 16: 16- 34",
     "Gospel": "Jn. 9: 1-38",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 6th week after Easter",
     "Holy Day of Obligation": true
   },
   {
@@ -4169,6 +4466,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4183,6 +4481,7 @@
     "Epistle": "iphanius, Bishop of Cyprus and Germanus the Hymnographer, Patriarch of Constantinople",
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4197,6 +4496,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4211,6 +4511,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4219,12 +4520,13 @@
     "Month": "May",
     "Day": 24,
     "Raw Text": "24\nPENTECOST SUNDAY (Rusalii)\nBlessing of the wheat and first fruts.\nKneeling prayers. All of the Feast. Epistle\nActs: 2: 1-11; Gospel Jn. 7: 37- 8: 12.\nFollowing week readings \u2013 1st week after\nPentecost\n31\n1st SUNDAY AFTER PENTECOST -\nAll Saints Sunday. Tone 8, Res. Gospel 1,\nEpistle Heb. 11: 33 \u2013 12: 2, Gospel Matt.\n10: 32-35; 37-38; 19: 27-30. Following week\nreadings \u2013 2nd week after Pentecost.",
-    "Title": "PENTECOST SUNDAY (Rusalii) Blessing of the wheat and first fruts. Kneeling prayers. All of the Feast. Following week readings \u2013 1st week after Pentecost 31 1st SUNDAY AFTER PENTECOST - All Saints Sunday. Epistle Heb. 11: 33 \u2013 12: 2, Gospel Matt. 10: 32-35; 37-38; 19: 27-30. Following week readings \u2013 2nd week after Pentecost",
+    "Title": "PENTECOST SUNDAY (Rusalii) Blessing of the wheat and first fruts. Kneeling prayers. All of the Feast. Epistle Heb. 11: 33 \u2013 12: 2, Gospel Matt. 10: 32-35; 37-38; 19: 27-30.",
     "Tone": "8",
     "Matins Gospel": "1",
     "Epistle": "Acts: 2: 1-11",
     "Gospel": "Jn. 7: 37- 8: 12",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 1st week after Pentecost 31 1st SUNDAY AFTER PENTECOST - All Saints Sunday. Following week readings \u2013 2nd week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -4239,6 +4541,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4253,6 +4556,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4261,12 +4565,13 @@
     "Month": "June",
     "Day": 14,
     "Raw Text": "14\nCommon Abstinence\n3RD SUNDAY AFTER\nPENTECOST.\nTone 2, Res. Gospel 3, Epistle\nRom. 5: 1 \u2013 10, Gospel Matt. 6:\n22-34. Following week readings \u2013\n4TH week after Pentecost.",
-    "Title": "3RD SUNDAY AFTER PENTECOST. Following week readings \u2013 4TH week after Pentecost",
+    "Title": "3RD SUNDAY AFTER PENTECOST.",
     "Tone": "2",
     "Matins Gospel": "3",
     "Epistle": "Rom. 5: 1 \u2013 10",
     "Gospel": "Matt. 6: 22-34",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 4TH week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -4281,6 +4586,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4295,6 +4601,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4309,6 +4616,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4323,6 +4631,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4331,12 +4640,13 @@
     "Month": "June",
     "Day": 28,
     "Raw Text": "28\nCommon Abstinence\n5th SUNDAY AFTER\nPENTECOST\nTone 4, Res. Gospel 5, Epistle\nRom. 10:1-10, Gospel Matt.8:28-\n34. Following week readings \u2013 6th\nweek after Pentecost.",
-    "Title": "5th SUNDAY AFTER PENTECOST. Following week readings \u2013 6th week after Pentecost",
+    "Title": "5th SUNDAY AFTER PENTECOST.",
     "Tone": "4",
     "Matins Gospel": "5",
     "Epistle": "Rom. 10:1-10",
     "Gospel": "Matt.8:28- 34",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 6th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -4351,6 +4661,7 @@
     "Epistle": "2 Cor. 11:21-12:9",
     "Gospel": "Mt 16:13-19",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4365,6 +4676,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4379,6 +4691,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4393,6 +4706,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4407,6 +4721,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4415,12 +4730,13 @@
     "Month": "July",
     "Day": 12,
     "Raw Text": "12\n7th SUNDAY AFTER PENTECOST\nTone 6, Res. Gospel 7, Epistle Rom. 15: 1 \u2013\n7, Gospel Mt. 9: 27 - 35. Following week\nreadings \u2013 8th week after Pentecost.",
-    "Title": "7th SUNDAY AFTER PENTECOST. Following week readings \u2013 8th week after Pentecost",
+    "Title": "7th SUNDAY AFTER PENTECOST.",
     "Tone": "6",
     "Matins Gospel": "7",
     "Epistle": "Rom. 15: 1 \u2013 7",
     "Gospel": "Mt. 9: 27 - 35",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 8th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -4435,6 +4751,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4449,6 +4766,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4463,6 +4781,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4477,6 +4796,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4491,6 +4811,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4499,12 +4820,13 @@
     "Month": "July",
     "Day": 26,
     "Raw Text": "26\n9th SUNDAY AFTER PENTECOST\nTone 8, Res. Gospel 9, Epistle 1 Cor. 3: 9 \u2013\n16, Gospel Matt. 14: 22 \u2013 34. Following\nweek readings \u2013 10th week after\nPentecost.",
-    "Title": "9th SUNDAY AFTER PENTECOST. Following week readings \u2013 10th week after Pentecost",
+    "Title": "9th SUNDAY AFTER PENTECOST.",
     "Tone": "8",
     "Matins Gospel": "9",
     "Epistle": "1 Cor. 3: 9 \u2013 16",
     "Gospel": "Matt. 14: 22 \u2013 34",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 10th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -4519,6 +4841,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4533,6 +4856,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4547,6 +4871,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4561,6 +4886,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4569,12 +4895,13 @@
     "Month": "August",
     "Day": 23,
     "Raw Text": "23\n13th SUNDAY AFTER PENTECOST\nTone 4, Res. Gospel 2, Epistle 1 Cor.\n16:13-24, Gospel Matt. 21:33-42.\nFollowing week readings \u2013 14th week after\nPentecost.\n30\n14th SUNDAY AFTER PENTECOST\nTone 5 Res. Gospel 3, Epistle 1 Cor.\n1:21-23, 2:1-4, Gospel Matt. 22:2-14.\nFollowing week readings \u2013 15th week after\nPentecost.",
-    "Title": "13th SUNDAY AFTER PENTECOST. Following week readings \u2013 14th week after Pentecost. 30 14th SUNDAY AFTER PENTECOST Tone 5 Res. Gospel 3, Epistle 1 Cor. 1:21-23, 2:1-4, Gospel Matt. 22:2-14. Following week readings \u2013 15th week after Pentecost",
+    "Title": "13th SUNDAY AFTER PENTECOST. 30 14th SUNDAY AFTER PENTECOST Tone 5 Res. Gospel 3, Epistle 1 Cor. 1:21-23, 2:1-4, Gospel Matt. 22:2-14.",
     "Tone": "4",
     "Matins Gospel": "2",
     "Epistle": "1 Cor. 16:13-24",
     "Gospel": "Matt. 21:33-42",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 14th week after Pentecost. Following week readings \u2013 15th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -4589,6 +4916,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4603,6 +4931,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4617,6 +4946,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4631,6 +4961,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4645,6 +4976,7 @@
     "Epistle": "Gal. 6: 11 \u2013 18",
     "Gospel": "Jn. 3: 13 \u2013 17",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4659,6 +4991,7 @@
     "Epistle": null,
     "Gospel": "Jn. 19:6-11, 13-20, 25-28, 30-35",
     "Fasting": "Strict Fast and abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4673,6 +5006,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4687,6 +5021,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4701,6 +5036,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4709,12 +5045,13 @@
     "Month": "September",
     "Day": 27,
     "Raw Text": "27\n1st SUNDAY AFTER HOLY\nCROSS\n(18th Sunday after Pentecost).\nTone 1, Res. Gospel 7, Epistle 2 Cor.\n9:6-11; Gospel Lk. 5: 1\u2013 18. Following\nweek readings \u2013 19th week after\nPentecost.",
-    "Title": "1st SUNDAY AFTER HOLY CROSS (18th Sunday after Pentecost). Following week readings \u2013 19th week after Pentecost",
+    "Title": "1st SUNDAY AFTER HOLY CROSS (18th Sunday after Pentecost).",
     "Tone": "1",
     "Matins Gospel": "7",
     "Epistle": "2 Cor. 9:6-11",
     "Gospel": "Lk. 5: 1\u2013 18",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 19th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -4729,6 +5066,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4743,6 +5081,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4757,6 +5096,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4771,6 +5111,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4779,12 +5120,13 @@
     "Month": "October",
     "Day": 11,
     "Raw Text": "11\n4th SUNDAY AFTER HOLY CROSS.\n(Sunday of the Holy Fathers of the\nSeventh Ecumenical Councils\nTone 3, Res. Gospel 9, Epistle Titus. 3: 8 \u2013 15;\nGospel Lk. 8:5 \u2013 15. Following week readings\n\u2013 21st week after Pentecost.",
-    "Title": "4th SUNDAY AFTER HOLY CROSS. (Sunday of the Holy Fathers of the Seventh Ecumenical Councils. Following week readings \u2013 21st week after Pentecost",
+    "Title": "4th SUNDAY AFTER HOLY CROSS. (Sunday of the Holy Fathers of the Seventh Ecumenical Councils.",
     "Tone": "3",
     "Matins Gospel": "9",
     "Epistle": "Titus. 3: 8 \u2013 15",
     "Gospel": "Lk. 8:5 \u2013 15",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 21st week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -4799,6 +5141,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4813,6 +5156,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4827,6 +5171,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4841,6 +5186,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4849,12 +5195,13 @@
     "Month": "October",
     "Day": 25,
     "Raw Text": "25\n6th SUNDAY AFTER HOLY CROSS\n(23rd Sunday after Pentecost).\nTone 5, Res. Gospel 11, Epistle Gal 6:11-18;\nGospel Lk. 8: 27\u2013 39. Following week\nreadings \u2013 23rd week after Pentecost.\n(\u2020) Holy Great-Martyr Demetrius, Fount\nof Myrrh",
-    "Title": "6th SUNDAY AFTER HOLY CROSS (23rd Sunday after Pentecost). Following week readings \u2013 23rd week after Pentecost. (\u2020) Holy Great-Martyr Demetrius, Fount of Myrrh",
+    "Title": "6th SUNDAY AFTER HOLY CROSS (23rd Sunday after Pentecost). (\u2020) Holy Great-Martyr Demetrius, Fount of Myrrh",
     "Tone": "5",
     "Matins Gospel": "11",
     "Epistle": "Gal 6:11-18",
     "Gospel": "Lk. 8: 27\u2013 39",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 23rd week after Pentecost.",
     "Holy Day of Obligation": true
   },
   {
@@ -4869,6 +5216,7 @@
     "Epistle": "2 Tim. 2:1-19",
     "Gospel": "John, 12:17 to 16:2",
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4883,6 +5231,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4891,12 +5240,13 @@
     "Month": "November",
     "Day": 1,
     "Raw Text": "1\n5th SUNDAY AFTER HOLY CROSS\n(22ND Sunday after Pentecost).\nTone 6, Res. Gospel 1, Epistle Eph 2:4-10\nGospel Lk. 16: 19\u2013 31. Following week\nreadings \u2013 24th week after Pentecost.",
-    "Title": "5th SUNDAY AFTER HOLY CROSS (22ND Sunday after Pentecost). Following week readings \u2013 24th week after Pentecost",
+    "Title": "5th SUNDAY AFTER HOLY CROSS (22ND Sunday after Pentecost).",
     "Tone": "6",
     "Matins Gospel": "1",
     "Epistle": "Eph 2:4-10",
     "Gospel": "Lk. 16: 19\u2013 31",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 24th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -4911,6 +5261,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4925,6 +5276,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4939,6 +5291,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -4953,6 +5306,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4961,12 +5315,13 @@
     "Month": "November",
     "Day": 15,
     "Raw Text": "15\nBeginning of Christmas fast (Advent)\n8TH SUNDAY AFTER HOLY CROSS\n(25th Sunday after Pentecost).\nTone 8, Res. Gospel 3, Epistle Eph 4: 1-7;\nGospel Lk. 10: 25\u2013 37. Following week\nreadings \u2013 26th week after Pentecost.",
-    "Title": "Beginning of Christmas fast (Advent) 8TH SUNDAY AFTER HOLY CROSS (25th Sunday after Pentecost). Following week readings \u2013 26th week after Pentecost",
+    "Title": "Beginning of Christmas fast (Advent) 8TH SUNDAY AFTER HOLY CROSS (25th Sunday after Pentecost).",
     "Tone": "8",
     "Matins Gospel": "3",
     "Epistle": "Eph 4: 1-7",
     "Gospel": "Lk. 10: 25\u2013 37",
     "Fasting": null,
+    "Notes": "Following week readings \u2013 26th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -4981,6 +5336,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -4995,6 +5351,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -5009,6 +5366,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -5023,6 +5381,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -5031,12 +5390,13 @@
     "Month": "November",
     "Day": 29,
     "Raw Text": "29\nDispensation (Harti)\n13th SUNDAY AFTER HOLY CROSS\n(30th Sunday after Pentecost).\nTone 2, Res. Gospel 5, Epistle Eph 6: 10-\n17; Gospel Lk. 18: 18\u201328. Following\nweek readings \u2013 28th week after\nPentecost.",
-    "Title": "13th SUNDAY AFTER HOLY CROSS (30th Sunday after Pentecost). Following week readings \u2013 28th week after Pentecost",
+    "Title": "13th SUNDAY AFTER HOLY CROSS (30th Sunday after Pentecost).",
     "Tone": "2",
     "Matins Gospel": "5",
     "Epistle": "Eph 6: 10- 17",
     "Gospel": "Lk. 18: 18\u201328",
     "Fasting": "Dispensation (Harti)",
+    "Notes": "Following week readings \u2013 28th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -5051,6 +5411,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -5059,12 +5420,13 @@
     "Month": "December",
     "Day": 13,
     "Raw Text": "13\nCommon Abstinence\n11th SUNDAY AFTER HOLY\nCROSS (Sunday of the Holy\nAncestors). Tone 4, Res. Gospel 7,\nEpistle Col 3: 4-12; Gospel Lk. 14:\n16\u201325. Following week readings \u2013\n30th week after Pentecost.",
-    "Title": "11th SUNDAY AFTER HOLY CROSS (Sunday of the Holy Ancestors). Following week readings \u2013 30th week after Pentecost",
+    "Title": "11th SUNDAY AFTER HOLY CROSS (Sunday of the Holy Ancestors).",
     "Tone": "4",
     "Matins Gospel": "7",
     "Epistle": "Col 3: 4-12",
     "Gospel": "Lk. 14: 16\u201325",
     "Fasting": "Common Abstinence",
+    "Notes": "Following week readings \u2013 30th week after Pentecost",
     "Holy Day of Obligation": true
   },
   {
@@ -5079,6 +5441,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -5093,6 +5456,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -5107,6 +5471,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": true
   },
   {
@@ -5121,6 +5486,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -5129,12 +5495,13 @@
     "Month": "December",
     "Day": 27,
     "Raw Text": "27\nSUNDAY AFTER NATIVITY OF\nOUR LORD JESUS CHRIST.\nTone 6, Res. Gospel 9, Epistle Gal. 1:\n11-19; Gospel Mt. 2: 13 \u2013 23.\nFollowing week readings 32nd week\nafter Pentecost or of the Menaion",
-    "Title": "SUNDAY AFTER NATIVITY OF OUR LORD JESUS CHRIST. Following week readings 32nd week after Pentecost or of the Menaion",
+    "Title": "SUNDAY AFTER NATIVITY OF OUR LORD JESUS CHRIST.",
     "Tone": "6",
     "Matins Gospel": "9",
     "Epistle": "Gal. 1: 11-19",
     "Gospel": "Mt. 2: 13 \u2013 23",
     "Fasting": null,
+    "Notes": "Following week readings 32nd week after Pentecost or of the Menaion",
     "Holy Day of Obligation": true
   },
   {
@@ -5149,6 +5516,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   },
   {
@@ -5163,6 +5531,7 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
+    "Notes": null,
     "Holy Day of Obligation": false
   }
 ]

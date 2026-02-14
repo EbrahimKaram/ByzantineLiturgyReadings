@@ -238,6 +238,24 @@ def clean_title(notes, day):
         return re.sub(pattern, '', notes).strip()
     return notes.strip()
 
+def split_following_notes(notes):
+    if not notes:
+        return (None, None)
+
+    sentences = [part.strip() for part in re.split(r'(?<=[.!?])\s+', notes) if part.strip()]
+    following_parts = []
+    regular_parts = []
+
+    for sentence in sentences:
+        if re.search(r'\bfollowing\b', sentence, re.IGNORECASE):
+            following_parts.append(sentence)
+        else:
+            regular_parts.append(sentence)
+
+    following_text = ' '.join(following_parts).strip() or None
+    regular_text = ' '.join(regular_parts).strip() or None
+    return (following_text, regular_text)
+
 def process_pdfs(root_dir):
     results = []
     
@@ -334,7 +352,8 @@ def process_pdfs(root_dir):
     final_results = []
     for entry in results:
         parsed = parse_reading_text(entry["Raw Text"])
-        title = clean_title(parsed['notes'], entry['Day'])
+        following_notes, main_notes = split_following_notes(parsed['notes'])
+        title = clean_title(main_notes, entry['Day'])
         
         # Determine Holy Day of Obligation
         is_holy_day = False
@@ -362,6 +381,7 @@ def process_pdfs(root_dir):
             "Epistle": parsed['epistle'],
             "Gospel": parsed['gospel'],
             "Fasting": parsed['fasting'],
+            "Notes": following_notes,
             "Holy Day of Obligation": is_holy_day
         })
         final_results.append(entry)
@@ -379,7 +399,7 @@ if __name__ == "__main__":
 
     # Save as CSV
     csv_output = calendars_dir / "readings.csv"
-    csv_columns = ["Date", "Title", "Tone", "Matins Gospel", "Epistle", "Gospel", "Fasting", "Holy Day of Obligation", "Raw Text"]
+    csv_columns = ["Date", "Title", "Tone", "Matins Gospel", "Epistle", "Gospel", "Fasting", "Notes", "Holy Day of Obligation", "Raw Text"]
     
     with open(csv_output, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=csv_columns, extrasaction='ignore')
