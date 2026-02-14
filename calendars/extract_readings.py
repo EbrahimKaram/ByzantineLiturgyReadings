@@ -528,6 +528,17 @@ def process_pdfs(root_dir):
 if __name__ == "__main__":
     calendars_dir = Path(__file__).parent
     data = process_pdfs(calendars_dir)
+
+    def csv_sort_key(row):
+        try:
+            year = int(row.get("Year"))
+            month = int(str(row.get("Date", ""))[:2])
+            day = int(row.get("Day"))
+            return (year, month, day)
+        except Exception:
+            return (9999, 12, 31)
+
+    sorted_data = sorted(data, key=csv_sort_key)
     
     # Save as JSON (optional, keep for debugging)
     json_output = calendars_dir / "extracted_readings.json"
@@ -541,7 +552,7 @@ if __name__ == "__main__":
     with open(csv_output, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=csv_columns, extrasaction='ignore')
         writer.writeheader()
-        for row in data:
+        for row in sorted_data:
             writer.writerow(row)
         
     print(f"Extraction complete. Saved to {csv_output}")
