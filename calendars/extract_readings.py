@@ -24,6 +24,12 @@ MONTH_MAP = {
     "july": "07", "august": "08", "september": "09", "october": "10", "november": "11", "december": "12"
 }
 
+WEEKDAY_TOKENS = {
+    "sun", "sunday", "mon", "monday", "tue", "tues", "tuesday",
+    "wed", "wednesday", "thu", "thur", "thurs", "thursday",
+    "fri", "friday", "sat", "saturday"
+}
+
 def clean_string(s):
     if not s:
         return None
@@ -123,6 +129,105 @@ def extract_day_number(text):
         return int(match.group(1))
     return None
 
+def extract_day_number_at_start(text):
+    if not text:
+        return None
+    cleaned = text.strip()
+    day_match = re.match(r'^(\d{1,2})(?:\s|$|\D)', cleaned)
+    if not day_match:
+        return None
+
+    day_num = int(day_match.group(1))
+    if re.match(r'^\d{1,2}\s*[\-–]\s*\d+', cleaned):
+        return None
+    if re.match(r'^\d{1,2}\s*[;:]', cleaned):
+        return None
+    if re.match(r'^\d\s+(?:Tim|Cor|Pet|John|Kgs|Sam|Chr|Thess|Macc|Ki|Sa|Co|Ti|Pe|Jo)', cleaned, re.IGNORECASE):
+        return None
+
+    return day_num if 1 <= day_num <= 31 else None
+
+def is_weekday_header_row(row):
+    if not row:
+        return False
+
+    tokens = []
+    for cell in row[:7]:
+        if not cell:
+            continue
+        first = re.split(r'\s+', cell.strip().lower())[0]
+        first = re.sub(r'[^a-z]', '', first)
+        if first:
+            tokens.append(first)
+
+    if len(tokens) < 4:
+        return False
+
+    weekday_hits = sum(1 for token in tokens if token in WEEKDAY_TOKENS)
+    return weekday_hits >= 4
+
+def is_week_row(row):
+    if not row:
+        return False
+    cells = row[:7]
+    day_hits = sum(1 for cell in cells if extract_day_number_at_start(cell))
+    return day_hits >= 2
+
+def get_table_cell_bbox(table, row_idx, col_idx):
+    try:
+        row_obj = table.rows[row_idx]
+        cell = row_obj.cells[col_idx]
+        if isinstance(cell, (tuple, list)) and len(cell) >= 4:
+            x0, top, x1, bottom = cell[:4]
+            if all(v is not None for v in (x0, top, x1, bottom)):
+                return (float(x0), float(top), float(x1), float(bottom))
+    except Exception:
+        return None
+    return None
+
+def extract_day_from_cell_style(page, bbox):
+    if not bbox:
+        return None
+
+    x0, top, x1, bottom = bbox
+    width = x1 - x0
+    height = bottom - top
+    if width <= 0 or height <= 0:
+        return None
+
+    top_band = top + (height * 0.40)
+
+    digit_chars = []
+    for ch in page.chars:
+        try:
+            cx = (float(ch["x0"]) + float(ch["x1"])) / 2.0
+            cy = (float(ch["top"]) + float(ch["bottom"])) / 2.0
+            if x0 <= cx <= x1 and top <= cy <= bottom and str(ch.get("text", "")).isdigit():
+                digit_chars.append(ch)
+        except Exception:
+            continue
+
+    if not digit_chars:
+        return None
+
+    top_digits = [c for c in digit_chars if float(c.get("top", top)) <= top_band]
+    candidates = top_digits if top_digits else digit_chars
+
+    max_size = max(float(c.get("size", 0)) for c in candidates)
+    prominent = [c for c in candidates if float(c.get("size", 0)) >= (max_size - 0.25)]
+    if not prominent:
+        return None
+
+    prominent = sorted(prominent, key=lambda c: float(c.get("x0", 0)))
+    digit_text = "".join(str(c.get("text", "")) for c in prominent)
+
+    match = re.search(r'(\d{1,2})', digit_text)
+    if not match:
+        return None
+
+    day_num = int(match.group(1))
+    return day_num if 1 <= day_num <= 31 else None
+
 def clean_title(notes, day):
     if not notes:
         return ""
@@ -159,90 +264,68 @@ def process_pdfs(root_dir):
             try:
                 with pdfplumber.open(pdf_file) as pdf:
                     for page_idx, page in enumerate(pdf.pages):
-                        tables = page.extract_tables()
-                        
-                        # Use a column-based state to track active entries for merging
-                        # Assuming max 7 columns for a week, but can be dynamic. 
-                        # We use a dictionary keyed by column index.
-                        active_entries = {} 
+                        tables = page.find_tables()
 
-                        if tables:
-                            for table in tables:
-                                for row in table:
-                                    for col_idx, cell in enumerate(row):
-                                        if not cell:
-                                            continue
-                                            
-                                        cleaned_cell = cell.strip()
-                                        if not cleaned_cell:
-                                            continue
+                        if not tables:
+                            continue
 
-                                        # Strict Day Number Check: Must be at start
-                                        day_match = re.match(r'^(\d{1,2})(?:\s|$|\D)', cleaned_cell)
-                                        day_num = int(day_match.group(1)) if day_match else None
-                                        
-                                        # Filter out unlikely day numbers (e.g. "16" in "16 - 20")
-                                        if day_num:
-                                            # Case 1: Range "16 - 20"
-                                            if re.match(r'^\d{1,2}\s*[\-–]\s*\d+', cleaned_cell):
-                                                day_num = None
-                                            # Case 2: Verse continuation "13;" or "13." followed by text (dangerous if day is "13.")
-                                            # But usually Day is "13" or "13\nTitle".
-                                            # If it is "13;" (semicolon), it is almost certainly a verse ending.
-                                            elif re.match(r'^\d{1,2}\s*[;:]', cleaned_cell):
-                                                day_num = None
-                                            
-                                            # Case 3: Check context with previous entry in this column
-                                            # If previous content ended with hypen "-", this is likely a continuation number
-                                            elif col_idx in active_entries:
-                                                prev_text = active_entries[col_idx]["Raw Text"]
-                                                if prev_text.strip().endswith(('-', '–')):
-                                                    day_num = None
+                        for table in tables:
+                            extracted_rows = table.extract() or []
+                            if not extracted_rows:
+                                continue
 
-                                            # Case 4: Bible book citation starting with number (e.g. "2 Tim", "1 Cor")
-                                            # Using a regex that catches common abbreviated books
-                                            if day_num and re.match(r'^\d\s+(?:Tim|Cor|Pet|John|Kgs|Sam|Chr|Thess|Macc|Ki|Sa|Co|Ti|Pe|Jo)', cleaned_cell, re.IGNORECASE):
-                                                day_num = None
+                            normalized_rows = []
+                            for row_idx, row in enumerate(extracted_rows):
+                                row = row or []
+                                if len(row) < 7:
+                                    row = row + [None] * (7 - len(row))
+                                elif len(row) > 7:
+                                    row = row[:7]
+                                normalized_rows.append((row_idx, row))
 
-                                        if day_num:
-                                            # New Day Found: Create Entry
-                                            yy = year[-2:]
-                                            dd = f"{day_num:02d}"
-                                            mm = month_num
-                                            date_id = f"{mm}{dd}{yy}"
-                                            
-                                            new_entry = {
-                                                "Date": date_id,
-                                                "Year": year,
-                                                "Month": month_name_raw,
-                                                "Day": day_num,
-                                                "Raw Text": cleaned_cell
-                                                # Other fields parsed later
-                                            }
-                                            active_entries[col_idx] = new_entry
-                                            results.append(new_entry)
-                                        
-                                        else:
-                                            # Continuation Text?
-                                            if col_idx in active_entries:
-                                                # Append text to existing entry and update Raw Text
-                                                entry = active_entries[col_idx]
-                                                entry["Raw Text"] += "\n" + cleaned_cell
-                                            else:
-                                                # Orphan text (maybe from header or prev page?)
-                                                # For now, ignore or try to append to last added result?
-                                                pass
+                            week_rows = []
+                            for row_idx, row in normalized_rows:
+                                if is_weekday_header_row(row):
+                                    continue
+                                if is_week_row(row):
+                                    week_rows.append((row_idx, row))
 
-                        else:
-                            # Fallback for pages without tables (rare/messy)
-                            text = page.extract_text()
-                            if text:
-                                # Simple day parsing for raw text
-                                # This doesn't support the fancy merging unless we parse the layout
-                                pass 
+                            if len(week_rows) > 5:
+                                week_rows = week_rows[:5]
+
+                            for row_idx, row in week_rows:
+                                for col_idx in range(7):
+                                    cell = row[col_idx]
+                                    if not cell:
+                                        continue
+
+                                    cleaned_cell = cell.strip()
+                                    if not cleaned_cell:
+                                        continue
+
+                                    day_num = extract_day_number_at_start(cleaned_cell)
+                                    if not day_num:
+                                        bbox = get_table_cell_bbox(table, row_idx, col_idx)
+                                        day_num = extract_day_from_cell_style(page, bbox)
+
+                                    if not day_num:
+                                        continue
+
+                                    yy = year[-2:]
+                                    dd = f"{day_num:02d}"
+                                    mm = month_num
+                                    date_id = f"{mm}{dd}{yy}"
+
+                                    new_entry = {
+                                        "Date": date_id,
+                                        "Year": year,
+                                        "Month": month_name_raw,
+                                        "Day": day_num,
+                                        "Raw Text": cleaned_cell
+                                    }
+                                    results.append(new_entry)
                                 
-                    # After processing all cells, run parsing on the final aggregated texts
-                    # Note: We appended to dictionaries inside 'results' list, so they are updated.
+                    # Table cell text already contains full daily content; no cross-cell merging needed.
 
             except Exception as e:
                 print(f"    Error processing {pdf_file.name}: {e}")
