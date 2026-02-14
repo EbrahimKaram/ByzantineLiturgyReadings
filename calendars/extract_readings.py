@@ -18,6 +18,8 @@ GOSPEL_RE = re.compile(r'(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|\.\s+[A
 FOLLOWING_RE = re.compile(r'Following[:\s]*', re.IGNORECASE)
 DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
 FASTING_RE = re.compile(r'(Strict Fast and abstinence|Common Abstinence|Strict Fast|Abstinence|Dispensation\s*\([^)]+\)|Dispensation)', re.IGNORECASE)
+CANADA_HOLIDAY_RE = re.compile(r'\bCANADA\s*:\s*(.+?)(?=(?:\s+USA\s*:)|$)', re.IGNORECASE)
+USA_HOLIDAY_RE = re.compile(r'\bUSA\s*:\s*(.+?)(?=(?:\s+CANADA\s*:)|$)', re.IGNORECASE)
 
 MONTH_MAP = {
     "january": "01", "february": "02", "march": "03", "april": "04", "may": "05", "june": "06",
@@ -36,6 +38,24 @@ def clean_string(s):
     # Remove leading/trailing punctuation and whitespace
     return re.sub(r'^[;:,.\-\s]+|[;:,.\-\s]+$', '', s.strip())
 
+def extract_country_holidays(text):
+    canada_holiday = None
+    usa_holiday = None
+    work_text = text
+
+    canada_match = CANADA_HOLIDAY_RE.search(work_text)
+    if canada_match:
+        canada_holiday = clean_string(canada_match.group(1))
+        work_text = work_text.replace(canada_match.group(0), ' ')
+
+    usa_match = USA_HOLIDAY_RE.search(work_text)
+    if usa_match:
+        usa_holiday = clean_string(usa_match.group(1))
+        work_text = work_text.replace(usa_match.group(0), ' ')
+
+    work_text = WHITESPACE_RE.sub(' ', work_text).strip()
+    return work_text, canada_holiday, usa_holiday
+
 def parse_reading_text(text):
     if not text:
         return None
@@ -43,6 +63,9 @@ def parse_reading_text(text):
     # Start with a clean working copy
     work_text = TAGS_RE.sub(' ', text)
     work_text = WHITESPACE_RE.sub(' ', work_text).strip()
+
+    # Extract country-specific holidays early so they don't remain in title/notes
+    work_text, canada_holiday, usa_holiday = extract_country_holidays(work_text)
 
     # 0. Extract Fasting/Abstinence (Look for it early to remove it from Title/notes)
     fasting = None
@@ -119,7 +142,9 @@ def parse_reading_text(text):
         "epistle": epistle,
         "gospel": gospel,
         "fasting": fasting,
-        "notes": notes if notes else None
+        "notes": notes if notes else None,
+        "canadaHoliday": canada_holiday,
+        "usaHoliday": usa_holiday
     }
 
 def extract_day_number(text):
@@ -463,6 +488,8 @@ def process_pdfs(root_dir):
             "Gospel": parsed['gospel'],
             "Fasting": parsed['fasting'],
             "Notes": following_notes,
+            "Canada Holiday": parsed['canadaHoliday'],
+            "USA Holiday": parsed['usaHoliday'],
             "Holy Day of Obligation": is_holy_day
         })
         final_results.append(entry)
@@ -480,7 +507,7 @@ if __name__ == "__main__":
 
     # Save as CSV
     csv_output = calendars_dir / "readings.csv"
-    csv_columns = ["Date", "Title", "Tone", "Matins Gospel", "Epistle", "Gospel", "Fasting", "Notes", "Holy Day of Obligation", "Raw Text"]
+    csv_columns = ["Date", "Title", "Tone", "Matins Gospel", "Epistle", "Gospel", "Fasting", "Notes", "Canada Holiday", "USA Holiday", "Holy Day of Obligation", "Raw Text"]
     
     with open(csv_output, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=csv_columns, extrasaction='ignore')
