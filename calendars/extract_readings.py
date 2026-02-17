@@ -2,7 +2,8 @@ import pdfplumber
 import re
 import json
 import csv
-import os
+import calendar
+from collections import Counter
 from pathlib import Path
 from datetime import date
 
@@ -17,11 +18,24 @@ EPISTLE_RE = re.compile(r'(?:^|[\s,;.])(?:Epistle\b|Ep\b\.?)\s*:?\s*(.+?)(?=\s*(
 APOSTLE_EPISTLE_RE = re.compile(r'(?:^|[\s,;.])(?:Apostle\b|Apost\.)\s+((?:[1-3]\s*)?(?:Acts|Rom|Cor|Gal|Eph|Phil|Col|Thess|Tim|Tit|Phlm|Philem|Heb|Jas|James|Pet|Jude|Rev)\.?\s*[^;]*?\d\s*:\s*\d[^;]*?)(?=\s*(?:;\s*)?(?:Gospel|G\s*:|Following)|$)', re.IGNORECASE)
 EPISTLE_BEFORE_GOSPEL_RE = re.compile(r'(?:^|[\s,;.])((?:[1-3]\s*)?(?:Acts|Rom|Cor|Gal|Eph|Phil|Col|Thess|Tim|Tit|Phlm|Philem|Heb|Jas|James|Pet|Jude|Rev)\.?\s*[^;]*?\d\s*:\s*\d[^;]*?)(?=\s*;\s*(?:Gospel|G\s*:))', re.IGNORECASE)
 GOSPEL_RE = re.compile(r'(?:^|[\s,;.])(?:Gospel|G\s*:)\s*(.+?)(?=\s*(?:Following|(?:Divine\s+)?Liturgy|Great\s+blessing\s+of\s+water|Holy\s+Day\s+of\s+Obligation|\.\s+[A-Z])|$)', re.IGNORECASE)
-FOLLOWING_RE = re.compile(r'Following[:\s]*', re.IGNORECASE)
+FOLLOWING_NOTES_START_RE = re.compile(
+    r'\b(?:the\s+readings?\s+for\s+the\s+following\s+week|following\s+week\s+readings?|following\s+week)\b',
+    re.IGNORECASE
+)
 DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
-FASTING_RE = re.compile(r'(Strict Fast and abstinence|Strict Abstinence|Common Abstinence|Strict Fast|Abstinence|Dispensation\s*\([^)]+\)|Dispensation)', re.IGNORECASE)
+FASTING_RE = re.compile(
+    r'(Strict Fast and abstinence|Strict Abstinence|Common Abstinence|Strict Fast|Dispensation\s*\([^)]+\)|Dispensation|Abstinence(?:\s+from\s+[^\n.;]+(?:\s+this\s+week)?)?)',
+    re.IGNORECASE
+)
 CANADA_HOLIDAY_RE = re.compile(r'\bCANADA\s*:\s*(.+?)(?=(?:\s+USA\s*:)|$)', re.IGNORECASE)
 USA_HOLIDAY_RE = re.compile(r'\bUSA\s*:\s*(.+?)(?=(?:\s+CANADA\s*:)|$)', re.IGNORECASE)
+TRAILING_REFERENCE_NOISE_RE = re.compile(
+    r'(?:\s*[;,.]\s*|\s+)'
+    r'(?:also\b|may\s+also\s+read\b|forefeast\b|resurrection\s+service\b|matins\s+and\b)'
+    r'.*$',
+    re.IGNORECASE
+)
+TRAILING_OVERLAY_DAY_RE = re.compile(r'\s*/\s*\d{1,2}\b.*$')
 
 MONTH_MAP = {
     "january": "01", "february": "02", "march": "03", "april": "04", "may": "05", "june": "06",
@@ -46,6 +60,8 @@ def normalize_scripture_reference(value):
         return None
 
     text = re.sub(r'\b(?:Great\s+blessing\s+of\s+water|Holy\s+Day\s+of\s+Obligation)\b.*$', '', text, flags=re.IGNORECASE)
+    text = TRAILING_REFERENCE_NOISE_RE.sub('', text)
+    text = TRAILING_OVERLAY_DAY_RE.sub('', text)
     text = re.sub(r'(?<=\d)\s*([\-–])\s*(?=\d)', r'\1', text)
     text = WHITESPACE_RE.sub(' ', text).strip()
     return clean_string(text)
@@ -83,7 +99,9 @@ def parse_reading_text(text):
     fasting = None
     fasting_match = FASTING_RE.search(work_text)
     if fasting_match:
-        fasting = fasting_match.group(1)
+        fasting = WHITESPACE_RE.sub(' ', fasting_match.group(1)).strip()
+        if re.match(r'^Abstinence\b', fasting, re.IGNORECASE) and ' from ' not in fasting.lower():
+            fasting = 'Abstinence'
         work_text = work_text.replace(fasting_match.group(0), '')
 
     # 1. Extract Tone
@@ -169,18 +187,28 @@ def parse_reading_text(text):
         "usaHoliday": usa_holiday
     }
 
-def extract_day_number(text):
-    # Look for a number at the very start
-    match = re.search(r'\b(\d{1,2})\b', text)
-    if match:
-        return int(match.group(1))
-    return None
-
 def extract_day_number_at_start(text):
     if not text:
         return None
-    cleaned = text.strip()
-    day_match = re.match(r'^(\d{1,2})(?:\s|$|\D)', cleaned)
+
+    cleaned = str(text).strip()
+
+    # Avoid misclassifying ordinal titles (e.g., "1st SUNDAY ...") as day numbers.
+    if re.match(r'^\d{1,2}(?:st|nd|rd|th)\b', cleaned, re.IGNORECASE):
+        return None
+
+    # Handle rows where fasting text precedes the day number at the start of the cell.
+    fasting_prefixed = re.match(
+        r'^(?:Common\s+Abstinence|Strict\s+Abstinence|Strict\s+Fast(?:\s+and\s+abstinence)?|Dispensation(?:\s*\([^)]+\))?)\s+(\d{1,2})(?=\s|$|[;:,\-–()./])',
+        cleaned,
+        re.IGNORECASE
+    )
+    if fasting_prefixed:
+        day_num = int(fasting_prefixed.group(1))
+        if 1 <= day_num <= 31:
+            return day_num
+
+    day_match = re.match(r'^(\d{1,2})(?=\s|$|[;:,\-–()./])', cleaned)
     if not day_match:
         return None
 
@@ -189,10 +217,15 @@ def extract_day_number_at_start(text):
         return None
     if re.match(r'^\d{1,2}\s*[;:]', cleaned):
         return None
+    if re.match(r'^\d{1,2}\s*,\s*(?:Gospel|Ep(?:istle)?\b|Res\.?\s*Gospel\b)', cleaned, re.IGNORECASE):
+        return None
     if re.match(r'^\d\s+(?:Tim|Cor|Pet|John|Kgs|Sam|Chr|Thess|Macc|Ki|Sa|Co|Ti|Pe|Jo)', cleaned, re.IGNORECASE):
         return None
 
-    return day_num if 1 <= day_num <= 31 else None
+    if 1 <= day_num <= 31:
+        return day_num
+
+    return None
 
 def is_weekday_header_row(row):
     if not row:
@@ -212,13 +245,6 @@ def is_weekday_header_row(row):
 
     weekday_hits = sum(1 for token in tokens if token in WEEKDAY_TOKENS)
     return weekday_hits >= 4
-
-def is_week_row(row):
-    if not row:
-        return False
-    cells = row[:7]
-    day_hits = sum(1 for cell in cells if extract_day_number_at_start(cell))
-    return day_hits >= 2
 
 def get_table_cell_bbox(table, row_idx, col_idx):
     try:
@@ -363,12 +389,29 @@ def split_following_notes(notes):
     if not notes:
         return (None, None)
 
+    normalized_notes = WHITESPACE_RE.sub(' ', notes).strip()
+
+    # Handle inline patterns like:
+    # "THOMAS SUNDAY ... Gospel ... Following week readings ..."
+    # and "... The readings for the following week ..."
+    inline_following_match = FOLLOWING_NOTES_START_RE.search(normalized_notes)
+    if inline_following_match:
+        before = normalized_notes[:inline_following_match.start()].strip()
+        after = normalized_notes[inline_following_match.start():].strip()
+
+        before = re.sub(r'^[\s,;:.\-]+|[\s,;:.\-]+$', '', before)
+        after = re.sub(r'^[\s,;:.\-]+|[\s,;:.\-]+$', '', after)
+
+        following_text = after or None
+        regular_text = before or None
+        return (following_text, regular_text)
+
     sentences = [part.strip() for part in re.split(r'(?<=[.!?])\s+', notes) if part.strip()]
     following_parts = []
     regular_parts = []
 
     for sentence in sentences:
-        if re.search(r'\bfollowing\b', sentence, re.IGNORECASE):
+        if FOLLOWING_NOTES_START_RE.search(sentence):
             following_parts.append(sentence)
         else:
             regular_parts.append(sentence)
@@ -376,6 +419,110 @@ def split_following_notes(notes):
     following_text = ' '.join(following_parts).strip() or None
     regular_text = ' '.join(regular_parts).strip() or None
     return (following_text, regular_text)
+
+def raw_text_quality_score(text):
+    if not text:
+        return 0
+    normalized = WHITESPACE_RE.sub(' ', str(text)).strip()
+    alpha_count = sum(1 for ch in normalized if ch.isalpha())
+    digit_only_penalty = -100 if re.fullmatch(r'\d{1,2}', normalized) else 0
+    return (alpha_count * 10) + len(normalized) + digit_only_penalty
+
+def extract_overlay_day_numbers(text):
+    if not text:
+        return []
+
+    one_line = WHITESPACE_RE.sub(' ', str(text)).strip()
+    match = re.match(r'^(\d{1,2})(?:\s*/\s*(\d{1,2}))+', one_line)
+    if not match:
+        return []
+
+    days = []
+    for value in re.findall(r'\d{1,2}', match.group(0)):
+        day_num = int(value)
+        if 1 <= day_num <= 31 and day_num not in days:
+            days.append(day_num)
+
+    # Also handle embedded overlay markers such as "/ 31" that may appear later in the cell.
+    for value in re.findall(r'(?:(?<=\s)|(?<=^))/\s*(\d{1,2})(?=\b)', one_line):
+        day_num = int(value)
+        if 1 <= day_num <= 31 and day_num not in days:
+            days.append(day_num)
+
+    return days
+
+def dedupe_entries_by_date(entries):
+    deduped_by_date = {}
+    for entry in entries:
+        key = (entry.get("Year"), entry.get("Date"))
+        current = deduped_by_date.get(key)
+        if current is None:
+            deduped_by_date[key] = entry
+            continue
+
+        current_score = raw_text_quality_score(current.get("Raw Text"))
+        incoming_score = raw_text_quality_score(entry.get("Raw Text"))
+        if incoming_score > current_score:
+            deduped_by_date[key] = entry
+
+    return list(deduped_by_date.values())
+
+def is_holy_day_of_obligation(entry):
+    try:
+        mm = int(entry["Date"][:2])
+        dd = int(entry["Day"])
+        yyyy = int(entry["Year"])
+        dt = date(yyyy, mm, dd)
+        if dt.weekday() == 6:  # Sunday
+            return True
+    except Exception:
+        pass
+
+    return bool(re.search(r'Holy Day of Obligation', entry["Raw Text"], re.IGNORECASE))
+
+def enrich_entry(entry):
+    parsed = parse_reading_text(entry["Raw Text"])
+    following_notes, main_notes = split_following_notes(parsed['notes'])
+    title = clean_title(main_notes, entry['Day'])
+
+    entry.update({
+        "Title": title,
+        "Tone": parsed['tone'],
+        "Matins Gospel": parsed['matinsGospel'],
+        "Epistle": parsed['epistle'],
+        "Gospel": parsed['gospel'],
+        "Fasting": parsed['fasting'],
+        "Notes": following_notes,
+        "Canada Holiday": parsed['canadaHoliday'],
+        "USA Holiday": parsed['usaHoliday'],
+        "Holy Day of Obligation": is_holy_day_of_obligation(entry)
+    })
+    return entry
+
+def csv_sort_key(row):
+    try:
+        year = int(row.get("Year"))
+        month = int(str(row.get("Date", ""))[:2])
+        day = int(row.get("Day"))
+        return (year, month, day)
+    except Exception:
+        return (9999, 12, 31)
+
+def write_output_files(calendars_dir, sorted_data):
+    json_output = calendars_dir / "extracted_readings.json"
+    with open(json_output, "w", encoding="utf-8") as f:
+        json.dump(sorted_data, f, indent=2)
+
+    csv_output = calendars_dir / "readings.csv"
+    csv_columns = ["Date", "Title", "Tone", "Matins Gospel", "Epistle", "Gospel", "Fasting", "Notes", "Canada Holiday", "USA Holiday", "Holy Day of Obligation", "Raw Text"]
+
+    with open(csv_output, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=csv_columns, extrasaction='ignore')
+        writer.writeheader()
+        for row in sorted_data:
+            writer.writerow(row)
+
+    print(f"Extraction complete. Saved to {csv_output}")
 
 def process_pdfs(root_dir):
     results = []
@@ -421,6 +568,19 @@ def process_pdfs(root_dir):
                                     group_width = row_group_width
                                 normalized_rows.append((row_idx, collapsed_row))
 
+                            # Calculate validation metrics for this month
+                            # calendar.monthrange returns (weekday_of_first, days_in_month)
+                            # weekday: 0=Mon ... 6=Sun
+                            # We assume Table Columns are: Sun=0, Mon=1 ... Sat=6
+                            cal_first_weekday, cal_days_in_m = calendar.monthrange(int(year), int(month_num))
+                            
+                            # (Monday(0) + 1) % 7 = Column 1. (Sunday(6) + 1) % 7 = Column 0.
+                            expected_start_col = (cal_first_weekday + 1) % 7
+                            
+                            # track the last day's expected column?
+                            # last_weekday_python = (cal_first_weekday + cal_days_in_m - 1) % 7
+                            # expected_end_col = (last_weekday_python + 1) % 7
+
                             week_blocks = []
                             current_block = None
 
@@ -428,7 +588,36 @@ def process_pdfs(root_dir):
                                 if is_weekday_header_row(row):
                                     continue
 
-                                if is_week_row(row):
+                                # Enhanced Check:
+                                # 1. Extract all numbers
+                                # 2. If >= 2 numbers -> valid week
+                                # 3. If 1 number -> Valid ONLY if it is '1' in expected_start_col 
+                                #                   OR it is 'days_in_month' (roughly) near end of rows
+                                
+                                cells = row[:7]
+                                days_found = [] # list of (col_idx, value)
+                                for c_i, c_val in enumerate(cells):
+                                    d_val = extract_day_number_at_start(c_val)
+                                    if d_val:
+                                        days_found.append((c_i, d_val))
+
+                                is_valid_week = False
+                                if len(days_found) >= 2:
+                                    is_valid_week = True
+                                elif len(days_found) == 1:
+                                    # Single day row edge case logic
+                                    col, val = days_found[0]
+                                    
+                                    # Case A: It's the 1st of the month
+                                    if val == 1 and col == expected_start_col:
+                                        is_valid_week = True
+                                    
+                                    # Case B: It's the end of the month (e.g. 30, 31)
+                                    # We allow it if it's > 25 to be safe
+                                    elif val >= 28 and val <= cal_days_in_m:
+                                        is_valid_week = True
+
+                                if is_valid_week:
                                     if current_block:
                                         week_blocks.append(current_block)
                                     current_block = {
@@ -441,107 +630,168 @@ def process_pdfs(root_dir):
                             if current_block:
                                 week_blocks.append(current_block)
 
-                            if len(week_blocks) > 5:
-                                week_blocks = week_blocks[:5]
-
-                            for block in week_blocks:
+                            # Smart Anchoring: Find the block that actually contains the start of the month
+                            # We look for a cell with value '1' (or '2', '3') in the expected column.
+                            start_block_index = 0
+                            found_start = False
+                            
+                            for idx, block in enumerate(week_blocks):
+                                if found_start:
+                                    break
+                                # Check the first row of each block
+                                row = block["rows"][0]
+                                cells = row[:7]
+                                for col_idx, cell_text in enumerate(cells):
+                                    day_val = extract_day_number_at_start(cell_text)
+                                    if not day_val:
+                                        continue
+                                    
+                                    # Calculate what day SHOULD be here if this is the first week
+                                    # Expected Day = (Column Index - Start Column) + 1
+                                    # e.g. If StartCol=4 (Thu), and we are at Col 4, Expected=1.
+                                    expected_val = col_idx - expected_start_col + 1
+                                    
+                                    # Allow a small margin of error or exact match
+                                    # We focus on finding Day 1..7
+                                    if 1 <= day_val <= 7 and day_val == expected_val:
+                                        start_block_index = idx
+                                        found_start = True
+                                        break
+                            
+                            # Slice from the detected start
+                            week_blocks = week_blocks[start_block_index:]
+    
+                            for block_idx, block in enumerate(week_blocks):
                                 block_rows = block["rows"]
                                 start_row_idx = block["start_row_idx"]
+
+                                combined_cells = [None] * 7
+                                day_numbers = [None] * 7
+                                explicit_day_numbers = [None] * 7
 
                                 for col_idx in range(7):
                                     parts = [row[col_idx] for row in block_rows if row[col_idx]]
                                     combined_cell = merge_unique_parts(parts)
-                                    if not combined_cell:
+                                    combined_cells[col_idx] = combined_cell.strip() if combined_cell else None
+                                    if not combined_cells[col_idx]:
                                         continue
 
-                                    cleaned_cell = combined_cell.strip()
-                                    day_num = extract_day_number_at_start(cleaned_cell)
-
+                                    day_num = extract_day_number_at_start(combined_cells[col_idx])
+                                    if day_num:
+                                        explicit_day_numbers[col_idx] = day_num
                                     if not day_num:
                                         bbox = get_logical_cell_bbox(table, start_row_idx, col_idx, group_width)
                                         day_num = extract_day_from_cell_style(page, bbox)
+                                    day_numbers[col_idx] = day_num
 
-                                    if not day_num:
+                                # Guard against day drift: each week block has a narrow expected day range by column.
+                                expected_by_col = [None] * 7
+                                base_candidates = [
+                                    explicit_day_numbers[col_idx] - col_idx
+                                    for col_idx in range(7)
+                                    if explicit_day_numbers[col_idx]
+                                ]
+
+                                if base_candidates:
+                                    block_base_day = Counter(base_candidates).most_common(1)[0][0]
+                                else:
+                                    block_base_day = 1 - expected_start_col + (block_idx * 7)
+
+                                for col_idx in range(7):
+                                    expected_day = block_base_day + col_idx
+                                    if 1 <= expected_day <= cal_days_in_m:
+                                        expected_by_col[col_idx] = expected_day
+
+                                for col_idx in range(7):
+                                    if not combined_cells[col_idx]:
+                                        continue
+
+                                    explicit_day = extract_day_number_at_start(combined_cells[col_idx])
+                                    if explicit_day:
+                                        continue
+
+                                    expected_day = expected_by_col[col_idx]
+                                    if not expected_day:
+                                        continue
+
+                                    current_day = day_numbers[col_idx]
+                                    if current_day is None or abs(current_day - expected_day) > 1:
+                                        day_numbers[col_idx] = expected_day
+
+                                # Infer missing days by week-column distance from nearest known cells.
+                                for col_idx in range(7):
+                                    if not combined_cells[col_idx] or day_numbers[col_idx]:
+                                        continue
+
+                                    left_idx = None
+                                    for i in range(col_idx - 1, -1, -1):
+                                        if day_numbers[i]:
+                                            left_idx = i
+                                            break
+
+                                    right_idx = None
+                                    for i in range(col_idx + 1, 7):
+                                        if day_numbers[i]:
+                                            right_idx = i
+                                            break
+
+                                    inferred = None
+                                    if left_idx is not None and right_idx is not None:
+                                        span = right_idx - left_idx
+                                        if (day_numbers[right_idx] - day_numbers[left_idx]) == span:
+                                            inferred = day_numbers[left_idx] + (col_idx - left_idx)
+                                    elif left_idx is not None:
+                                        inferred = day_numbers[left_idx] + (col_idx - left_idx)
+                                    elif right_idx is not None:
+                                        inferred = day_numbers[right_idx] - (right_idx - col_idx)
+
+                                    if inferred and 1 <= inferred <= 31:
+                                        day_numbers[col_idx] = inferred
+
+                                for col_idx in range(7):
+                                    cleaned_cell = combined_cells[col_idx]
+                                    if not cleaned_cell:
+                                        continue
+
+                                    entry_days = []
+                                    base_day = day_numbers[col_idx]
+                                    if base_day and 1 <= base_day <= 31:
+                                        entry_days.append(base_day)
+
+                                    for overlay_day in extract_overlay_day_numbers(cleaned_cell):
+                                        if overlay_day not in entry_days:
+                                            entry_days.append(overlay_day)
+
+                                    if not entry_days:
                                         continue
 
                                     yy = year[-2:]
-                                    dd = f"{day_num:02d}"
                                     mm = month_num
-                                    date_id = f"{mm}{dd}{yy}"
-
-                                    new_entry = {
-                                        "Date": date_id,
-                                        "Year": year,
-                                        "Month": month_name_raw,
-                                        "Day": day_num,
-                                        "Raw Text": cleaned_cell
-                                    }
-                                    results.append(new_entry)
+                                    for day_num in entry_days:
+                                        dd = f"{day_num:02d}"
+                                        date_id = f"{mm}{dd}{yy}"
+                                        new_entry = {
+                                            "Date": date_id,
+                                            "Year": year,
+                                            "Month": month_name_raw,
+                                            "Day": day_num,
+                                            "Raw Text": cleaned_cell
+                                        }
+                                        results.append(new_entry)
                                 
                     # Table cell text already contains full daily content; no cross-cell merging needed.
 
             except Exception as e:
                 print(f"    Error processing {pdf_file.name}: {e}")
 
-    # Final Pass: Parse fields from the aggregated Raw Text
-    final_results = []
-    for entry in results:
-        parsed = parse_reading_text(entry["Raw Text"])
-        following_notes, main_notes = split_following_notes(parsed['notes'])
-        title = clean_title(main_notes, entry['Day'])
-        
-        # Determine Holy Day of Obligation
-        is_holy_day = False
-        
-        # Check if Sunday
-        try:
-            # Entry has Year (str), Date (MMDDYY), Day (int)
-            mm = int(entry["Date"][:2])
-            dd = int(entry["Day"])
-            yyyy = int(entry["Year"])
-            dt = date(yyyy, mm, dd)
-            if dt.weekday() == 6: # Sunday
-                is_holy_day = True
-        except Exception:
-            pass
+    deduped_results = dedupe_entries_by_date(results)
+    return [enrich_entry(entry) for entry in deduped_results]
 
-        # Check Raw Text
-        if re.search(r'Holy Day of Obligation', entry["Raw Text"], re.IGNORECASE):
-            is_holy_day = True
-
-        entry.update({
-            "Title": title,
-            "Tone": parsed['tone'],
-            "Matins Gospel": parsed['matinsGospel'],
-            "Epistle": parsed['epistle'],
-            "Gospel": parsed['gospel'],
-            "Fasting": parsed['fasting'],
-            "Notes": following_notes,
-            "Canada Holiday": parsed['canadaHoliday'],
-            "USA Holiday": parsed['usaHoliday'],
-            "Holy Day of Obligation": is_holy_day
-        })
-        final_results.append(entry)
-
-    return final_results
-
-if __name__ == "__main__":
+def main():
     calendars_dir = Path(__file__).parent
     data = process_pdfs(calendars_dir)
-    
-    # Save as JSON (optional, keep for debugging)
-    json_output = calendars_dir / "extracted_readings.json"
-    with open(json_output, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
+    sorted_data = sorted(data, key=csv_sort_key)
+    write_output_files(calendars_dir, sorted_data)
 
-    # Save as CSV
-    csv_output = calendars_dir / "readings.csv"
-    csv_columns = ["Date", "Title", "Tone", "Matins Gospel", "Epistle", "Gospel", "Fasting", "Notes", "Canada Holiday", "USA Holiday", "Holy Day of Obligation", "Raw Text"]
-    
-    with open(csv_output, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=csv_columns, extrasaction='ignore')
-        writer.writeheader()
-        for row in data:
-            writer.writerow(row)
-        
-    print(f"Extraction complete. Saved to {csv_output}")
+if __name__ == "__main__":
+    main()
