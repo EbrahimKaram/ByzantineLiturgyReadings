@@ -22,6 +22,13 @@ DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
 FASTING_RE = re.compile(r'(Strict Fast and abstinence|Strict Abstinence|Common Abstinence|Strict Fast|Abstinence|Dispensation\s*\([^)]+\)|Dispensation)', re.IGNORECASE)
 CANADA_HOLIDAY_RE = re.compile(r'\bCANADA\s*:\s*(.+?)(?=(?:\s+USA\s*:)|$)', re.IGNORECASE)
 USA_HOLIDAY_RE = re.compile(r'\bUSA\s*:\s*(.+?)(?=(?:\s+CANADA\s*:)|$)', re.IGNORECASE)
+TRAILING_REFERENCE_NOISE_RE = re.compile(
+    r'(?:\s*[;,.]\s*|\s+)'
+    r'(?:also\b|may\s+also\s+read\b|forefeast\b|resurrection\s+service\b|matins\s+and\b)'
+    r'.*$',
+    re.IGNORECASE
+)
+TRAILING_OVERLAY_DAY_RE = re.compile(r'\s*/\s*\d{1,2}\b.*$')
 
 MONTH_MAP = {
     "january": "01", "february": "02", "march": "03", "april": "04", "may": "05", "june": "06",
@@ -46,6 +53,8 @@ def normalize_scripture_reference(value):
         return None
 
     text = re.sub(r'\b(?:Great\s+blessing\s+of\s+water|Holy\s+Day\s+of\s+Obligation)\b.*$', '', text, flags=re.IGNORECASE)
+    text = TRAILING_REFERENCE_NOISE_RE.sub('', text)
+    text = TRAILING_OVERLAY_DAY_RE.sub('', text)
     text = re.sub(r'(?<=\d)\s*([\-–])\s*(?=\d)', r'\1', text)
     text = WHITESPACE_RE.sub(' ', text).strip()
     return clean_string(text)
