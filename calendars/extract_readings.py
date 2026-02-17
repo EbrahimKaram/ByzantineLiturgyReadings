@@ -3,6 +3,7 @@ import re
 import json
 import csv
 import os
+import calendar
 from pathlib import Path
 from datetime import date
 
@@ -189,7 +190,12 @@ def extract_day_number_at_start(text):
     if not text:
         return None
     cleaned = text.strip()
-    day_match = re.match(r'^(\d{1,2})(?:\s|$|\D)', cleaned)
+
+    # Avoid misclassifying ordinal titles (e.g., "1st SUNDAY ...") as day numbers.
+    if re.match(r'^\d{1,2}(?:st|nd|rd|th)\b', cleaned, re.IGNORECASE):
+        return None
+
+    day_match = re.match(r'^(\d{1,2})(?=\s|$|[;:,\-–().])', cleaned)
     if not day_match:
         return None
 
@@ -227,7 +233,7 @@ def is_week_row(row):
         return False
     cells = row[:7]
     day_hits = sum(1 for cell in cells if extract_day_number_at_start(cell))
-    return day_hits >= 2
+    return day_hits >= 1
 
 def get_table_cell_bbox(table, row_idx, col_idx):
     try:
@@ -430,6 +436,19 @@ def process_pdfs(root_dir):
                                     group_width = row_group_width
                                 normalized_rows.append((row_idx, collapsed_row))
 
+                            # Calculate validation metrics for this month
+                            # calendar.monthrange returns (weekday_of_first, days_in_month)
+                            # weekday: 0=Mon ... 6=Sun
+                            # We assume Table Columns are: Sun=0, Mon=1 ... Sat=6
+                            cal_first_weekday, cal_days_in_m = calendar.monthrange(int(year), int(month_num))
+                            
+                            # (Monday(0) + 1) % 7 = Column 1. (Sunday(6) + 1) % 7 = Column 0.
+                            expected_start_col = (cal_first_weekday + 1) % 7
+                            
+                            # track the last day's expected column?
+                            # last_weekday_python = (cal_first_weekday + cal_days_in_m - 1) % 7
+                            # expected_end_col = (last_weekday_python + 1) % 7
+
                             week_blocks = []
                             current_block = None
 
@@ -437,7 +456,36 @@ def process_pdfs(root_dir):
                                 if is_weekday_header_row(row):
                                     continue
 
-                                if is_week_row(row):
+                                # Enhanced Check:
+                                # 1. Extract all numbers
+                                # 2. If >= 2 numbers -> valid week
+                                # 3. If 1 number -> Valid ONLY if it is '1' in expected_start_col 
+                                #                   OR it is 'days_in_month' (roughly) near end of rows
+                                
+                                cells = row[:7]
+                                days_found = [] # list of (col_idx, value)
+                                for c_i, c_val in enumerate(cells):
+                                    d_val = extract_day_number_at_start(c_val)
+                                    if d_val:
+                                        days_found.append((c_i, d_val))
+
+                                is_valid_week = False
+                                if len(days_found) >= 2:
+                                    is_valid_week = True
+                                elif len(days_found) == 1:
+                                    # Single day row edge case logic
+                                    col, val = days_found[0]
+                                    
+                                    # Case A: It's the 1st of the month
+                                    if val == 1 and col == expected_start_col:
+                                        is_valid_week = True
+                                    
+                                    # Case B: It's the end of the month (e.g. 30, 31)
+                                    # We allow it if it's > 25 to be safe
+                                    elif val >= 28 and val <= cal_days_in_m:
+                                        is_valid_week = True
+
+                                if is_valid_week:
                                     if current_block:
                                         week_blocks.append(current_block)
                                     current_block = {
@@ -450,9 +498,37 @@ def process_pdfs(root_dir):
                             if current_block:
                                 week_blocks.append(current_block)
 
-                            if len(week_blocks) > 5:
-                                week_blocks = week_blocks[:5]
-
+                            # Smart Anchoring: Find the block that actually contains the start of the month
+                            # We look for a cell with value '1' (or '2', '3') in the expected column.
+                            start_block_index = 0
+                            found_start = False
+                            
+                            for idx, block in enumerate(week_blocks):
+                                if found_start:
+                                    break
+                                # Check the first row of each block
+                                row = block["rows"][0]
+                                cells = row[:7]
+                                for col_idx, cell_text in enumerate(cells):
+                                    day_val = extract_day_number_at_start(cell_text)
+                                    if not day_val:
+                                        continue
+                                    
+                                    # Calculate what day SHOULD be here if this is the first week
+                                    # Expected Day = (Column Index - Start Column) + 1
+                                    # e.g. If StartCol=4 (Thu), and we are at Col 4, Expected=1.
+                                    expected_val = col_idx - expected_start_col + 1
+                                    
+                                    # Allow a small margin of error or exact match
+                                    # We focus on finding Day 1..7
+                                    if 1 <= day_val <= 7 and day_val == expected_val:
+                                        start_block_index = idx
+                                        found_start = True
+                                        break
+                            
+                            # Slice from the detected start
+                            week_blocks = week_blocks[start_block_index:]
+    
                             for block in week_blocks:
                                 block_rows = block["rows"]
                                 start_row_idx = block["start_row_idx"]
@@ -552,7 +628,7 @@ if __name__ == "__main__":
     # Save as JSON (optional, keep for debugging)
     json_output = calendars_dir / "extracted_readings.json"
     with open(json_output, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
+        json.dump(sorted_data, f, indent=2)
 
     # Save as CSV
     csv_output = calendars_dir / "readings.csv"

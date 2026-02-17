@@ -3829,8 +3829,8 @@
     "Year": "2024",
     "Month": "September",
     "Day": 8,
-    "Raw Text": "SUNDAY BEFORE THE EXALTATION OF\nTHE CROSS Tone 7, Res. Gospel 5,\nEpistle Gal. 6:11\u201318, Gospel Jn. 3:13 \u2013\n17; also\n\u2020 NATIVITY OF THE MOTHER OF GOD\nMay also read: Epistle: Phil 2:5-11;\nGospel: Lk 10:38-42, 11:27-28. Next\nweek \u2013 17th week after Pentecost.",
-    "Title": "SUNDAY BEFORE THE EXALTATION OF THE CROSS. Next week \u2013 17th week after Pentecost",
+    "Raw Text": "SUNDAY BEFORE THE EXALTATION OF\nTHE CROSS Tone 7, Res. Gospel 5,\nEpistle Gal. 6:11\u201318, Gospel Jn. 3:13 \u2013\n17; also\n\u2020 NATIVITY OF THE MOTHER OF GOD",
+    "Title": "SUNDAY BEFORE THE EXALTATION OF THE CROSS",
     "Tone": "7",
     "Matins Gospel": "5",
     "Epistle": "Gal. 6:11\u201318",
@@ -4118,6 +4118,23 @@
     "Year": "2024",
     "Month": "September",
     "Day": 25,
+    "Raw Text": "May also read: Epistle: Phil 2:5-11;\nGospel: Lk 10:38-42, 11:27-28. Next\nweek \u2013 17th week after Pentecost.",
+    "Title": "May also read. Next week \u2013 17th week after Pentecost",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": "Phil 2:5-11",
+    "Gospel": "Lk 10:38-42, 11:27-28",
+    "Fasting": null,
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
+    "Date": "092524",
+    "Year": "2024",
+    "Month": "September",
+    "Day": 25,
     "Raw Text": "25\nCommon Abstinence\nVen. Euphrosyna of\nAlexandria, martyr",
     "Title": "Ven. Euphrosyna of Alexandria, martyr",
     "Tone": null,
@@ -4159,6 +4176,23 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
+    "Date": "092824",
+    "Year": "2024",
+    "Month": "September",
+    "Day": 28,
+    "Raw Text": "28, 30-35",
+    "Title": "30-35",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
+    "Fasting": null,
     "Notes": null,
     "Canada Holiday": null,
     "USA Holiday": null,
@@ -4301,12 +4335,12 @@
     "Holy Day of Obligation": false
   },
   {
-    "Date": "100324",
+    "Date": "100624",
     "Year": "2024",
     "Month": "October",
-    "Day": 3,
+    "Day": 6,
     "Raw Text": "3rd SUNDAY AFTER HOLY CROSS\n(20th Sunday after Pentecost) Tone\n3, Res. Gospel 9, Epistle Gal 1:11-19; Gospel\nLk. 7:11\u2013 16. Following week readings \u2013 21st\nweek after Pentecost.",
-    "Title": "rd SUNDAY AFTER HOLY CROSS (20th Sunday after Pentecost)",
+    "Title": "3rd SUNDAY AFTER HOLY CROSS (20th Sunday after Pentecost)",
     "Tone": "3",
     "Matins Gospel": "9",
     "Epistle": "Gal 1:11-19",
@@ -4315,7 +4349,7 @@
     "Notes": "Following week readings \u2013 21st week after Pentecost",
     "Canada Holiday": null,
     "USA Holiday": null,
-    "Holy Day of Obligation": false
+    "Holy Day of Obligation": true
   },
   {
     "Date": "100724",
@@ -4743,12 +4777,12 @@
     "Holy Day of Obligation": false
   },
   {
-    "Date": "110524",
+    "Date": "110324",
     "Year": "2024",
     "Month": "November",
-    "Day": 5,
+    "Day": 3,
     "Raw Text": "5th SUNDAY AFTER HOLY\nCROSS (24th Sunday after\nPentecost) Tone 7, Res. Gospel 2,\nEpistle Eph. 2:14-22 Gospel Lk. 16:19\u2013\n31. Following week readings \u2013 25th\nweek after Pentecost.",
-    "Title": "th SUNDAY AFTER HOLY CROSS (24th Sunday after Pentecost)",
+    "Title": "5th SUNDAY AFTER HOLY CROSS (24th Sunday after Pentecost)",
     "Tone": "7",
     "Matins Gospel": "2",
     "Epistle": "Eph. 2:14-22",
@@ -4757,7 +4791,7 @@
     "Notes": "Following week readings \u2013 25th week after Pentecost",
     "Canada Holiday": null,
     "USA Holiday": null,
-    "Holy Day of Obligation": false
+    "Holy Day of Obligation": true
   },
   {
     "Date": "110424",
@@ -6052,12 +6086,12 @@
     "Holy Day of Obligation": false
   },
   {
-    "Date": "011225",
+    "Date": "011925",
     "Year": "2025",
     "Month": "January",
-    "Day": 12,
+    "Day": 19,
     "Raw Text": "12th Sunday after The Holy Cross\n(29th Sunday after Pentecost)\nTone 2, Res, Gospel 2, Epistle Col. 3:4-\n11, Gospel Lk 17:12-19. Following week\nreadings are of the 30th week after\nPentecost.",
-    "Title": "th Sunday after The Holy Cross (29th Sunday after Pentecost), Res",
+    "Title": "12th Sunday after The Holy Cross (29th Sunday after Pentecost), Res",
     "Tone": "2",
     "Matins Gospel": null,
     "Epistle": "Col. 3:4-11",
@@ -6267,6 +6301,23 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
+    "Date": "020125",
+    "Year": "2025",
+    "Month": "February",
+    "Day": 1,
+    "Raw Text": "1\nForefeast of the Meeting of\nthe Lord. Tryphon, martyr",
+    "Title": "Forefeast of the Meeting of the Lord. Tryphon, martyr",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
+    "Fasting": null,
     "Notes": null,
     "Canada Holiday": null,
     "USA Holiday": null,
@@ -6726,6 +6777,23 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
+    "Date": "030125",
+    "Year": "2025",
+    "Month": "March",
+    "Day": 1,
+    "Raw Text": "1\nVen. Eudochia, woman\nmartyr",
+    "Title": "Ven. Eudochia, woman martyr",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
+    "Fasting": null,
     "Notes": null,
     "Canada Holiday": null,
     "USA Holiday": null,
@@ -7633,6 +7701,57 @@
     "Holy Day of Obligation": false
   },
   {
+    "Date": "050125",
+    "Year": "2025",
+    "Month": "May",
+    "Day": 1,
+    "Raw Text": "1\nProphet Jeremiah",
+    "Title": "Prophet Jeremiah",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
+    "Fasting": null,
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
+    "Date": "050225",
+    "Year": "2025",
+    "Month": "May",
+    "Day": 2,
+    "Raw Text": "2\nCommon Abstinence\nFounding of Constantinople.\nH. Father Athanasius the\nGreat.",
+    "Title": "Founding of Constantinople. H. Father Athanasius the Great",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
+    "Fasting": "Common Abstinence",
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
+    "Date": "050325",
+    "Year": "2025",
+    "Month": "May",
+    "Day": 3,
+    "Raw Text": "3\nTimothy & Maura,\nmartyrs.",
+    "Title": "Timothy & Maura, martyrs",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
+    "Fasting": null,
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
     "Date": "050425",
     "Year": "2025",
     "Month": "May",
@@ -8073,6 +8192,23 @@
     "Canada Holiday": null,
     "USA Holiday": null,
     "Holy Day of Obligation": true
+  },
+  {
+    "Date": "053025",
+    "Year": "2025",
+    "Month": "May",
+    "Day": 30,
+    "Raw Text": "30, Gospel Jn. 4: 5-42. Following week\nreadings \u2013 5th Sunday after Easter.",
+    "Title": "",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": "Jn. 4: 5-42",
+    "Fasting": null,
+    "Notes": "Following week readings \u2013 5th Sunday after Easter",
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
   },
   {
     "Date": "053025",
@@ -8704,12 +8840,12 @@
     "Holy Day of Obligation": false
   },
   {
-    "Date": "070425",
+    "Date": "070625",
     "Year": "2025",
     "Month": "July",
-    "Day": 4,
+    "Day": 6,
     "Raw Text": "4th SUNDAY AFTER PENTECOST\nTone 3, Res. Gospel 4, Epistle Rom. 6: 18 \u2013\n23, Gospel Matt. 8: 5-13. Following week\nreadings \u2013 5th week after Pentecost.",
-    "Title": "th SUNDAY AFTER PENTECOST",
+    "Title": "4th SUNDAY AFTER PENTECOST",
     "Tone": "3",
     "Matins Gospel": "4",
     "Epistle": "Rom. 6: 18\u201323",
@@ -8718,7 +8854,7 @@
     "Notes": "Following week readings \u2013 5th week after Pentecost",
     "Canada Holiday": null,
     "USA Holiday": null,
-    "Holy Day of Obligation": false
+    "Holy Day of Obligation": true
   },
   {
     "Date": "070725",
@@ -9265,12 +9401,12 @@
     "Holy Day of Obligation": false
   },
   {
-    "Date": "081025",
+    "Date": "081725",
     "Year": "2025",
     "Month": "August",
-    "Day": 10,
+    "Day": 17,
     "Raw Text": "10th SUNDAY AFTER PENTECOST\nTone 1, Res. Gospel 10, Epistle 1 Cor. 4:\n9 \u2013 16, Gospel Matt. 17: 14 \u2013 23.\nFollowing week readings \u2013 11th week after\nPentecost.",
-    "Title": "th SUNDAY AFTER PENTECOST",
+    "Title": "10th SUNDAY AFTER PENTECOST",
     "Tone": "1",
     "Matins Gospel": "10",
     "Epistle": "1 Cor. 4: 9\u201316",
@@ -10319,12 +10455,12 @@
     "Holy Day of Obligation": false
   },
   {
-    "Date": "100325",
+    "Date": "101925",
     "Year": "2025",
     "Month": "October",
-    "Day": 3,
+    "Day": 19,
     "Raw Text": "3RD SUNDAY AFTER HOLY CROSS\n(20TH Sunday after Pentecost). Tone\n2, Res. Gospel 8, Epistle Gal 1:11-19; Gospel\nLk. 7: 11\u2013 16. Following week readings \u2013 22nd\nweek after Pentecost.",
-    "Title": "RD SUNDAY AFTER HOLY CROSS (20TH Sunday after Pentecost)",
+    "Title": "3RD SUNDAY AFTER HOLY CROSS (20TH Sunday after Pentecost)",
     "Tone": "2",
     "Matins Gospel": "8",
     "Epistle": "Gal 1:11-19",
@@ -10333,7 +10469,7 @@
     "Notes": "Following week readings \u2013 22nd week after Pentecost",
     "Canada Holiday": null,
     "USA Holiday": null,
-    "Holy Day of Obligation": false
+    "Holy Day of Obligation": true
   },
   {
     "Date": "102025",
@@ -10540,12 +10676,12 @@
     "Holy Day of Obligation": false
   },
   {
-    "Date": "110525",
+    "Date": "110225",
     "Year": "2025",
     "Month": "November",
-    "Day": 5,
+    "Day": 2,
     "Raw Text": "5th SUNDAY AFTER HOLY CROSS\n(22ND Sunday after Pentecost).\nTone 4, Res. Gospel 10, Epistle Gal 6:11-\n18 Gospel Lk. 16: 19\u2013 31. Following\nweek readings \u2013 24th week after\nPentecost.",
-    "Title": "th SUNDAY AFTER HOLY CROSS (22ND Sunday after Pentecost)",
+    "Title": "5th SUNDAY AFTER HOLY CROSS (22ND Sunday after Pentecost)",
     "Tone": "4",
     "Matins Gospel": "10",
     "Epistle": "Gal 6:11-18",
@@ -10554,7 +10690,7 @@
     "Notes": "Following week readings \u2013 24th week after Pentecost",
     "Canada Holiday": null,
     "USA Holiday": null,
-    "Holy Day of Obligation": false
+    "Holy Day of Obligation": true
   },
   {
     "Date": "110325",
@@ -11543,6 +11679,23 @@
     "Holy Day of Obligation": true
   },
   {
+    "Date": "010626",
+    "Year": "2026",
+    "Month": "January",
+    "Day": 6,
+    "Raw Text": "6\nCommon Abstinence\nVeneration of the Chains\nof the Holy & All-Praised\nApostle, Peter.",
+    "Title": "Veneration of the Chains of the Holy & All-Praised Apostle, Peter",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
+    "Fasting": "Common Abstinence",
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
     "Date": "010726",
     "Year": "2026",
     "Month": "January",
@@ -11690,23 +11843,6 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": null,
-    "Notes": null,
-    "Canada Holiday": null,
-    "USA Holiday": null,
-    "Holy Day of Obligation": false
-  },
-  {
-    "Date": "010626",
-    "Year": "2026",
-    "Month": "January",
-    "Day": 6,
-    "Raw Text": "6\nCommon Abstinence\nVeneration of the Chains\nof the Holy & All-Praised\nApostle, Peter.",
-    "Title": "Veneration of the Chains of the Holy & All-Praised Apostle, Peter",
-    "Tone": null,
-    "Matins Gospel": null,
-    "Epistle": null,
-    "Gospel": null,
-    "Fasting": "Common Abstinence",
     "Notes": null,
     "Canada Holiday": null,
     "USA Holiday": null,
@@ -13366,14 +13502,14 @@
     "Year": "2026",
     "Month": "May",
     "Day": 3,
-    "Raw Text": "SUNDAY OF THE SAMARITAN\nWOMAN (5th Sunday of Easter)\nTone 4, Res. Gospel 7. Epistle Acts 11: 19-\n30, Gospel Jn. 4: 5-42. Following week\nreadings \u2013 5th Sunday after Easter.",
+    "Raw Text": "3\nSUNDAY OF THE SAMARITAN\nWOMAN (5th Sunday of Easter)\nTone 4, Res. Gospel 7. Epistle Acts 11: 19-",
     "Title": "SUNDAY OF THE SAMARITAN WOMAN (5th Sunday of Easter)",
     "Tone": "4",
     "Matins Gospel": "7",
-    "Epistle": "Acts 11: 19-30",
-    "Gospel": "Jn. 4: 5-42",
+    "Epistle": "Acts 11: 19",
+    "Gospel": null,
     "Fasting": null,
-    "Notes": "Following week readings \u2013 5th Sunday after Easter",
+    "Notes": null,
     "Canada Holiday": null,
     "USA Holiday": null,
     "Holy Day of Obligation": true
@@ -13816,6 +13952,23 @@
     "Gospel": null,
     "Fasting": "Dispensation (H\u00e2r\u021bi)",
     "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
+    "Date": "053026",
+    "Year": "2026",
+    "Month": "May",
+    "Day": 30,
+    "Raw Text": "30, Gospel Jn. 4: 5-42. Following week\nreadings \u2013 5th Sunday after Easter.",
+    "Title": "",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": "Jn. 4: 5-42",
+    "Fasting": null,
+    "Notes": "Following week readings \u2013 5th Sunday after Easter",
     "Canada Holiday": null,
     "USA Holiday": null,
     "Holy Day of Obligation": false
@@ -14314,12 +14467,12 @@
     "Holy Day of Obligation": false
   },
   {
-    "Date": "070626",
+    "Date": "070526",
     "Year": "2026",
     "Month": "July",
-    "Day": 6,
+    "Day": 5,
     "Raw Text": "6TH SUNDAY AFTER PENTECOST\nTone 5, Res. Gospel 6, Epistle Rom. 12: 6-\n14, Gospel Mt. 9: 1 - 8. Following week\nreadings \u2013 7th week after Pentecost.",
-    "Title": "TH SUNDAY AFTER PENTECOST",
+    "Title": "6TH SUNDAY AFTER PENTECOST",
     "Tone": "5",
     "Matins Gospel": "6",
     "Epistle": "Rom. 12: 6-14",
@@ -14328,7 +14481,7 @@
     "Notes": "Following week readings \u2013 7th week after Pentecost",
     "Canada Holiday": null,
     "USA Holiday": null,
-    "Holy Day of Obligation": false
+    "Holy Day of Obligation": true
   },
   {
     "Date": "070626",
@@ -14756,6 +14909,23 @@
     "Holy Day of Obligation": false
   },
   {
+    "Date": "073026",
+    "Year": "2026",
+    "Month": "July",
+    "Day": 30,
+    "Raw Text": "30",
+    "Title": "",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
+    "Fasting": null,
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
     "Date": "073126",
     "Year": "2026",
     "Month": "July",
@@ -14767,6 +14937,40 @@
     "Epistle": null,
     "Gospel": null,
     "Fasting": "Common Abstinence",
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
+    "Date": "080126",
+    "Year": "2026",
+    "Month": "August",
+    "Day": 1,
+    "Raw Text": "1\nSeven Holy Maccabees and their\nMother, Solomonia and their\nTeacher, Eleazar. Beginning of\nthe Dormition Fast\n8\nCommon Abstinence\nEmilian the Confessor,\nBishop of Cyzicus.",
+    "Title": "Seven Holy Maccabees and their Mother, Solomonia and their Teacher, Eleazar. Beginning of the Dormition Fast 8 Emilian the Confessor, Bishop of Cyzicus",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": null,
+    "Gospel": null,
+    "Fasting": "Common Abstinence",
+    "Notes": null,
+    "Canada Holiday": null,
+    "USA Holiday": null,
+    "Holy Day of Obligation": false
+  },
+  {
+    "Date": "080626",
+    "Year": "2026",
+    "Month": "August",
+    "Day": 6,
+    "Raw Text": "6\nDispensation (H\u00e2r\u021bi)\n(\u2020) TRANSFIGURATION OF OUR\nLORD JESUS CHRIST. Epistle 2\nPeter 1:10-19; Gospel Matt\n17:1-9. Blessing of the first fruits\nof the vine",
+    "Title": "(\u2020) TRANSFIGURATION OF OUR LORD JESUS CHRIST. Blessing of the first fruits of the vine",
+    "Tone": null,
+    "Matins Gospel": null,
+    "Epistle": "2 Peter 1:10-19",
+    "Gospel": "Matt 17:1-9",
+    "Fasting": "Dispensation (H\u00e2r\u021bi)",
     "Notes": null,
     "Canada Holiday": null,
     "USA Holiday": null,
@@ -14892,12 +15096,12 @@
     "Holy Day of Obligation": true
   },
   {
-    "Date": "081226",
+    "Date": "081626",
     "Year": "2026",
     "Month": "August",
-    "Day": 12,
+    "Day": 16,
     "Raw Text": "12th SUNDAY AFTER PENTECOST\nTone 3, Res. Gospel 1, Epistle 1 Cor.\n15:1-11, Gospel Matt. 19:16-26.\nFollowing week readings \u2013 13th week after\nPentecost.",
-    "Title": "th SUNDAY AFTER PENTECOST",
+    "Title": "12th SUNDAY AFTER PENTECOST",
     "Tone": "3",
     "Matins Gospel": "1",
     "Epistle": "1 Cor. 15:1-11",
@@ -14906,7 +15110,7 @@
     "Notes": "Following week readings \u2013 13th week after Pentecost",
     "Canada Holiday": null,
     "USA Holiday": null,
-    "Holy Day of Obligation": false
+    "Holy Day of Obligation": true
   },
   {
     "Date": "081726",
@@ -15215,12 +15419,12 @@
     "Holy Day of Obligation": false
   },
   {
-    "Date": "091526",
+    "Date": "090626",
     "Year": "2026",
     "Month": "September",
-    "Day": 15,
+    "Day": 6,
     "Raw Text": "15th SUNDAY AFTER\nPENTECOST\nTone 6 Res. Gospel 4, Epistle 2 Cor.\n4:6-15, Gospel Matt. 22:35-46.\nFollowing week readings \u2013 16th week\nafter Pentecost.",
-    "Title": "th SUNDAY AFTER PENTECOST",
+    "Title": "15th SUNDAY AFTER PENTECOST",
     "Tone": "6",
     "Matins Gospel": "4",
     "Epistle": "2 Cor. 4:6-15",
@@ -15229,7 +15433,7 @@
     "Notes": "Following week readings \u2013 16th week after Pentecost",
     "Canada Holiday": null,
     "USA Holiday": null,
-    "Holy Day of Obligation": false
+    "Holy Day of Obligation": true
   },
   {
     "Date": "090726",
@@ -16286,12 +16490,12 @@
     "Holy Day of Obligation": false
   },
   {
-    "Date": "110726",
+    "Date": "110826",
     "Year": "2026",
     "Month": "November",
-    "Day": 7,
+    "Day": 8,
     "Raw Text": "7TH SUNDAY AFTER HOLY CROSS\n(24th Sunday after Pentecost).\nTone 7, Res. Gospel 2, Epistle Eph 2: 14-\n22; Gospel Lk. 8: 41\u2013 56. Following week\nreadings \u2013 25TH week after Pentecost",
-    "Title": "TH SUNDAY AFTER HOLY CROSS (24th Sunday after Pentecost)",
+    "Title": "7TH SUNDAY AFTER HOLY CROSS (24th Sunday after Pentecost)",
     "Tone": "7",
     "Matins Gospel": "2",
     "Epistle": "Eph 2: 14-22",
@@ -16300,7 +16504,7 @@
     "Notes": "Following week readings \u2013 25TH week after Pentecost",
     "Canada Holiday": null,
     "USA Holiday": null,
-    "Holy Day of Obligation": false
+    "Holy Day of Obligation": true
   },
   {
     "Date": "110926",
