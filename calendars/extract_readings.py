@@ -24,7 +24,10 @@ FOLLOWING_NOTES_START_RE = re.compile(
     re.IGNORECASE
 )
 DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
-FASTING_RE = re.compile(r'(Strict Fast and abstinence|Strict Abstinence|Common Abstinence|Strict Fast|Abstinence|Dispensation\s*\([^)]+\)|Dispensation)', re.IGNORECASE)
+FASTING_RE = re.compile(
+    r'(Strict Fast and abstinence|Strict Abstinence|Common Abstinence|Strict Fast|Dispensation\s*\([^)]+\)|Dispensation|Abstinence(?:\s+from\s+[^\n.;]+(?:\s+this\s+week)?)?)',
+    re.IGNORECASE
+)
 CANADA_HOLIDAY_RE = re.compile(r'\bCANADA\s*:\s*(.+?)(?=(?:\s+USA\s*:)|$)', re.IGNORECASE)
 USA_HOLIDAY_RE = re.compile(r'\bUSA\s*:\s*(.+?)(?=(?:\s+CANADA\s*:)|$)', re.IGNORECASE)
 TRAILING_REFERENCE_NOISE_RE = re.compile(
@@ -97,7 +100,9 @@ def parse_reading_text(text):
     fasting = None
     fasting_match = FASTING_RE.search(work_text)
     if fasting_match:
-        fasting = fasting_match.group(1)
+        fasting = WHITESPACE_RE.sub(' ', fasting_match.group(1)).strip()
+        if re.match(r'^Abstinence\b', fasting, re.IGNORECASE) and ' from ' not in fasting.lower():
+            fasting = 'Abstinence'
         work_text = work_text.replace(fasting_match.group(0), '')
 
     # 1. Extract Tone
