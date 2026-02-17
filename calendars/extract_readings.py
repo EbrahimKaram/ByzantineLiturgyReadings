@@ -19,6 +19,10 @@ APOSTLE_EPISTLE_RE = re.compile(r'(?:^|[\s,;.])(?:Apostle\b|Apost\.)\s+((?:[1-3]
 EPISTLE_BEFORE_GOSPEL_RE = re.compile(r'(?:^|[\s,;.])((?:[1-3]\s*)?(?:Acts|Rom|Cor|Gal|Eph|Phil|Col|Thess|Tim|Tit|Phlm|Philem|Heb|Jas|James|Pet|Jude|Rev)\.?\s*[^;]*?\d\s*:\s*\d[^;]*?)(?=\s*;\s*(?:Gospel|G\s*:))', re.IGNORECASE)
 GOSPEL_RE = re.compile(r'(?:^|[\s,;.])(?:Gospel|G\s*:)\s*(.+?)(?=\s*(?:Following|(?:Divine\s+)?Liturgy|Great\s+blessing\s+of\s+water|Holy\s+Day\s+of\s+Obligation|\.\s+[A-Z])|$)', re.IGNORECASE)
 FOLLOWING_RE = re.compile(r'Following[:\s]*', re.IGNORECASE)
+FOLLOWING_NOTES_START_RE = re.compile(
+    r'\b(?:the\s+readings?\s+for\s+the\s+following\s+week|following\s+week\s+readings?|following\s+week)\b',
+    re.IGNORECASE
+)
 DIVINE_LITURGY_HEADER_RE = re.compile(r'Divine Liturgy:?', re.IGNORECASE)
 FASTING_RE = re.compile(r'(Strict Fast and abstinence|Strict Abstinence|Common Abstinence|Strict Fast|Abstinence|Dispensation\s*\([^)]+\)|Dispensation)', re.IGNORECASE)
 CANADA_HOLIDAY_RE = re.compile(r'\bCANADA\s*:\s*(.+?)(?=(?:\s+USA\s*:)|$)', re.IGNORECASE)
@@ -382,7 +386,8 @@ def split_following_notes(notes):
 
     # Handle inline patterns like:
     # "THOMAS SUNDAY ... Gospel ... Following week readings ..."
-    inline_following_match = re.search(r'\bfollowing\b', normalized_notes, re.IGNORECASE)
+    # and "... The readings for the following week ..."
+    inline_following_match = FOLLOWING_NOTES_START_RE.search(normalized_notes)
     if inline_following_match:
         before = normalized_notes[:inline_following_match.start()].strip()
         after = normalized_notes[inline_following_match.start():].strip()
@@ -399,7 +404,7 @@ def split_following_notes(notes):
     regular_parts = []
 
     for sentence in sentences:
-        if re.search(r'\bfollowing\b', sentence, re.IGNORECASE):
+        if FOLLOWING_NOTES_START_RE.search(sentence):
             following_parts.append(sentence)
         else:
             regular_parts.append(sentence)
