@@ -217,6 +217,8 @@ def extract_day_number_at_start(text):
         return None
     if re.match(r'^\d{1,2}\s*[;:]', cleaned):
         return None
+    if re.match(r'^\d{1,2}\s*,\s*(?:Gospel|Ep(?:istle)?\b|Res\.?\s*Gospel\b)', cleaned, re.IGNORECASE):
+        return None
     if re.match(r'^\d\s+(?:Tim|Cor|Pet|John|Kgs|Sam|Chr|Thess|Macc|Ki|Sa|Co|Ti|Pe|Jo)', cleaned, re.IGNORECASE):
         return None
 
