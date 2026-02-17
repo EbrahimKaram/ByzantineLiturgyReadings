@@ -378,6 +378,22 @@ def split_following_notes(notes):
     if not notes:
         return (None, None)
 
+    normalized_notes = WHITESPACE_RE.sub(' ', notes).strip()
+
+    # Handle inline patterns like:
+    # "THOMAS SUNDAY ... Gospel ... Following week readings ..."
+    inline_following_match = re.search(r'\bfollowing\b', normalized_notes, re.IGNORECASE)
+    if inline_following_match:
+        before = normalized_notes[:inline_following_match.start()].strip()
+        after = normalized_notes[inline_following_match.start():].strip()
+
+        before = re.sub(r'^[\s,;:.\-]+|[\s,;:.\-]+$', '', before)
+        after = re.sub(r'^[\s,;:.\-]+|[\s,;:.\-]+$', '', after)
+
+        following_text = after or None
+        regular_text = before or None
+        return (following_text, regular_text)
+
     sentences = [part.strip() for part in re.split(r'(?<=[.!?])\s+', notes) if part.strip()]
     following_parts = []
     regular_parts = []
