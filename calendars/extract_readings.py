@@ -37,6 +37,16 @@ TRAILING_REFERENCE_NOISE_RE = re.compile(
 )
 TRAILING_OVERLAY_DAY_RE = re.compile(r'\s*/\s*\d{1,2}\b.*$')
 
+MOJIBAKE_REPLACEMENTS = {
+    "â€“": "–",
+    "â€”": "—",
+    "â€˜": "‘",
+    "â€™": "’",
+    "â€œ": "“",
+    "â€": "”",
+    "Â": ""
+}
+
 MONTH_MAP = {
     "january": "01", "february": "02", "march": "03", "april": "04", "may": "05", "june": "06",
     "july": "07", "august": "08", "september": "09", "october": "10", "november": "11", "december": "12"
@@ -54,15 +64,33 @@ def clean_string(s):
     # Remove leading/trailing punctuation and whitespace
     return re.sub(r'^[;:,.\-\s]+|[;:,.\-\s]+$', '', s.strip())
 
+def normalize_mojibake(text):
+    if not text:
+        return text
+
+    normalized = str(text)
+    for broken, fixed in MOJIBAKE_REPLACEMENTS.items():
+        normalized = normalized.replace(broken, fixed)
+    return normalized
+
 def normalize_scripture_reference(value):
-    text = clean_string(value)
+    text = clean_string(normalize_mojibake(value))
     if not text:
         return None
 
     text = re.sub(r'\b(?:Great\s+blessing\s+of\s+water|Holy\s+Day\s+of\s+Obligation)\b.*$', '', text, flags=re.IGNORECASE)
     text = TRAILING_REFERENCE_NOISE_RE.sub('', text)
     text = TRAILING_OVERLAY_DAY_RE.sub('', text)
-    text = re.sub(r'(?<=\d)\s*([\-–])\s*(?=\d)', r'\1', text)
+    text = text.replace(chr(0x2013), '-')
+    text = text.replace(chr(0x2014), '-')
+
+    chars = list(text)
+    for idx in range(1, len(chars) - 1):
+        if ord(chars[idx]) in (0x00E2, 0x00C3) and chars[idx - 1].isdigit() and chars[idx + 1].isdigit():
+            chars[idx] = '-'
+    text = ''.join(chars)
+
+    text = re.sub(r'(?<=\d)\s*-\s*(?=\d)', '-', text)
     text = WHITESPACE_RE.sub(' ', text).strip()
     return clean_string(text)
 
@@ -91,6 +119,7 @@ def parse_reading_text(text):
     # Start with a clean working copy
     work_text = TAGS_RE.sub(' ', text)
     work_text = WHITESPACE_RE.sub(' ', work_text).strip()
+    work_text = normalize_mojibake(work_text)
 
     # Extract country-specific holidays early so they don't remain in title/notes
     work_text, canada_holiday, usa_holiday = extract_country_holidays(work_text)
