@@ -256,6 +256,24 @@ def extract_day_number_at_start(text):
 
     return None
 
+def replace_day_number_at_start(text, old_day, new_day):
+    if not text:
+        return text
+    cleaned = str(text).strip()
+    
+    fasting_prefixed = re.match(
+        r'^((?:Common\s+Abstinence|Strict\s+Abstinence|Strict\s+Fast(?:\s+and\s+abstinence)?|Dispensation(?:\s*\([^)]+\))?)\s+)' + str(old_day) + r'(?=\s|$|[;:,\-–()./])',
+        cleaned,
+        re.IGNORECASE
+    )
+    if fasting_prefixed:
+        return text[:fasting_prefixed.end(1)] + str(new_day) + text[fasting_prefixed.end():]
+    
+    day_match = re.match(r'^' + str(old_day) + r'(?=\s|$|[;:,\-–()./])', cleaned)
+    if day_match:
+        return str(new_day) + text[day_match.end():]
+    return text
+
 def is_weekday_header_row(row):
     if not row:
         return False
@@ -735,10 +753,6 @@ def process_pdfs(root_dir):
                                     if not combined_cells[col_idx]:
                                         continue
 
-                                    explicit_day = extract_day_number_at_start(combined_cells[col_idx])
-                                    if explicit_day:
-                                        continue
-
                                     expected_day = expected_by_col[col_idx]
                                     if not expected_day:
                                         continue
@@ -793,6 +807,10 @@ def process_pdfs(root_dir):
 
                                     if not entry_days:
                                         continue
+
+                                    explicit_day = extract_day_number_at_start(cleaned_cell)
+                                    if explicit_day and explicit_day != base_day:
+                                        cleaned_cell = replace_day_number_at_start(cleaned_cell, explicit_day, base_day)
 
                                     yy = year[-2:]
                                     mm = month_num
