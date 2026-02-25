@@ -248,7 +248,7 @@ def extract_day_number_at_start(text):
         return None
     if re.match(r'^\d{1,2}\s*,\s*(?:Gospel|Ep(?:istle)?\b|Res\.?\s*Gospel\b)', cleaned, re.IGNORECASE):
         return None
-    if re.match(r'^\d\s+(?:Tim|Cor|Pet|John|Kgs|Sam|Chr|Thess|Macc|Ki|Sa|Co|Ti|Pe|Jo)', cleaned, re.IGNORECASE):
+    if re.match(r'^\d\s+(?:Tim|Cor|Pet|John|Kgs|Sam|Chr|Thess|Macc)[a-z]*\b', cleaned, re.IGNORECASE):
         return None
 
     if 1 <= day_num <= 31:
@@ -744,7 +744,7 @@ def process_pdfs(root_dir):
                                         continue
 
                                     current_day = day_numbers[col_idx]
-                                    if current_day is None or abs(current_day - expected_day) > 1:
+                                    if current_day is None or current_day != expected_day:
                                         day_numbers[col_idx] = expected_day
 
                                 # Infer missing days by week-column distance from nearest known cells.
