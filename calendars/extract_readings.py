@@ -74,7 +74,7 @@ def normalize_mojibake(text):
     return normalized
 
 def normalize_scripture_reference(value):
-    text = clean_string(normalize_mojibake(value))
+    text = clean_string(value)
     if not text:
         return None
 
@@ -221,6 +221,13 @@ def extract_day_number_at_start(text):
         return None
 
     cleaned = str(text).strip()
+    if not cleaned:
+        return None
+
+    # Fast fail: If it doesn't start with a digit or 'Common'/'Strict'/'Dispensation', skip heavy regex
+    first_char = cleaned[0].upper()
+    if not (first_char.isdigit() or first_char in ('C', 'S', 'D', 'A')):
+        return None
 
     # Avoid misclassifying ordinal titles (e.g., "1st SUNDAY ...") as day numbers.
     if re.match(r'^\d{1,2}(?:st|nd|rd|th)\b', cleaned, re.IGNORECASE):
@@ -336,21 +343,24 @@ def get_logical_cell_bbox(table, row_idx, logical_col_idx, group_width):
 
 def merge_unique_parts(parts):
     merged = []
+    seen = set()
+    
     for part in parts:
         text = (part or '').strip()
         if not text:
             continue
 
-        skip = False
-        for existing in merged:
-            if text == existing or text in existing:
-                skip = True
-                break
-        if skip:
+        # Check if we've seen this exact text before
+        if text in seen:
             continue
-
-        merged = [existing for existing in merged if existing not in text]
+            
+        # Check if text is a substring of something we've already collected
+        # (This remains O(N), but 'merged' is usually very small)
+        if any(text in existing for existing in merged):
+            continue
+            
         merged.append(text)
+        seen.add(text)
 
     return "\n".join(merged) if merged else None
 
