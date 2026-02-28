@@ -489,26 +489,54 @@ def raw_text_quality_score(text):
     digit_only_penalty = -100 if re.fullmatch(r'\d{1,2}', normalized) else 0
     return (alpha_count * 10) + len(normalized) + digit_only_penalty
 
-def extract_overlay_day_numbers(text):
+def extract_overlay_day_numbers(text, base_day=None):
     if not text:
         return []
 
-    one_line = WHITESPACE_RE.sub(' ', str(text)).strip()
-    match = re.match(r'^(\d{1,2})(?:\s*/\s*(\d{1,2}))+', one_line)
-    if not match:
-        return []
-
+    text_str = str(text)
     days = []
-    for value in re.findall(r'\d{1,2}', match.group(0)):
-        day_num = int(value)
-        if 1 <= day_num <= 31 and day_num not in days:
-            days.append(day_num)
 
-    # Also handle embedded overlay markers such as "/ 31" that may appear later in the cell.
+    # 1. Standard slash-separated overlay (e.g., "23 / 30")
+    one_line = WHITESPACE_RE.sub(' ', text_str).strip()
+    match = re.match(r'^(\d{1,2})(?:\s*/\s*(\d{1,2}))+', one_line)
+    if match:
+        for value in re.findall(r'\d{1,2}', match.group(0)):
+            day_num = int(value)
+            if 1 <= day_num <= 31 and day_num not in days:
+                days.append(day_num)
+
+    # 2. Embedded slash overlay (e.g., "... / 31")
     for value in re.findall(r'(?:(?<=\s)|(?<=^))/\s*(\d{1,2})(?=\b)', one_line):
         day_num = int(value)
         if 1 <= day_num <= 31 and day_num not in days:
             days.append(day_num)
+
+    # 3. Stacked/Vertical overlay (e.g. "23 ... \n30 ...")
+    # Only look for this if we have a base_day (the primary day of the cell)
+    if base_day:
+        next_week_day = base_day + 7
+        # We only expect this towards the end of the month (e.g. > 20)
+        if base_day > 20 and next_week_day <= 31:
+            # Check if this specific next_week_day exists as a standalone token in the text
+            # We look for it preceded by newline or start of string, because in stacked cells 
+            # the day number is usually on its own line or start of line.
+            # We must be careful not to match scripture chapter/verse.
+            
+            # Regex: 
+            # (?:\A|[\n\r])      -> Start of string or newline
+            # \s*                -> optional whitespace
+            # (next_week_day)    -> our target number
+            # (?=\s|$)           -> followed by whitespace or end of string
+            # 
+            # We also want to avoid matches like "Psalm 30" or "Matt 30:1".
+            # The capture group ensures we get the number.
+            
+            pattern = r'(?:^|[\n\r])\s*(' + str(next_week_day) + r')(?=\s|$)'
+            found = re.search(pattern, text_str)
+            if found:
+                found_day = int(found.group(1))
+                if found_day not in days:
+                    days.append(found_day)
 
     return days
 
@@ -756,20 +784,66 @@ def process_table_month(table, page, year, month_num, month_name_raw):
             if base_day and 1 <= base_day <= 31:
                 entry_days.append(base_day)
 
-            for overlay_day in extract_overlay_day_numbers(cleaned_cell):
+            for overlay_day in extract_overlay_day_numbers(cleaned_cell, base_day):
                 if overlay_day not in entry_days:
                     entry_days.append(overlay_day)
-
+            
             if not entry_days:
                 continue
+            
+            # Create entries for each identified day
+            # For cells with multiple days (overlays), we need to SPLIT the text 
+            # so that the second day gets its own content, not just a copy of the whole cell.
+            
+            cell_text_map = { d: cleaned_cell for d in entry_days }
+            
+            # Attempt to split text if we have multiple days and they seem stacked
+            if len(entry_days) > 1:
+                sorted_days = sorted(entry_days)
+                # Simple heuristic: If we found a "stacked" day (day[i+1] = day[i] + 7), 
+                # try to split the text at that number.
+                
+                # We only support splitting 2 stacked days for now as that's the common case.
+                if len(sorted_days) == 2 and sorted_days[1] == sorted_days[0] + 7:
+                    d1, d2 = sorted_days
+                    
+                    # Find the split point (the appearance of d2 on a new line or start line)
+                    # Support both stacked (newline + d2) and slash ( / d2 ) formats
+                    
+                    # Pattern 1: Stacked - (\n or ^) + whitespace + d2 + (whitespace or $)
+                    p_stack = r'(?:^|[\n\r])\s*(' + str(d2) + r')(?=\s|$)'
+                    
+                    # Pattern 2: Slash - / + whitespace + d2 + (whitespace or $)
+                    # We look for slash preceded by space or newline, and followed by d2
+                    p_slash = r'(?:^|\s)/\s*(' + str(d2) + r')(?=\s|$)'
+                    
+                    split_match = re.search(p_stack, cleaned_cell)
+                    if not split_match:
+                        split_match = re.search(p_slash, cleaned_cell)
+                    
+                    if split_match:
+                        split_start = split_match.start()
+                        d2_start_idx = split_match.start(1) # The start of the number itself
+                        
+                        # d1 text is everything before the match start
+                        # (in slash case, before the /)
+                        t1 = cleaned_cell[:split_start].strip()
+                        
+                        # d2 text is everything from the number onwards
+                        # (skipping the split pattern prefix like \n or / )
+                        t2 = cleaned_cell[d2_start_idx:].strip()
+                        
+                        cell_text_map[d1] = t1
+                        cell_text_map[d2] = t2
 
             explicit_day = extract_day_number_at_start(cleaned_cell)
-            if explicit_day and explicit_day != base_day:
-                cleaned_cell = replace_day_number_at_start(cleaned_cell, explicit_day, base_day)
-
+            
             yy = year[-2:]
             mm = month_num
             for day_num in entry_days:
+                # Get the specific text for this day
+                day_raw_text = cell_text_map.get(day_num, cleaned_cell)
+                
                 dd = f"{day_num:02d}"
                 date_id = f"{mm}{dd}{yy}"
                 new_entry = {
@@ -777,7 +851,7 @@ def process_table_month(table, page, year, month_num, month_name_raw):
                     "Year": year,
                     "Month": month_name_raw,
                     "Day": day_num,
-                    "Raw Text": cleaned_cell
+                    "Raw Text": day_raw_text
                 }
                 results.append(new_entry)
     
