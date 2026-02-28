@@ -37,6 +37,9 @@ TRAILING_REFERENCE_NOISE_RE = re.compile(
 )
 TRAILING_OVERLAY_DAY_RE = re.compile(r'\s*/\s*\d{1,2}\b.*$')
 
+# Regex for detecting double feasts splittable by "Nth Sunday" pattern
+DOUBLE_FEAST_SPLIT_RE = re.compile(r'(?<=\.)\s+(?=\d+(?:st|nd|rd|th)\s+Sunday)', re.IGNORECASE)
+
 # Day Extraction Regexes
 ORDINAL_DAY_RE = re.compile(r'^\d{1,2}(?:st|nd|rd|th)\b', re.IGNORECASE)
 FASTING_PREFIX_RE = re.compile(
@@ -573,6 +576,41 @@ def dedupe_entries_by_date(entries):
 
     return list(deduped_by_date.values())
 
+def detect_and_split_double_entry(entry):
+    """
+    Detects if an entry contains two distinct feasts (e.g., Encounter + Sunday)
+    and splits them into two separate entries.
+    """
+    raw_text = entry.get("Raw Text", "")
+    
+    # Check for split pattern: ". <Number>th Sunday"
+    match = DOUBLE_FEAST_SPLIT_RE.search(raw_text)
+    if not match:
+        return [entry]
+        
+    part1_text = raw_text[:match.start()].strip()
+    part2_text = raw_text[match.end():].strip()
+    
+    # Heuristic check: Both parts should contain at least one reading keyword
+    reading_kw_re = re.compile(r'Epistle|Gospel|Ep\.|G\s*:', re.IGNORECASE)
+    
+    # Check part 1
+    if not reading_kw_re.search(part1_text):
+        return [entry]
+        
+    # Check part 2
+    if not reading_kw_re.search(part2_text):
+         return [entry]
+         
+    # If valid, create two entries
+    entry1 = entry.copy()
+    entry1["Raw Text"] = part1_text
+    
+    entry2 = entry.copy()
+    entry2["Raw Text"] = part2_text
+    
+    return [entry1, entry2]
+
 def is_holy_day_of_obligation(entry):
     try:
         mm = int(entry["Date"][:2])
@@ -915,7 +953,12 @@ def process_pdfs(root_dir):
                 print(f"    Error processing {pdf_file.name}: {e}")
 
     deduped_results = dedupe_entries_by_date(results)
-    return [enrich_entry(entry) for entry in deduped_results]
+    
+    final_results = []
+    for entry in deduped_results:
+        final_results.extend(detect_and_split_double_entry(entry))
+
+    return [enrich_entry(entry) for entry in final_results]
 
 def main():
     calendars_dir = Path(__file__).parent
