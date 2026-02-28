@@ -278,19 +278,23 @@ def is_weekday_header_row(row):
     if not row:
         return False
 
-    tokens = []
+    weekday_hits = 0
     for cell in row[:7]:
         if not cell:
             continue
-        first = re.split(r'\s+', cell.strip().lower())[0]
-        first = re.sub(r'[^a-z]', '', first)
-        if first:
-            tokens.append(first)
+        
+        # Fast path check
+        text = cell.strip().lower()
+        if not text:
+            continue
+            
+        # Simple extraction of first word characters
+        first_part = text.split()[0]
+        cleaned = "".join(c for c in first_part if c.isalpha())
+        
+        if cleaned in WEEKDAY_TOKENS:
+            weekday_hits += 1
 
-    if len(tokens) < 4:
-        return False
-
-    weekday_hits = sum(1 for token in tokens if token in WEEKDAY_TOKENS)
     return weekday_hits >= 4
 
 def get_table_cell_bbox(table, row_idx, col_idx):
@@ -571,21 +575,220 @@ def write_output_files(calendars_dir, sorted_data):
 
     print(f"Extraction complete. Saved to {csv_output}")
 
+def process_table_month(table, page, year, month_num, month_name_raw):
+    """
+    Extracts readings from a single table if it matches the month structure.
+    Returns a list of result dictionaries.
+    """
+    results = []
+    extracted_rows = table.extract() or []
+    if not extracted_rows:
+        return []
+
+    normalized_rows = []
+    group_width = 1
+    for row_idx, row in enumerate(extracted_rows):
+        collapsed_row, row_group_width = collapse_row_to_7_columns(row)
+        if row_group_width > group_width:
+            group_width = row_group_width
+        normalized_rows.append((row_idx, collapsed_row))
+
+    # Calculate validation metrics for this month
+    cal_first_weekday, cal_days_in_m = calendar.monthrange(int(year), int(month_num))
+    # (Monday(0) + 1) % 7 = Column 1. (Sunday(6) + 1) % 7 = Column 0.
+    expected_start_col = (cal_first_weekday + 1) % 7
+
+    week_blocks = []
+    current_block = None
+
+    for row_idx, row in normalized_rows:
+        if is_weekday_header_row(row):
+            continue
+
+        cells = row[:7]
+        days_found = [] 
+        for c_i, c_val in enumerate(cells):
+            d_val = extract_day_number_at_start(c_val)
+            if d_val:
+                days_found.append((c_i, d_val))
+
+        is_valid_week = False
+        if len(days_found) >= 2:
+            is_valid_week = True
+        elif len(days_found) == 1:
+            col, val = days_found[0]
+            # Case A: It's the 1st of the month
+            if val == 1 and col == expected_start_col:
+                is_valid_week = True
+            # Case B: It's the end of the month
+            elif val >= 28 and val <= cal_days_in_m:
+                is_valid_week = True
+
+        if is_valid_week:
+            if current_block:
+                week_blocks.append(current_block)
+            current_block = {
+                "start_row_idx": row_idx,
+                "rows": [row]
+            }
+        elif current_block:
+            current_block["rows"].append(row)
+
+    if current_block:
+        week_blocks.append(current_block)
+
+    # Smart Anchoring: Find the block that actually contains the start of the month
+    start_block_index = 0
+    found_start = False
+    
+    for idx, block in enumerate(week_blocks):
+        if found_start:
+            break
+        row = block["rows"][0]
+        cells = row[:7]
+        for col_idx, cell_text in enumerate(cells):
+            day_val = extract_day_number_at_start(cell_text)
+            if not day_val:
+                continue
+            
+            expected_val = col_idx - expected_start_col + 1
+            if 1 <= day_val <= 7 and day_val == expected_val:
+                start_block_index = idx
+                found_start = True
+                break
+    
+    week_blocks = week_blocks[start_block_index:]
+
+    for block_idx, block in enumerate(week_blocks):
+        block_rows = block["rows"]
+        start_row_idx = block["start_row_idx"]
+
+        combined_cells = [None] * 7
+        day_numbers = [None] * 7
+        explicit_day_numbers = [None] * 7
+
+        for col_idx in range(7):
+            parts = [row[col_idx] for row in block_rows if row[col_idx]]
+            combined_cell = merge_unique_parts(parts)
+            combined_cells[col_idx] = combined_cell.strip() if combined_cell else None
+            if not combined_cells[col_idx]:
+                continue
+
+            day_num = extract_day_number_at_start(combined_cells[col_idx])
+            if day_num:
+                explicit_day_numbers[col_idx] = day_num
+            if not day_num:
+                bbox = get_logical_cell_bbox(table, start_row_idx, col_idx, group_width)
+                day_num = extract_day_from_cell_style(page, bbox)
+            day_numbers[col_idx] = day_num
+
+        base_candidates = [
+            explicit_day_numbers[col_idx] - col_idx
+            for col_idx in range(7)
+            if explicit_day_numbers[col_idx]
+        ]
+
+        if base_candidates:
+            block_base_day = Counter(base_candidates).most_common(1)[0][0]
+        else:
+            block_base_day = 1 - expected_start_col + (block_idx * 7)
+
+        expected_by_col = [None] * 7
+        for col_idx in range(7):
+            expected_day = block_base_day + col_idx
+            if 1 <= expected_day <= cal_days_in_m:
+                expected_by_col[col_idx] = expected_day
+
+        for col_idx in range(7):
+            if not combined_cells[col_idx]:
+                continue
+            expected_day = expected_by_col[col_idx]
+            if not expected_day:
+                continue
+            current_day = day_numbers[col_idx]
+            if current_day is None or current_day != expected_day:
+                day_numbers[col_idx] = expected_day
+
+        # Infer missing days
+        for col_idx in range(7):
+            if not combined_cells[col_idx] or day_numbers[col_idx]:
+                continue
+            left_idx = None
+            for i in range(col_idx - 1, -1, -1):
+                if day_numbers[i]:
+                    left_idx = i
+                    break
+            right_idx = None
+            for i in range(col_idx + 1, 7):
+                if day_numbers[i]:
+                    right_idx = i
+                    break
+            inferred = None
+            if left_idx is not None and right_idx is not None:
+                span = right_idx - left_idx
+                if (day_numbers[right_idx] - day_numbers[left_idx]) == span:
+                    inferred = day_numbers[left_idx] + (col_idx - left_idx)
+            elif left_idx is not None:
+                inferred = day_numbers[left_idx] + (col_idx - left_idx)
+            elif right_idx is not None:
+                inferred = day_numbers[right_idx] - (right_idx - col_idx)
+
+            if inferred and 1 <= inferred <= 31:
+                day_numbers[col_idx] = inferred
+
+        for col_idx in range(7):
+            cleaned_cell = combined_cells[col_idx]
+            if not cleaned_cell:
+                continue
+
+            entry_days = []
+            base_day = day_numbers[col_idx]
+            if base_day and 1 <= base_day <= 31:
+                entry_days.append(base_day)
+
+            for overlay_day in extract_overlay_day_numbers(cleaned_cell):
+                if overlay_day not in entry_days:
+                    entry_days.append(overlay_day)
+
+            if not entry_days:
+                continue
+
+            explicit_day = extract_day_number_at_start(cleaned_cell)
+            if explicit_day and explicit_day != base_day:
+                cleaned_cell = replace_day_number_at_start(cleaned_cell, explicit_day, base_day)
+
+            yy = year[-2:]
+            mm = month_num
+            for day_num in entry_days:
+                dd = f"{day_num:02d}"
+                date_id = f"{mm}{dd}{yy}"
+                new_entry = {
+                    "Date": date_id,
+                    "Year": year,
+                    "Month": month_name_raw,
+                    "Day": day_num,
+                    "Raw Text": cleaned_cell
+                }
+                results.append(new_entry)
+    
+    return results
+
 def process_pdfs(root_dir):
     results = []
     
     root_path = Path(root_dir)
-    for year_dir in root_path.glob("20*"):
+    # Ensure deterministic processing order
+    for year_dir in sorted(root_path.glob("20*")):
         if not year_dir.is_dir():
             continue
             
         year = year_dir.name
         print(f"Processing year {year}...")
         
-        for pdf_file in year_dir.glob("*.pdf"):
+        pdf_files = sorted(year_dir.glob("*.pdf"))
+        for pdf_file in pdf_files:
             print(f"  Processing file: {pdf_file.name}")
             
-            # extract month from filename key
             parts = pdf_file.stem.split()
             month_name_raw = parts[-1] if len(parts) > 1 else pdf_file.stem
             month_num = MONTH_MAP.get(month_name_raw.lower())
@@ -596,236 +799,14 @@ def process_pdfs(root_dir):
 
             try:
                 with pdfplumber.open(pdf_file) as pdf:
-                    for page_idx, page in enumerate(pdf.pages):
+                    for page in pdf.pages:
                         tables = page.find_tables()
-
                         if not tables:
                             continue
 
                         for table in tables:
-                            extracted_rows = table.extract() or []
-                            if not extracted_rows:
-                                continue
-
-                            normalized_rows = []
-                            group_width = 1
-                            for row_idx, row in enumerate(extracted_rows):
-                                collapsed_row, row_group_width = collapse_row_to_7_columns(row)
-                                if row_group_width > group_width:
-                                    group_width = row_group_width
-                                normalized_rows.append((row_idx, collapsed_row))
-
-                            # Calculate validation metrics for this month
-                            # calendar.monthrange returns (weekday_of_first, days_in_month)
-                            # weekday: 0=Mon ... 6=Sun
-                            # We assume Table Columns are: Sun=0, Mon=1 ... Sat=6
-                            cal_first_weekday, cal_days_in_m = calendar.monthrange(int(year), int(month_num))
-                            
-                            # (Monday(0) + 1) % 7 = Column 1. (Sunday(6) + 1) % 7 = Column 0.
-                            expected_start_col = (cal_first_weekday + 1) % 7
-                            
-                            # track the last day's expected column?
-                            # last_weekday_python = (cal_first_weekday + cal_days_in_m - 1) % 7
-                            # expected_end_col = (last_weekday_python + 1) % 7
-
-                            week_blocks = []
-                            current_block = None
-
-                            for row_idx, row in normalized_rows:
-                                if is_weekday_header_row(row):
-                                    continue
-
-                                # Enhanced Check:
-                                # 1. Extract all numbers
-                                # 2. If >= 2 numbers -> valid week
-                                # 3. If 1 number -> Valid ONLY if it is '1' in expected_start_col 
-                                #                   OR it is 'days_in_month' (roughly) near end of rows
-                                
-                                cells = row[:7]
-                                days_found = [] # list of (col_idx, value)
-                                for c_i, c_val in enumerate(cells):
-                                    d_val = extract_day_number_at_start(c_val)
-                                    if d_val:
-                                        days_found.append((c_i, d_val))
-
-                                is_valid_week = False
-                                if len(days_found) >= 2:
-                                    is_valid_week = True
-                                elif len(days_found) == 1:
-                                    # Single day row edge case logic
-                                    col, val = days_found[0]
-                                    
-                                    # Case A: It's the 1st of the month
-                                    if val == 1 and col == expected_start_col:
-                                        is_valid_week = True
-                                    
-                                    # Case B: It's the end of the month (e.g. 30, 31)
-                                    # We allow it if it's > 25 to be safe
-                                    elif val >= 28 and val <= cal_days_in_m:
-                                        is_valid_week = True
-
-                                if is_valid_week:
-                                    if current_block:
-                                        week_blocks.append(current_block)
-                                    current_block = {
-                                        "start_row_idx": row_idx,
-                                        "rows": [row]
-                                    }
-                                elif current_block:
-                                    current_block["rows"].append(row)
-
-                            if current_block:
-                                week_blocks.append(current_block)
-
-                            # Smart Anchoring: Find the block that actually contains the start of the month
-                            # We look for a cell with value '1' (or '2', '3') in the expected column.
-                            start_block_index = 0
-                            found_start = False
-                            
-                            for idx, block in enumerate(week_blocks):
-                                if found_start:
-                                    break
-                                # Check the first row of each block
-                                row = block["rows"][0]
-                                cells = row[:7]
-                                for col_idx, cell_text in enumerate(cells):
-                                    day_val = extract_day_number_at_start(cell_text)
-                                    if not day_val:
-                                        continue
-                                    
-                                    # Calculate what day SHOULD be here if this is the first week
-                                    # Expected Day = (Column Index - Start Column) + 1
-                                    # e.g. If StartCol=4 (Thu), and we are at Col 4, Expected=1.
-                                    expected_val = col_idx - expected_start_col + 1
-                                    
-                                    # Allow a small margin of error or exact match
-                                    # We focus on finding Day 1..7
-                                    if 1 <= day_val <= 7 and day_val == expected_val:
-                                        start_block_index = idx
-                                        found_start = True
-                                        break
-                            
-                            # Slice from the detected start
-                            week_blocks = week_blocks[start_block_index:]
-    
-                            for block_idx, block in enumerate(week_blocks):
-                                block_rows = block["rows"]
-                                start_row_idx = block["start_row_idx"]
-
-                                combined_cells = [None] * 7
-                                day_numbers = [None] * 7
-                                explicit_day_numbers = [None] * 7
-
-                                for col_idx in range(7):
-                                    parts = [row[col_idx] for row in block_rows if row[col_idx]]
-                                    combined_cell = merge_unique_parts(parts)
-                                    combined_cells[col_idx] = combined_cell.strip() if combined_cell else None
-                                    if not combined_cells[col_idx]:
-                                        continue
-
-                                    day_num = extract_day_number_at_start(combined_cells[col_idx])
-                                    if day_num:
-                                        explicit_day_numbers[col_idx] = day_num
-                                    if not day_num:
-                                        bbox = get_logical_cell_bbox(table, start_row_idx, col_idx, group_width)
-                                        day_num = extract_day_from_cell_style(page, bbox)
-                                    day_numbers[col_idx] = day_num
-
-                                # Guard against day drift: each week block has a narrow expected day range by column.
-                                expected_by_col = [None] * 7
-                                base_candidates = [
-                                    explicit_day_numbers[col_idx] - col_idx
-                                    for col_idx in range(7)
-                                    if explicit_day_numbers[col_idx]
-                                ]
-
-                                if base_candidates:
-                                    block_base_day = Counter(base_candidates).most_common(1)[0][0]
-                                else:
-                                    block_base_day = 1 - expected_start_col + (block_idx * 7)
-
-                                for col_idx in range(7):
-                                    expected_day = block_base_day + col_idx
-                                    if 1 <= expected_day <= cal_days_in_m:
-                                        expected_by_col[col_idx] = expected_day
-
-                                for col_idx in range(7):
-                                    if not combined_cells[col_idx]:
-                                        continue
-
-                                    expected_day = expected_by_col[col_idx]
-                                    if not expected_day:
-                                        continue
-
-                                    current_day = day_numbers[col_idx]
-                                    if current_day is None or current_day != expected_day:
-                                        day_numbers[col_idx] = expected_day
-
-                                # Infer missing days by week-column distance from nearest known cells.
-                                for col_idx in range(7):
-                                    if not combined_cells[col_idx] or day_numbers[col_idx]:
-                                        continue
-
-                                    left_idx = None
-                                    for i in range(col_idx - 1, -1, -1):
-                                        if day_numbers[i]:
-                                            left_idx = i
-                                            break
-
-                                    right_idx = None
-                                    for i in range(col_idx + 1, 7):
-                                        if day_numbers[i]:
-                                            right_idx = i
-                                            break
-
-                                    inferred = None
-                                    if left_idx is not None and right_idx is not None:
-                                        span = right_idx - left_idx
-                                        if (day_numbers[right_idx] - day_numbers[left_idx]) == span:
-                                            inferred = day_numbers[left_idx] + (col_idx - left_idx)
-                                    elif left_idx is not None:
-                                        inferred = day_numbers[left_idx] + (col_idx - left_idx)
-                                    elif right_idx is not None:
-                                        inferred = day_numbers[right_idx] - (right_idx - col_idx)
-
-                                    if inferred and 1 <= inferred <= 31:
-                                        day_numbers[col_idx] = inferred
-
-                                for col_idx in range(7):
-                                    cleaned_cell = combined_cells[col_idx]
-                                    if not cleaned_cell:
-                                        continue
-
-                                    entry_days = []
-                                    base_day = day_numbers[col_idx]
-                                    if base_day and 1 <= base_day <= 31:
-                                        entry_days.append(base_day)
-
-                                    for overlay_day in extract_overlay_day_numbers(cleaned_cell):
-                                        if overlay_day not in entry_days:
-                                            entry_days.append(overlay_day)
-
-                                    if not entry_days:
-                                        continue
-
-                                    explicit_day = extract_day_number_at_start(cleaned_cell)
-                                    if explicit_day and explicit_day != base_day:
-                                        cleaned_cell = replace_day_number_at_start(cleaned_cell, explicit_day, base_day)
-
-                                    yy = year[-2:]
-                                    mm = month_num
-                                    for day_num in entry_days:
-                                        dd = f"{day_num:02d}"
-                                        date_id = f"{mm}{dd}{yy}"
-                                        new_entry = {
-                                            "Date": date_id,
-                                            "Year": year,
-                                            "Month": month_name_raw,
-                                            "Day": day_num,
-                                            "Raw Text": cleaned_cell
-                                        }
-                                        results.append(new_entry)
-                                
+                            table_results = process_table_month(table, page, year, month_num, month_name_raw)
+                            results.extend(table_results)
                     # Table cell text already contains full daily content; no cross-cell merging needed.
 
             except Exception as e:
