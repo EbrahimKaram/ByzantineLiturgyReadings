@@ -37,6 +37,25 @@ TRAILING_REFERENCE_NOISE_RE = re.compile(
 )
 TRAILING_OVERLAY_DAY_RE = re.compile(r'\s*/\s*\d{1,2}\b.*$')
 
+# Day Extraction Regexes
+ORDINAL_DAY_RE = re.compile(r'^\d{1,2}(?:st|nd|rd|th)\b', re.IGNORECASE)
+FASTING_PREFIX_RE = re.compile(
+    r'^(?:Common\s+Abstinence|Strict\s+Abstinence|Strict\s+Fast(?:\s+and\s+abstinence)?|Dispensation(?:\s*\([^)]+\))?)\s+(\d{1,2})(?=\s|$|[;:,\-–()./])',
+    re.IGNORECASE
+)
+DAY_START_RE = re.compile(r'^(\d{1,2})(?=\s|$|[;:,\-–()./])')
+INVALID_DAY_RANGE_RE = re.compile(r'^\d{1,2}\s*[\-–]\s*\d+')
+INVALID_DAY_PUNCT_RE = re.compile(r'^\d{1,2}\s*[;:]')
+INVALID_DAY_CONTEXT_RE = re.compile(r'^\d{1,2}\s*,\s*(?:Gospel|Ep(?:istle)?\b|Res\.?\s*Gospel\b)', re.IGNORECASE)
+SCRIPTURE_CHAPTER_RE = re.compile(r'^\d\s+(?:Tim|Cor|Pet|John|Kgs|Sam|Chr|Thess|Macc)[a-z]*\b', re.IGNORECASE)
+
+# Title Cleaning Regexes
+HOLY_DAY_OBLIGATION_RE = re.compile(r'\bHoly\s+Day\s+of\s+Obligation\b\.?', re.IGNORECASE)
+CLEAN_SPACES_RE = re.compile(r'\s{2,}')
+Clean_PUNCT_SPACE_RE = re.compile(r'\s+([,.;:])')
+CLEAN_DOUBLE_PUNCT_RE = re.compile(r'([,.;:]){2,}')
+CLEAN_TRIM_PUNCT_RE = re.compile(r'^[\s,.;:]+|[\s,.;:]+$')
+
 MOJIBAKE_REPLACEMENTS = {
     "â€“": "–",
     "â€”": "—",
@@ -230,34 +249,30 @@ def extract_day_number_at_start(text):
         return None
 
     # Avoid misclassifying ordinal titles (e.g., "1st SUNDAY ...") as day numbers.
-    if re.match(r'^\d{1,2}(?:st|nd|rd|th)\b', cleaned, re.IGNORECASE):
+    if ORDINAL_DAY_RE.match(cleaned):
         return None
 
     # Handle rows where fasting text precedes the day number at the start of the cell.
-    fasting_prefixed = re.match(
-        r'^(?:Common\s+Abstinence|Strict\s+Abstinence|Strict\s+Fast(?:\s+and\s+abstinence)?|Dispensation(?:\s*\([^)]+\))?)\s+(\d{1,2})(?=\s|$|[;:,\-–()./])',
-        cleaned,
-        re.IGNORECASE
-    )
+    fasting_prefixed = FASTING_PREFIX_RE.match(cleaned)
     if fasting_prefixed:
         day_num = int(fasting_prefixed.group(1))
         if 1 <= day_num <= 31:
             return day_num
 
-    day_match = re.match(r'^(\d{1,2})(?=\s|$|[;:,\-–()./])', cleaned)
+    day_match = DAY_START_RE.match(cleaned)
     if not day_match:
         return None
 
-    day_num = int(day_match.group(1))
-    if re.match(r'^\d{1,2}\s*[\-–]\s*\d+', cleaned):
+    if INVALID_DAY_RANGE_RE.match(cleaned):
         return None
-    if re.match(r'^\d{1,2}\s*[;:]', cleaned):
+    if INVALID_DAY_PUNCT_RE.match(cleaned):
         return None
-    if re.match(r'^\d{1,2}\s*,\s*(?:Gospel|Ep(?:istle)?\b|Res\.?\s*Gospel\b)', cleaned, re.IGNORECASE):
+    if INVALID_DAY_CONTEXT_RE.match(cleaned):
         return None
-    if re.match(r'^\d\s+(?:Tim|Cor|Pet|John|Kgs|Sam|Chr|Thess|Macc)[a-z]*\b', cleaned, re.IGNORECASE):
+    if SCRIPTURE_CHAPTER_RE.match(cleaned):
         return None
 
+    day_num = int(day_match.group(1))
     if 1 <= day_num <= 31:
         return day_num
 
@@ -268,17 +283,19 @@ def replace_day_number_at_start(text, old_day, new_day):
         return text
     cleaned = str(text).strip()
     
-    fasting_prefixed = re.match(
-        r'^((?:Common\s+Abstinence|Strict\s+Abstinence|Strict\s+Fast(?:\s+and\s+abstinence)?|Dispensation(?:\s*\([^)]+\))?)\s+)' + str(old_day) + r'(?=\s|$|[;:,\-–()./])',
-        cleaned,
-        re.IGNORECASE
-    )
-    if fasting_prefixed:
-        return text[:fasting_prefixed.end(1)] + str(new_day) + text[fasting_prefixed.end():]
+    # Check for fasting prefix pattern match
+    match = FASTING_PREFIX_RE.match(cleaned)
+    if match and int(match.group(1)) == old_day:
+        # Replace only the captured day number group
+        start, end = match.span(1)
+        return text[:start] + str(new_day) + text[end:]
     
-    day_match = re.match(r'^' + str(old_day) + r'(?=\s|$|[;:,\-–()./])', cleaned)
-    if day_match:
-        return str(new_day) + text[day_match.end():]
+    # Check for standard day start match
+    match = DAY_START_RE.match(cleaned)
+    if match and int(match.group(1)) == old_day:
+        start, end = match.span(1)
+        return str(new_day) + text[end:]
+        
     return text
 
 def is_weekday_header_row(row):
@@ -439,11 +456,11 @@ def clean_title(notes, day):
         pattern = fr'^{day}[\s,.-]*'
         cleaned = re.sub(pattern, '', cleaned)
 
-    cleaned = re.sub(r'\bHoly\s+Day\s+of\s+Obligation\b\.?', '', cleaned, flags=re.IGNORECASE)
-    cleaned = re.sub(r'\s{2,}', ' ', cleaned)
-    cleaned = re.sub(r'\s+([,.;:])', r'\1', cleaned)
-    cleaned = re.sub(r'([,.;:]){2,}', r'\1', cleaned)
-    cleaned = re.sub(r'^[\s,.;:]+|[\s,.;:]+$', '', cleaned)
+    cleaned = HOLY_DAY_OBLIGATION_RE.sub('', cleaned)
+    cleaned = CLEAN_SPACES_RE.sub(' ', cleaned)
+    cleaned = Clean_PUNCT_SPACE_RE.sub(r'\1', cleaned)
+    cleaned = CLEAN_DOUBLE_PUNCT_RE.sub(r'\1', cleaned)
+    cleaned = CLEAN_TRIM_PUNCT_RE.sub('', cleaned)
     return cleaned.strip()
 
 def split_following_notes(notes):
@@ -613,6 +630,149 @@ def write_output_files(calendars_dir, sorted_data):
 
     print(f"Extraction complete. Saved to {csv_output}")
 
+def resolve_block_days(table, page, block_rows, start_row_idx, group_width, expected_start_col, block_idx, cal_days_in_m):
+    combined_cells = [None] * 7
+    day_numbers = [None] * 7
+    explicit_day_numbers = [None] * 7
+
+    # 1. First pass: extract text and explicit/style-based day numbers
+    for col_idx in range(7):
+        parts = [row[col_idx] for row in block_rows if row[col_idx]]
+        combined_cell = merge_unique_parts(parts)
+        combined_cells[col_idx] = combined_cell.strip() if combined_cell else None
+        
+        if not combined_cells[col_idx]:
+            continue
+
+        day_num = extract_day_number_at_start(combined_cells[col_idx])
+        if day_num:
+            explicit_day_numbers[col_idx] = day_num
+        
+        if not day_num:
+            bbox = get_logical_cell_bbox(table, start_row_idx, col_idx, group_width)
+            day_num = extract_day_from_cell_style(page, bbox)
+        
+        day_numbers[col_idx] = day_num
+
+    # 2. Determine base day (anchor) for the block
+    base_candidates = [
+        explicit_day_numbers[col_idx] - col_idx
+        for col_idx in range(7)
+        if explicit_day_numbers[col_idx]
+    ]
+
+    if base_candidates:
+        block_base_day = Counter(base_candidates).most_common(1)[0][0]
+    else:
+        # Fallback: estimate based on block index and start column
+        block_base_day = 1 - expected_start_col + (block_idx * 7)
+
+    expected_by_col = [None] * 7
+    for col_idx in range(7):
+        expected_day = block_base_day + col_idx
+        if 1 <= expected_day <= cal_days_in_m:
+            expected_by_col[col_idx] = expected_day
+
+    # 3. Reconcile found days with expected days
+    for col_idx in range(7):
+        if not combined_cells[col_idx]:
+            continue
+        expected_day = expected_by_col[col_idx]
+        if not expected_day:
+            continue
+        current_day = day_numbers[col_idx]
+        if current_day is None or current_day != expected_day:
+            day_numbers[col_idx] = expected_day
+
+    # 4. Infer missing days from neighbors
+    for col_idx in range(7):
+        if not combined_cells[col_idx] or day_numbers[col_idx]:
+            continue
+        
+        left_idx = None
+        for i in range(col_idx - 1, -1, -1):
+            if day_numbers[i]:
+                left_idx = i
+                break
+        
+        right_idx = None
+        for i in range(col_idx + 1, 7):
+            if day_numbers[i]:
+                right_idx = i
+                break
+        
+        inferred = None
+        if left_idx is not None and right_idx is not None:
+            span = right_idx - left_idx
+            if (day_numbers[right_idx] - day_numbers[left_idx]) == span:
+                inferred = day_numbers[left_idx] + (col_idx - left_idx)
+        elif left_idx is not None:
+            inferred = day_numbers[left_idx] + (col_idx - left_idx)
+        elif right_idx is not None:
+            inferred = day_numbers[right_idx] - (right_idx - col_idx)
+
+        if inferred and 1 <= inferred <= 31:
+            day_numbers[col_idx] = inferred
+
+    return combined_cells, day_numbers
+
+def create_entries_for_cell(cleaned_cell, base_day, year, month_num, month_name_raw):
+    if not cleaned_cell:
+        return []
+
+    entry_days = []
+    if base_day and 1 <= base_day <= 31:
+        entry_days.append(base_day)
+
+    for overlay_day in extract_overlay_day_numbers(cleaned_cell, base_day):
+        if overlay_day not in entry_days:
+            entry_days.append(overlay_day)
+    
+    if not entry_days:
+        return []
+    
+    cell_text_map = { d: cleaned_cell for d in entry_days }
+    
+    # Text splitting logic for stacked days
+    if len(entry_days) > 1:
+        sorted_days = sorted(entry_days)
+        if len(sorted_days) == 2 and sorted_days[1] == sorted_days[0] + 7:
+            d1, d2 = sorted_days
+            
+            p_stack = r'(?:^|[\n\r])\s*(' + str(d2) + r')(?=\s|$)'
+            p_slash = r'(?:^|\s)/\s*(' + str(d2) + r')(?=\s|$)'
+            
+            split_match = re.search(p_stack, cleaned_cell) or re.search(p_slash, cleaned_cell)
+            
+            if split_match:
+                split_start = split_match.start()
+                d2_start_idx = split_match.start(1) 
+                
+                t1 = cleaned_cell[:split_start].strip()
+                t2 = cleaned_cell[d2_start_idx:].strip()
+                
+                cell_text_map[d1] = t1
+                cell_text_map[d2] = t2
+
+    entries = []
+    yy = year[-2:]
+    mm = month_num
+    
+    for day_num in entry_days:
+        day_raw_text = cell_text_map.get(day_num, cleaned_cell)
+        dd = f"{day_num:02d}"
+        date_id = f"{mm}{dd}{yy}"
+        
+        entries.append({
+            "Date": date_id,
+            "Year": year,
+            "Month": month_name_raw,
+            "Day": day_num,
+            "Raw Text": day_raw_text
+        })
+        
+    return entries
+
 def process_table_month(table, page, year, month_num, month_name_raw):
     """
     Extracts readings from a single table if it matches the month structure.
@@ -698,162 +858,20 @@ def process_table_month(table, page, year, month_num, month_name_raw):
     week_blocks = week_blocks[start_block_index:]
 
     for block_idx, block in enumerate(week_blocks):
-        block_rows = block["rows"]
-        start_row_idx = block["start_row_idx"]
-
-        combined_cells = [None] * 7
-        day_numbers = [None] * 7
-        explicit_day_numbers = [None] * 7
-
-        for col_idx in range(7):
-            parts = [row[col_idx] for row in block_rows if row[col_idx]]
-            combined_cell = merge_unique_parts(parts)
-            combined_cells[col_idx] = combined_cell.strip() if combined_cell else None
-            if not combined_cells[col_idx]:
-                continue
-
-            day_num = extract_day_number_at_start(combined_cells[col_idx])
-            if day_num:
-                explicit_day_numbers[col_idx] = day_num
-            if not day_num:
-                bbox = get_logical_cell_bbox(table, start_row_idx, col_idx, group_width)
-                day_num = extract_day_from_cell_style(page, bbox)
-            day_numbers[col_idx] = day_num
-
-        base_candidates = [
-            explicit_day_numbers[col_idx] - col_idx
-            for col_idx in range(7)
-            if explicit_day_numbers[col_idx]
-        ]
-
-        if base_candidates:
-            block_base_day = Counter(base_candidates).most_common(1)[0][0]
-        else:
-            block_base_day = 1 - expected_start_col + (block_idx * 7)
-
-        expected_by_col = [None] * 7
-        for col_idx in range(7):
-            expected_day = block_base_day + col_idx
-            if 1 <= expected_day <= cal_days_in_m:
-                expected_by_col[col_idx] = expected_day
+        combined_cells, day_numbers = resolve_block_days(
+            table, page, 
+            block["rows"], block["start_row_idx"], 
+            group_width, expected_start_col, 
+            block_idx, cal_days_in_m
+        )
 
         for col_idx in range(7):
-            if not combined_cells[col_idx]:
-                continue
-            expected_day = expected_by_col[col_idx]
-            if not expected_day:
-                continue
-            current_day = day_numbers[col_idx]
-            if current_day is None or current_day != expected_day:
-                day_numbers[col_idx] = expected_day
-
-        # Infer missing days
-        for col_idx in range(7):
-            if not combined_cells[col_idx] or day_numbers[col_idx]:
-                continue
-            left_idx = None
-            for i in range(col_idx - 1, -1, -1):
-                if day_numbers[i]:
-                    left_idx = i
-                    break
-            right_idx = None
-            for i in range(col_idx + 1, 7):
-                if day_numbers[i]:
-                    right_idx = i
-                    break
-            inferred = None
-            if left_idx is not None and right_idx is not None:
-                span = right_idx - left_idx
-                if (day_numbers[right_idx] - day_numbers[left_idx]) == span:
-                    inferred = day_numbers[left_idx] + (col_idx - left_idx)
-            elif left_idx is not None:
-                inferred = day_numbers[left_idx] + (col_idx - left_idx)
-            elif right_idx is not None:
-                inferred = day_numbers[right_idx] - (right_idx - col_idx)
-
-            if inferred and 1 <= inferred <= 31:
-                day_numbers[col_idx] = inferred
-
-        for col_idx in range(7):
-            cleaned_cell = combined_cells[col_idx]
-            if not cleaned_cell:
-                continue
-
-            entry_days = []
-            base_day = day_numbers[col_idx]
-            if base_day and 1 <= base_day <= 31:
-                entry_days.append(base_day)
-
-            for overlay_day in extract_overlay_day_numbers(cleaned_cell, base_day):
-                if overlay_day not in entry_days:
-                    entry_days.append(overlay_day)
-            
-            if not entry_days:
-                continue
-            
-            # Create entries for each identified day
-            # For cells with multiple days (overlays), we need to SPLIT the text 
-            # so that the second day gets its own content, not just a copy of the whole cell.
-            
-            cell_text_map = { d: cleaned_cell for d in entry_days }
-            
-            # Attempt to split text if we have multiple days and they seem stacked
-            if len(entry_days) > 1:
-                sorted_days = sorted(entry_days)
-                # Simple heuristic: If we found a "stacked" day (day[i+1] = day[i] + 7), 
-                # try to split the text at that number.
-                
-                # We only support splitting 2 stacked days for now as that's the common case.
-                if len(sorted_days) == 2 and sorted_days[1] == sorted_days[0] + 7:
-                    d1, d2 = sorted_days
-                    
-                    # Find the split point (the appearance of d2 on a new line or start line)
-                    # Support both stacked (newline + d2) and slash ( / d2 ) formats
-                    
-                    # Pattern 1: Stacked - (\n or ^) + whitespace + d2 + (whitespace or $)
-                    p_stack = r'(?:^|[\n\r])\s*(' + str(d2) + r')(?=\s|$)'
-                    
-                    # Pattern 2: Slash - / + whitespace + d2 + (whitespace or $)
-                    # We look for slash preceded by space or newline, and followed by d2
-                    p_slash = r'(?:^|\s)/\s*(' + str(d2) + r')(?=\s|$)'
-                    
-                    split_match = re.search(p_stack, cleaned_cell)
-                    if not split_match:
-                        split_match = re.search(p_slash, cleaned_cell)
-                    
-                    if split_match:
-                        split_start = split_match.start()
-                        d2_start_idx = split_match.start(1) # The start of the number itself
-                        
-                        # d1 text is everything before the match start
-                        # (in slash case, before the /)
-                        t1 = cleaned_cell[:split_start].strip()
-                        
-                        # d2 text is everything from the number onwards
-                        # (skipping the split pattern prefix like \n or / )
-                        t2 = cleaned_cell[d2_start_idx:].strip()
-                        
-                        cell_text_map[d1] = t1
-                        cell_text_map[d2] = t2
-
-            explicit_day = extract_day_number_at_start(cleaned_cell)
-            
-            yy = year[-2:]
-            mm = month_num
-            for day_num in entry_days:
-                # Get the specific text for this day
-                day_raw_text = cell_text_map.get(day_num, cleaned_cell)
-                
-                dd = f"{day_num:02d}"
-                date_id = f"{mm}{dd}{yy}"
-                new_entry = {
-                    "Date": date_id,
-                    "Year": year,
-                    "Month": month_name_raw,
-                    "Day": day_num,
-                    "Raw Text": day_raw_text
-                }
-                results.append(new_entry)
+            cell_entries = create_entries_for_cell(
+                combined_cells[col_idx], 
+                day_numbers[col_idx], 
+                year, month_num, month_name_raw
+            )
+            results.extend(cell_entries)
     
     return results
 
