@@ -1,11 +1,12 @@
 import { ref, watch, onMounted, onUnmounted } from 'vue';
 import { fetchSundayReadings } from '../services/calendarService';
+import { getLocalReading } from '../services/localReadingsService';
 
 export function useReadings() {
   const readings = ref([]);
   const loading = ref(false);
   const error = ref(null);
-  
+
   // Helper to get the initial Sunday (today or next Sunday)
   const getInitialSunday = () => {
     // Check hash first
@@ -37,6 +38,54 @@ export function useReadings() {
     loading.value = true;
     error.value = null;
     try {
+      // First try to get local reading
+      const localReading = getLocalReading(currentDate.value);
+      
+      if (localReading) {
+        // Format local reading to match the expected structure
+        const descriptionParts = [];
+        if (localReading.Epistle) descriptionParts.push(`Epistle: ${localReading.Epistle}`);
+        if (localReading.Gospel) descriptionParts.push(`Gospel: ${localReading.Gospel}`);
+        if (localReading.Tone) descriptionParts.push(`Tone ${localReading.Tone}`);
+        if (localReading['Matins Gospel']) descriptionParts.push(`Matins Gospel: ${localReading['Matins Gospel']}`);
+        // if (localReading.Fasting) descriptionParts.push(`Fasting: ${localReading.Fasting}`);
+        if (localReading.Notes) descriptionParts.push(`${localReading.Notes}`);
+        
+        /* 
+        if (localReading['Holy Day of Obligation']) {
+           descriptionParts.unshift('✝ Holy Day of Obligation');
+        } 
+        */
+
+        // Calculate exclusive end date for compatibility with Google Calendar logic in ReadingCard
+        // (Google Calendar uses exclusive end dates for all-day events)
+        const startDateStr = currentDate.value.getFullYear() + '-' + 
+            String(currentDate.value.getMonth() + 1).padStart(2, '0') + '-' + 
+            String(currentDate.value.getDate()).padStart(2, '0');
+            
+        const nextDay = new Date(currentDate.value);
+        nextDay.setDate(nextDay.getDate() + 1);
+        const endDateStr = nextDay.getFullYear() + '-' + 
+            String(nextDay.getMonth() + 1).padStart(2, '0') + '-' + 
+            String(nextDay.getDate()).padStart(2, '0');
+
+        readings.value = [{
+          id: localReading.id || localReading.Date, // Fallback ID
+          summary: localReading.Title,
+          description: descriptionParts.join('\n'),
+          htmlLink: '', // Could link to a bible site if we parsed verses
+          // New properties
+          fasting: localReading.Fasting,
+          usaHoliday: localReading['USA Holiday'],
+          canadaHoliday: localReading['Canada Holiday'],
+          isHolyDayOfObligation: localReading['Holy Day of Obligation'] === true,
+          start: { date: startDateStr },
+          end: { date: endDateStr }
+        }];
+        loading.value = false;
+        return;
+      }
+
       const events = await fetchSundayReadings(currentDate.value);
       
       // Sort events: Prioritize events with "Epistle" or "Gospel" in the description

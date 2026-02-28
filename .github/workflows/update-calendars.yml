@@ -36,6 +36,7 @@ jobs:
           cd calendars
           bash ./get_calendars.sh "${{ steps.year.outputs.year }}"
           python ./extract_readings.py
+          cp extracted_readings.json ../client/src/assets/extracted_readings.json
 
       - name: Commit updated calendar data
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -46,3 +47,4 @@ jobs:
             calendars/readings.csv
             calendars/extracted_readings.json
             calendars/${{ steps.year.outputs.year }}/**
+            client/src/assets/extracted_readings.json

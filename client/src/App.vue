@@ -112,6 +112,10 @@
             :link="event.htmlLink"
             :start="event.start"
             :end="event.end"
+            :fasting="event.fasting"
+            :usa-holiday="event.usaHoliday"
+            :canada-holiday="event.canadaHoliday"
+            :is-holy-day-of-obligation="event.isHolyDayOfObligation"
           />
           
           <div v-if="!loading && readings.length === 0" class="text-center py-12 bg-white dark:bg-stone-800 rounded-lg shadow p-6">

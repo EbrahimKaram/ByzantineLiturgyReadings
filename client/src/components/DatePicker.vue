@@ -28,13 +28,15 @@
         :key="date"
         @click.stop="selectDate(date)"
         :class="[
-          'p-1 text-sm rounded-full w-8 h-8 flex items-center justify-center transition-all duration-200',
+          'p-1 text-sm rounded-full w-8 h-8 flex items-center justify-center transition-all duration-200 relative',
           isSelected(date) 
             ? 'bg-red-800 text-white dark:bg-red-700 shadow-md' 
             : 'text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700',
           isToday(date) && !isSelected(date) ? 'ring-1 ring-red-800 text-red-800 dark:ring-red-500 dark:text-red-400 font-semibold' : '',
-          isSunday(date) && !isSelected(date) ? 'text-red-800/80 dark:text-red-400/80 font-medium' : ''
+          isSunday(date) && !isSelected(date) ? 'text-red-800/80 dark:text-red-400/80 font-medium' : '',
+          isHolyDay(date) && !isSelected(date) && !isToday(date) ? 'bg-amber-100 dark:bg-amber-900/30 font-bold text-amber-800 dark:text-amber-200 ring-1 ring-amber-300 dark:ring-amber-700' : ''
         ]"
+        :title="isHolyDay(date) ? 'Holy Day of Obligation' : ''"
       >
         {{ date }}
       </button>
@@ -44,6 +46,7 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import { isHolyDayDate } from '../services/localReadingsService';
 
 const props = defineProps({
   modelValue: Date
@@ -103,5 +106,10 @@ const isToday = (day) => {
 const isSunday = (day) => {
   const d = new Date(viewDate.value.getFullYear(), viewDate.value.getMonth(), day);
   return d.getDay() === 0;
+};
+
+const isHolyDay = (day) => {
+  const d = new Date(viewDate.value.getFullYear(), viewDate.value.getMonth(), day);
+  return isHolyDayDate(d);
 };
 </script>
