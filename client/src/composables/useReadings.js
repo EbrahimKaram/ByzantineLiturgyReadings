@@ -7,8 +7,8 @@ export function useReadings() {
   const loading = ref(false);
   const error = ref(null);
 
-  // Helper to get the initial Sunday (today or next Sunday)
-  const getInitialSunday = () => {
+  // Helper to get the initial date (today)
+  const getInitialDate = () => {
     // Check hash first
     const hash = window.location.hash.substring(1);
     if (hash) {
@@ -24,15 +24,10 @@ export function useReadings() {
       }
     }
 
-    const d = new Date();
-    const day = d.getDay();
-    // If today is Sunday (0), we want today.
-    // If today is Monday (1) to Saturday (6), we want the next Sunday.
-    const diff = d.getDate() + (day === 0 ? 0 : (7 - day));
-    return new Date(d.setDate(diff));
+    return new Date();
   };
 
-  const currentDate = ref(getInitialSunday());
+  const currentDate = ref(getInitialDate());
 
   const loadReadings = async () => {
     loading.value = true;
@@ -104,22 +99,27 @@ export function useReadings() {
     }
   };
 
-  const previousSunday = () => {
+  const previousDay = () => {
     const newDate = new Date(currentDate.value);
-    newDate.setDate(newDate.getDate() - 7);
+    newDate.setDate(newDate.getDate() - 1);
     currentDate.value = newDate;
   };
 
-  const nextSunday = () => {
+  const nextDay = () => {
     const newDate = new Date(currentDate.value);
-    newDate.setDate(newDate.getDate() + 7);
+    newDate.setDate(newDate.getDate() + 1);
     currentDate.value = newDate;
   };
 
   const goToToday = () => {
-    // Reset to "today" (meaning the upcoming/current Sunday)
-    const d = new Date();
+    currentDate.value = new Date();
+  };
+
+  const goToComingSunday = () => {
+    const d = new Date(); // Start from today
     const day = d.getDay();
+    // If today is Sunday (0), we want today.
+    // If today is Monday (1) to Saturday (6), we want the next Sunday.
     const diff = d.getDate() + (day === 0 ? 0 : (7 - day));
     currentDate.value = new Date(d.setDate(diff));
   };
@@ -173,8 +173,9 @@ export function useReadings() {
     loading,
     error,
     currentDate,
-    previousSunday,
-    nextSunday,
-    goToToday
+    previousDay,
+    nextDay,
+    goToToday,
+    goToComingSunday
   };
 }

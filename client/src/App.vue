@@ -15,7 +15,7 @@
           </svg>
         </div>
         <h1 class="text-4xl font-bold text-stone-800 dark:text-stone-100 mb-2 tracking-tight">Romanian Byzantine Liturgy Readings</h1>
-        <p class="text-stone-600 dark:text-stone-400 italic">Scripture readings for the Sunday Romanian Byzantine Liturgies from the <a href="https://www.stgeorgeoh.org/calendar" target="_blank" rel="noopener noreferrer" class="underline">Saint George Cathedral Calendar.</a>
+        <p class="text-stone-600 dark:text-stone-400 italic">Scripture readings for the Romanian Byzantine Liturgies from the <a href="https://www.stgeorgeoh.org/calendar" target="_blank" rel="noopener noreferrer" class="underline">Saint George Cathedral Calendar.</a>
         
           We are specifically following the readings as outlined by the Romanian <a href="https://romaniancatholic.org/" target="_blank" rel="noopener noreferrer" class="underline">Catholic Diocese Eparchy of St. George in Canton</a>.</p>
 
@@ -27,9 +27,9 @@
           <div class="absolute inset-0 bg-white/90 dark:bg-stone-800/90 backdrop-blur-sm rounded-lg shadow-lg border border-stone-200 dark:border-stone-700"></div>
           <div class="relative flex items-center justify-center space-x-2 sm:space-x-4 p-2 sm:p-4">
           <button 
-            @click="previousSunday"
+            @click="previousDay"
             class="p-1 sm:p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
-            aria-label="Previous Sunday"
+            aria-label="Previous Day"
           >
             ←
           </button>
@@ -39,15 +39,31 @@
           </span>
           
           <button 
-            @click="nextSunday"
+            @click="nextDay"
             class="p-1 sm:p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
-            aria-label="Next Sunday"
+            aria-label="Next Day"
           >
             →
           </button>
           
           <div class="h-6 w-px bg-stone-300 dark:bg-stone-600 mx-1 sm:mx-2"></div>
 
+          <button 
+            @click="goToToday"
+            class="px-2 sm:px-3 py-1.5 text-xs sm:text-sm font-medium rounded-md hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
+            title="Go to Today"
+          >
+            Today
+          </button>
+
+          <button 
+            @click="goToComingSunday"
+            class="px-2 sm:px-3 py-1.5 text-xs sm:text-sm font-medium rounded-md hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
+            title="Go to Next Sunday"
+          >
+            Coming Sunday
+          </button>
+          
           <div class="relative">
             <button 
               @click="toggleDatePicker"
@@ -69,13 +85,6 @@
             </div>
           </div>
 
-          <button 
-            @click="goToToday"
-            class="px-2 sm:px-3 py-1.5 text-xs sm:text-sm font-medium rounded-md hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-600 dark:text-stone-300 transition-colors"
-            title="Go to current Sunday"
-          >
-            Today
-          </button>
           </div>
         </div>
       </div>
@@ -119,7 +128,7 @@
           />
           
           <div v-if="!loading && readings.length === 0" class="text-center py-12 bg-white dark:bg-stone-800 rounded-lg shadow p-6">
-            <p class="text-stone-500 dark:text-stone-400 text-lg">No readings found for this Sunday.</p>
+            <p class="text-stone-500 dark:text-stone-400 text-lg">No readings found for this day.</p>
           </div>
         </div>
       </main>
@@ -154,7 +163,7 @@ import { useReadings } from './composables/useReadings';
 import ReadingCard from './components/ReadingCard.vue';
 import DatePicker from './components/DatePicker.vue';
 
-const { readings, loading, error, currentDate, previousSunday, nextSunday, goToToday } = useReadings();
+const { readings, loading, error, currentDate, previousDay, nextDay, goToToday, goToComingSunday } = useReadings();
 const showDatePicker = ref(false);
 
 const toggleDatePicker = () => {
@@ -162,26 +171,12 @@ const toggleDatePicker = () => {
 };
 
 const onDateSelect = (selectedDate) => {
-  // Snap to next Sunday logic to match existing behavior
-  const day = selectedDate.getDay();
-  // If Sunday (0) -> 0
-  // If Mon (1) -> 6
-  // ...
-  const diff = day === 0 ? 0 : (7 - day);
-  const nextSundayDate = new Date(selectedDate);
-  nextSundayDate.setDate(selectedDate.getDate() + diff);
-  
-  currentDate.value = nextSundayDate;
+  currentDate.value = selectedDate;
 };
 
 const formatDate = (date) => {
   if (!date) return '';
-  // make sure it's the date closest to sunday
-  const d = new Date(date);
-  const day = d.getDay();
-  const diff = d.getDate() + (day === 0 ? 0 : (7 - day));
-  const closestSunday = new Date(d.setDate(diff));
-  return closestSunday.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  return date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 };
 
 const romanCatholicLink = computed(() => {
