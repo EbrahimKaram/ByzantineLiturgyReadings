@@ -10,6 +10,44 @@ const memoryCache = new Map();
 
 const getCacheKey = (dateStr) => `calendar_events_${dateStr}`;
 
+const toLocalDateString = (date) => {
+  const d = new Date(date);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
+const eventOccursOnDate = (event, targetDateStr) => {
+  const start = event?.start;
+  const end = event?.end;
+
+  // All-day events (end date is exclusive in Google Calendar)
+  if (start?.date) {
+    const startDate = start.date;
+    const endDate = end?.date || startDate;
+    return targetDateStr >= startDate && targetDateStr < endDate;
+  }
+
+  // Timed events
+  if (start?.dateTime) {
+    const startDateTime = new Date(start.dateTime);
+    const startDateStr = toLocalDateString(startDateTime);
+
+    if (!end?.dateTime) {
+      return startDateStr === targetDateStr;
+    }
+
+    const endDateTime = new Date(end.dateTime);
+    const targetStart = new Date(`${targetDateStr}T00:00:00`);
+    const targetEnd = new Date(`${targetDateStr}T23:59:59.999`);
+
+    return startDateTime <= targetEnd && endDateTime >= targetStart;
+  }
+
+  return false;
+};
+
 const isFreshCacheEntry = (entry) => {
   if (!entry || typeof entry !== 'object') return false;
   if (typeof entry.cachedAt !== 'number') return false;
@@ -28,7 +66,7 @@ export const fetchSundayReadings = async (date) => {
   const timeMax = new Date(date);
   timeMax.setHours(23, 59, 59, 999);
 
-  const dateStr = timeMin.toISOString().split('T')[0];
+  const dateStr = toLocalDateString(timeMin);
   const cacheKey = getCacheKey(dateStr);
 
   // 1. Check Cache
@@ -44,15 +82,16 @@ export const fetchSundayReadings = async (date) => {
       localStorage.removeItem(cacheKey);
     }
   } catch (e) {
-    // LocalStorage might be disabled or full
-    if (memoryCache.has(cacheKey)) {
-      const memoryEntry = memoryCache.get(cacheKey);
-      if (isFreshCacheEntry(memoryEntry)) {
-        return memoryEntry.value;
-      }
+    // LocalStorage might be disabled or unreadable
+  }
 
-      memoryCache.delete(cacheKey);
+  if (memoryCache.has(cacheKey)) {
+    const memoryEntry = memoryCache.get(cacheKey);
+    if (isFreshCacheEntry(memoryEntry)) {
+      return memoryEntry.value;
     }
+
+    memoryCache.delete(cacheKey);
   }
 
   try {
@@ -66,7 +105,7 @@ export const fetchSundayReadings = async (date) => {
       },
     });
 
-    const items = response.data.items;
+    const items = (response.data.items || []).filter((event) => eventOccursOnDate(event, dateStr));
     const cachePayload = { cachedAt: Date.now(), value: items };
 
     // 2. Save to Cache

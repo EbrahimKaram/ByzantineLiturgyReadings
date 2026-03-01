@@ -81,6 +81,8 @@ const hasParsedData = computed(() => {
   return parsed.value.epistle || parsed.value.gospel;
 });
 
+const isDevelopment = import.meta.env.DEV;
+
 // --- New Logic for Fetching Text ---
 const epistleText = ref(null);
 const gospelText = ref(null);
@@ -314,5 +316,13 @@ const toggleGospel = async () => {
         </svg>
       </a>
     </div>
+
+    <!-- Development Debug: Raw Source Text -->
+    <details v-if="isDevelopment && description" class="mt-4 pt-4 border-t border-stone-100 dark:border-stone-700">
+      <summary class="text-xs font-semibold text-stone-500 dark:text-stone-400 uppercase tracking-wider cursor-pointer select-none">
+        Raw Text (Dev Only)
+      </summary>
+      <pre class="mt-3 p-3 rounded bg-stone-50 dark:bg-stone-900/50 border border-stone-200 dark:border-stone-700 text-xs text-stone-700 dark:text-stone-300 whitespace-pre-wrap break-words">{{ description }}</pre>
+    </details>
   </div>
 </template>

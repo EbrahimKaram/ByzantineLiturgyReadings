@@ -6,6 +6,7 @@ export function useReadings() {
   const readings = ref([]);
   const loading = ref(false);
   const error = ref(null);
+  let activeLoadId = 0;
 
   // Helper to get the initial date (today)
   const getInitialDate = () => {
@@ -30,11 +31,13 @@ export function useReadings() {
   const currentDate = ref(getInitialDate());
 
   const loadReadings = async () => {
+    const loadId = ++activeLoadId;
     loading.value = true;
     error.value = null;
     try {
       // First try to get local reading
       const localReading = getLocalReading(currentDate.value);
+      let localEvent = null;
       
       if (localReading) {
         // Format local reading to match the expected structure
@@ -64,7 +67,7 @@ export function useReadings() {
             String(nextDay.getMonth() + 1).padStart(2, '0') + '-' + 
             String(nextDay.getDate()).padStart(2, '0');
 
-        readings.value = [{
+        localEvent = {
           id: localReading.id || localReading.Date, // Fallback ID
           summary: localReading.Title,
           description: descriptionParts.join('\n'),
@@ -76,15 +79,21 @@ export function useReadings() {
           isHolyDayOfObligation: localReading['Holy Day of Obligation'] === true,
           start: { date: startDateStr },
           end: { date: endDateStr }
-        }];
-        loading.value = false;
-        return;
+        };
       }
 
-      const events = await fetchSundayReadings(currentDate.value);
+      let events = [];
+      try {
+        events = await fetchSundayReadings(currentDate.value);
+      } catch (calendarError) {
+        if (!localEvent) {
+          throw calendarError;
+        }
+        console.warn('Calendar fetch failed; showing local reading only.', calendarError);
+      }
       
       // Sort events: Prioritize events with "Epistle" or "Gospel" in the description
-      readings.value = events.sort((a, b) => {
+      const sortedCalendarEvents = events.sort((a, b) => {
         const aHasReadings = a.description && (a.description.includes('Epistle') || a.description.includes('Gospel'));
         const bHasReadings = b.description && (b.description.includes('Epistle') || b.description.includes('Gospel'));
 
@@ -92,10 +101,37 @@ export function useReadings() {
         if (!aHasReadings && bHasReadings) return 1;
         return 0;
       });
+
+      if (localEvent) {
+        const normalizeTitle = (title) => String(title || '').trim().toLowerCase();
+        const localTitle = normalizeTitle(localEvent.summary);
+
+        const mergedEvents = sortedCalendarEvents.filter((event) => {
+          // Keep local reading if titles duplicate
+          if (localTitle && normalizeTitle(event.summary) === localTitle) {
+            return false;
+          }
+
+          // Also remove exact duplicate body if title differs slightly
+          return !(event.summary === localEvent.summary && event.description === localEvent.description);
+        });
+
+        if (loadId === activeLoadId) {
+          readings.value = [localEvent, ...mergedEvents];
+        }
+      } else {
+        if (loadId === activeLoadId) {
+          readings.value = sortedCalendarEvents;
+        }
+      }
     } catch (e) {
-      error.value = e.message || 'Failed to load readings';
+      if (loadId === activeLoadId) {
+        error.value = e.message || 'Failed to load readings';
+      }
     } finally {
-      loading.value = false;
+      if (loadId === activeLoadId) {
+        loading.value = false;
+      }
     }
   };
 
