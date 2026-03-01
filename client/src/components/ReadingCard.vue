@@ -135,10 +135,14 @@ const toggleGospel = async () => {
 
       <!-- Holidays Chips -->
       <span v-if="usaHoliday"
+        :title="`USA Holiday: ${usaHoliday}`"
+        aria-label="USA Holiday"
         class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
         🇺🇸 {{ usaHoliday }}
       </span>
       <span v-if="canadaHoliday"
+        :title="`Canadian Holiday: ${canadaHoliday}`"
+        aria-label="Canadian Holiday"
         class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">
         🇨🇦 {{ canadaHoliday }}
       </span>
