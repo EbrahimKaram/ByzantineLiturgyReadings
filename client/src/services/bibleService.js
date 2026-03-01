@@ -1,4 +1,11 @@
 const BASE_URL = 'https://bible-api.com';
+const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
+
+function isFreshCacheEntry(entry) {
+  if (!entry || typeof entry !== 'object') return false;
+  if (typeof entry.cachedAt !== 'number') return false;
+  return Date.now() - entry.cachedAt < CACHE_TTL_MS;
+}
 
 export async function fetchScriptureText(reference) {
   if (!reference) return null;
@@ -76,7 +83,12 @@ async function fetchSinglePassage(ref) {
   try {
     const cached = localStorage.getItem(cacheKey);
     if (cached) {
-      return JSON.parse(cached);
+      const parsed = JSON.parse(cached);
+      if (isFreshCacheEntry(parsed)) {
+        return parsed.value;
+      }
+
+      localStorage.removeItem(cacheKey);
     }
   } catch (e) {
     // Ignore potential input errors
@@ -91,10 +103,11 @@ async function fetchSinglePassage(ref) {
     const htmlContent = data.verses.map(v => 
       `<span class="text-xs align-top text-red-800 dark:text-red-400 font-bold mr-0.5 select-none">${v.verse}</span>${v.text}`
     ).join(' ');
+    const cachePayload = { cachedAt: Date.now(), value: htmlContent };
 
     // 2. Save to Cache
     try {
-      localStorage.setItem(cacheKey, JSON.stringify(htmlContent));
+      localStorage.setItem(cacheKey, JSON.stringify(cachePayload));
     } catch (e) {
       // Quota exceeded or disabled
     }
