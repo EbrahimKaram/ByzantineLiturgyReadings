@@ -7,10 +7,13 @@ export async function fetchScriptureText(reference) {
   const cleanRef = reference
     .replace(/^(Epistle|Gospel)\s*/i, '')
     .replace(/–/g, '-')
+    .replace(/\s+to\s+/gi, '-') // Normalize textual ranges (e.g. "14 to 5:6")
     .replace(/\s*:\s*/g, ':') // Remove spaces around colons
     .replace(/\s*-\s*/g, '-') // Remove spaces around hyphens
     // Fix for "Verse-Verse-Chapter:Verse" patterns (e.g. "8:8-13-9:1-2") which should be semicolon separated
     .replace(/(\d+-\d+)-(\d+:)/g, '$1;$2')
+    // Fix for space-separated cross-chapter ranges (e.g. "1:10-14 2:1-4")
+    .replace(/(\d+-\d+)\s+(\d+:)/g, '$1;$2')
     .trim()
     .replace(/[.;,]+$/, ''); // Remove trailing periods, semicolons, or commas
 
