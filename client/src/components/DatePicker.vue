@@ -28,13 +28,12 @@
         :key="date"
         @click.stop="selectDate(date)"
         :class="[
-          'p-1 text-sm rounded-full w-8 h-8 flex items-center justify-center transition-all duration-200 relative',
+          'p-1 text-sm rounded-full w-8 h-8 flex items-center justify-center transition-all duration-200',
           isSelected(date) 
             ? 'bg-red-800 text-white dark:bg-red-700 shadow-md' 
-            : 'text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700',
-          isToday(date) && !isSelected(date) ? 'ring-1 ring-red-800 text-red-800 dark:ring-red-500 dark:text-red-400 font-semibold' : '',
-          isSunday(date) && !isSelected(date) ? 'text-red-800/80 dark:text-red-400/80 font-medium' : '',
-          isHolyDay(date) && !isSelected(date) && !isToday(date) ? 'bg-amber-100 dark:bg-amber-900/30 font-bold text-amber-800 dark:text-amber-200 ring-1 ring-amber-300 dark:ring-amber-700' : ''
+            : 'text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700', 
+          !isSelected(date) && (isSunday(date) || isHolyDay(date)) ? '!text-red-700 dark:!text-red-400 font-bold' : '',
+          !isSelected(date) && isToday(date) ? 'ring-1 ring-stone-400 dark:ring-stone-500 font-semibold' : ''
         ]"
         :title="isHolyDay(date) ? 'Holy Day of Obligation' : ''"
       >
