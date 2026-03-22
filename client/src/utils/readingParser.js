@@ -12,7 +12,7 @@ export function parseReadingDescription(description) {
   const toneMatch = workText.match(/Tone\s+(\d+)/i);
   if (toneMatch) {
     tone = toneMatch[1];
-    workText = workText.replace(toneMatch[0], '');
+    workText = workText.replace(toneMatch[0], ' ');
   }
 
   // 2. Extract Matins
@@ -21,13 +21,13 @@ export function parseReadingDescription(description) {
 
   if (matinsResMatch) {
     matinsGospel = matinsResMatch[1];
-    workText = workText.replace(matinsResMatch[0], '');
+    workText = workText.replace(matinsResMatch[0], ' ');
   } else {
     // Look for explicit Matins Gospel phrase, stopping before other major keywords
     const matinsTextMatch = workText.match(/Matins\s+Gospel:?\s*(.+?)(?=\s*(?:Divine Liturgy|Epistle|Gospel|Following)|$)/i);
     if (matinsTextMatch) {
       matinsGospel = clean(matinsTextMatch[1]);
-      workText = workText.replace(matinsTextMatch[0], '');
+      workText = workText.replace(matinsTextMatch[0], ' ');
     }
   }
 
@@ -38,13 +38,13 @@ export function parseReadingDescription(description) {
   // Check for implicit "Divine Liturgy: <Epistle>; <Gospel>" pattern first (where labels are missing)
   // This must look at description or workText before stripping "Divine Liturgy" blindly
   // We match "Divine Liturgy" followed by texts separated by semicolon, ending at period or "Following"
-  const implicitMatch = workText.match(/Divine Liturgy:?\s*([^;]+);\s*([^;]+?)(?=\s*(?:Following|\.\s*[A-Z]|$))/i);
+  const implicitMatch = workText.match(/Divine Liturgy:?\s*([^;]+);\s*([^;]+?)(?=\s*(?:Following|\.\s*[A-Z]|$))/i) || workText.match(/(?:^|\s|\b)(?:Epistle:?\s*)?((?:[1-3]\s+)?[A-Za-z]+\.?\s+\d+\s*[,.:]\s*[\d\s\-,a-z]+);\s*(?:Gospel:?\s*)?((?:[1-3]\s+)?[A-Za-z]+\.?\s+\d+\s*[,.:]\s*[\d\s\-,a-z]+)/i);
 
   if (implicitMatch) {
     // If we found the implicit pair, capture them and remove the whole segment
     epistle = clean(implicitMatch[1]);
     gospel = clean(implicitMatch[2]);
-    workText = workText.replace(implicitMatch[0], '');
+    workText = workText.replace(implicitMatch[0], ' ');
   } else {
     // Fallback: Remove "Divine Liturgy" header if present to clean up the text for keyword search
     workText = workText.replace(/Divine Liturgy:?/i, '');
@@ -54,7 +54,7 @@ export function parseReadingDescription(description) {
     const epistleMatch = workText.match(/(?:^|[\s,;.])Epistle:?\s*(.+?)(?=\s*(?:Gospel|Following)|$)/i);
     if (epistleMatch) {
       epistle = clean(epistleMatch[1]);
-      workText = workText.replace(epistleMatch[0], '');
+      workText = workText.replace(epistleMatch[0], ' ');
     }
 
     // 5. Extract Gospel
@@ -62,7 +62,7 @@ export function parseReadingDescription(description) {
     const gospelMatch = workText.match(/(?:^|[\s,;.])Gospel:?\s*(.+?)(?=\s*(?:Following|\.\s+[A-Z])|$)/i);
     if (gospelMatch) {
       gospel = clean(gospelMatch[1]);
-      workText = workText.replace(gospelMatch[0], '');
+      workText = workText.replace(gospelMatch[0], ' ');
     }
   }
 
