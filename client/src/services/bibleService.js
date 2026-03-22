@@ -12,15 +12,31 @@ export async function fetchScriptureText(reference) {
 
   // 1. Clean the reference
   const cleanRef = reference
-    .replace(/^(Epistle|Gospel)\s*/i, '')
+    // Handle prefixes like "2, Gospel Lk" or simple "Epistle "
+    .replace(/^(?:[\d\s,]*)(Epistle|Gospel)\s*/i, '')
+    // Clean typical suffix garbage (e.g. annotations like "Hippolytus, martyr")
+    .replace(/\s+[A-Za-z\s,]*martyr.*/i, '')
     .replace(/–/g, '-')
     .replace(/\s+to\s+/gi, '-') // Normalize textual ranges (e.g. "14 to 5:6")
+    .replace(/\s+and\s+/gi, ';') // Treat textual 'and' as semicolon splits
+    // Fix colons or commas incorrectly placed right after book abbreviations (e.g. "Acts: 2", "John, 12")
+    .replace(/([a-zA-Z]+[.]?)[:\,]\s*(\d+)/g, '$1 $2')
+    // Remove periods right after alphabetical book abbreviations (e.g. "Phil.", "Rom.")
+    .replace(/([a-zA-Z])\./g, '$1')
+    // Fix European comma as colon e.g. "Heb 7,26-28" ONLY if followed by verse-dash
+    .replace(/([a-zA-Z]+\s+\d+),(\d+-)/g, '$1:$2')
     .replace(/\s*:\s*/g, ':') // Remove spaces around colons
     .replace(/\s*-\s*/g, '-') // Remove spaces around hyphens
+    // Treat commas as semicolons to break sequential disjoint verses (e.g. "11:24, 32" -> "11:24; 32")
+    .replace(/,/g, ';')
     // Fix for "Verse-Verse-Chapter:Verse" patterns (e.g. "8:8-13-9:1-2") which should be semicolon separated
     .replace(/(\d+-\d+)-(\d+:)/g, '$1;$2')
     // Fix for space-separated cross-chapter ranges (e.g. "1:10-14 2:1-4")
     .replace(/(\d+-\d+)\s+(\d+:)/g, '$1;$2')
+    // Fix for dot-separated cross-chapter ranges (e.g. "11:31-33. 12:1-10")
+    .replace(/(\d+)\.\s+(\d+:)/g, '$1;$2')
+    // Remove alphabetical markings from verses that break APIs (e.g., 7:5a -> 7:5)
+    .replace(/(\d)[ab]\b/gi, '$1')
     .trim()
     .replace(/[.;,]+$/, ''); // Remove trailing periods, semicolons, or commas
 
@@ -48,15 +64,31 @@ export async function fetchScriptureText(reference) {
           lastBook = match[1];
           if (match[2]) lastChapter = match[2];
         }
+        // Check if the chapter shifts within this part (e.g. "Acts 6:8-7:5")
+        const endChMatch = part.match(/-(\d+):/);
+        if (endChMatch) lastChapter = endChMatch[1];
       } else {
         // It's a continuation.
         if (part.includes(':')) {
-          // New chapter, same book
-          queryRef = `${lastBook} ${part}`;
-          const chMatch = part.match(/^(\d+):/);
-          if (chMatch) lastChapter = chMatch[1];
+          if (part.match(/^\d+-/)) {
+            // Starts with a verse, jumping to new chapter: e.g. "32-12:1"
+            queryRef = `${lastBook} ${lastChapter}:${part}`;
+            
+            // Update lastChapter if it jumps across chapters
+            const endChMatch = part.match(/-(\d+):/);
+            if (endChMatch) lastChapter = endChMatch[1];
+          } else {
+            // New chapter, same book: e.g. "16:1" or "16:1-2"
+            queryRef = `${lastBook} ${part}`;
+            const chMatch = part.match(/^(\d+):/);
+            if (chMatch) lastChapter = chMatch[1];
+            
+            // Update lastChapter if it jumps internally as well
+            const endChMatch = part.match(/-(\d+):/);
+            if (endChMatch) lastChapter = endChMatch[1];
+          }
         } else {
-          // Same chapter, same book
+          // Same chapter, same book: e.g. "17-27"
           queryRef = `${lastBook} ${lastChapter}:${part}`;
         }
       }
