@@ -107,9 +107,12 @@
         </div>
 
         <div v-else class="space-y-8">
-          <div class="text-center">
+          <div class="text-center flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6">
              <a :href="romanCatholicLink" target="_blank" rel="noopener noreferrer" class="text-sm text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-300 transition-colors underline decoration-stone-300 dark:decoration-stone-600">
-              Roman Catholic Readings for this day
+              Roman Catholic Readings
+            </a>
+            <a :href="maroniteLink" target="_blank" rel="noopener noreferrer" class="text-sm text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-300 transition-colors underline decoration-stone-300 dark:decoration-stone-600">
+              Maronite Readings
             </a>
           </div>
 
@@ -187,5 +190,15 @@ const romanCatholicLink = computed(() => {
   const year = String(d.getFullYear()).slice(-2);
   
   return `https://bible.usccb.org/bible/readings/${month}${day}${year}.cfm`;
+});
+
+const maroniteLink = computed(() => {
+  if (!currentDate.value) return '#';
+  const d = new Date(currentDate.value);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  
+  return `https://dailygospel.org/MAE/gospel/${year}-${month}-${day}`;
 });
 </script>
