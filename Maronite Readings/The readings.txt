@@ -1,0 +1,4 @@
+https://www.maronite-heritage.com/LNE.php?page=Gospel%20Readings
+
+
+https://dailygospel.org/MAE/gospel/${year}-${month}-${day}

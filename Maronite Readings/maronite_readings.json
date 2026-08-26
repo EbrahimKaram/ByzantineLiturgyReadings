@@ -1,0 +1,2201 @@
+[
+  {
+    "page": "Consecration",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Isaiah 54:1+3+5-8+10",
+        "epistle": "Hebrews 9:1-12",
+        "gospel": "Matthew 16:13-20"
+      },
+      "MONDAY": {
+        "epistle": "Hebrews 10:11-18",
+        "gospel": "John 17:1-8"
+      },
+      "TUESDAY": {
+        "epistle": "Hebrews 10:19-25",
+        "gospel": "John 17:9-13"
+      },
+      "WEDNESDAY": {
+        "epistle": "Hebrews 10:26-31",
+        "gospel": "John 17:14-19"
+      },
+      "THURSDAY": {
+        "epistle": "Hebrews 10:32-39",
+        "gospel": "John 17:20-23"
+      },
+      "FRIDAY": {
+        "epistle": "Romans 5:12-16",
+        "gospel": "John 17:24-26"
+      },
+      "SATURDAY": {
+        "epistle": "Romans 5:17-21",
+        "gospel": "John 15:15-21"
+      }
+    }
+  },
+  {
+    "page": "Dedication",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "2 Macc 10:1-6",
+        "epistle": "Hebrews 9:11-15",
+        "gospel": "John 10:22-42"
+      },
+      "MONDAY": {
+        "epistle": "Hebrews 8:1-6",
+        "gospel": "John 10:1-6"
+      },
+      "TUESDAY": {
+        "epistle": "Hebrews 8:7-13",
+        "gospel": "John 10:7-10"
+      },
+      "WEDNESDAY": {
+        "epistle": "Hebrews 9:15-23",
+        "gospel": "John 10:11-16"
+      },
+      "THURSDAY": {
+        "epistle": "Hebrews 9:24-28",
+        "gospel": "John 10:17-21"
+      },
+      "FRIDAY": {
+        "epistle": "Hebrews 10:1-10",
+        "gospel": "Mark 2:18-22"
+      },
+      "SATURDAY": {
+        "epistle": "Hebrews 3:1-6",
+        "gospel": "Mark 1:21-28"
+      }
+    }
+  },
+  {
+    "page": "Announcement to Zechariah",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Genesis 17:15-22",
+        "epistle": "Romans 4:13-25",
+        "gospel": "Luke 1:1-25"
+      },
+      "MONDAY": {
+        "epistle": "Romans 4:1-12",
+        "gospel": "John 8:31-37"
+      },
+      "TUESDAY": {
+        "epistle": "Romans 2:1-8",
+        "gospel": "John 8:38-40"
+      },
+      "WEDNESDAY": {
+        "epistle": "Romans 2:9-16",
+        "gospel": "John 8:41-45"
+      },
+      "THURSDAY": {
+        "epistle": "Romans 2:17-29",
+        "gospel": "John 8:46-50"
+      },
+      "FRIDAY": {
+        "epistle": "Romans 3:1-12",
+        "gospel": "John 8:51-55"
+      },
+      "SATURDAY": {
+        "epistle": "Romans 3:21-31",
+        "gospel": "John 8:56-59"
+      }
+    }
+  },
+  {
+    "page": "Announcement to the Virgin Mary",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "2 Samuel 7:8-10 + 11",
+        "epistle": "Galatians 3:15-22",
+        "gospel": "Luke 1:26-38"
+      },
+      "MONDAY": {
+        "epistle": "Galatians 3:1-6",
+        "gospel": "Luke 11:27-32"
+      },
+      "TUESDAY": {
+        "epistle": "Galatians 3:7-14",
+        "gospel": "Matthew 11:25-30"
+      },
+      "WEDNESDAY": {
+        "epistle": "Galatians 3:23-29",
+        "gospel": "Matthew 13:54-58"
+      },
+      "THURSDAY": {
+        "epistle": "Galatians 4:1-7",
+        "gospel": "Matthew 12:46-50"
+      },
+      "FRIDAY": {
+        "epistle": "Galatians 4:8-12",
+        "gospel": "John 6:40-44"
+      },
+      "SATURDAY": {
+        "epistle": "Galatians 4:13-20",
+        "gospel": "Luke 10:21-24"
+      }
+    }
+  },
+  {
+    "page": "Visitation of the Virgin to Elizabeth",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "2 Samuel 6:9-15 + 17+18",
+        "epistle": "Ephesians 1:1-14",
+        "gospel": "Luke 1:39-45"
+      },
+      "MONDAY": {
+        "epistle": "Ephesians 1:15-23",
+        "gospel": "Luke 1:46-56"
+      },
+      "TUESDAY": {
+        "epistle": "Ephesians 2:1-10",
+        "gospel": "Luke 10:38-42"
+      },
+      "WEDNESDAY": {
+        "epistle": "Ephesians 2:11-16",
+        "gospel": "Luke 19:1-10"
+      },
+      "THURSDAY": {
+        "epistle": "Ephesians 2:17-22",
+        "gospel": "John 4:39-42"
+      },
+      "FRIDAY": {
+        "epistle": "Ephesians 3:14-21",
+        "gospel": "Mark 7:24-30"
+      },
+      "SATURDAY": {
+        "epistle": "Ephesians 4:1-7",
+        "gospel": "Luke 5:27-32"
+      }
+    }
+  },
+  {
+    "page": "Birth of John the Baptist",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "1 Samuel 1:9-11 + 19",
+        "epistle": "Galatians 4:21-5:1",
+        "gospel": "Luke 1:57-66"
+      },
+      "MONDAY": {
+        "epistle": "Romans 9:1-5",
+        "gospel": "Luke 1:67-80"
+      },
+      "TUESDAY": {
+        "epistle": "Romans 9:6 -13",
+        "gospel": "Matthew 11:11-15"
+      },
+      "WEDNESDAY": {
+        "epistle": "Romans 9:14-18",
+        "gospel": "Matthew 17:9-13"
+      },
+      "THURSDAY": {
+        "epistle": "Romans 9:19-29",
+        "gospel": "Matthew 21:23-27"
+      },
+      "FRIDAY": {
+        "epistle": "Romans 9:30-33",
+        "gospel": "Matthew 11:16-19"
+      },
+      "SATURDAY": {
+        "epistle": "Romans 10:1-13",
+        "gospel": "John 5:31-36"
+      }
+    }
+  },
+  {
+    "page": "Revelation to Joseph",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Isaiah 7:10-15",
+        "epistle": "Ephesians 3:1-13",
+        "gospel": "Matthew 1:18-25"
+      },
+      "MONDAY": {
+        "epistle": "Romans 10:14-21",
+        "gospel": "John 7:1-10"
+      },
+      "TUESDAY": {
+        "epistle": "Romans 11:1-12",
+        "gospel": "John 7:11-18"
+      },
+      "WEDNESDAY": {
+        "epistle": "Romans 11:13-24",
+        "gospel": "John 7:25-30"
+      },
+      "THURSDAY": {
+        "epistle": "Romans 11:25-36",
+        "gospel": "John 7:31-36"
+      },
+      "FRIDAY": {
+        "epistle": "Romans 12:1-8",
+        "gospel": "John 7:37-44"
+      },
+      "SATURDAY": {
+        "epistle": "Romans 12:9-21",
+        "gospel": "John 7:45-53"
+      }
+    }
+  },
+  {
+    "page": "Genealogy",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Isaiah 11:1-4",
+        "epistle": "Romans 1:1 -12",
+        "gospel": "Matthew 1:1-17"
+      },
+      "MONDAY": {
+        "epistle": "Hebrews 11:1-6",
+        "gospel": "John 8:1-11"
+      },
+      "TUESDAY": {
+        "epistle": "Hebrews 11:7-10",
+        "gospel": "John 8:12-20"
+      },
+      "WEDNESDAY": {
+        "epistle": "Hebrews 11:11-16",
+        "gospel": "John 8:21-24"
+      },
+      "THURSDAY": {
+        "epistle": "Hebrews 11:17-22",
+        "gospel": "John 8:25-30"
+      },
+      "FRIDAY": {
+        "epistle": "Hebrews 11:23-31",
+        "gospel": "John 12:44-47"
+      },
+      "SATURDAY": {
+        "epistle": "Hebrews 11:32-40",
+        "gospel": "John 12:48-50"
+      }
+    }
+  },
+  {
+    "page": "Birth of the Lord Jesus",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Isaiah 8:23+9:1-5",
+        "epistle": "Hebrews 1:1-12",
+        "gospel": "Luke 2:1-20"
+      },
+      "MONDAY": {
+        "epistle": "Ephesians 1:3-14",
+        "gospel": "Luke 1:46-55"
+      },
+      "TUESDAY": {
+        "epistle": "2 Corinthians 11:1-9",
+        "gospel": "Matthew 23:29-24:2"
+      },
+      "WEDNESDAY": {
+        "epistle": "Revelation 21:9-10, 21-27",
+        "gospel": "Matthew 2:1-12"
+      },
+      "THURSDAY": {
+        "epistle": "Hebrews 11:23-31",
+        "gospel": "Matthew 2:13-18"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 7:2, 30-37",
+        "gospel": "Matthew 2:19-23"
+      },
+      "SATURDAY": {
+        "epistle": "Colossians 1:9",
+        "gospel": "John 1:1-18"
+      }
+    }
+  },
+  {
+    "page": "Sunday after Christmas",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Jer 23:5-8"
+      }
+    }
+  },
+  {
+    "page": "New Year",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Micah 4:1-4",
+        "epistle": "Ephesians 2:11-22",
+        "gospel": "John 14:27-31"
+      },
+      "MONDAY": {
+        "epistle": "Hebrews 7:1-10",
+        "gospel": "Luke 2:21-24"
+      },
+      "TUESDAY": {
+        "epistle": "Hebrews 7:20-28",
+        "gospel": "Luke 2:25-35"
+      },
+      "WEDNESDAY": {
+        "epistle": "Hebrews 6:9-12",
+        "gospel": "Luke 2:36-40"
+      },
+      "THURSDAY": {
+        "epistle": "Romans 5:1-11",
+        "gospel": "Luke 3:1-6"
+      }
+    }
+  },
+  {
+    "page": "Finding of the Lord in the Temple",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "1 Kings 3:5-7+9-12+14",
+        "epistle": "Hebrews 7:11-19",
+        "gospel": "Luke 2:41-52"
+      }
+    }
+  },
+  {
+    "page": "Epiphany",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Ez 36:22-28",
+        "epistle": "Titus 2:11-3:7",
+        "gospel": "Luke 3:15-22"
+      },
+      "MONDAY": {
+        "epistle": "Colossians 1:24-29",
+        "gospel": "Luke 7:18-30"
+      },
+      "TUESDAY": {
+        "epistle": "Colossians 2:1-7",
+        "gospel": "Matthew 3:13-17"
+      },
+      "WEDNESDAY": {
+        "epistle": "Galatians 5:2-15",
+        "gospel": "John 5:31-38"
+      },
+      "THURSDAY": {
+        "epistle": "Galatians 5:16-26",
+        "gospel": "John 5:39-47"
+      },
+      "FRIDAY": {
+        "epistle": "Galatians 6:1-10",
+        "gospel": "Matthew 3:7-12"
+      },
+      "SATURDAY": {
+        "epistle": "Galatians 6:11-18",
+        "gospel": "Matthew 11:11-15"
+      }
+    }
+  },
+  {
+    "page": "1st Week Epiphany",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Isaiah 40:6-11",
+        "epistle": "2 Corinthians 10:1-11",
+        "gospel": "John 1:29-34"
+      },
+      "MONDAY": {
+        "epistle": "2 Corinthians 10:12-18",
+        "gospel": "Mark 1:1-8"
+      },
+      "TUESDAY": {
+        "epistle": "2 Corinthians 11:1-6",
+        "gospel": "John 1:19-28"
+      },
+      "WEDNESDAY": {
+        "epistle": "2 Corinthians 11:7-15",
+        "gospel": "John 3:22-30"
+      },
+      "THURSDAY": {
+        "epistle": "2 Corinthians 11:18, 22-30",
+        "gospel": "John 3:31-36"
+      },
+      "FRIDAY": {
+        "epistle": "2 Corinthians 12:1-10",
+        "gospel": "Matthew 14:1-12"
+      },
+      "SATURDAY": {
+        "epistle": "2 Corinthians 12:11-16",
+        "gospel": "John 10:40-42"
+      }
+    }
+  },
+  {
+    "page": "2nd Week Epiphany",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Jer 1:4-10",
+        "epistle": "2 Corinthians 4:5-15",
+        "gospel": "John 1:35-42"
+      },
+      "MONDAY": {
+        "epistle": "2 Corinthians 1:1-11",
+        "gospel": "John 1:43-51"
+      },
+      "TUESDAY": {
+        "epistle": "2 Corinthians 1:12-24",
+        "gospel": "Luke 5:1-11"
+      },
+      "WEDNESDAY": {
+        "epistle": "2 Corinthians 2:1-11",
+        "gospel": "Matthew 4:18-25"
+      },
+      "THURSDAY": {
+        "epistle": "2 Corinthians 2:12-17",
+        "gospel": "Matthew 9:9-13"
+      },
+      "FRIDAY": {
+        "epistle": "2 Corinthians 12:17-13:4",
+        "gospel": "Matthew 9:35-38"
+      },
+      "SATURDAY": {
+        "epistle": "2 Corinthians 13:5-13",
+        "gospel": "Matthew 10:1-6"
+      }
+    }
+  },
+  {
+    "page": "3rd Week Epiphany",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Numbers 21:4-9",
+        "epistle": "Galatians 3:23-29",
+        "gospel": "John 3:1-16"
+      },
+      "MONDAY": {
+        "epistle": "2 Corinthians 4:16-5:1-5, 10",
+        "gospel": "John 5:1-16"
+      },
+      "TUESDAY": {
+        "epistle": "2 Corinthians 5:11-21",
+        "gospel": "John 9:1-12"
+      },
+      "WEDNESDAY": {
+        "epistle": "2 Corinthians 6:1-13",
+        "gospel": "John 9:13-25"
+      },
+      "THURSDAY": {
+        "epistle": "2 Corinthians 6:14-7:1",
+        "gospel": "John 9:26-41"
+      },
+      "FRIDAY": {
+        "epistle": "2 Corinthians 7:2-10",
+        "gospel": "John 7:40-52"
+      },
+      "SATURDAY": {
+        "epistle": "2 Corinthians 7:11-16",
+        "gospel": "John 19:38-42"
+      }
+    }
+  },
+  {
+    "page": "4th Week Epiphany",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Genesis 29:1-3 + 5-6 + 9-14",
+        "epistle": "Romans 7:1-6",
+        "gospel": "John 4:5-7, 9-26"
+      },
+      "MONDAY": {
+        "epistle": "Romans 7:7-13",
+        "gospel": "John 4:31-38"
+      },
+      "TUESDAY": {
+        "epistle": "Romans 7:14-25",
+        "gospel": "John 4:39-42"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 8:4-13",
+        "gospel": "Luke 9:51-56"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 8:14-25",
+        "gospel": "Luke 17:11-19"
+      },
+      "FRIDAY": {
+        "epistle": "2 Corinthians 3:1-6",
+        "gospel": "John 7:37-39"
+      },
+      "SATURDAY": {
+        "epistle": "2 Corinthians 3:7-14",
+        "gospel": "John 19:28-37"
+      }
+    }
+  },
+  {
+    "page": "5th Week Epiphany",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "1 Kings 17:17-24",
+        "epistle": "Galatians 1:11-17",
+        "gospel": "John 4:46-54"
+      },
+      "MONDAY": {
+        "epistle": "Galatians 1:1-5",
+        "gospel": "Matthew 4:12-17"
+      },
+      "TUESDAY": {
+        "epistle": "Galatians 1:6-10",
+        "gospel": "Luke 4:16-30"
+      },
+      "WEDNESDAY": {
+        "epistle": "Galatians 1:18-24",
+        "gospel": "Matthew 12:38-42"
+      },
+      "THURSDAY": {
+        "epistle": "Galatians 2:1-10",
+        "gospel": "Luke 7:1-10"
+      },
+      "FRIDAY": {
+        "epistle": "Galatians 2:11-14",
+        "gospel": "Matthew 27:45-54"
+      },
+      "SATURDAY": {
+        "epistle": "Galatians 2:15-21",
+        "gospel": "Matthew 8:5-13"
+      }
+    }
+  },
+  {
+    "page": "Priests",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Malachi 2:1 + 5-9",
+        "epistle": "1 Timothy 4:6-16",
+        "gospel": "Luke 12:42-48"
+      },
+      "MONDAY": {
+        "epistle": "2 Timothy 1:1-11",
+        "gospel": "Matthew 16:24-28"
+      },
+      "TUESDAY": {
+        "epistle": "2 Timothy 2:1-13",
+        "gospel": "Matthew 18:1-5"
+      },
+      "WEDNESDAY": {
+        "epistle": "2 Timothy 2:14-26",
+        "gospel": "Matthew 20:20-28"
+      },
+      "THURSDAY": {
+        "epistle": "2 Timothy 3:10-17",
+        "gospel": "Luke 17:7-10"
+      },
+      "FRIDAY": {
+        "epistle": "2 Timothy 4:1-8",
+        "gospel": "Luke 22:24-30"
+      },
+      "SATURDAY": {
+        "epistle": "Titus 1:1-9",
+        "gospel": "John 13:13-17"
+      }
+    }
+  },
+  {
+    "page": "Righteous and Just",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Wisdom 5:1+3-6+8+15-16",
+        "epistle": "Hebrews 12:18-24",
+        "gospel": "Matthew 25:31-46"
+      },
+      "MONDAY": {
+        "epistle": "Hebrews 12:1-13",
+        "gospel": "Matthew 5:1-12"
+      },
+      "TUESDAY": {
+        "epistle": "Hebrews 12:14-17",
+        "gospel": "Matthew 5:13-16"
+      },
+      "WEDNESDAY": {
+        "epistle": "Hebrews 12:25-29",
+        "gospel": "Matthew 5:17-20"
+      },
+      "THURSDAY": {
+        "epistle": "Hebrews 13:1-8",
+        "gospel": "Matthew 5:21-26"
+      },
+      "FRIDAY": {
+        "epistle": "Hebrews 13:9-16",
+        "gospel": "Matthew 5:27-37"
+      },
+      "SATURDAY": {
+        "epistle": "Hebrews 13:17-25",
+        "gospel": "Matthew 5:38-48"
+      }
+    }
+  },
+  {
+    "page": "Faithful Departed",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Ez 37:1-10",
+        "epistle": "1 Thessalonians 5:1-11",
+        "gospel": "Luke 16:19-31"
+      },
+      "MONDAY": {
+        "epistle": "1 Thessalonians 4:13-18",
+        "gospel": "Luke 12:1-7"
+      },
+      "TUESDAY": {
+        "epistle": "2 Thessalonians 1:1-12",
+        "gospel": "Luke 12:8-12"
+      },
+      "WEDNESDAY": {
+        "epistle": "2 Thessalonians 2:1-12",
+        "gospel": "Luke 12:13-21"
+      },
+      "THURSDAY": {
+        "epistle": "2 Thessalonians 2:13-3:5",
+        "gospel": "Luke 12:22-32"
+      },
+      "FRIDAY": {
+        "epistle": "1 Corinthians 15:35-44",
+        "gospel": "Luke 12:33-40"
+      },
+      "SATURDAY": {
+        "epistle": "1 Corinthians 15:51-58",
+        "gospel": "Luke 12:49-59"
+      }
+    }
+  },
+  {
+    "page": "Cana of Galilee",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Isaiah 55:1+6-13",
+        "epistle": "Romans 14:14-23",
+        "gospel": "John 2:1-11"
+      },
+      "TUESDAY": {
+        "epistle": "Romans 15:1-13",
+        "gospel": "Matthew 6:5-15"
+      },
+      "WEDNESDAY": {
+        "epistle": "Romans 15:14-21",
+        "gospel": "Matthew 6:1-4"
+      },
+      "THURSDAY": {
+        "epistle": "1 Timothy 6:6-12",
+        "gospel": "Matthew 6:25-34"
+      },
+      "FRIDAY": {
+        "epistle": "2 Thessalonians 3:6-14",
+        "gospel": "Matthew 7:13-27"
+      },
+      "SATURDAY": {
+        "epistle": "Hebrews 3:12-4:4",
+        "gospel": "Luke 18:9-14"
+      }
+    }
+  },
+  {
+    "page": "The Leper",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "2 Kings 5:1-3+9-14",
+        "epistle": "Romans 6:12-23",
+        "gospel": "Mark 1:35-43"
+      },
+      "MONDAY": {
+        "epistle": "1 Thessalonians 3:6-13",
+        "gospel": "Matthew 6:22-24"
+      },
+      "TUESDAY": {
+        "epistle": "Galatians 2:11-17",
+        "gospel": "Matthew 7:7-12"
+      },
+      "WEDNESDAY": {
+        "epistle": "Romans 3:19-27",
+        "gospel": "Matthew 12:38-45"
+      },
+      "THURSDAY": {
+        "epistle": "Philippians 4:4-10",
+        "gospel": "Luke 8:4-15"
+      },
+      "FRIDAY": {
+        "epistle": "Romans 1:18-25",
+        "gospel": "Matthew 18:23-35"
+      },
+      "SATURDAY": {
+        "epistle": "Hebrews 12:28-13:9",
+        "gospel": "Mark 11:19-25"
+      }
+    }
+  },
+  {
+    "page": "The Hemorrhaging Woman",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Numbers 15:37-41",
+        "epistle": "2 Corinthians 7:4-11",
+        "gospel": "Luke 8:40-56"
+      },
+      "MONDAY": {
+        "epistle": "1 Timothy 4:9-16",
+        "gospel": "John 8:21-27"
+      },
+      "TUESDAY": {
+        "epistle": "2 Corinthians 8:1-9",
+        "gospel": "Matthew 23:1-12"
+      },
+      "WEDNESDAY": {
+        "epistle": "Galatians 2:1-7",
+        "gospel": "Matthew 17:10-13"
+      },
+      "THURSDAY": {
+        "epistle": "Galatians 1:1-10",
+        "gospel": "Luke 17:20-37"
+      },
+      "FRIDAY": {
+        "epistle": "Romans 3:1-7",
+        "gospel": "Luke 12:16-21"
+      },
+      "SATURDAY": {
+        "epistle": "2 Timothy 3:1-9",
+        "gospel": "Matthew 12:1-14"
+      }
+    }
+  },
+  {
+    "page": "The Prodigal Son",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Zech 3:1-7",
+        "epistle": "2 Corinthians 13:5-13",
+        "gospel": "Luke 15:11-32"
+      },
+      "MONDAY": {
+        "epistle": "2 Corinthians 9:1",
+        "gospel": "Luke 9:37-45"
+      },
+      "TUESDAY": {
+        "epistle": "1 Corinthians 16:15-24",
+        "gospel": "Mark 8:22-26"
+      },
+      "WEDNESDAY": {
+        "epistle": "Romans 14:1-13",
+        "gospel": "Luke 7:1-10"
+      },
+      "THURSDAY": {
+        "epistle": "2 Corinthians 1:23-2:5",
+        "gospel": "Matthew 15:29-39"
+      },
+      "FRIDAY": {
+        "epistle": "2 Corinthians 12:21-13:5",
+        "gospel": "Matthew 9:27-35"
+      },
+      "SATURDAY": {
+        "epistle": "2 Timothy 4:9-19",
+        "gospel": "Mark 3:1-12"
+      }
+    }
+  },
+  {
+    "page": "The Paralytic",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Isaiah 35:1-6+8+9",
+        "epistle": "1 Timothy 5:24-6:5",
+        "gospel": "Mark 2:1-12"
+      },
+      "MONDAY": {
+        "epistle": "Ephesians 5:3-13",
+        "gospel": "Mark 5:1-20"
+      },
+      "TUESDAY": {
+        "epistle": "1 Timothy 1:1-8",
+        "gospel": "Mark 6:47-56"
+      },
+      "WEDNESDAY": {
+        "epistle": "Ephesians 6:1-9",
+        "gospel": "Luke 7:11-17"
+      },
+      "THURSDAY": {
+        "epistle": "2 Timothy 1:6-14",
+        "gospel": "Mark 4:33-41"
+      },
+      "FRIDAY": {
+        "epistle": "Philippians 2:12-19",
+        "gospel": "Luke 4:31-44"
+      },
+      "SATURDAY": {
+        "epistle": "Colossians 3:23-4:7",
+        "gospel": "Mark 7:31-37"
+      }
+    }
+  },
+  {
+    "page": "Bartimaeus the Blind",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Isaiah 42:6-8 + 16-18",
+        "epistle": "2 Corinthians 10:1-7",
+        "gospel": "Mark 10:46-52"
+      },
+      "MONDAY": {
+        "epistle": "Romans 15:25-33",
+        "gospel": "John 7:32-36"
+      },
+      "TUESDAY": {
+        "epistle": "Romans 8:12-18",
+        "gospel": "John 7:1-13"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 Thessalonians 4:1-9",
+        "gospel": "Luke 11:37-48"
+      },
+      "THURSDAY": {
+        "epistle": "Titus 2:1-8",
+        "gospel": "Luke 18:31-34"
+      }
+    }
+  },
+  {
+    "page": "Hosanna Sunday",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Zech 9:9-11+15",
+        "epistle": "Philippians 1:1-13",
+        "gospel": "John 12:12-22"
+      },
+      "MONDAY": {
+        "epistle": "Hebrews 6:1-9",
+        "gospel": "Matthew 21:17-27"
+      },
+      "TUESDAY": {
+        "epistle": "1 Thessalonians 2:13-17",
+        "gospel": "Luke 13:22-30"
+      },
+      "WEDNESDAY": {
+        "epistle": "Hebrews 2:5-12",
+        "gospel": "John 11:47-54"
+      }
+    }
+  },
+  {
+    "page": "Resurrection",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Jonah 2:1",
+        "epistle": "Philippians 2:1-11",
+        "gospel": "Matthew 28:1-10"
+      },
+      "MONDAY": {
+        "epistle": "1 Corinthians 15:1-11",
+        "gospel": "Mark 16:9-14"
+      },
+      "TUESDAY": {
+        "epistle": "Romans 6:3-11",
+        "gospel": "John 21:1-14"
+      },
+      "WEDNESDAY": {
+        "epistle": "Colossians 3:1-11",
+        "gospel": "John 21:15-25"
+      },
+      "THURSDAY": {
+        "epistle": "Ephesians 2:1-10",
+        "gospel": "Mark 16:15-18"
+      },
+      "FRIDAY": {
+        "epistle": "Romans 10:4-12",
+        "gospel": "Luke 24:36-45"
+      },
+      "SATURDAY": {
+        "epistle": "Colossians 2:8-15",
+        "gospel": "John 20:19-25"
+      }
+    }
+  },
+  {
+    "page": "2nd Week Resurrection",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Isaiah 52:7-12",
+        "epistle": "2 Corinthians 5:11-21",
+        "gospel": "John 20:26-31"
+      },
+      "MONDAY": {
+        "epistle": "1 Peter 1:1-9",
+        "gospel": "John 20:1-10"
+      },
+      "TUESDAY": {
+        "epistle": "1 Peter 1:10-16",
+        "gospel": "John 20:11-18"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 Peter 1:17-21",
+        "gospel": "Matthew 28:11-15"
+      },
+      "THURSDAY": {
+        "epistle": "1 Peter 1:22-25",
+        "gospel": "Matthew 28:16-20"
+      },
+      "FRIDAY": {
+        "epistle": "1 Peter 2:1-10",
+        "gospel": "John 2:13-25"
+      },
+      "SATURDAY": {
+        "epistle": "1 Peter 2:11-17",
+        "gospel": "Matthew 22:41-46"
+      }
+    }
+  },
+  {
+    "page": "3rd Week Resurrection",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Job 42:1-6, 12",
+        "epistle": "2 Tim 2:8-13",
+        "gospel": "Luke 24:13-35"
+      },
+      "MONDAY": {
+        "epistle": "1 Peter 2:18-25",
+        "gospel": "Luke 24:44-49"
+      },
+      "TUESDAY": {
+        "epistle": "1 Peter 3:1-12",
+        "gospel": "John 6:28-33"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 Peter 3:13-22",
+        "gospel": "John 6:34-40"
+      },
+      "THURSDAY": {
+        "epistle": "1 Peter 4:1-11",
+        "gospel": "John 6:41-47"
+      },
+      "FRIDAY": {
+        "epistle": "1 Peter 4:12-19",
+        "gospel": "John 6:48-59"
+      },
+      "SATURDAY": {
+        "epistle": "1 Peter 5:1-14",
+        "gospel": "John 6:60-71"
+      }
+    }
+  },
+  {
+    "page": "4th Week Resurrection",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Gen 1:20-23",
+        "epistle": "Hebrews 13:18-25",
+        "gospel": "John 21:1-14"
+      },
+      "MONDAY": {
+        "epistle": "1 Thessalonians 1:1-10",
+        "gospel": "Luke 5:1-11"
+      },
+      "TUESDAY": {
+        "epistle": "1 Thessalonians 2:1-12",
+        "gospel": "Luke 8:22-25"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 Thessalonians 2:13-20",
+        "gospel": "John 6:1-15"
+      },
+      "THURSDAY": {
+        "epistle": "1 Thessalonians 3:1-13",
+        "gospel": "John 6:16-21"
+      },
+      "FRIDAY": {
+        "epistle": "1 Thessalonians 4:1-12",
+        "gospel": "John 6:22-27"
+      },
+      "SATURDAY": {
+        "epistle": "1 Thessalonians 5:12-28",
+        "gospel": "Matthew 14:22-33"
+      }
+    }
+  },
+  {
+    "page": "5th Week Resurrection",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Ez 34:11-16 + 23-25",
+        "epistle": "Ephesians 2:1-10",
+        "gospel": "John 21:15-19"
+      },
+      "MONDAY": {
+        "epistle": "Philippians 1:1-10",
+        "gospel": "Luke 22:28-34"
+      },
+      "TUESDAY": {
+        "epistle": "Philippians 1:12-20",
+        "gospel": "John 1:35-42"
+      },
+      "WEDNESDAY": {
+        "epistle": "Philippians 1:21-30",
+        "gospel": "Matthew 16:21-28"
+      },
+      "THURSDAY": {
+        "epistle": "Philippians 2:1-11",
+        "gospel": "Matthew 16:11-20"
+      },
+      "FRIDAY": {
+        "epistle": "Philippians 2:12-18",
+        "gospel": "Matthew 18:18-22"
+      },
+      "SATURDAY": {
+        "epistle": "Philippians 2:19-30",
+        "gospel": "Matthew 17:24-27"
+      }
+    }
+  },
+  {
+    "page": "6th Week Resurrection",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Deut 31:1-3 + 6-9",
+        "epistle": "Romans 10:1-13",
+        "gospel": "Luke 24:36-48"
+      },
+      "MONDAY": {
+        "epistle": "Philippians 3:1-12",
+        "gospel": "John 11:1-16"
+      },
+      "TUESDAY": {
+        "epistle": "Philippians 3:13-21",
+        "gospel": "John 11:17-27"
+      },
+      "WEDNESDAY": {
+        "epistle": "Philippians 4:1-7",
+        "gospel": "John 11:32-44",
+        "old_testament": "2 Kings 2:1 + 8-13"
+      },
+      "FRIDAY": {
+        "epistle": "Philippians 4:8-14",
+        "gospel": "John 3:12-15"
+      },
+      "SATURDAY": {
+        "epistle": "Philippians 4:15-23",
+        "gospel": "John 14:1-6"
+      }
+    }
+  },
+  {
+    "page": "7th Week Resurrection",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Lev 19:1-2 +11-18",
+        "epistle": "Ephesians 1:15-23",
+        "gospel": "John 13:31-35"
+      },
+      "MONDAY": {
+        "epistle": "Ephesians 4:1-13",
+        "gospel": "John 12:20-25"
+      },
+      "TUESDAY": {
+        "epistle": "Ephesians 4:17-24",
+        "gospel": "John 12:26-30"
+      },
+      "WEDNESDAY": {
+        "epistle": "Ephesians 4:25-32",
+        "gospel": "John 12:31-36"
+      },
+      "THURSDAY": {
+        "epistle": "Ephesians 5:1-7",
+        "gospel": "John 12:37-43"
+      },
+      "FRIDAY": {
+        "epistle": "Ephesians 5:8-21",
+        "gospel": "Mark 12:28-34"
+      },
+      "SATURDAY": {
+        "epistle": "Ephesians 6:10-20,23-24",
+        "gospel": "Matthew 5:43-48"
+      }
+    }
+  },
+  {
+    "page": "Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Gen 11:1-9",
+        "epistle": "Acts 2:1-21",
+        "gospel": "John 14:15-20"
+      },
+      "MONDAY": {
+        "epistle": "Acts 2:22-28",
+        "gospel": "John 3:5-8"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 2:29-39",
+        "gospel": "John 4:21-24"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 2:40-47",
+        "gospel": "John 7:37-39"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 3:1-10",
+        "gospel": "John 14:1-7"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 3:11-21",
+        "gospel": "John 14:8-14"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 3:22-4:4",
+        "gospel": "John 14:27-31"
+      }
+    }
+  },
+  {
+    "page": "2nd Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Gen 18:1-8",
+        "epistle": "Romans 11:25-36",
+        "gospel": "Matthew 28:16-20"
+      },
+      "MONDAY": {
+        "epistle": "Acts 4:5-12",
+        "gospel": "John 15:1-8"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 4:13-22",
+        "gospel": "John 15:9-14"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 4:23-31",
+        "gospel": "John 15:15-17"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 5:1-11",
+        "gospel": "John 15:18-21"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 5:12-21",
+        "gospel": "John 15:22-27"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 5:21",
+        "gospel": "John 16:1-4"
+      }
+    }
+  },
+  {
+    "page": "3rd Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Prov 8:22-23 + 30-36",
+        "epistle": "1 Corinthians 2:1-10",
+        "gospel": "John 14:21-27"
+      },
+      "MONDAY": {
+        "epistle": "Acts 5:34-42",
+        "gospel": "John 16:5-11"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 6:1-12",
+        "gospel": "John 16:12-15"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 7:1-8",
+        "gospel": "John 16:16-19"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 7:9-16",
+        "gospel": "John 16:20-24"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 7:17-29",
+        "gospel": "John 16:25-28"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 7:30-38",
+        "gospel": "John 16:29-33"
+      }
+    }
+  },
+  {
+    "page": "4th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Wis 7:7-14",
+        "epistle": "1 Corinthians 2:11-16",
+        "gospel": "Luke 10:21-24"
+      },
+      "MONDAY": {
+        "epistle": "Acts 7:44-50",
+        "gospel": "Matthew 18:1-5"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 7:51-8:1",
+        "gospel": "Matthew 18:6-10"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 8:1",
+        "gospel": "Matthew 18:11-14"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 8:9,13",
+        "gospel": "Matthew 18:15-20"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 8:26-40",
+        "gospel": "Matthew 18:21-35"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 9:1-6,10-11,15-19",
+        "gospel": "Matthew 11:25-30"
+      }
+    }
+  },
+  {
+    "page": "5th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Ex 1:1-7",
+        "epistle": "Philippians 3:7-14",
+        "gospel": "Matthew 10:1-7"
+      },
+      "MONDAY": {
+        "epistle": "Acts 9:19",
+        "gospel": "Matthew 10:8-15"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 9:31-43",
+        "gospel": "Mark 13:9-13"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 10:1-10,19-23",
+        "gospel": "Matthew 10:21-26"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 10:23",
+        "gospel": "Matthew 10:27-33"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 10:44-48",
+        "gospel": "Matthew 10:34-39"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 11:19-30",
+        "gospel": "Matthew 10:40-11:1"
+      }
+    }
+  },
+  {
+    "page": "6th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Ez 3:1-7 + 10-12",
+        "epistle": "1 Corinthians 12:12-13, 27-30",
+        "gospel": "Matthew 10:16-25"
+      },
+      "MONDAY": {
+        "epistle": "Acts 12:1-11",
+        "gospel": "Matthew 15:1-9"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 12:12-24",
+        "gospel": "Matthew 15:10-20"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 12:25-13:12",
+        "gospel": "Matthew 15:21-28"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 13:13-25",
+        "gospel": "Matthew 16:1-4"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 13:26-39",
+        "gospel": "Matthew 16:5-12"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 13:44-52",
+        "gospel": "John 3:31-36"
+      }
+    }
+  },
+  {
+    "page": "7th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "epistle": "The Sending of the 72",
+        "old_testament": "Num 11:16-17 + 24-29",
+        "gospel": "Luke 10:1-7"
+      },
+      "MONDAY": {
+        "epistle": "Acts 14:1-7",
+        "gospel": "Luke 10:8-12"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 14:8-18",
+        "gospel": "Luke 10:13-16"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 14:19-28",
+        "gospel": "Luke 10:17-20"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 15:1-12",
+        "gospel": "Luke 10:25-28"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 15:13-21",
+        "gospel": "Luke 10:29-37"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 15:22-30",
+        "gospel": "Luke 10:38-42"
+      }
+    }
+  },
+  {
+    "page": "8th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Is 42:1-8",
+        "epistle": "Romans 8:1-11",
+        "gospel": "Matthew 12:14-21"
+      },
+      "MONDAY": {
+        "epistle": "Acts 15:36-16:1-3,6-10",
+        "gospel": "Luke 11:1-4"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 16:11-23",
+        "gospel": "Luke 11:5-8"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 16:25-34",
+        "gospel": "Luke 11:9-13"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 17:1-12",
+        "gospel": "Luke 11:14-23"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 17:16-20,22-24,30-34",
+        "gospel": "Luke 11:24-26"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 18:1-11",
+        "gospel": "Luke 11:27-32"
+      }
+    }
+  },
+  {
+    "page": "9th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Is 61:1-4 + 8-10",
+        "epistle": "2 Corinthians 5:20-6:10",
+        "gospel": "Luke 4:14-21"
+      },
+      "MONDAY": {
+        "epistle": "Acts 18:18-28",
+        "gospel": "Luke 11:33-36"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 19:1-10",
+        "gospel": "Luke 11:37-41"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 19:11-22",
+        "gospel": "Luke 11:42-46"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 19:23-29,35-40",
+        "gospel": "Luke 11:47-51"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 20:6-16",
+        "gospel": "Luke 11:52-54"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 20:17-24,28,32,35",
+        "gospel": "Matthew 23:1-12"
+      }
+    }
+  },
+  {
+    "page": "10th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "2 Kings 1:2-8",
+        "epistle": "1 Corinthians 12:1-11",
+        "gospel": "Matthew 12:22-32"
+      },
+      "MONDAY": {
+        "epistle": "Acts 21:1-14",
+        "gospel": "Matthew 23:13-15"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 21:15-26",
+        "gospel": "Matthew 23:16-22"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 21:27-28, 30",
+        "gospel": "Matthew 23:23-26"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 21:40-22:10",
+        "gospel": "Luke 12:1-5"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 22:17-29",
+        "gospel": "Luke 12:6-9"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 22:30-23:11",
+        "gospel": "Luke 12:10-12"
+      }
+    }
+  },
+  {
+    "page": "11th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Ez 18:1 + 21-23 + 27-28",
+        "epistle": "Ephesians 2:17-22",
+        "gospel": "Luke 19:1-10"
+      },
+      "MONDAY": {
+        "epistle": "Acts 23:12-22",
+        "gospel": "Luke 12:13-21"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 23:23-35",
+        "gospel": "Luke 12:22-31"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 24:1-2",
+        "gospel": "Luke 12:32-34"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 24:27-25:12",
+        "gospel": "Luke 12:35-40"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 25:13",
+        "gospel": "Luke 12:42-48"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 26:1-2",
+        "gospel": "Luke 12:49-53"
+      }
+    }
+  },
+  {
+    "page": "12th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Ruth 1:15-19",
+        "epistle": "Ephesians 3:1-13",
+        "gospel": "Matthew 15:21-28"
+      },
+      "MONDAY": {
+        "epistle": "Acts 27:1-4,8",
+        "gospel": "Luke 12:54-59"
+      },
+      "TUESDAY": {
+        "epistle": "Acts 27:27,33-37,39-44",
+        "gospel": "Luke 13:1-5"
+      },
+      "WEDNESDAY": {
+        "epistle": "Acts 28:1-10",
+        "gospel": "Luke 13:6-9"
+      },
+      "THURSDAY": {
+        "epistle": "Acts 28:11-15",
+        "gospel": "Luke 13:10-17"
+      },
+      "FRIDAY": {
+        "epistle": "Acts 28:16-22",
+        "gospel": "Luke 13:18-21"
+      },
+      "SATURDAY": {
+        "epistle": "Acts 28:23-31",
+        "gospel": "Luke 13:22-30"
+      }
+    }
+  },
+  {
+    "page": "13th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Gen 2:8-10 + 15-17",
+        "epistle": "1 Corinthians 3:1-11",
+        "gospel": "Luke 8:1-15"
+      },
+      "MONDAY": {
+        "epistle": "1 John 1:1-10",
+        "gospel": "Luke 13:31-35"
+      },
+      "TUESDAY": {
+        "epistle": "1 John 2:1-11",
+        "gospel": "Luke 14:1-6"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 John 2:12-20",
+        "gospel": "Luke 14:7-11"
+      },
+      "THURSDAY": {
+        "epistle": "1 John 2:21-29",
+        "gospel": "Luke 14:12-15"
+      },
+      "FRIDAY": {
+        "epistle": "1 John 3:1-10",
+        "gospel": "Luke 14:16-24"
+      },
+      "SATURDAY": {
+        "epistle": "1 John 3:11-22",
+        "gospel": "Luke 14:25-35"
+      }
+    }
+  },
+  {
+    "page": "14th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Deut 6:4-9",
+        "epistle": "1 Thessalonians 2:1-13",
+        "gospel": "Luke 10:38-42"
+      },
+      "MONDAY": {
+        "epistle": "1 John 3:23-4:6",
+        "gospel": "Luke 15:1-7"
+      },
+      "TUESDAY": {
+        "epistle": "1 John 4:7-21",
+        "gospel": "Luke 15:8-10"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 John 5:1-12",
+        "gospel": "Luke 16:1-8"
+      },
+      "THURSDAY": {
+        "epistle": "1 John 5:13-21",
+        "gospel": "Luke 16:9-12"
+      },
+      "FRIDAY": {
+        "epistle": "2 John 1-13",
+        "gospel": "Luke 16:13-17"
+      },
+      "SATURDAY": {
+        "epistle": "3 John 1-15",
+        "gospel": "Luke 17:1-4"
+      }
+    }
+  },
+  {
+    "page": "15th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Micah 7:7-9 + 18-20",
+        "epistle": "1 Thessalonians 1:1-10",
+        "gospel": "Luke 7:36-50"
+      },
+      "MONDAY": {
+        "epistle": "James 1:1-8",
+        "gospel": "Luke 17:5-10"
+      },
+      "TUESDAY": {
+        "epistle": "James 1:9-18",
+        "gospel": "Luke 17:11-19"
+      },
+      "WEDNESDAY": {
+        "epistle": "James 1:19-27",
+        "gospel": "Luke 17:20-25"
+      },
+      "THURSDAY": {
+        "epistle": "James 2:1-13",
+        "gospel": "Luke 17:26-30"
+      },
+      "FRIDAY": {
+        "epistle": "James 2:14-26",
+        "gospel": "Luke 17:31-37"
+      },
+      "SATURDAY": {
+        "epistle": "James 3:1-12",
+        "gospel": "Luke 18:1-8"
+      }
+    }
+  },
+  {
+    "page": "16th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Amos 5:21-24",
+        "epistle": "Romans 8:18-27",
+        "gospel": "Luke 18:9-14"
+      },
+      "MONDAY": {
+        "epistle": "James 3:13-18",
+        "gospel": "Luke 18:15-17"
+      },
+      "TUESDAY": {
+        "epistle": "James 4:1-10",
+        "gospel": "Luke 18:18-23"
+      },
+      "WEDNESDAY": {
+        "epistle": "James 4:11-17",
+        "gospel": "Luke 18:24-30"
+      },
+      "THURSDAY": {
+        "epistle": "James 5:1-6",
+        "gospel": "Luke 18:31-34"
+      },
+      "FRIDAY": {
+        "epistle": "James 5:7-12",
+        "gospel": "Luke 19:11-28"
+      },
+      "SATURDAY": {
+        "epistle": "James 5:13-20",
+        "gospel": "Luke 19:41-44"
+      }
+    }
+  },
+  {
+    "page": "17th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Micah 6:6-9",
+        "epistle": "Romans 13:8-14",
+        "gospel": "Luke 10:25-37"
+      },
+      "MONDAY": {
+        "epistle": "1 Timothy 1:1-7, 12-17",
+        "gospel": "Matthew 5:43-48"
+      },
+      "TUESDAY": {
+        "epistle": "1 Timothy 1:18-2:7",
+        "gospel": "John 13:31-35"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 Timothy 2:8-15",
+        "gospel": "John 15:12-17"
+      },
+      "THURSDAY": {
+        "epistle": "1 Timothy 3:1-13",
+        "gospel": "Matthew 22:35-40"
+      },
+      "FRIDAY": {
+        "epistle": "1 Timothy 3:14-4:5",
+        "gospel": "Luke 6:31-38"
+      },
+      "SATURDAY": {
+        "epistle": "1 Timothy 4:6-16",
+        "gospel": "John 17:20-26"
+      }
+    }
+  },
+  {
+    "page": "18th Week Pentecost",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Is 5:1-7",
+        "epistle": "1 Peter 1:22-25",
+        "gospel": "Mark 12:1-12"
+      },
+      "MONDAY": {
+        "epistle": "1 Timothy 5:1-10",
+        "gospel": "Mark 11:27-33"
+      },
+      "TUESDAY": {
+        "epistle": "1 Timothy 5:17-25",
+        "gospel": "Mark 12:13-17"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 Timothy 6:1-10",
+        "gospel": "Mark 12:18-27"
+      },
+      "THURSDAY": {
+        "epistle": "1 Timothy 6:11-21",
+        "gospel": "Mark 12:28-34"
+      },
+      "FRIDAY": {
+        "epistle": "Titus 3:1-9,14-15",
+        "gospel": "Mark 12:35-40"
+      },
+      "SATURDAY": {
+        "epistle": "Philemon 1-25",
+        "gospel": "Mark 12:41-44"
+      }
+    }
+  },
+  {
+    "page": "Exaltation of Holy Cross",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Ex 17:8-15",
+        "epistle": "1 Corinthians 1:18-25",
+        "gospel": "John 12:20-32"
+      },
+      "MONDAY": {
+        "epistle": "2 Peter 1:1-11",
+        "gospel": "John 3:11-21"
+      },
+      "TUESDAY": {
+        "epistle": "2 Peter 1:12-21",
+        "gospel": "John 8:21-30"
+      },
+      "WEDNESDAY": {
+        "epistle": "2 Peter 3:1-9",
+        "gospel": "John 12:31-36"
+      },
+      "THURSDAY": {
+        "epistle": "2 Peter 3:10-18",
+        "gospel": "Mark 8:31-38"
+      },
+      "FRIDAY": {
+        "epistle": "Jude 1-7",
+        "gospel": "John 18:33-38"
+      },
+      "SATURDAY": {
+        "epistle": "Jude 17-25",
+        "gospel": "Luke 23:36-43"
+      }
+    }
+  },
+  {
+    "page": "1st Week Holy Cross",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Deut 17:14-20",
+        "epistle": "2 Timothy 2:1-10",
+        "gospel": "Mark 10:35-45"
+      },
+      "MONDAY": {
+        "epistle": "Revelation 1:1-8",
+        "gospel": "Mark 8:34-9:1"
+      },
+      "TUESDAY": {
+        "epistle": "Revelation 1:9-20",
+        "gospel": "Mark 9:33-37"
+      },
+      "WEDNESDAY": {
+        "epistle": "Revelation 2:1-7",
+        "gospel": "Mark 9:38-50"
+      },
+      "THURSDAY": {
+        "epistle": "Revelation 2:8-11",
+        "gospel": "Mark 10:17-27"
+      },
+      "FRIDAY": {
+        "epistle": "Revelation 2:12-17",
+        "gospel": "Mark 10:28-31"
+      },
+      "SATURDAY": {
+        "epistle": "Revelation 2:18-29",
+        "gospel": "Matthew 20:1-16"
+      }
+    }
+  },
+  {
+    "page": "2nd Week Holy Cross",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Joel 2:1+10-13+15-16",
+        "epistle": "1 Corinthians 15:19-34",
+        "gospel": "Matthew 24:1-14"
+      },
+      "MONDAY": {
+        "epistle": "Revelation 3:1-6",
+        "gospel": "Matthew 10:16-22"
+      },
+      "TUESDAY": {
+        "epistle": "Revelation 3:7-13",
+        "gospel": "Matthew 11:20-24"
+      },
+      "WEDNESDAY": {
+        "epistle": "Revelation 3:14-22",
+        "gospel": "Matthew 12:29-32"
+      },
+      "THURSDAY": {
+        "epistle": "Revelation 4:1-11",
+        "gospel": "Matthew 12:33-37"
+      },
+      "FRIDAY": {
+        "epistle": "Revelation 5:1-10",
+        "gospel": "Matthew 12:38-42"
+      },
+      "SATURDAY": {
+        "epistle": "Revelation 6:9-17",
+        "gospel": "Matthew 12:43-45"
+      }
+    }
+  },
+  {
+    "page": "3rd Week Holy Cross",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Daniel 7:9-14",
+        "epistle": "Philippians 3:17-4:1",
+        "gospel": "Matthew 24:23-31"
+      },
+      "MONDAY": {
+        "epistle": "Revelation 7:9-17",
+        "gospel": "Matthew 24:32-44"
+      },
+      "TUESDAY": {
+        "epistle": "Revelation 10:1-11",
+        "gospel": "Luke 6:20-26"
+      },
+      "WEDNESDAY": {
+        "epistle": "Revelation 11:1-12",
+        "gospel": "Luke 5:33-39"
+      },
+      "THURSDAY": {
+        "epistle": "Revelation 12:1-12",
+        "gospel": "Luke 21:34-38"
+      },
+      "FRIDAY": {
+        "epistle": "Revelation 13:1,2",
+        "gospel": "John 5:17-23"
+      },
+      "SATURDAY": {
+        "epistle": "Revelation 14:1-8,13",
+        "gospel": "John 5:24-30"
+      }
+    }
+  },
+  {
+    "page": "4th Week Holy Cross",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Genesis 41:38-44",
+        "epistle": "1 Thessalonians 5:1-11",
+        "gospel": "Matthew 24:45-51"
+      },
+      "MONDAY": {
+        "epistle": "Revelation 15:1-8",
+        "gospel": "John 12:20-28"
+      },
+      "TUESDAY": {
+        "epistle": "Revelation 18:1-8",
+        "gospel": "John 16:20-24"
+      },
+      "WEDNESDAY": {
+        "epistle": "Revelation 19:1-2, 5-9, 11-13, 16",
+        "gospel": "Luke 12:16-21"
+      },
+      "THURSDAY": {
+        "epistle": "Revelation 21:1-12, 14",
+        "gospel": "Luke 13:6-9"
+      },
+      "FRIDAY": {
+        "epistle": "Revelation 21:22-22:5",
+        "gospel": "Luke 15:3-7"
+      },
+      "SATURDAY": {
+        "epistle": "Revelation 22:16-21",
+        "gospel": "Luke 15:8-10"
+      }
+    }
+  },
+  {
+    "page": "5th Week Holy Cross",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Song of Songs 5:2-8",
+        "epistle": "Philippians 2:12-18",
+        "gospel": "Matthew 25:1-13"
+      },
+      "MONDAY": {
+        "epistle": "1 Corinthians 1:1-9",
+        "gospel": "Luke 16:1-12"
+      },
+      "TUESDAY": {
+        "epistle": "1 Corinthians 1:10-17",
+        "gospel": "Luke 18:1-8"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 Corinthians 1:26-31",
+        "gospel": "Luke 19:11-28"
+      },
+      "THURSDAY": {
+        "epistle": "1 Corinthians 3:10-23",
+        "gospel": "Mark 4:21-25"
+      },
+      "FRIDAY": {
+        "epistle": "1 Corinthians 4:1-13",
+        "gospel": "Mark 4:26-29"
+      },
+      "SATURDAY": {
+        "epistle": "1 Corinthians 4:14-21",
+        "gospel": "Matthew 22:1-14"
+      }
+    }
+  },
+  {
+    "page": "6th Week Holy Cross",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Proverbs 6:6-11",
+        "epistle": "Galatians 6:1-10",
+        "gospel": "Matthew 25:14-30"
+      },
+      "MONDAY": {
+        "epistle": "1 Corinthians 6:1-11",
+        "gospel": "Matthew 13:1-9"
+      },
+      "TUESDAY": {
+        "epistle": "1 Corinthians 6:12-20",
+        "gospel": "Matthew 13:10-17"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 Corinthians 7:1-3, 8-14, 17, 24",
+        "gospel": "Matthew 13:18-23"
+      },
+      "THURSDAY": {
+        "epistle": "1 Corinthians 7:25-35",
+        "gospel": "Matthew 13:24-30"
+      },
+      "FRIDAY": {
+        "epistle": "1 Corinthians 9:13-18",
+        "gospel": "Matthew 13:31-35"
+      },
+      "SATURDAY": {
+        "epistle": "1 Corinthians 9:19-27",
+        "gospel": "Matthew 13:36-43"
+      }
+    }
+  },
+  {
+    "page": "7th Week Holy Cross",
+    "days": {
+      "SUNDAY": {
+        "old_testament": "Job 29:1-3 + 12-16",
+        "epistle": "Romans 12:9-21",
+        "gospel": "Matthew 25:31-46"
+      },
+      "MONDAY": {
+        "epistle": "1 Corinthians 10:1-13",
+        "gospel": "Matthew 13:44-46"
+      },
+      "TUESDAY": {
+        "epistle": "1 Corinthians 10:14-24",
+        "gospel": "Matthew 13:47-53"
+      },
+      "WEDNESDAY": {
+        "epistle": "1 Corinthians 12:1-11",
+        "gospel": "Matthew 18:23-35"
+      },
+      "THURSDAY": {
+        "epistle": "1 Corinthians 12:12-27",
+        "gospel": "Matthew 22:15-22"
+      },
+      "FRIDAY": {
+        "epistle": "1 Corinthians 13:1-13",
+        "gospel": "Matthew 21:28-32"
+      },
+      "SATURDAY": {
+        "epistle": "1 Corinthians 14:1-5,13-14,20,26",
+        "gospel": "Matthew 21:33-46"
+      }
+    }
+  },
+  {
+    "page": "1Jan",
+    "days": {
+      "SUNDAY": {
+        "epistle": "January 1:"
+      }
+    }
+  },
+  {
+    "page": "2Jan",
+    "days": {}
+  },
+  {
+    "page": "3Jan",
+    "days": {}
+  },
+  {
+    "page": "6Jan",
+    "days": {}
+  },
+  {
+    "page": "7Jan",
+    "days": {}
+  },
+  {
+    "page": "10Jan",
+    "days": {
+      "SUNDAY": {
+        "epistle": "In 381 Gregory attended the second ecumenical council of Constantinople, and supported with philosophical and theological arguments, the truth of the divine nature of the Holy Spirit, and worked to excommunicate Makdonios and his followers who denied the divinity of the Holy Ghost. In 394 he participated in another council, always in Constantinople, where the fathers of the council promoted him to the rank of Metropolitan (Archbishop). He continued his fierce fight against the enemies of the true faith, leading his people first by his holy way of life, until he died in the Lord in 394. He truly enriched the Church with his theological and biblical writings; and became an important reference for the fathers of the Church and theologians especially in Trinitarian Theology matter. May his prayers be with us. Amen."
+      }
+    }
+  },
+  {
+    "page": "13Jan",
+    "days": {}
+  },
+  {
+    "page": "17Jan",
+    "days": {
+      "SUNDAY": {
+        "epistle": "In the year 311, when persecution against Christians got fierce, Anthony was carried out by a great apostolic zeal, and marched down to Alexandria, searching for his Christian brothers and sisters, supporting them in their faith, accompanying them before governors and judges, and till martyrdom, helping them to stand firm in the face of this ephemeral persecution. He remained in Alexandria until persecutions calmed down, and then returned to his hermitage in Upper Egypt, persevering in his monastic life."
+      },
+      "MONDAY": {
+        "epistle": "In the year 325 Alexandria the capital of North Africa, again was threatened by the Arian heresy, and Anthony was called down for help, by Bishop Athanasius. In stead of his old age, Anthony obeyed the call of his bishop, and walked down to Alexandria, which came out to greet him. He stayed among them for a while teaching them about the truth of Jesus Christ, a true man and a true God, and then turned back to his mountain in solitude. Anthony was quite revered among kings and the lords of this earth, especially by king Constantine the Great who wrote him asking for his prayers."
+      }
+    }
+  },
+  {
+    "page": "18Jan",
+    "days": {}
+  },
+  {
+    "page": "19Jan",
+    "days": {}
+  },
+  {
+    "page": "25Jan",
+    "days": {}
+  },
+  {
+    "page": "28Jan",
+    "days": {
+      "SUNDAY": {
+        "epistle": "In the year 369 Ephrem moved his school to Edessa, where he continued with a greater zeal his work in writing and teaching theology. And when the clergy and people of Edessa wanted him to become their bishop, the news terrified Ephrem who considered himself unworthy of such a great responsibility, and pretended to be foolish and insane until he was left in alone. Whenever Ephrem was tempted in pride, or pushed to gossip about other people’s imperfections, he would remind himself of a terrible accident that he caused as a child, when he chased out the cow of his parents neighbors so enthusiastically, that the cow fall down and died. He then would cry his sin saying:“the cow! What have you done to the cow, Eprhem? ... ”, asking for God’s mercy, considering himself a great sinner."
+      }
+    }
+  },
+  {
+    "page": "2Feb",
+    "days": {}
+  },
+  {
+    "page": "6Feb",
+    "days": {}
+  },
+  {
+    "page": "9Feb",
+    "days": {}
+  },
+  {
+    "page": "12Feb",
+    "days": {
+      "SUNDAY": {
+        "epistle": "In the year 250, when Caesar Dakius lunched persecutions against Christian, Bishop Alexander was captured, tortured, and burned down a martyr. May his prayer be with us always. Amen."
+      }
+    }
+  },
+  {
+    "page": "14Feb",
+    "days": {}
+  },
+  {
+    "page": "18Feb",
+    "days": {
+      "SUNDAY": {
+        "epistle": "In the year 459, Pope Leo, prohibited public confessions and ordered that confession must be heard in private. He was also the first to establish Papal Nuncios throughout the world. After a long life of holiness, pope Leo passed to eternal life in November 4th, 461 where he continues to glorify God."
+      }
+    }
+  },
+  {
+    "page": "19Feb",
+    "days": {}
+  },
+  {
+    "page": "20Feb",
+    "days": {}
+  },
+  {
+    "page": "23Feb",
+    "days": {}
+  },
+  {
+    "page": "26Feb",
+    "days": {}
+  },
+  {
+    "page": "2March",
+    "days": {
+      "SUNDAY": {
+        "epistle": "In the year 676 John Maron was ordained a bishop by the Pope’s mandate John from Philadelphia [1], and assigned the cathedral of Batroon in Mount Lebanon. In 685, John Maron was the first Maronite Patriarch to be elected by the bishops and people of Mount Lebanon. And according to our Maronite tradition, he went to Rome asking for the Pope’s blessing, which he got from Pope Sergius who welcomed him and granted him “a high leadership honor badge”. It was under the leadership of our first Patriarch that we got to be known as The Maronites after Saint Maron and thanks to the many monks that served the Maronite people especially in Mount Lebanon and kept them faithful to the Chalcedonian Catholic teaching. Saint John Maron’s first Cathedral was in the monastery of Yanooh in Jebeil’s mountains between Al’Akoora and Qartaba. According to the tradition, Saint John Maron established the monastery of Saint John Maron in KefarHay, Batroon, and got the skull of Saint Maron transferred there."
+      }
+    }
+  },
+  {
+    "page": "5March",
+    "days": {}
+  },
+  {
+    "page": "9March",
+    "days": {
+      "SUNDAY": {
+        "epistle": "The 40 martyrs of Capadokia"
+      }
+    }
+  },
+  {
+    "page": "10March",
+    "days": {}
+  },
+  {
+    "page": "11March",
+    "days": {}
+  },
+  {
+    "page": "12March",
+    "days": {
+      "SUNDAY": {
+        "epistle": "In 590, the bishops, clergy and people of Rome elected him in stead of his resistance, the new pope, after pope Belajius."
+      }
+    }
+  },
+  {
+    "page": "15March",
+    "days": {}
+  },
+  {
+    "page": "16March",
+    "days": {}
+  },
+  {
+    "page": "17March",
+    "days": {}
+  },
+  {
+    "page": "19March",
+    "days": {}
+  },
+  {
+    "page": "21March",
+    "days": {
+      "SUNDAY": {
+        "epistle": "In the year 409, Sebastian was asked by the Christian of Ptolimas to flock them as their bishop, and the patriarch ordered him to accept. Thus the patriarch Theophilos ordained him a priest, then a bishop, and established him in the service of city of Ptolimas, where he expresses a great zeal in serving his people, and a special love for the poor and the needy. A story has been recounted about him asking a friend of his, who he had recently converted to Christian faith, to lend him 300 silver pieces to give to the needy, and the saint promised to address a bill to Christ asking him to pay back his friend. Sebastian’s friend gave him the money, and later Sebastian paid him back as he promised."
+      }
+    }
+  },
+  {
+    "page": "23March",
+    "days": {}
+  },
+  {
+    "page": "25March",
+    "days": {}
+  },
+  {
+    "page": "29March",
+    "days": {}
+  },
+  {
+    "page": "16May",
+    "days": {}
+  },
+  {
+    "page": "Holy Days of Obligation",
+    "days": {
+      "SUNDAY": {
+        "epistle": "November 1"
+      },
+      "MONDAY": {
+        "epistle": "March 19"
+      }
+    }
+  },
+  {
+    "page": "Dispensation",
+    "days": {}
+  },
+  {
+    "page": "Holy Week",
+    "days": {}
+  }
+]
