@@ -14,10 +14,26 @@
             <line x1="8" y1="15" x2="16" y2="18"></line>
           </svg>
         </div>
-        <h1 class="text-4xl font-bold text-stone-800 dark:text-stone-100 mb-2 tracking-tight">Romanian Byzantine Liturgy Readings</h1>
-        <p class="text-stone-600 dark:text-stone-400 italic">Scripture readings for the Romanian Byzantine Liturgies from the <a href="https://www.stgeorgeoh.org/calendar" target="_blank" rel="noopener noreferrer" class="underline">Saint George Cathedral Calendar.</a>
-        
+        <h1 class="text-4xl font-bold text-stone-800 dark:text-stone-100 mb-2 tracking-tight">
+          {{ rite === 'maronite' ? 'Maronite Liturgy Readings' : 'Romanian Byzantine Liturgy Readings' }}
+        </h1>
+        <p v-if="rite === 'byzantine'" class="text-stone-600 dark:text-stone-400 italic">Scripture readings for the Romanian Byzantine Liturgies from the <a href="https://www.stgeorgeoh.org/calendar" target="_blank" rel="noopener noreferrer" class="underline">Saint George Cathedral Calendar.</a>
           We are specifically following the readings as outlined by the Romanian <a href="https://romaniancatholic.org/" target="_blank" rel="noopener noreferrer" class="underline">Catholic Diocese Eparchy of St. George in Canton</a>.</p>
+        <p v-else class="text-stone-600 dark:text-stone-400 italic">Daily Maronite liturgical readings. Gospel text via <a href="https://dailygospel.org/" target="_blank" rel="noopener noreferrer" class="underline">Evangelizo</a>.</p>
+
+        <!-- Rite toggle -->
+        <div class="inline-flex mt-4 rounded-lg border border-stone-300 dark:border-stone-600 overflow-hidden shadow-sm">
+          <button
+            class="px-4 py-1.5 text-sm font-medium transition-colors"
+            :class="rite === 'byzantine' ? 'bg-red-800 text-white' : 'bg-white dark:bg-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-700'"
+            @click="rite = 'byzantine'"
+          >Byzantine</button>
+          <button
+            class="px-4 py-1.5 text-sm font-medium transition-colors border-l border-stone-300 dark:border-stone-600"
+            :class="rite === 'maronite' ? 'bg-amber-700 text-white' : 'bg-white dark:bg-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-700'"
+            @click="rite = 'maronite'"
+          >Maronite</button>
+        </div>
 
       </header>
 
@@ -90,6 +106,27 @@
       </div>
 
       <main>
+        <!-- Maronite rite -->
+        <div v-if="rite === 'maronite'">
+          <div v-if="maroniteLoading" class="flex flex-col items-center justify-center py-12">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-700 dark:border-amber-500"></div>
+            <p class="mt-4 text-stone-600 dark:text-stone-400">Loading Maronite readings…</p>
+          </div>
+          <div v-else-if="maroniteReadings">
+            <MaroniteReadingCard
+              :liturgic-title="maroniteReadings.liturgic_title"
+              :readings="maroniteReadings.readings"
+              :date="currentDate"
+            />
+          </div>
+          <div v-else class="text-center py-12 bg-white dark:bg-stone-800 rounded-lg shadow p-6">
+            <p class="text-stone-500 dark:text-stone-400 text-lg">No Maronite readings found for this date.</p>
+            <a :href="maroniteLink" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-sm text-amber-700 dark:text-amber-500 underline">View on dailygospel.org →</a>
+          </div>
+        </div>
+
+        <!-- Byzantine rite -->
+        <template v-else>
         <div v-if="loading" class="flex flex-col items-center justify-center py-12">
           <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-red-800 dark:border-red-600"></div>
           <p class="mt-4 text-stone-600 dark:text-stone-400">Loading Calendar events...</p>
@@ -134,6 +171,7 @@
             <p class="text-stone-500 dark:text-stone-400 text-lg">No readings found for this day.</p>
           </div>
         </div>
+        </template>
       </main>
       
       <footer class="mt-16 text-center text-stone-500 dark:text-stone-500 text-sm space-y-4">
@@ -161,13 +199,31 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { useReadings } from './composables/useReadings';
 import ReadingCard from './components/ReadingCard.vue';
+import MaroniteReadingCard from './components/MaroniteReadingCard.vue';
 import DatePicker from './components/DatePicker.vue';
+import { getMaroniteReadings } from './services/maroniteService';
 
 const { readings, loading, error, currentDate, previousDay, nextDay, goToToday, goToComingSunday } = useReadings();
 const showDatePicker = ref(false);
+
+// Rite selection
+const rite = ref('byzantine');
+const maroniteReadings = ref(null);
+const maroniteLoading = ref(false);
+
+const loadMaroniteReadings = async (date) => {
+  maroniteLoading.value = true;
+  maroniteReadings.value = null;
+  maroniteReadings.value = await getMaroniteReadings(date);
+  maroniteLoading.value = false;
+};
+
+watch([rite, currentDate], ([newRite, newDate]) => {
+  if (newRite === 'maronite' && newDate) loadMaroniteReadings(newDate);
+}, { immediate: true });
 
 const toggleDatePicker = () => {
   showDatePicker.value = !showDatePicker.value;

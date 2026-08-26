@@ -5,18 +5,16 @@ entry contains the liturgical title and the full reading texts returned by the
 API. Designed to be a static asset shipped with the Vue.js frontend.
 
 Usage:
-    python build_maronite_calendar.py [--years 2025 2026 2027] [--workers 8]
-                                      [--output maronite_calendar.json]
+    python build_maronite_calendar.py [--years 2025 2026 2027]
+                                      [--delay 1.5] [--output maronite_calendar.json]
 """
 import argparse
 import json
 import re
 import sys
 import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, timedelta
 from pathlib import Path
-from threading import Event
 
 import requests
 
@@ -56,20 +54,19 @@ def normalize_reference(reading_code: str, book_code: str, ref_displayed: str) -
     return REF_TRAIL_RE.sub("", code).strip()
 
 
-def fetch_day(
-    date_str: str,
-    session: requests.Session,
-    stop_event: Event,
-    retries: int = 3,
-) -> dict | None:
+class RateLimited(Exception):
+    """The remote API rejected the request with HTTP 429."""
+
+
+def fetch_day(date_str: str, session: requests.Session, retries: int = 3) -> dict:
     url = f"{API_BASE}/{date_str}?from=gospelComponent"
+    last_status = None
     for attempt in range(retries):
-        if stop_event.is_set():
-            return None
         try:
             resp = session.get(url, headers=REQUEST_HEADERS, timeout=20)
+            last_status = resp.status_code
             if resp.status_code == 429:
-                wait = 2 ** attempt
+                wait = 30 * (2 ** attempt)
                 print(
                     f"  429 {date_str}: Too Many Requests "
                     f"(attempt {attempt + 1}/{retries}, retry in {wait}s)",
@@ -96,17 +93,16 @@ def fetch_day(
                 "liturgic_title": data.get("liturgic_title", ""),
                 "readings": readings,
             }
+        except RateLimited:
+            raise
         except Exception as exc:
             if attempt == retries - 1:
-                print(f"  FAIL {date_str}: {exc}", file=sys.stderr, flush=True)
-                return None
+                raise
+            print(f"  FAIL {date_str}: {exc} (retrying)", file=sys.stderr, flush=True)
             time.sleep(1)
-    print(
-        f"  FAIL {date_str}: 429 Too Many Requests after {retries} attempts",
-        file=sys.stderr,
-        flush=True,
-    )
-    return None
+    if last_status == 429:
+        raise RateLimited(f"{date_str}: 429 Too Many Requests after {retries} attempts")
+    raise RuntimeError(f"{date_str}: request failed after {retries} attempts")
 
 
 def date_range(year: int):
@@ -120,7 +116,12 @@ def date_range(year: int):
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--years", nargs="+", type=int, default=[2025, 2026, 2027])
-    parser.add_argument("--workers", type=int, default=1)
+    parser.add_argument(
+        "--delay",
+        type=float,
+        default=1.5,
+        help="Seconds to wait between successful API calls",
+    )
     parser.add_argument(
         "--output",
         default=str(Path(__file__).parent / "maronite_calendar.json"),
@@ -128,7 +129,6 @@ def main():
     args = parser.parse_args()
 
     output_path = Path(args.output)
-    # Load existing results so the script can be resumed
     existing = {}
     if output_path.exists():
         existing = json.loads(output_path.read_text(encoding="utf-8"))
@@ -136,11 +136,13 @@ def main():
 
     all_dates = [d for year in sorted(set(args.years)) for d in date_range(year)]
     to_fetch = [d for d in all_dates if d not in existing]
-    print(f"Fetching {len(to_fetch)} dates across {args.years} with {args.workers} workers…")
+    print(
+        f"Fetching {len(to_fetch)} dates across {args.years} "
+        f"with {args.delay}s between calls…"
+    )
 
     results = dict(existing)
     done = 0
-    stop_event = Event()
 
     def save(label: str) -> None:
         output_path.write_text(
@@ -150,28 +152,24 @@ def main():
         print(f"  {label}: {len(results)} entries saved to {output_path}", flush=True)
 
     with requests.Session() as session:
-        pool = ThreadPoolExecutor(max_workers=args.workers)
         try:
-            futures = {
-                pool.submit(fetch_day, d, session, stop_event): d for d in to_fetch
-            }
-            for future in as_completed(futures):
-                date_str = futures[future]
-                entry = future.result()
+            for date_str in to_fetch:
+                entry = fetch_day(date_str, session)
+                results[date_str] = entry
                 done += 1
-                if entry:
-                    results[date_str] = entry
                 if done % 50 == 0:
                     print(f"  {done}/{len(to_fetch)} fetched, saving…", flush=True)
                     save("checkpoint")
+                if args.delay > 0 and done < len(to_fetch):
+                    time.sleep(args.delay)
+        except RateLimited as exc:
+            print(f"\nRate limited. Stopping so remaining dates can be retried later.\n  {exc}", file=sys.stderr, flush=True)
+            save("rate-limited")
+            sys.exit(1)
         except KeyboardInterrupt:
-            stop_event.set()
-            print("\nInterrupted. Cancelling remaining fetches…", file=sys.stderr, flush=True)
-            pool.shutdown(wait=False, cancel_futures=True)
+            print("\nInterrupted. Saving progress…", file=sys.stderr, flush=True)
             save("interrupted")
             sys.exit(130)
-        finally:
-            pool.shutdown(wait=False, cancel_futures=True)
 
     save("done")
     print(f"Done. {len(results)} total entries saved to {output_path}")
