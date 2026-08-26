@@ -1,4 +1,4 @@
-name: Update Calendars and Readings
+name: Update Byzantine Calendars and Readings
 
 on:
   schedule:
@@ -29,11 +29,11 @@ jobs:
           python-version: "3.12"
 
       - name: Install parser dependencies
-        run: python -m pip install -r calendars/requirements.txt
+        run: python -m pip install -r byzantine-calendars/requirements.txt
 
       - name: Download calendars and extract readings
         run: |
-          cd calendars
+          cd byzantine-calendars
           bash ./get_calendars.sh "${{ steps.year.outputs.year }}"
           python ./extract_readings.py
           cp extracted_readings.json ../client/src/assets/extracted_readings.json
@@ -42,9 +42,9 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: main
-          commit_message: "chore(calendars): update data for ${{ steps.year.outputs.year }}"
+          commit_message: "chore(byzantine-calendars): update data for ${{ steps.year.outputs.year }}"
           file_pattern: |
-            calendars/readings.csv
-            calendars/extracted_readings.json
-            calendars/${{ steps.year.outputs.year }}/**
+            byzantine-calendars/readings.csv
+            byzantine-calendars/extracted_readings.json
+            byzantine-calendars/${{ steps.year.outputs.year }}/**
             client/src/assets/extracted_readings.json
