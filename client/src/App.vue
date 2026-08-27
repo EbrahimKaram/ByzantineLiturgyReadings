@@ -214,11 +214,9 @@ import MaroniteReadingCard from './components/MaroniteReadingCard.vue';
 import DatePicker from './components/DatePicker.vue';
 import { getMaroniteReadings } from './services/maroniteService';
 
-const { readings, loading, error, currentDate, previousDay, nextDay, goToToday, goToComingSunday } = useReadings();
+const { readings, loading, error, currentDate, rite, previousDay, nextDay, goToToday, goToComingSunday } = useReadings();
 const showDatePicker = ref(false);
 
-// Rite selection
-const rite = ref('byzantine');
 const maroniteReadings = ref(null);
 const maroniteLoading = ref(false);
 

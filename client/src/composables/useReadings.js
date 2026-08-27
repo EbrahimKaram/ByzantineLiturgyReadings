@@ -26,6 +26,32 @@ const parseDateFromHash = (hashValue) => {
   return Number.isNaN(parsedDate.getTime()) ? null : parsedDate;
 };
 
+const parseRite = (value) => {
+  const rite = String(value || '').toLowerCase();
+  return rite === 'maronite' || rite === 'byzantine' ? rite : null;
+};
+
+const parseLocationHash = (hashValue) => {
+  const raw = String(hashValue || '').replace(/^#/, '').replace(/^\/+|\/+$/g, '');
+  if (!raw) return { rite: null, date: null };
+
+  const parts = raw.split('/').filter(Boolean);
+  if (parts.length >= 2) {
+    return {
+      rite: parseRite(parts[0]),
+      date: parseDateFromHash(parts[1]),
+    };
+  }
+
+  const rite = parseRite(parts[0]);
+  return {
+    rite,
+    date: rite ? null : parseDateFromHash(parts[0]),
+  };
+};
+
+const buildLocationHash = (rite, date) => `${rite}/${toDateString(date)}`;
+
 export function useReadings() {
   const normalizeTitle = (title) => String(title || '')
     .normalize('NFKD')
@@ -108,13 +134,17 @@ export function useReadings() {
   const error = ref(null);
   let activeLoadId = 0;
 
-  // Helper to get the initial date (today)
-  const getInitialDate = () => {
-    const hashDate = parseDateFromHash(window.location.hash.substring(1));
-    return hashDate || new Date();
+  const getInitialState = () => {
+    const { rite, date } = parseLocationHash(window.location.hash);
+    return {
+      rite: rite || 'byzantine',
+      date: date || new Date(),
+    };
   };
 
-  const currentDate = ref(getInitialDate());
+  const initialState = getInitialState();
+  const rite = ref(initialState.rite);
+  const currentDate = ref(initialState.date);
 
   const loadReadings = async () => {
     const loadId = ++activeLoadId;
@@ -244,18 +274,28 @@ export function useReadings() {
     currentDate.value = new Date(d.setDate(diff));
   };
 
-  // Watch for date changes to refetch data and update hash
-  watch(currentDate, (newDate) => {
-    const dateString = toDateString(newDate);
-    
-    if (window.location.hash.substring(1) !== dateString) {
-      window.location.hash = dateString;
+  const syncLocationHash = () => {
+    const nextHash = buildLocationHash(rite.value, currentDate.value);
+    if (window.location.hash.substring(1) !== nextHash) {
+      window.location.hash = nextHash;
     }
+  };
+
+  // Watch for date changes to refetch data and update hash
+  watch(currentDate, () => {
+    syncLocationHash();
     loadReadings();
   }, { immediate: true });
 
+  watch(rite, syncLocationHash);
+
   const handleHashChange = () => {
-    const dateFromHash = parseDateFromHash(window.location.hash.substring(1));
+    const { rite: riteFromHash, date: dateFromHash } = parseLocationHash(window.location.hash);
+
+    if (riteFromHash && riteFromHash !== rite.value) {
+      rite.value = riteFromHash;
+    }
+
     if (dateFromHash && dateFromHash.getTime() !== currentDate.value.getTime()) {
       currentDate.value = dateFromHash;
     }
@@ -274,6 +314,7 @@ export function useReadings() {
     loading,
     error,
     currentDate,
+    rite,
     previousDay,
     nextDay,
     goToToday,
