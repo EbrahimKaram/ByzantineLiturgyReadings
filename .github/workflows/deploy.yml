@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
   workflow_run:
-    workflows: ["Update Calendars and Readings"]
+    workflows: ["Update Byzantine Calendars and Readings"]
     types:
       - completed
 

@@ -22,6 +22,23 @@ To build the product which included minimization
 
  Github has an automated deploy that would create the build for me.
 
+## Python scripts
+
+Byzantine and Maronite calendar scripts share one virtual environment and one `requirements.txt` at the repo root.
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+Then run scripts from their folders, for example:
+
+```powershell
+python "byzantine-calendars\extract_readings.py"
+python "Maronite Readings\build_maronite_calendar.py"
+```
+
 ## Support
 If you find this project useful, please consider supporting it!
 
