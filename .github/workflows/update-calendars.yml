@@ -1,4 +1,4 @@
-name: Update Byzantine Calendars and Readings
+name: Update Byzantine and Maronite Calendars
 
 on:
   schedule:
@@ -38,13 +38,20 @@ jobs:
           python ./extract_readings.py
           cp extracted_readings.json ../client/src/assets/extracted_readings.json
 
+      - name: Update Maronite calendar
+        run: |
+          python "Maronite Readings/build_maronite_calendar.py" --years "${{ steps.year.outputs.year }}"
+          cp "Maronite Readings/maronite_calendar.json" client/public/maronite_calendar.json
+
       - name: Commit updated calendar data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: main
-          commit_message: "chore(byzantine-calendars): update data for ${{ steps.year.outputs.year }}"
+          commit_message: "chore(calendars): update data for ${{ steps.year.outputs.year }}"
           file_pattern: |
             byzantine-calendars/readings.csv
             byzantine-calendars/extracted_readings.json
             byzantine-calendars/${{ steps.year.outputs.year }}/**
             client/src/assets/extracted_readings.json
+            Maronite Readings/maronite_calendar.json
+            client/public/maronite_calendar.json

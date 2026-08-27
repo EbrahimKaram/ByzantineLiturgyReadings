@@ -58,6 +58,10 @@ class RateLimited(Exception):
     """The remote API rejected the request with HTTP 429."""
 
 
+class NotFound(Exception):
+    """The remote API has no data for this date (HTTP 404)."""
+
+
 def fetch_day(date_str: str, session: requests.Session, retries: int = 3) -> dict:
     url = f"{API_BASE}/{date_str}?from=gospelComponent"
     last_status = None
@@ -65,6 +69,8 @@ def fetch_day(date_str: str, session: requests.Session, retries: int = 3) -> dic
         try:
             resp = session.get(url, headers=REQUEST_HEADERS, timeout=20)
             last_status = resp.status_code
+            if resp.status_code == 404:
+                raise NotFound(f"{date_str}: 404 Not Found")
             if resp.status_code == 429:
                 wait = 30 * (2 ** attempt)
                 print(
@@ -93,7 +99,7 @@ def fetch_day(date_str: str, session: requests.Session, retries: int = 3) -> dic
                 "liturgic_title": data.get("liturgic_title", ""),
                 "readings": readings,
             }
-        except RateLimited:
+        except (NotFound, RateLimited):
             raise
         except Exception as exc:
             if attempt == retries - 1:
@@ -143,6 +149,7 @@ def main():
 
     results = dict(existing)
     done = 0
+    skipped = []
 
     def save(label: str) -> None:
         output_path.write_text(
@@ -154,11 +161,19 @@ def main():
     with requests.Session() as session:
         try:
             for date_str in to_fetch:
-                entry = fetch_day(date_str, session)
+                try:
+                    entry = fetch_day(date_str, session)
+                except NotFound as exc:
+                    skipped.append(date_str)
+                    print(f"  SKIP {exc}", file=sys.stderr, flush=True)
+                    done += 1
+                    if args.delay > 0 and done < len(to_fetch):
+                        time.sleep(args.delay)
+                    continue
                 results[date_str] = entry
                 done += 1
                 if done % 50 == 0:
-                    print(f"  {done}/{len(to_fetch)} fetched, saving…", flush=True)
+                    print(f"  {done}/{len(to_fetch)} processed, saving…", flush=True)
                     save("checkpoint")
                 if args.delay > 0 and done < len(to_fetch):
                     time.sleep(args.delay)
@@ -170,8 +185,14 @@ def main():
             print("\nInterrupted. Saving progress…", file=sys.stderr, flush=True)
             save("interrupted")
             sys.exit(130)
+        except Exception as exc:
+            print(f"\nUnexpected error. Saving progress…\n  {exc}", file=sys.stderr, flush=True)
+            save("error")
+            raise
 
     save("done")
+    if skipped:
+        print(f"Skipped {len(skipped)} missing date(s): {', '.join(skipped)}")
     print(f"Done. {len(results)} total entries saved to {output_path}")
 
 
