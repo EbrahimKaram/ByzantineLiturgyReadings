@@ -29,7 +29,7 @@
 
     <!-- Text -->
     <!-- Font-family: serif, matching the website's clean serif aesthetic -->
-    <text y="180" dominant-baseline="middle" text-anchor="middle" font-family="ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif" font-size="72" fill="#292524" font-weight="bold" letter-spacing="-0.025em">Byzantine and Maronite</text>
-    <text y="250" dominant-baseline="middle" text-anchor="middle" font-family="ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif" font-size="48" fill="#57534e" font-style="italic">Liturgy Readings</text>
+    <text y="180" dominant-baseline="middle" text-anchor="middle" font-family="ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif" font-size="72" fill="#292524" font-weight="bold" letter-spacing="-0.025em">Eastern Catholic</text>
+    <text y="250" dominant-baseline="middle" text-anchor="middle" font-family="ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif" font-size="48" fill="#57534e" font-style="italic">Readings</text>
   </g>
 </svg>
