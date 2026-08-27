@@ -3,7 +3,8 @@
     <div class="max-w-3xl mx-auto">
       <header class="text-center mb-8">
         <div class="flex justify-center mb-4">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-red-800 dark:text-red-600">
+          <!-- Byzantine three-bar cross -->
+          <svg v-if="rite === 'byzantine'" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-red-800 dark:text-red-600" aria-label="Byzantine Cross">
             <!-- Vertical post -->
             <line x1="12" y1="2" x2="12" y2="22"></line>
             <!-- Top bar (Titulus) -->
@@ -12,6 +13,13 @@
             <line x1="5" y1="10" x2="19" y2="10"></line>
             <!-- Bottom slanted bar (Suppedaneum) -->
             <line x1="8" y1="15" x2="16" y2="18"></line>
+          </svg>
+          <!-- Maronite patriarchal cross: one vertical, three bars -->
+          <svg v-else width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-red-800 dark:text-red-600" aria-label="Maronite Cross">
+            <line x1="12" y1="2" x2="12" y2="22"></line>
+            <line x1="9" y1="5" x2="15" y2="5"></line>
+            <line x1="7" y1="8.5" x2="17" y2="8.5"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
           </svg>
         </div>
         <h1 class="text-4xl font-bold text-stone-800 dark:text-stone-100 mb-2 tracking-tight">
@@ -223,6 +231,13 @@ const loadMaroniteReadings = async (date) => {
 
 watch([rite, currentDate], ([newRite, newDate]) => {
   if (newRite === 'maronite' && newDate) loadMaroniteReadings(newDate);
+}, { immediate: true });
+
+watch(rite, (newRite) => {
+  const icon = document.querySelector("link[rel='icon']");
+  if (!icon) return;
+  const file = newRite === 'maronite' ? 'maronite-cross.svg' : 'byzantine-cross.svg';
+  icon.href = `${import.meta.env.BASE_URL}${file}`;
 }, { immediate: true });
 
 const toggleDatePicker = () => {
