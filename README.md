@@ -1,6 +1,6 @@
-# Byzantine Divine Liturgy Sunday Readings
+# Eastern Catholic Readings
 
-A web application that displays the Sunday scripture readings from the Byzantine Lectionary.
+A web application that displays Byzantine and Maronite liturgical readings.
 
 - **Live Website:** [https://www.ebrahimkaram.com/ByzantineLiturgyReadings/](https://www.ebrahimkaram.com/ByzantineLiturgyReadings/)
 - **GitHub Repository:** [https://github.com/EbrahimKaram/ByzantineLiturgyReadings](https://github.com/EbrahimKaram/ByzantineLiturgyReadings)
