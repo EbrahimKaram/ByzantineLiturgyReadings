@@ -23,8 +23,11 @@
           </svg>
         </div>
         <h1 class="text-4xl font-bold text-stone-800 dark:text-stone-100 mb-2 tracking-tight">
-          {{ rite === 'maronite' ? 'Maronite Liturgy Readings' : 'Romanian Byzantine Liturgy Readings' }}
+          Eastern Catholic Readings
         </h1>
+        <p class="text-lg font-semibold text-stone-600 dark:text-stone-300">
+          {{ rite === 'maronite' ? 'Maronite Rite' : 'Romanian Byzantine Rite' }}
+        </p>
         <p v-if="rite === 'byzantine'" class="text-stone-600 dark:text-stone-400 italic">Scripture readings for the Romanian Byzantine Liturgies from the <a href="https://www.stgeorgeoh.org/calendar" target="_blank" rel="noopener noreferrer" class="underline">Saint George Cathedral Calendar.</a>
           We are specifically following the readings as outlined by the Romanian <a href="https://romaniancatholic.org/" target="_blank" rel="noopener noreferrer" class="underline">Catholic Diocese Eparchy of St. George in Canton</a>.</p>
         <p v-else class="text-stone-600 dark:text-stone-400 italic">Daily Maronite liturgical readings. Gospel text via <a href="https://dailygospel.org/" target="_blank" rel="noopener noreferrer" class="underline">Evangelizo</a>.</p>
@@ -114,6 +117,15 @@
       </div>
 
       <main>
+        <div class="text-center flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 mb-8">
+          <a :href="romanCatholicLink" target="_blank" rel="noopener noreferrer" class="text-sm text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-300 transition-colors underline decoration-stone-300 dark:decoration-stone-600">
+            Roman Catholic Readings
+          </a>
+          <a :href="maroniteLink" target="_blank" rel="noopener noreferrer" class="text-sm text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-300 transition-colors underline decoration-stone-300 dark:decoration-stone-600">
+            Maronite Readings
+          </a>
+        </div>
+
         <!-- Maronite rite -->
         <div v-if="rite === 'maronite'">
           <div v-if="maroniteLoading" class="flex flex-col items-center justify-center py-12">
@@ -152,15 +164,6 @@
         </div>
 
         <div v-else class="space-y-8">
-          <div class="text-center flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6">
-             <a :href="romanCatholicLink" target="_blank" rel="noopener noreferrer" class="text-sm text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-300 transition-colors underline decoration-stone-300 dark:decoration-stone-600">
-              Roman Catholic Readings
-            </a>
-            <a :href="maroniteLink" target="_blank" rel="noopener noreferrer" class="text-sm text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-300 transition-colors underline decoration-stone-300 dark:decoration-stone-600">
-              Maronite Readings
-            </a>
-          </div>
-
           <ReadingCard
             v-for="event in readings"
             :key="event.id"
