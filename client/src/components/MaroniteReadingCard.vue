@@ -28,12 +28,37 @@ const READING_LABELS = {
 
 const label = (type) => READING_LABELS[type] ?? type;
 
+const readingStyle = (type) => {
+  if (type === 'gospel') {
+    return {
+      border: 'border-red-600',
+      heading: 'text-red-700 dark:text-red-500',
+      hover: 'hover:text-red-700',
+      box: 'bg-red-50 dark:bg-stone-900/50 border border-red-100 dark:border-stone-700',
+    };
+  }
+  if (type === 'psalm') {
+    return {
+      border: 'border-amber-500',
+      heading: 'text-amber-700 dark:text-amber-500',
+      hover: 'hover:text-amber-600',
+      box: 'bg-amber-50 dark:bg-stone-900/50 border border-amber-100 dark:border-stone-700',
+    };
+  }
+  return {
+    border: 'border-stone-400',
+    heading: 'text-stone-600 dark:text-stone-400',
+    hover: 'hover:text-stone-700 dark:hover:text-stone-300',
+    box: 'bg-stone-50 dark:bg-stone-900/50 border border-stone-200 dark:border-stone-700',
+  };
+};
+
 // Format reading text: verse-by-verse (each \n = new verse) displayed as paragraphs
 const formatText = (text) => text?.trim().replace(/\n+/g, '\n').split('\n') ?? [];
 </script>
 
 <template>
-  <div class="bg-white dark:bg-stone-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border-t-4 border-amber-700 dark:border-amber-600 relative">
+  <div class="bg-white dark:bg-stone-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border-t-4 border-red-800 dark:border-red-600 relative">
 
     <div v-if="dateDisplay" class="text-sm font-semibold text-stone-500 dark:text-stone-400 mb-2 uppercase tracking-wide">
       {{ dateDisplay }}
@@ -44,39 +69,39 @@ const formatText = (text) => text?.trim().replace(/\n+/g, '\n').split('\n') ?? [
     </h2>
 
     <div class="space-y-4">
-      <div v-for="(reading, idx) in readings" :key="idx" class="border border-stone-200 dark:border-stone-700 rounded-lg overflow-hidden">
+      <div
+        v-for="(reading, idx) in readings"
+        :key="idx"
+        class="relative pl-4 border-l-4"
+        :class="readingStyle(reading.type).border"
+      >
+        <h3
+          class="text-sm font-bold uppercase tracking-wide mb-1"
+          :class="readingStyle(reading.type).heading"
+        >
+          {{ label(reading.type) }}
+        </h3>
+        <p class="text-lg font-serif text-stone-800 dark:text-stone-200">{{ reading.reference }}</p>
+        <span v-if="reading.book" class="block text-xs text-stone-500 dark:text-stone-400">
+          {{ reading.book }}
+        </span>
 
-        <!-- Reading header (always visible) -->
         <button
-          class="w-full flex items-center justify-between px-4 py-3 bg-stone-50 dark:bg-stone-900/40 hover:bg-stone-100 dark:hover:bg-stone-700/60 transition-colors text-left"
+          class="mt-2 text-xs font-medium text-stone-500 underline decoration-dotted underline-offset-4"
+          :class="readingStyle(reading.type).hover"
           @click="toggle(idx)"
         >
-          <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-500 block mb-0.5">
-              {{ label(reading.type) }}
-            </span>
-            <span class="text-sm font-semibold text-stone-700 dark:text-stone-300">
-              {{ reading.reference }}
-            </span>
-            <span v-if="reading.book" class="text-xs text-stone-500 dark:text-stone-400 block">
-              {{ reading.book }}
-            </span>
-          </div>
-          <svg
-            class="w-5 h-5 text-stone-400 transition-transform duration-200 flex-shrink-0 ml-4"
-            :class="{ 'rotate-180': expanded[idx] }"
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-          >
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-          </svg>
+          {{ expanded[idx] ? 'Hide Text' : 'Read Passage' }}
         </button>
 
-        <!-- Reading text (expandable) -->
-        <div v-if="expanded[idx]" class="px-4 py-4">
+        <div
+          v-if="expanded[idx]"
+          class="mt-3 p-4 rounded text-stone-700 dark:text-stone-300 text-sm leading-relaxed"
+          :class="readingStyle(reading.type).box"
+        >
           <p
             v-for="(verse, vi) in formatText(reading.text)"
             :key="vi"
-            class="text-stone-700 dark:text-stone-300 leading-relaxed text-[0.95rem]"
             :class="{ 'mt-2': vi > 0 }"
           >
             {{ verse }}
