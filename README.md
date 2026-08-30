@@ -2,7 +2,7 @@
 
 A web application that displays Byzantine and Maronite liturgical readings.
 
-- **Live Website:** [https://www.ebrahimkaram.com/ByzantineLiturgyReadings/](https://www.ebrahimkaram.com/ByzantineLiturgyReadings/)
+- **Live Website:** [https://www.ebrahimkaram.com/EasternCatholicReadings/](https://www.ebrahimkaram.com/EasternCatholicReadings/)
 - **GitHub Repository:** [https://github.com/EbrahimKaram/ByzantineLiturgyReadings](https://github.com/EbrahimKaram/ByzantineLiturgyReadings)
 
 Hopefully if you want a better reference
