@@ -12,5 +12,5 @@ export default defineConfig({
   },
   // REPLACE 'repo-name' WITH YOUR ACTUAL GITHUB REPOSITORY NAME
   // Example: base: '/byzantine-readings/',
-  base: '/ByzantineLiturgyReadings/',
+  base: '/EasternCatholicReadings/',
 })
